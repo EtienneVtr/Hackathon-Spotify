@@ -1,0 +1,207 @@
+ul{
+    list-style-type: none;
+}
+
+img{
+    border-radius: 4px;
+}
+
+#image{
+    float:left;
+    margin-left: 10px;
+}
+
+
+#nom{
+    text-align: center;
+}
+
+
+#numero{
+    text-align: center;
+}
+
+h1{
+    font-size: 2.6rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: rgb(255, 255, 255);
+    padding: 6px;
+    margin-left: 6px;
+}
+
+
+.main-head{
+    background: rgb(255, 255, 255);
+    color:rgb(0, 0, 0)
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#corps_de_page{
+    display: flex;
+    margin-top: 15px;
+    flex-direction: row;
+}
+
+div.menu-vertical{
+    display: block;
+    top: 9vh;
+    bottom: 0;
+    box-shadow: 2px 2px 2px silver;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+}
+
+
+
+
+
+#main-menu ul{
+    display: none;
+}
+
+div.corps_page{
+    margin-left: 30px;
+    width: 100%;
+}
+
+footer{
+    background: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    margin-top: 100%;
+    font-weight : bold;
+}
+
+.catégories{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.erreur_pref{
+    color: red;
+}
+
+
+#banner {
+    margin-top: 100px;
+    display:flex;
+    flex : 1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+body{
+    margin:0;
+    padding:0;
+    background: url(images/banner.jpeg) no-repeat center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+.bouton{
+    background-color: #ff0000;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  p{
+    color: rgb(0, 0, 0);
+		font-family: "Courier New", monospace;
+		font-size: 20pt;
+		font-weight: 400;
+		letter-spacing: 0.075em;
+		line-height: 1.65em;
+        line-height: 20px;
+        font-weight : bold;
+        
+}
+h2{
+    color: rgb(0, 0, 0);
+		font-weight: 800;
+        text-align: center;
+}
+h4{
+    color: rgb(0, 0, 0);
+		font-weight: 800;
+		letter-spacing: 0.225em;
+		line-height: 1em;
+		margin: 0 0 1em 0;
+		text-transform: uppercase;
+       
+        border-style: inset;
+        border-top-width: 5px;
+        border-bottom-width:5px;
+        border-left-width: 0px;
+        border-right-width:0px;
+        font-size:60px;
+}
+h3 {
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 47, 255);
+    border-style: inset;
+    border-top-width: 0px;
+    border-bottom-width:5px;
+    border-left-width: 0px;
+    border-right-width:0px;
+}
+
+#Question{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "Courier New", monospace;
+    color: rgb(0, 0, 0);
+        border-top-color: rgb(255, 0, 0);
+        border-style: inset;
+        border-top-width: 5px;
+        border-bottom-width:0px;
+        border-left-width: 0px;
+        border-right-width:0px;
+        margin-left: auto;
+        margin-right: auto;
+    display:flex;
+}
+
+#Réponse {
+    margin-left: 5px;
+    list-style-type: none;
+    font-family: "Courier New", monospace;
+    display: inline;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+h3{
+    text-align: center;
+}
+
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display:flex;
+    flex : 1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+table{
+    margin: auto;
+}
+#milieu{
+    margin-top: 150px;
+}

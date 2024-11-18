@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <title> {% block title %}{% endblock %} </title>
+    </head>
+    <body>
+        <link rel="stylesheet" href="/static/style_projet.css">
+        <header class="main-head"> 
+            
+          <nav>
+            <h1>{%block titre %}{% endblock %}</h1>
+             <ul>
+                 <li><a href="/">Accueil</a></li>
+                 <li><a href="/musiquesimilaire">Musique Similaire</a></li>
+                 <li><a href="/creationprofile">Creation Profil</a></li>
+                 <li><a href="/pokedexmusical">Pokedex Musical</a></li>
+          
+               
+             </ul>       
+          </nav>       
+            
+                       
+        </header>
+        <body >
+        
+        <section  id='corps_de_page'> 
+                <div class="corps_page">
+                    {% block body %}{% endblock %}
+                </div>
+            
+
+            
+                
+                <div class="menu-vertical">
+                    <nav class="main-menu">
+                        {% block menu%}{% endblock %}
+                    </nav>
+                </div>
+        
+    
+
+        </section>
+        </body>
+        
+        
+
+
+        <footer>
+            
+                <h2>© 2024 Telecom Nancy</h2>
+            
+        </footer>
+
+    </body>
+</html>
