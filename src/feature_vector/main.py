@@ -20,17 +20,6 @@ def extract_audio_features(file_path):
         "mfcc_mean": np.mean(mfcc, axis=1).tolist(),
         "rms_mean": np.mean(rms).tolist()
     }
-     # Extraction du chromagramme
-    chroma = librosa.feature.chroma_cqt(y=y, sr=sr)  # CQT pour plus de précision sur les notes
-
-    # Obtenir les indices des notes dominantes pour chaque frame
-    note_indices = np.argmax(chroma, axis=0)
-        
-    # Correspondance des indices avec les noms des notes
-    notes = ['Do', 'Do#', 'Ré', 'Ré#', 'Mi', 'Fa', 'Fa#', 'Sol', 'Sol#', 'La', 'La#', 'Si']
-    feature_vector["extracted_notes"] = [notes[idx] for idx in note_indices]
-
-
     return feature_vector
 
 
