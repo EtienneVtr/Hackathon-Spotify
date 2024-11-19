@@ -1,0 +1,1011 @@
+age,gender,education,smoking,alcohol,internet_usage,music,slow_songs,dance,folk,country,classical,musical,pop,rock,metal_hardrock,punk,hiphop_rap,reggae_ska,swing_jazz,rock_n_roll,alternative,latino,techno_trance,opera
+20.0,female,college/bachelor degree,never smoked,drink a lot,few hours a day,5.0,3.0,2.0,1.0,2.0,2.0,1.0,5.0,5.0,1.0,1.0,1.0,1.0,1.0,3.0,1.0,1.0,1.0,1.0
+19.0,female,college/bachelor degree,never smoked,drink a lot,few hours a day,4.0,4.0,2.0,1.0,1.0,1.0,2.0,3.0,5.0,4.0,4.0,1.0,3.0,1.0,4.0,4.0,2.0,1.0,1.0
+20.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,5.0,2.0,2.0,3.0,4.0,5.0,3.0,5.0,3.0,4.0,1.0,4.0,3.0,5.0,5.0,5.0,1.0,3.0
+22.0,female,college/bachelor degree,former smoker,drink a lot,most of the day,5.0,3.0,2.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,4.0,2.0,2.0,1.0,2.0,5.0,1.0,2.0,1.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,3.0,2.0,4.0,3.0,5.0,3.0,1.0,2.0,5.0,3.0,2.0,1.0,2.0,4.0,2.0,2.0
+20.0,male,secondary school,never smoked,never,few hours a day,5.0,3.0,2.0,3.0,2.0,3.0,3.0,2.0,5.0,5.0,3.0,4.0,3.0,4.0,4.0,5.0,3.0,1.0,3.0
+20.0,female,secondary school,tried smoking,social drinker,less than an hour a day,5.0,5.0,5.0,3.0,1.0,2.0,2.0,5.0,3.0,1.0,1.0,3.0,1.0,1.0,2.0,3.0,3.0,5.0,2.0
+19.0,male,college/bachelor degree,current smoker,drink a lot,few hours a day,5.0,3.0,3.0,2.0,1.0,2.0,2.0,4.0,5.0,1.0,2.0,3.0,2.0,2.0,3.0,1.0,2.0,3.0,2.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,2.0,4.0,3.0,5.0,5.0,1.0,1.0,2.0,2.0,2.0,3.0,1.0,1.0,1.0
+19.0,female,secondary school,never smoked,drink a lot,few hours a day,5.0,3.0,2.0,5.0,2.0,2.0,5.0,3.0,5.0,2.0,3.0,2.0,4.0,4.0,4.0,4.0,5.0,1.0,2.0
+19.0,female,secondary school,current smoker,social drinker,less than an hour a day,5.0,3.0,3.0,2.0,1.0,2.0,3.0,4.0,3.0,2.0,1.0,3.0,2.0,2.0,3.0,3.0,3.0,4.0,2.0
+17.0,female,primary school,tried smoking,never,few hours a day,5.0,3.0,1.0,1.0,1.0,4.0,1.0,2.0,5.0,1.0,1.0,1.0,1.0,2.0,2.0,5.0,2.0,1.0,2.0
+24.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,1.0,2.0,1.0,4.0,3.0,3.0,5.0,4.0,2.0,3.0,1.0,1.0,4.0,3.0,2.0,1.0,2.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,5.0,3.0,2.0,1.0,5.0,5.0,2.0,1.0,1.0,2.0,1.0,3.0,2.0,1.0,3.0,1.0,1.0
+22.0,female,college/bachelor degree,current smoker,social drinker,most of the day,5.0,3.0,2.0,1.0,1.0,2.0,3.0,4.0,5.0,2.0,5.0,3.0,4.0,4.0,4.0,4.0,1.0,1.0,1.0
+18.0,male,secondary school,former smoker,social drinker,few hours a day,1.0,3.0,2.0,2.0,3.0,4.0,3.0,3.0,5.0,5.0,5.0,2.0,4.0,2.0,3.0,3.0,2.0,1.0,2.0
+19.0,female,college/bachelor degree,current smoker,drink a lot,few hours a day,5.0,3.0,3.0,1.0,1.0,1.0,2.0,4.0,4.0,1.0,3.0,2.0,3.0,2.0,3.0,1.0,1.0,4.0,1.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,3.0,3.0,2.0,2.0,4.0,4.0,2.0,3.0,3.0,4.0,3.0,3.0,1.0,2.0,1.0,3.0
+18.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,4.0,3.0,4.0,5.0,5.0,4.0,4.0,3.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,3.0
+18.0,male,secondary school,former smoker,drink a lot,few hours a day,5.0,4.0,3.0,3.0,2.0,4.0,2.0,2.0,4.0,5.0,2.0,1.0,4.0,5.0,4.0,3.0,4.0,3.0,2.0
+20.0,male,secondary school,never smoked,never,few hours a day,5.0,3.0,3.0,2.0,3.0,4.0,3.0,2.0,5.0,5.0,4.0,4.0,3.0,5.0,4.0,5.0,3.0,3.0,4.0
+24.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,5.0,1.0,1.0,3.0,2.0,2.0,2.0,5.0,5.0,4.0,1.0,2.0,1.0,4.0,3.0,2.0,1.0,2.0
+22.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,3.0,3.0,3.0,4.0,5.0,1.0,2.0,2.0,1.0,1.0,3.0,2.0,3.0,3.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,2.0,2.0,4.0,4.0,5.0,2.0,3.0,3.0,3.0,3.0,3.0,1.0,4.0,1.0,1.0
+19.0,female,secondary school,tried smoking,never,few hours a day,5.0,2.0,3.0,1.0,1.0,4.0,3.0,3.0,5.0,5.0,5.0,1.0,1.0,1.0,2.0,3.0,2.0,3.0,4.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,1.0,2.0,3.0,5.0,1.0,1.0,1.0,3.0,1.0,2.0,1.0,1.0,4.0,2.0,1.0
+22.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,5.0,5.0,5.0,4.0,5.0,3.0,4.0,4.0,3.0,2.0,2.0,1.0,3.0,5.0,3.0,5.0,2.0,2.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,4.0,5.0,3.0,4.0,1.0,3.0,2.0,2.0,4.0,2.0,4.0,2.0,4.0,2.0,3.0,4.0,3.0,4.0,2.0
+20.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,5.0,1.0,1.0,1.0,1.0,3.0,4.0,1.0,3.0,5.0,2.0,1.0,4.0,3.0,2.0,3.0,1.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,4.0,2.0,3.0,3.0,3.0,4.0,1.0,3.0,3.0,4.0,3.0,4.0,3.0,4.0,3.0,2.0
+25.0,male,secondary school,former smoker,drink a lot,few hours a day,4.0,3.0,4.0,3.0,3.0,3.0,3.0,4.0,4.0,2.0,2.0,4.0,3.0,4.0,3.0,3.0,3.0,3.0,3.0
+22.0,female,secondary school,tried smoking,social drinker,less than an hour a day,4.0,3.0,4.0,1.0,3.0,2.0,3.0,5.0,3.0,1.0,1.0,3.0,3.0,2.0,1.0,1.0,5.0,1.0,2.0
+20.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,5.0,3.0,1.0,3.0,2.0,3.0,3.0,4.0,3.0,4.0,4.0,2.0,2.0,4.0,4.0,2.0,3.0,1.0
+27.0,female,masters degree,tried smoking,social drinker,few hours a day,5.0,4.0,2.0,2.0,3.0,4.0,5.0,4.0,3.0,1.0,1.0,1.0,3.0,4.0,4.0,3.0,2.0,1.0,5.0
+20.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,2.0,1.0,3.0,4.0,4.0,5.0,3.0,4.0,2.0,3.0,3.0,4.0,4.0,2.0,1.0,1.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,3.0,1.0,4.0,5.0,5.0,3.0,1.0,1.0,4.0,3.0,1.0,3.0,3.0,5.0,1.0,1.0
+18.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,1.0,3.0,2.0,3.0,4.0,4.0,4.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,4.0
+21.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,5.0,1.0,1.0,1.0,5.0,1.0,2.0,3.0,5.0,2.0,1.0,2.0,2.0,2.0,1.0,1.0,1.0,1.0
+23.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,5.0,5.0,3.0,1.0,5.0,2.0,5.0,4.0,1.0,2.0,4.0,5.0,2.0,2.0,1.0,3.0,4.0,4.0
+21.0,female,secondary school,never smoked,never,few hours a day,5.0,3.0,3.0,3.0,2.0,2.0,3.0,5.0,5.0,4.0,4.0,1.0,2.0,1.0,5.0,2.0,1.0,2.0,2.0
+26.0,female,secondary school,never smoked,social drinker,few hours a day,4.0,3.0,4.0,1.0,1.0,1.0,1.0,5.0,1.0,1.0,1.0,3.0,2.0,1.0,1.0,1.0,2.0,3.0,1.0
+20.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,5.0,5.0,5.0,5.0,1.0,1.0,4.0,5.0,1.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,1.0
+19.0,female,secondary school,never smoked,never,few hours a day,5.0,5.0,2.0,2.0,2.0,3.0,4.0,5.0,5.0,4.0,4.0,3.0,3.0,3.0,3.0,4.0,3.0,3.0,1.0
+20.0,female,college/bachelor degree,tried smoking,drink a lot,most of the day,5.0,4.0,3.0,1.0,1.0,2.0,2.0,5.0,4.0,1.0,2.0,3.0,2.0,2.0,2.0,4.0,3.0,3.0,1.0
+25.0,female,masters degree,current smoker,social drinker,few hours a day,4.0,4.0,4.0,2.0,1.0,3.0,3.0,4.0,4.0,1.0,1.0,3.0,1.0,3.0,3.0,4.0,5.0,4.0,3.0
+27.0,male,masters degree,never smoked,social drinker,most of the day,5.0,4.0,5.0,2.0,2.0,4.0,3.0,5.0,4.0,1.0,2.0,3.0,3.0,3.0,5.0,1.0,4.0,3.0,4.0
+21.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,3.0,4.0,3.0,4.0,1.0,5.0,5.0,5.0,3.0,2.0,5.0,2.0,3.0,5.0,4.0,5.0,2.0,2.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,2.0,3.0,4.0,4.0,2.0,2.0,1.0,3.0,3.0,3.0,4.0,3.0,2.0,3.0
+20.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,4.0,3.0,1.0,1.0,1.0,4.0,3.0,2.0,1.0,2.0,5.0,5.0,2.0,2.0,2.0,4.0,2.0,1.0
+20.0,female,primary school,tried smoking,social drinker,few hours a day,5.0,4.0,2.0,1.0,2.0,2.0,2.0,3.0,5.0,3.0,5.0,3.0,2.0,2.0,4.0,2.0,1.0,2.0,1.0
+19.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,4.0,3.0,2.0,4.0,2.0,5.0,5.0,5.0,5.0,2.0,4.0,4.0,4.0,3.0,4.0,4.0,5.0,1.0,2.0
+19.0,female,secondary school,never smoked,never,less than an hour a day,5.0,3.0,3.0,3.0,1.0,4.0,3.0,5.0,4.0,3.0,2.0,2.0,4.0,4.0,4.0,3.0,5.0,3.0,2.0
+21.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,4.0,2.0,5.0,5.0,5.0,5.0,2.0,5.0,2.0,5.0
+18.0,female,secondary school,tried smoking,social drinker,less than an hour a day,5.0,3.0,4.0,4.0,3.0,4.0,5.0,4.0,3.0,2.0,2.0,3.0,3.0,3.0,3.0,3.0,5.0,2.0,5.0
+21.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,3.0,5.0,5.0,3.0,5.0,5.0,5.0,5.0,4.0,3.0,3.0,3.0,4.0,4.0,3.0,5.0,4.0,5.0
+23.0,female,college/bachelor degree,current smoker,drink a lot,few hours a day,5.0,3.0,4.0,2.0,2.0,4.0,3.0,4.0,3.0,3.0,2.0,4.0,3.0,3.0,4.0,4.0,4.0,5.0,3.0
+20.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,1.0,2.0,3.0,4.0,3.0,4.0,5.0,1.0,4.0,2.0,3.0,4.0,5.0,5.0,1.0,1.0,4.0
+21.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,3.0,3.0,2.0,3.0,2.0,2.0,5.0,2.0,2.0,2.0,2.0,4.0,5.0,5.0,1.0,1.0,2.0
+19.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,5.0,5.0,3.0,2.0,3.0,2.0,5.0,1.0,1.0,1.0,2.0,2.0,1.0,2.0,2.0,3.0,3.0,1.0
+22.0,male,college/bachelor degree,current smoker,drink a lot,few hours a day,5.0,4.0,2.0,1.0,2.0,3.0,1.0,3.0,4.0,3.0,5.0,3.0,3.0,4.0,5.0,5.0,1.0,4.0,3.0
+23.0,male,college/bachelor degree,tried smoking,social drinker,most of the day,5.0,2.0,2.0,2.0,2.0,4.0,4.0,4.0,4.0,1.0,3.0,2.0,3.0,3.0,4.0,4.0,2.0,1.0,3.0
+23.0,male,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,5.0,1.0,2.0,4.0,3.0,4.0,4.0,1.0,2.0,3.0,2.0,3.0,3.0,3.0,4.0,4.0,3.0
+23.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,5.0,4.0,5.0,4.0,4.0,5.0,4.0,5.0,4.0,5.0,4.0,5.0,5.0,5.0,4.0,5.0,5.0
+22.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,1.0,3.0,2.0,1.0,2.0,3.0,1.0,1.0,5.0,4.0,3.0,3.0,1.0,3.0,5.0,1.0
+18.0,female,primary school,former smoker,social drinker,most of the day,5.0,3.0,3.0,1.0,1.0,1.0,4.0,4.0,5.0,1.0,3.0,2.0,1.0,2.0,2.0,1.0,3.0,2.0,2.0
+17.0,male,primary school,tried smoking,social drinker,few hours a day,4.0,3.0,3.0,1.0,2.0,2.0,1.0,3.0,3.0,3.0,2.0,4.0,2.0,2.0,2.0,1.0,2.0,4.0,2.0
+20.0,male,secondary school,tried smoking,social drinker,less than an hour a day,4.0,3.0,4.0,2.0,2.0,2.0,4.0,5.0,3.0,4.0,3.0,3.0,3.0,3.0,2.0,2.0,4.0,5.0,1.0
+24.0,female,college/bachelor degree,never smoked,never,few hours a day,3.0,4.0,4.0,3.0,2.0,2.0,4.0,5.0,1.0,1.0,1.0,4.0,3.0,4.0,4.0,1.0,5.0,1.0,1.0
+18.0,female,college/bachelor degree,tried smoking,drink a lot,few hours a day,5.0,5.0,3.0,2.0,1.0,2.0,4.0,3.0,5.0,5.0,5.0,1.0,5.0,4.0,4.0,3.0,2.0,4.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,4.0,1.0,1.0,1.0,1.0,4.0,5.0,4.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,4.0,1.0,2.0
+17.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,5.0,2.0,2.0,2.0,3.0,5.0,3.0,1.0,1.0,5.0,2.0,3.0,1.0,1.0,2.0,3.0,1.0
+20.0,male,secondary school,tried smoking,never,few hours a day,4.0,3.0,2.0,3.0,1.0,4.0,1.0,4.0,1.0,1.0,1.0,4.0,4.0,1.0,2.0,3.0,1.0,3.0,1.0
+28.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,2.0,2.0,2.0,2.0,5.0,5.0,5.0,2.0,4.0,4.0,2.0,2.0,3.0,3.0,5.0,1.0,1.0
+21.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,2.0,1.0,5.0,2.0,1.0,2.0,5.0,2.0,2.0,2.0,2.0,4.0,3.0,1.0
+22.0,male,masters degree,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,1.0,4.0,5.0,3.0,2.0,1.0,1.0,1.0,5.0,4.0,1.0,1.0,1.0,1.0,2.0,4.0
+20.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,4.0,4.0,3.0,1.0,1.0,5.0,4.0,4.0,3.0,5.0,4.0,5.0,4.0,4.0,1.0,2.0
+18.0,male,secondary school,tried smoking,social drinker,few hours a day,4.0,4.0,4.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0,4.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,1.0,2.0,2.0,2.0,5.0,4.0,2.0,1.0,4.0,2.0,2.0,2.0,2.0,5.0,5.0,1.0
+24.0,female,college/bachelor degree,never smoked,never,few hours a day,4.0,4.0,4.0,2.0,4.0,1.0,5.0,5.0,3.0,1.0,1.0,4.0,5.0,5.0,5.0,3.0,5.0,4.0,2.0
+21.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,4.0,4.0,4.0,3.0,4.0,5.0,5.0,2.0,2.0,5.0,3.0,3.0,3.0,3.0,4.0,4.0,4.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,2.0,2.0,3.0,4.0,5.0,2.0,3.0,4.0,4.0,3.0,4.0,2.0,5.0,3.0,2.0
+22.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,4.0,1.0,2.0,3.0,3.0,5.0,4.0,2.0,3.0,4.0,4.0,3.0,4.0,3.0,5.0,3.0,3.0
+18.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,5.0,1.0,3.0,1.0,3.0,2.0,1.0,5.0,5.0,4.0,1.0,1.0,2.0,2.0,5.0,1.0,1.0,3.0
+22.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,5.0,1.0,2.0,4.0,4.0,5.0,5.0,3.0,1.0,3.0,2.0,4.0,3.0,1.0,5.0,5.0,3.0
+19.0,female,secondary school,former smoker,drink a lot,few hours a day,5.0,3.0,1.0,1.0,4.0,5.0,5.0,1.0,5.0,5.0,5.0,4.0,4.0,5.0,5.0,4.0,3.0,1.0,5.0
+22.0,male,college/bachelor degree,tried smoking,social drinker,most of the day,5.0,2.0,3.0,3.0,5.0,5.0,3.0,3.0,4.0,4.0,1.0,1.0,1.0,2.0,3.0,3.0,2.0,4.0,3.0
+24.0,male,masters degree,current smoker,social drinker,few hours a day,4.0,3.0,4.0,3.0,3.0,3.0,2.0,4.0,5.0,3.0,3.0,4.0,3.0,3.0,3.0,3.0,2.0,3.0,3.0
+18.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,4.0,4.0,1.0,2.0,2.0,4.0,4.0,5.0,2.0,4.0,3.0,5.0,3.0,4.0,4.0,5.0,2.0,1.0
+21.0,female,secondary school,former smoker,drink a lot,few hours a day,5.0,5.0,5.0,1.0,1.0,5.0,2.0,5.0,5.0,1.0,1.0,1.0,1.0,5.0,5.0,4.0,5.0,5.0,1.0
+22.0,female,masters degree,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,1.0,4.0,3.0,3.0,5.0,3.0,3.0,1.0,2.0,4.0,4.0,4.0,2.0,1.0,3.0
+19.0,female,secondary school,tried smoking,social drinker,most of the day,4.0,2.0,3.0,2.0,1.0,3.0,4.0,3.0,4.0,1.0,3.0,1.0,3.0,1.0,2.0,3.0,1.0,1.0,1.0
+18.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,5.0,1.0,5.0,1.0,3.0,5.0,3.0,5.0,5.0,5.0,1.0,5.0,1.0,3.0,1.0,1.0,1.0,1.0
+19.0,female,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,2.0,1.0,3.0,4.0,4.0,4.0,2.0,3.0,1.0,2.0,1.0,3.0,5.0,4.0,3.0,3.0,1.0,4.0
+24.0,male,masters degree,current smoker,drink a lot,few hours a day,5.0,4.0,1.0,5.0,5.0,4.0,4.0,4.0,3.0,3.0,3.0,1.0,1.0,5.0,4.0,1.0,1.0,1.0,4.0
+21.0,male,secondary school,tried smoking,social drinker,most of the day,5.0,5.0,5.0,1.0,1.0,1.0,2.0,4.0,3.0,1.0,3.0,5.0,2.0,1.0,3.0,3.0,1.0,4.0,1.0
+21.0,male,college/bachelor degree,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,2.0,2.0,4.0,3.0,3.0,3.0,1.0,2.0,5.0,5.0,4.0,4.0,2.0,3.0,2.0,2.0
+19.0,male,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,3.0,1.0,1.0,1.0,1.0,1.0,2.0,4.0,5.0,4.0,3.0,1.0,1.0,1.0,4.0,1.0,4.0,1.0
+19.0,male,primary school,tried smoking,drink a lot,most of the day,5.0,3.0,2.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,5.0,2.0,2.0,1.0,1.0,1.0,2.0,1.0
+22.0,male,secondary school,former smoker,drink a lot,few hours a day,3.0,5.0,5.0,1.0,1.0,1.0,1.0,3.0,5.0,2.0,1.0,1.0,3.0,2.0,2.0,5.0,5.0,3.0,1.0
+18.0,female,secondary school,never smoked,social drinker,less than an hour a day,5.0,3.0,4.0,1.0,1.0,2.0,2.0,4.0,2.0,1.0,3.0,2.0,4.0,1.0,2.0,1.0,4.0,1.0,1.0
+21.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,4.0,4.0,3.0,2.0,4.0,5.0,4.0,5.0,3.0,2.0,4.0,4.0,3.0,3.0,2.0,3.0,2.0,2.0
+18.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,1.0,3.0,2.0,3.0,1.0,2.0,4.0,5.0,4.0,1.0,4.0,3.0,3.0,3.0,1.0,1.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,1.0,2.0,3.0,5.0,4.0,1.0,5.0,2.0,5.0,1.0,4.0,5.0,5.0,5.0,2.0,1.0,4.0
+22.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,5.0,5.0,2.0,2.0,3.0,4.0,5.0,1.0,1.0,1.0,5.0,5.0,4.0,3.0,2.0,5.0,4.0,4.0
+21.0,male,secondary school,tried smoking,drink a lot,few hours a day,4.0,4.0,3.0,3.0,2.0,4.0,2.0,2.0,4.0,4.0,3.0,3.0,3.0,4.0,4.0,4.0,3.0,3.0,2.0
+24.0,male,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,5.0,1.0,3.0,1.0,3.0,2.0,2.0,4.0,5.0,1.0,1.0,2.0,3.0,1.0,1.0,1.0,1.0,2.0
+19.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,4.0,4.0,5.0,5.0,3.0,4.0,5.0,1.0,2.0,4.0,4.0,4.0,5.0,3.0,5.0,3.0,4.0
+18.0,female,secondary school,tried smoking,social drinker,less than an hour a day,5.0,3.0,1.0,1.0,1.0,2.0,2.0,2.0,4.0,4.0,1.0,1.0,3.0,4.0,2.0,4.0,2.0,1.0,1.0
+17.0,female,primary school,never smoked,social drinker,few hours a day,4.0,3.0,2.0,2.0,1.0,4.0,1.0,2.0,4.0,4.0,3.0,2.0,1.0,1.0,2.0,3.0,2.0,2.0,3.0
+18.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,2.0,2.0,2.0,4.0,4.0,2.0,3.0,5.0,5.0,3.0,2.0,2.0,2.0,3.0,1.0,3.0,1.0,4.0
+21.0,male,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,4.0,4.0,5.0,2.0,3.0,1.0,4.0,4.0,1.0,1.0,1.0,4.0,5.0,4.0,4.0,4.0,4.0,1.0
+22.0,female,college/bachelor degree,tried smoking,social drinker,most of the day,5.0,3.0,4.0,3.0,2.0,5.0,3.0,3.0,4.0,2.0,2.0,3.0,3.0,4.0,4.0,5.0,2.0,4.0,4.0
+20.0,female,secondary school,never smoked,social drinker,less than an hour a day,5.0,3.0,4.0,2.0,2.0,4.0,3.0,3.0,3.0,2.0,2.0,1.0,3.0,4.0,2.0,3.0,5.0,4.0,1.0
+21.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,3.0,4.0,4.0,2.0,3.0,1.0,2.0,4.0,4.0,2.0,1.0,4.0,1.0,1.0,2.0,2.0,2.0,5.0,1.0
+19.0,female,secondary school,former smoker,drink a lot,less than an hour a day,5.0,3.0,2.0,1.0,1.0,3.0,4.0,4.0,4.0,1.0,3.0,2.0,2.0,2.0,3.0,3.0,1.0,1.0,4.0
+17.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,5.0,2.0,2.0,5.0,4.0,5.0,5.0,2.0,2.0,3.0,3.0,3.0,2.0,3.0,5.0,3.0,2.0
+21.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,3.0,2.0,2.0,2.0,2.0,1.0,3.0,5.0,1.0,2.0,1.0,1.0,2.0,4.0,5.0,2.0,1.0,1.0
+18.0,female,secondary school,never smoked,never,few hours a day,5.0,3.0,2.0,2.0,1.0,1.0,3.0,5.0,3.0,2.0,1.0,1.0,1.0,1.0,2.0,1.0,4.0,1.0,1.0
+23.0,male,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,3.0,1.0,2.0,2.0,4.0,1.0,3.0,4.0,2.0,4.0,2.0,4.0,4.0,4.0,4.0,2.0,1.0,1.0
+16.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,2.0,4.0,2.0,1.0,3.0,2.0,4.0,2.0,2.0,1.0,2.0,2.0,2.0,2.0,1.0,2.0,3.0,2.0
+23.0,male,college/bachelor degree,never smoked,drink a lot,most of the day,5.0,5.0,4.0,1.0,2.0,4.0,4.0,2.0,5.0,5.0,2.0,1.0,3.0,5.0,5.0,3.0,4.0,3.0,2.0
+21.0,male,secondary school,current smoker,social drinker,few hours a day,4.0,3.0,2.0,3.0,4.0,2.0,1.0,4.0,4.0,2.0,2.0,4.0,2.0,2.0,4.0,1.0,1.0,3.0,1.0
+23.0,female,masters degree,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,5.0,3.0,1.0,5.0,2.0,4.0,1.0,3.0,4.0,4.0,5.0,3.0,1.0,3.0
+20.0,female,secondary school,tried smoking,never,few hours a day,5.0,3.0,3.0,3.0,3.0,3.0,4.0,3.0,5.0,3.0,1.0,3.0,1.0,5.0,5.0,3.0,3.0,1.0,3.0
+20.0,male,secondary school,current smoker,social drinker,few hours a day,4.0,4.0,1.0,4.0,2.0,5.0,5.0,3.0,5.0,3.0,3.0,1.0,2.0,4.0,5.0,2.0,3.0,1.0,3.0
+20.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,3.0,3.0,2.0,3.0,2.0,2.0,4.0,3.0,3.0,2.0,4.0,5.0,3.0,4.0,3.0,2.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,3.0,5.0,4.0,1.0,1.0,3.0,1.0,4.0,4.0,1.0,4.0,4.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0
+19.0,female,primary school,tried smoking,social drinker,most of the day,4.0,3.0,3.0,3.0,4.0,4.0,3.0,4.0,4.0,3.0,3.0,3.0,4.0,3.0,4.0,4.0,2.0,3.0,3.0
+15.0,female,primary school,never smoked,never,few hours a day,5.0,5.0,5.0,1.0,5.0,5.0,5.0,5.0,5.0,5.0,1.0,2.0,3.0,1.0,5.0,5.0,5.0,5.0,2.0
+20.0,female,secondary school,never smoked,social drinker,less than an hour a day,5.0,4.0,5.0,3.0,1.0,2.0,2.0,4.0,5.0,2.0,2.0,2.0,3.0,4.0,3.0,4.0,3.0,1.0,1.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,2.0,2.0,1.0,1.0,4.0,2.0,2.0,5.0,3.0,3.0,1.0,2.0,2.0,3.0,1.0,3.0,3.0,2.0
+18.0,male,primary school,former smoker,social drinker,few hours a day,5.0,4.0,3.0,1.0,1.0,2.0,2.0,4.0,2.0,1.0,2.0,5.0,2.0,1.0,1.0,1.0,1.0,3.0,1.0
+15.0,female,primary school,tried smoking,never,most of the day,5.0,4.0,3.0,1.0,1.0,1.0,1.0,4.0,4.0,1.0,5.0,2.0,4.0,3.0,2.0,2.0,2.0,1.0,1.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,less than an hour a day,5.0,3.0,2.0,4.0,1.0,4.0,2.0,1.0,3.0,1.0,1.0,1.0,2.0,5.0,1.0,1.0,3.0,1.0,3.0
+16.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,4.0,3.0,3.0,3.0,3.0,3.0,3.0,1.0,1.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,2.0
+18.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,2.0,1.0,3.0,5.0,1.0,3.0,5.0,4.0,4.0,3.0,5.0,4.0,4.0,5.0,1.0,1.0,3.0
+21.0,male,secondary school,never smoked,never,few hours a day,5.0,3.0,4.0,3.0,2.0,3.0,2.0,4.0,3.0,1.0,1.0,5.0,1.0,1.0,1.0,1.0,1.0,1.0,3.0
+19.0,female,primary school,never smoked,never,few hours a day,5.0,3.0,4.0,3.0,3.0,5.0,5.0,5.0,4.0,2.0,2.0,4.0,3.0,5.0,4.0,3.0,4.0,2.0,2.0
+20.0,female,secondary school,never smoked,never,few hours a day,5.0,3.0,2.0,3.0,3.0,4.0,5.0,2.0,1.0,1.0,1.0,3.0,3.0,4.0,4.0,2.0,3.0,1.0,2.0
+19.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,5.0,3.0,2.0,3.0,3.0,5.0,4.0,1.0,2.0,5.0,3.0,4.0,4.0,1.0,2.0,3.0,2.0
+19.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,2.0,1.0,2.0,3.0,4.0,4.0,2.0,2.0,2.0,2.0,5.0,3.0,2.0,4.0,3.0,2.0
+19.0,female,primary school,current smoker,social drinker,few hours a day,3.0,4.0,1.0,3.0,1.0,3.0,1.0,3.0,5.0,5.0,4.0,4.0,3.0,1.0,1.0,5.0,5.0,2.0,1.0
+19.0,male,primary school,never smoked,social drinker,most of the day,5.0,4.0,4.0,1.0,3.0,2.0,2.0,4.0,4.0,1.0,1.0,3.0,2.0,1.0,1.0,2.0,3.0,2.0,1.0
+20.0,female,secondary school,former smoker,social drinker,most of the day,5.0,4.0,4.0,2.0,1.0,1.0,2.0,4.0,4.0,2.0,3.0,5.0,4.0,1.0,1.0,3.0,3.0,3.0,1.0
+21.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,2.0,3.0,1.0,2.0,3.0,2.0,4.0,5.0,1.0,3.0,2.0,2.0,2.0,4.0,3.0,4.0,4.0,2.0
+19.0,female,secondary school,current smoker,social drinker,few hours a day,1.0,4.0,4.0,1.0,1.0,2.0,2.0,2.0,4.0,1.0,1.0,1.0,2.0,1.0,1.0,3.0,2.0,3.0,2.0
+21.0,male,secondary school,tried smoking,never,few hours a day,5.0,3.0,5.0,2.0,1.0,4.0,1.0,5.0,4.0,3.0,4.0,5.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0
+18.0,male,secondary school,never smoked,social drinker,most of the day,5.0,4.0,3.0,2.0,3.0,2.0,2.0,3.0,5.0,4.0,3.0,5.0,2.0,2.0,2.0,4.0,2.0,1.0,1.0
+20.0,male,secondary school,never smoked,social drinker,few hours a day,4.0,3.0,4.0,4.0,4.0,3.0,3.0,5.0,3.0,2.0,3.0,4.0,3.0,2.0,4.0,3.0,3.0,3.0,2.0
+19.0,male,college/bachelor degree,tried smoking,never,few hours a day,2.0,3.0,1.0,3.0,1.0,3.0,4.0,1.0,2.0,2.0,2.0,3.0,2.0,1.0,1.0,1.0,1.0,1.0,2.0
+22.0,female,secondary school,tried smoking,never,few hours a day,5.0,2.0,2.0,2.0,3.0,4.0,4.0,3.0,5.0,5.0,3.0,1.0,2.0,4.0,4.0,3.0,1.0,1.0,4.0
+20.0,male,secondary school,tried smoking,never,few hours a day,5.0,4.0,3.0,1.0,1.0,3.0,2.0,2.0,4.0,4.0,4.0,2.0,5.0,4.0,4.0,4.0,2.0,2.0,1.0
+25.0,male,college/bachelor degree,tried smoking,drink a lot,few hours a day,5.0,3.0,5.0,2.0,2.0,3.0,3.0,4.0,4.0,2.0,1.0,4.0,3.0,3.0,4.0,3.0,2.0,2.0,2.0
+21.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,2.0,5.0,5.0,2.0,2.0,3.0,2.0,4.0,2.0,1.0,2.0,4.0,1.0,4.0,2.0,1.0,3.0,3.0,3.0
+24.0,male,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,3.0,1.0,2.0,4.0,5.0,1.0,1.0,5.0,4.0,4.0,2.0,2.0,3.0,3.0,3.0,2.0,1.0,3.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,4.0,3.0,3.0,5.0,2.0,3.0,3.0,2.0,3.0,3.0,2.0,4.0,3.0,4.0,2.0,2.0,3.0
+25.0,male,doctorate degree,never smoked,drink a lot,few hours a day,5.0,4.0,2.0,4.0,3.0,4.0,2.0,3.0,5.0,2.0,5.0,3.0,5.0,2.0,3.0,3.0,2.0,1.0,2.0
+26.0,male,masters degree,former smoker,social drinker,most of the day,5.0,5.0,4.0,4.0,4.0,2.0,2.0,4.0,4.0,4.0,4.0,2.0,2.0,2.0,1.0,2.0,1.0,1.0,2.0
+15.0,female,currently a primary school pupil,tried smoking,never,few hours a day,5.0,3.0,4.0,2.0,1.0,3.0,2.0,5.0,4.0,1.0,3.0,4.0,5.0,4.0,3.0,3.0,2.0,5.0,1.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,4.0,3.0,5.0,4.0,4.0,5.0,3.0,3.0,3.0,4.0,3.0,3.0,4.0,3.0,3.0,3.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,1.0,2.0,1.0,1.0,5.0,4.0,5.0,3.0,5.0,4.0,4.0,5.0,1.0,3.0,1.0
+20.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,2.0,2.0,2.0,2.0,2.0,4.0,5.0,3.0,3.0,4.0,3.0,2.0,3.0,2.0,2.0,3.0,2.0
+21.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,4.0,2.0,3.0,5.0,4.0,5.0,2.0,4.0,3.0,1.0,1.0,5.0,4.0,3.0,2.0,1.0,5.0,1.0,3.0
+22.0,male,secondary school,current smoker,social drinker,most of the day,5.0,5.0,3.0,1.0,1.0,2.0,1.0,4.0,3.0,2.0,1.0,1.0,1.0,1.0,1.0,3.0,1.0,5.0,1.0
+20.0,male,secondary school,current smoker,social drinker,most of the day,5.0,4.0,4.0,2.0,1.0,3.0,2.0,4.0,5.0,1.0,3.0,2.0,2.0,4.0,4.0,5.0,2.0,3.0,2.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,5.0,2.0,4.0,3.0,1.0,4.0,1.0,1.0,1.0,5.0,3.0,3.0,2.0,1.0,5.0,2.0,1.0
+21.0,female,secondary school,former smoker,drink a lot,few hours a day,5.0,5.0,1.0,2.0,1.0,3.0,1.0,1.0,3.0,5.0,2.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,5.0
+21.0,male,primary school,current smoker,drink a lot,few hours a day,3.0,3.0,3.0,2.0,2.0,3.0,2.0,3.0,4.0,3.0,4.0,4.0,4.0,3.0,3.0,3.0,3.0,3.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,4.0,4.0,1.0,2.0,4.0,3.0,4.0,4.0,1.0,3.0,3.0,3.0,3.0,4.0,2.0,1.0,1.0,1.0
+19.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,2.0,1.0,2.0,4.0,4.0,3.0,5.0,4.0,3.0,1.0,1.0,3.0,3.0,4.0,1.0,1.0,1.0
+19.0,male,secondary school,never smoked,drink a lot,few hours a day,4.0,3.0,2.0,3.0,2.0,2.0,1.0,3.0,4.0,2.0,2.0,2.0,3.0,5.0,4.0,5.0,4.0,1.0,1.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,1.0,2.0,4.0,3.0,4.0,4.0,1.0,1.0,4.0,3.0,3.0,3.0,2.0,1.0,1.0,1.0
+22.0,male,secondary school,tried smoking,social drinker,most of the day,5.0,3.0,2.0,3.0,3.0,4.0,4.0,2.0,5.0,5.0,5.0,2.0,4.0,4.0,4.0,4.0,2.0,1.0,3.0
+21.0,male,secondary school,never smoked,social drinker,most of the day,5.0,3.0,2.0,1.0,2.0,4.0,4.0,3.0,2.0,1.0,1.0,2.0,1.0,2.0,3.0,2.0,1.0,5.0,4.0
+26.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,2.0,1.0,5.0,3.0,3.0,3.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,3.0,1.0,5.0
+17.0,female,primary school,never smoked,never,few hours a day,5.0,3.0,1.0,1.0,1.0,5.0,3.0,3.0,5.0,5.0,2.0,3.0,4.0,4.0,4.0,2.0,4.0,2.0,1.0
+22.0,male,college/bachelor degree,former smoker,social drinker,less than an hour a day,5.0,3.0,3.0,2.0,1.0,1.0,1.0,3.0,5.0,5.0,3.0,2.0,4.0,3.0,5.0,4.0,1.0,2.0,1.0
+26.0,male,masters degree,tried smoking,never,few hours a day,5.0,3.0,1.0,4.0,2.0,4.0,3.0,1.0,5.0,5.0,3.0,1.0,3.0,3.0,3.0,5.0,2.0,1.0,3.0
+20.0,female,masters degree,tried smoking,social drinker,few hours a day,4.0,3.0,1.0,3.0,3.0,5.0,2.0,2.0,4.0,4.0,3.0,1.0,2.0,2.0,4.0,3.0,2.0,1.0,4.0
+22.0,male,secondary school,tried smoking,never,few hours a day,4.0,3.0,1.0,2.0,2.0,5.0,2.0,1.0,1.0,2.0,1.0,1.0,1.0,4.0,1.0,1.0,1.0,4.0,5.0
+21.0,male,secondary school,current smoker,social drinker,few hours a day,4.0,4.0,2.0,1.0,1.0,3.0,3.0,2.0,5.0,4.0,5.0,2.0,2.0,1.0,4.0,4.0,1.0,1.0,1.0
+23.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,4.0,3.0,3.0,4.0,3.0,3.0,4.0,3.0,3.0,4.0,4.0,5.0,3.0,3.0,5.0,3.0,3.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,3.0,2.0,4.0,4.0,4.0,5.0,4.0,3.0,2.0,4.0,3.0,2.0,3.0,4.0,1.0,5.0
+20.0,male,college/bachelor degree,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,2.0,1.0,2.0,5.0,4.0,3.0,1.0,1.0,5.0,4.0,4.0,3.0,4.0,3.0,4.0,3.0
+21.0,female,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,4.0,2.0,2.0,2.0,3.0,4.0,2.0,5.0,1.0,2.0,1.0,1.0,4.0,5.0,5.0,1.0,1.0,2.0
+19.0,female,secondary school,never smoked,never,less than an hour a day,3.0,3.0,3.0,1.0,1.0,2.0,5.0,3.0,2.0,1.0,1.0,4.0,3.0,3.0,4.0,1.0,5.0,3.0,1.0
+29.0,female,masters degree,tried smoking,social drinker,less than an hour a day,4.0,2.0,2.0,4.0,2.0,3.0,3.0,4.0,2.0,1.0,1.0,1.0,1.0,3.0,2.0,2.0,3.0,2.0,4.0
+22.0,female,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,3.0,1.0,2.0,2.0,2.0,1.0,4.0,3.0,2.0,2.0,1.0,1.0,2.0,1.0,5.0,1.0,5.0,1.0
+19.0,female,college/bachelor degree,never smoked,social drinker,less than an hour a day,3.0,3.0,3.0,3.0,2.0,5.0,4.0,3.0,3.0,1.0,1.0,3.0,2.0,2.0,2.0,2.0,2.0,1.0,4.0
+17.0,female,primary school,never smoked,social drinker,few hours a day,5.0,3.0,1.0,3.0,2.0,5.0,3.0,1.0,4.0,5.0,4.0,1.0,1.0,1.0,3.0,2.0,1.0,1.0,4.0
+16.0,female,primary school,never smoked,social drinker,few hours a day,4.0,4.0,2.0,2.0,2.0,4.0,2.0,2.0,4.0,5.0,3.0,2.0,3.0,2.0,3.0,3.0,2.0,2.0,3.0
+29.0,female,masters degree,former smoker,social drinker,less than an hour a day,5.0,3.0,2.0,5.0,2.0,4.0,5.0,5.0,2.0,1.0,1.0,1.0,3.0,4.0,3.0,4.0,3.0,1.0,4.0
+18.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,1.0,4.0,1.0,2.0,3.0,3.0,5.0,4.0,1.0,3.0,5.0,2.0,1.0,3.0,2.0,3.0,4.0,1.0
+26.0,male,masters degree,tried smoking,never,few hours a day,5.0,3.0,1.0,4.0,3.0,5.0,3.0,1.0,5.0,5.0,4.0,1.0,3.0,3.0,5.0,5.0,1.0,1.0,3.0
+19.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,1.0,2.0,1.0,3.0,2.0,2.0,4.0,2.0,4.0,2.0,3.0,1.0,5.0,5.0,1.0,1.0,1.0
+19.0,male,secondary school,current smoker,never,few hours a day,5.0,3.0,2.0,2.0,2.0,3.0,2.0,2.0,3.0,1.0,1.0,5.0,3.0,3.0,3.0,3.0,2.0,1.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,2.0,2.0,2.0,3.0,4.0,4.0,3.0,3.0,4.0,4.0,3.0,3.0,3.0,3.0,3.0,3.0
+22.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,3.0,1.0,4.0,2.0,2.0,1.0,1.0,3.0,2.0,2.0,1.0,1.0,3.0,1.0,1.0
+20.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,3.0,4.0,2.0,2.0,2.0,3.0,5.0,3.0,5.0,5.0,4.0,2.0,5.0,2.0,2.0,2.0,2.0
+21.0,male,secondary school,former smoker,social drinker,less than an hour a day,5.0,4.0,4.0,1.0,1.0,1.0,1.0,2.0,3.0,1.0,1.0,4.0,2.0,1.0,1.0,1.0,2.0,4.0,1.0
+21.0,male,secondary school,tried smoking,social drinker,most of the day,4.0,3.0,3.0,1.0,2.0,4.0,3.0,4.0,4.0,4.0,3.0,5.0,4.0,3.0,4.0,2.0,2.0,2.0,1.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,4.0,3.0,3.0,3.0,5.0,5.0,1.0,3.0,5.0,5.0,1.0,5.0,5.0,3.0,2.0,1.0
+15.0,male,primary school,never smoked,never,few hours a day,5.0,3.0,5.0,1.0,1.0,1.0,1.0,3.0,2.0,1.0,1.0,5.0,3.0,1.0,1.0,1.0,1.0,4.0,1.0
+19.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,3.0,4.0,2.0,2.0,3.0,1.0,4.0,5.0,3.0,3.0,3.0,3.0,2.0,2.0,2.0,4.0,3.0,3.0
+24.0,female,college/bachelor degree,never smoked,drink a lot,few hours a day,5.0,3.0,3.0,3.0,2.0,3.0,3.0,2.0,5.0,4.0,4.0,2.0,5.0,4.0,5.0,4.0,3.0,1.0,2.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,1.0,2.0,4.0,3.0,5.0,5.0,4.0,4.0,3.0,1.0,1.0,1.0,4.0,5.0,3.0,4.0,1.0,5.0
+25.0,male,college/bachelor degree,tried smoking,drink a lot,few hours a day,5.0,3.0,5.0,2.0,2.0,5.0,5.0,3.0,4.0,4.0,3.0,1.0,2.0,4.0,4.0,3.0,1.0,1.0,5.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,3.0,3.0,4.0,5.0,3.0,3.0,1.0,4.0,2.0,2.0,3.0,4.0,2.0,4.0,1.0,4.0
+19.0,female,secondary school,current smoker,social drinker,less than an hour a day,5.0,3.0,3.0,2.0,1.0,3.0,2.0,4.0,4.0,1.0,5.0,4.0,5.0,5.0,5.0,3.0,3.0,1.0,2.0
+21.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,2.0,4.0,3.0,3.0,4.0,3.0,2.0,5.0,4.0,3.0,5.0,4.0,5.0,4.0,2.0,4.0,2.0,2.0
+23.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,5.0,5.0,5.0,5.0,1.0,4.0,5.0,4.0,3.0,4.0,4.0,4.0,5.0,3.0,4.0,5.0,1.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,5.0,1.0,2.0,2.0,5.0,5.0,5.0,1.0,1.0,5.0,4.0,4.0,5.0,2.0,5.0,4.0,1.0
+20.0,male,secondary school,tried smoking,drink a lot,most of the day,5.0,3.0,1.0,3.0,3.0,5.0,1.0,2.0,4.0,2.0,3.0,3.0,2.0,4.0,5.0,5.0,1.0,2.0,5.0
+20.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,4.0,4.0,2.0,3.0,3.0,4.0,5.0,5.0,2.0,5.0,4.0,2.0,2.0,2.0,4.0,3.0,5.0,2.0
+18.0,female,primary school,tried smoking,social drinker,less than an hour a day,4.0,3.0,2.0,2.0,2.0,3.0,3.0,3.0,5.0,4.0,3.0,2.0,2.0,5.0,5.0,4.0,3.0,1.0,2.0
+27.0,male,secondary school,former smoker,social drinker,few hours a day,1.0,3.0,2.0,2.0,1.0,1.0,1.0,3.0,1.0,1.0,1.0,5.0,1.0,1.0,1.0,1.0,5.0,1.0,1.0
+17.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,1.0,1.0,1.0,1.0,1.0,1.0,4.0,5.0,3.0,2.0,1.0,1.0,3.0,1.0,1.0,2.0,1.0
+19.0,female,primary school,never smoked,social drinker,few hours a day,5.0,3.0,4.0,1.0,3.0,2.0,5.0,4.0,3.0,1.0,2.0,3.0,1.0,2.0,4.0,4.0,3.0,2.0,3.0
+18.0,male,primary school,tried smoking,social drinker,few hours a day,5.0,4.0,2.0,1.0,3.0,2.0,3.0,4.0,3.0,1.0,1.0,4.0,3.0,1.0,2.0,2.0,1.0,3.0,2.0
+26.0,male,secondary school,current smoker,social drinker,less than an hour a day,5.0,5.0,5.0,1.0,1.0,1.0,2.0,3.0,1.0,1.0,1.0,5.0,2.0,1.0,1.0,1.0,2.0,5.0,1.0
+18.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,4.0,3.0,3.0,4.0,2.0,1.0,3.0,1.0,2.0,5.0,4.0,4.0,2.0,5.0,3.0,1.0,3.0
+30.0,male,masters degree,current smoker,drink a lot,few hours a day,5.0,3.0,4.0,5.0,1.0,4.0,3.0,3.0,5.0,5.0,4.0,5.0,5.0,5.0,4.0,4.0,3.0,4.0,3.0
+24.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,3.0,2.0,4.0,4.0,3.0,5.0,5.0,3.0,3.0,2.0,1.0,4.0,3.0,3.0,3.0,1.0,1.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,3.0,2.0,3.0,1.0,4.0,2.0,2.0,1.0,4.0,3.0,4.0,2.0,2.0,5.0,2.0,2.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,2.0,3.0,5.0,4.0,4.0,5.0,3.0,4.0,3.0,3.0,2.0,3.0,5.0,2.0,1.0,2.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,2.0,3.0,2.0,4.0,4.0,2.0,5.0,2.0,4.0,3.0,4.0,4.0,5.0,5.0,3.0,2.0,2.0
+25.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,5.0,5.0,5.0,4.0,3.0,3.0,4.0,5.0,3.0,3.0,5.0,3.0,2.0,3.0,1.0,2.0,3.0,1.0
+19.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,2.0,2.0,4.0,3.0,5.0,3.0,2.0,4.0,3.0,3.0,2.0,3.0,5.0,3.0,4.0,4.0,1.0,3.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,3.0,5.0,3.0,4.0,2.0,3.0,3.0,1.0,2.0,1.0,2.0,5.0,4.0,4.0,3.0,2.0,3.0
+21.0,male,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,4.0,2.0,4.0,1.0,1.0,4.0,3.0,1.0,4.0,2.0,5.0,3.0,3.0,2.0,2.0,3.0,3.0
+19.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,2.0,2.0,5.0,4.0,5.0,5.0,5.0,3.0,1.0,3.0,4.0,3.0,3.0,3.0,3.0,5.0,2.0,3.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,1.0,3.0,2.0,3.0,2.0,2.0,4.0,5.0,3.0,3.0,1.0,2.0,3.0,5.0,1.0,5.0,1.0,1.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,1.0,2.0,4.0,4.0,1.0,2.0,3.0,2.0,2.0,3.0,4.0,5.0,3.0,1.0,4.0,3.0,1.0
+18.0,female,primary school,current smoker,social drinker,few hours a day,4.0,4.0,4.0,2.0,2.0,4.0,3.0,4.0,4.0,4.0,4.0,4.0,4.0,2.0,4.0,3.0,4.0,4.0,1.0
+18.0,female,college/bachelor degree,never smoked,social drinker,few hours a day,4.0,4.0,4.0,4.0,3.0,2.0,1.0,4.0,5.0,4.0,4.0,2.0,4.0,1.0,3.0,4.0,5.0,1.0,1.0
+16.0,female,secondary school,tried smoking,never,few hours a day,5.0,3.0,1.0,1.0,1.0,3.0,3.0,3.0,5.0,4.0,2.0,1.0,1.0,3.0,4.0,2.0,4.0,1.0,2.0
+19.0,female,secondary school,tried smoking,drink a lot,less than an hour a day,1.0,3.0,3.0,3.0,2.0,3.0,5.0,4.0,4.0,3.0,3.0,2.0,4.0,3.0,4.0,2.0,4.0,1.0,1.0
+18.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,4.0,4.0,2.0,1.0,3.0,3.0,4.0,3.0,1.0,1.0,5.0,4.0,3.0,2.0,2.0,5.0,3.0,2.0
+19.0,female,primary school,former smoker,drink a lot,few hours a day,5.0,2.0,2.0,1.0,2.0,2.0,3.0,4.0,2.0,1.0,1.0,5.0,3.0,2.0,3.0,2.0,4.0,1.0,1.0
+21.0,female,secondary school,former smoker,social drinker,less than an hour a day,5.0,3.0,4.0,2.0,1.0,5.0,2.0,2.0,4.0,1.0,3.0,3.0,3.0,4.0,4.0,4.0,2.0,2.0,4.0
+21.0,male,college/bachelor degree,former smoker,never,few hours a day,3.0,4.0,2.0,1.0,1.0,1.0,1.0,2.0,3.0,2.0,1.0,2.0,2.0,2.0,2.0,2.0,1.0,2.0,1.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,2.0,1.0,1.0,3.0,5.0,3.0,3.0,1.0,2.0,5.0,3.0,3.0,3.0,3.0,2.0,1.0,4.0
+21.0,female,secondary school,never smoked,never,less than an hour a day,3.0,3.0,3.0,2.0,1.0,2.0,5.0,5.0,4.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,4.0,1.0,3.0
+17.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,2.0,1.0,2.0,4.0,5.0,5.0,5.0,1.0,4.0,1.0,2.0,4.0,5.0,4.0,3.0,1.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,3.0,5.0,2.0,4.0,3.0,5.0,5.0,5.0,2.0,3.0,2.0,3.0,3.0,4.0,3.0,5.0,2.0,1.0
+19.0,female,primary school,tried smoking,social drinker,less than an hour a day,5.0,3.0,2.0,3.0,3.0,2.0,2.0,3.0,4.0,3.0,4.0,4.0,5.0,4.0,5.0,5.0,3.0,1.0,1.0
+27.0,male,masters degree,tried smoking,never,few hours a day,5.0,3.0,3.0,2.0,3.0,4.0,1.0,4.0,5.0,2.0,2.0,3.0,4.0,4.0,4.0,1.0,5.0,1.0,4.0
+22.0,female,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,3.0,3.0,2.0,1.0,4.0,5.0,3.0,5.0,2.0,3.0,3.0,4.0,5.0,3.0,5.0,4.0,2.0,1.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,1.0,1.0,4.0,3.0,4.0,5.0,4.0,3.0,4.0,2.0,2.0,2.0,2.0,2.0,3.0,3.0
+19.0,female,secondary school,never smoked,social drinker,no time at all,5.0,3.0,3.0,4.0,4.0,4.0,4.0,5.0,5.0,4.0,4.0,2.0,2.0,4.0,4.0,4.0,5.0,2.0,4.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,1.0,2.0,2.0,4.0,3.0,2.0,2.0,4.0,4.0,2.0,2.0,2.0,4.0,2.0,1.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,5.0,5.0,2.0,2.0,3.0,5.0,5.0,5.0,2.0,4.0,4.0,4.0,3.0,3.0,2.0,4.0,5.0,2.0
+20.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,2.0,2.0,2.0,3.0,3.0,3.0,4.0,5.0,1.0,2.0,2.0,1.0,3.0,2.0,5.0,4.0,2.0,4.0
+17.0,female,primary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,2.0,1.0,1.0,3.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+23.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,5.0,3.0,2.0,2.0,5.0,5.0,3.0,1.0,1.0,4.0,2.0,1.0,5.0,2.0,5.0,3.0,2.0
+20.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,2.0,5.0,4.0,5.0,5.0,3.0,5.0,4.0,3.0,3.0,3.0,4.0,4.0,4.0,5.0,1.0,4.0
+20.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,3.0,4.0,2.0,1.0,2.0,5.0,2.0,1.0,1.0,3.0,2.0,1.0,2.0,1.0,5.0,1.0,1.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,3.0,2.0,3.0,3.0,4.0,4.0,3.0,1.0,4.0,2.0,3.0,3.0,3.0,2.0,5.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,4.0,1.0,2.0,1.0,5.0,1.0,1.0,5.0,5.0,2.0,1.0,1.0,4.0,3.0,5.0,2.0,1.0,1.0
+19.0,male,secondary school,current smoker,social drinker,few hours a day,2.0,3.0,3.0,3.0,3.0,2.0,2.0,3.0,4.0,2.0,2.0,2.0,1.0,3.0,5.0,2.0,5.0,1.0,5.0
+19.0,male,secondary school,tried smoking,never,few hours a day,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0
+18.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,4.0,2.0,3.0,2.0,2.0,5.0,2.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,3.0,1.0,1.0
+19.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,4.0,3.0,4.0,2.0,5.0,4.0,2.0,5.0,2.0,1.0,3.0,3.0,5.0,3.0,5.0,2.0,3.0,4.0
+15.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,5.0,5.0,2.0,2.0,2.0,4.0,5.0,4.0,2.0,2.0,4.0,3.0,2.0,4.0,3.0,5.0,3.0,2.0
+19.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,3.0,3.0,3.0,3.0,1.0,3.0,3.0,5.0,4.0,3.0,3.0,5.0,4.0,3.0,3.0,3.0,3.0,3.0,3.0
+15.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,3.0,3.0,2.0,1.0,2.0,3.0,5.0,2.0,1.0,1.0,4.0,3.0,3.0,2.0,1.0,1.0,1.0,1.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,3.0,2.0,3.0,3.0,4.0,4.0,1.0,1.0,2.0,2.0,4.0,3.0,1.0,4.0,1.0,2.0
+21.0,female,masters degree,never smoked,never,few hours a day,5.0,3.0,4.0,3.0,4.0,4.0,3.0,2.0,4.0,4.0,4.0,3.0,2.0,2.0,3.0,2.0,3.0,2.0,3.0
+19.0,female,college/bachelor degree,never smoked,never,few hours a day,5.0,3.0,3.0,2.0,1.0,2.0,2.0,5.0,2.0,1.0,1.0,2.0,3.0,3.0,3.0,2.0,5.0,1.0,2.0
+17.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,2.0,4.0,4.0,3.0,5.0,3.0,4.0,1.0,1.0,1.0,3.0,2.0,4.0,2.0,4.0
+23.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,1.0,1.0,3.0,4.0,5.0,4.0,5.0,5.0,5.0,5.0,5.0,5.0,3.0,2.0,1.0
+24.0,male,secondary school,never smoked,social drinker,less than an hour a day,5.0,3.0,4.0,3.0,1.0,1.0,1.0,4.0,5.0,5.0,5.0,5.0,5.0,4.0,5.0,4.0,2.0,1.0,1.0
+19.0,female,secondary school,former smoker,social drinker,less than an hour a day,5.0,3.0,2.0,4.0,3.0,5.0,3.0,2.0,5.0,5.0,5.0,2.0,5.0,4.0,3.0,5.0,2.0,1.0,5.0
+19.0,female,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,3.0,4.0,2.0,2.0,4.0,4.0,4.0,4.0,2.0,4.0,4.0,4.0,5.0,4.0,4.0,4.0,4.0,3.0
+22.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,4.0,5.0,3.0,3.0,2.0,2.0,4.0,3.0,1.0,1.0,4.0,3.0,2.0,4.0,1.0,3.0,2.0,1.0
+20.0,female,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,3.0,3.0,3.0,4.0,4.0,5.0,3.0,4.0,4.0,3.0,2.0,2.0,4.0,3.0,3.0,5.0,4.0,3.0
+21.0,female,college/bachelor degree,tried smoking,never,few hours a day,5.0,4.0,5.0,3.0,5.0,2.0,2.0,5.0,5.0,4.0,3.0,1.0,1.0,1.0,4.0,3.0,3.0,1.0,1.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,1.0,3.0,3.0,1.0,4.0,5.0,3.0,1.0,2.0,2.0,3.0,5.0,1.0,2.0,2.0,2.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,5.0,2.0,4.0,3.0,3.0,4.0,2.0,3.0,5.0,5.0,2.0,3.0,5.0,4.0,3.0,3.0
+20.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,3.0,4.0,2.0,2.0,2.0,1.0,4.0,3.0,1.0,3.0,3.0,3.0,1.0,1.0,1.0,2.0,2.0,1.0
+18.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,4.0,2.0,1.0,3.0,4.0,2.0,5.0,5.0,3.0,2.0,3.0,2.0,2.0,4.0,5.0,5.0,2.0
+19.0,male,secondary school,former smoker,drink a lot,few hours a day,5.0,3.0,4.0,2.0,3.0,4.0,1.0,2.0,4.0,4.0,5.0,4.0,4.0,5.0,5.0,2.0,5.0,3.0,2.0
+20.0,female,secondary school,tried smoking,never,less than an hour a day,5.0,3.0,1.0,1.0,2.0,1.0,2.0,3.0,2.0,1.0,1.0,1.0,2.0,1.0,2.0,2.0,3.0,1.0,1.0
+22.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,4.0,2.0,3.0,3.0,2.0,4.0,4.0,2.0,4.0,4.0,3.0,5.0,3.0,2.0,3.0,3.0,2.0
+20.0,male,secondary school,never smoked,social drinker,most of the day,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,1.0,1.0,3.0,3.0,5.0,5.0,1.0,1.0,3.0,1.0,2.0,1.0,1.0,1.0,1.0,4.0
+27.0,female,masters degree,former smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,4.0,3.0,4.0,4.0,1.0,3.0,5.0,5.0,3.0,3.0,4.0,4.0,1.0,1.0
+19.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,3.0,2.0,4.0,4.0,2.0,4.0,4.0,1.0,3.0,3.0,4.0,2.0,3.0,3.0
+22.0,male,secondary school,tried smoking,never,few hours a day,5.0,3.0,5.0,3.0,2.0,3.0,1.0,2.0,3.0,2.0,1.0,4.0,4.0,2.0,3.0,1.0,4.0,5.0,1.0
+19.0,male,college/bachelor degree,current smoker,drink a lot,most of the day,5.0,3.0,4.0,2.0,2.0,3.0,4.0,4.0,4.0,2.0,2.0,4.0,1.0,2.0,4.0,1.0,2.0,2.0,3.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,4.0,1.0,1.0,2.0,4.0,4.0,4.0,1.0,1.0,4.0,3.0,4.0,4.0,3.0,4.0,1.0,1.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,5.0,4.0,4.0,3.0,4.0,3.0,4.0,3.0,3.0,2.0,3.0
+21.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,4.0,5.0,2.0,3.0,2.0,5.0,5.0,4.0,1.0,3.0,3.0,3.0,3.0,3.0,3.0,5.0,2.0,1.0
+16.0,female,primary school,tried smoking,never,few hours a day,5.0,1.0,2.0,2.0,2.0,4.0,4.0,1.0,5.0,4.0,5.0,1.0,4.0,3.0,3.0,5.0,2.0,1.0,2.0
+19.0,female,secondary school,former smoker,never,less than an hour a day,5.0,3.0,2.0,2.0,1.0,4.0,2.0,3.0,4.0,1.0,4.0,4.0,4.0,4.0,3.0,4.0,4.0,1.0,2.0
+18.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,2.0,5.0,3.0,3.0,4.0,5.0,3.0,2.0,2.0,4.0,3.0,5.0,5.0,3.0,1.0,4.0
+23.0,male,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,4.0,5.0,1.0,1.0,1.0,1.0,5.0,3.0,2.0,2.0,2.0,4.0,1.0,3.0,3.0,1.0,5.0,1.0
+19.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,2.0,1.0,2.0,3.0,2.0,2.0,3.0,2.0,3.0,1.0,3.0,3.0,2.0,4.0,2.0,4.0,2.0
+19.0,female,secondary school,tried smoking,drink a lot,less than an hour a day,5.0,3.0,5.0,2.0,3.0,2.0,2.0,4.0,3.0,1.0,1.0,5.0,4.0,4.0,5.0,1.0,5.0,2.0,1.0
+22.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,1.0,1.0,3.0,4.0,2.0,4.0,1.0,3.0,5.0,5.0,3.0,2.0,2.0,3.0,1.0,2.0
+18.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,2.0,1.0,5.0,2.0,5.0,2.0,2.0,4.0,5.0,3.0,1.0,1.0,3.0,3.0,5.0,1.0,1.0,5.0
+20.0,male,college/bachelor degree,never smoked,social drinker,few hours a day,4.0,2.0,1.0,2.0,1.0,5.0,2.0,1.0,5.0,5.0,1.0,1.0,1.0,2.0,1.0,2.0,1.0,1.0,4.0
+19.0,female,secondary school,tried smoking,social drinker,less than an hour a day,5.0,4.0,5.0,4.0,1.0,2.0,5.0,5.0,5.0,2.0,2.0,5.0,3.0,1.0,4.0,1.0,5.0,1.0,2.0
+25.0,female,masters degree,never smoked,social drinker,few hours a day,4.0,5.0,2.0,2.0,4.0,2.0,5.0,4.0,5.0,4.0,2.0,4.0,2.0,2.0,3.0,1.0,5.0,1.0,1.0
+18.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,2.0,2.0,1.0,4.0,4.0,4.0,4.0,2.0,1.0,2.0,3.0,2.0,2.0,1.0,2.0,1.0,3.0
+20.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,1.0,2.0,2.0,2.0,5.0,2.0,3.0,2.0,2.0,3.0,4.0,5.0,1.0,1.0,2.0
+15.0,female,primary school,never smoked,social drinker,few hours a day,5.0,5.0,5.0,3.0,3.0,3.0,3.0,3.0,4.0,2.0,4.0,4.0,5.0,5.0,5.0,5.0,5.0,4.0,1.0
+19.0,female,secondary school,never smoked,never,few hours a day,5.0,3.0,1.0,4.0,3.0,2.0,5.0,2.0,5.0,4.0,3.0,1.0,1.0,5.0,5.0,3.0,3.0,1.0,1.0
+19.0,female,secondary school,tried smoking,never,few hours a day,5.0,5.0,5.0,2.0,3.0,3.0,2.0,4.0,3.0,1.0,1.0,3.0,1.0,1.0,1.0,2.0,3.0,4.0,1.0
+16.0,female,secondary school,never smoked,never,few hours a day,5.0,3.0,4.0,2.0,1.0,3.0,3.0,3.0,4.0,1.0,1.0,4.0,1.0,1.0,4.0,2.0,2.0,2.0,1.0
+19.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,5.0,4.0,1.0,1.0,3.0,2.0,4.0,4.0,2.0,1.0,1.0,2.0,1.0,1.0,1.0,3.0,5.0,3.0
+18.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,4.0,5.0,5.0,2.0,5.0,5.0,5.0,5.0,2.0,2.0,5.0,5.0,5.0,3.0,3.0,5.0,2.0,5.0
+15.0,male,primary school,tried smoking,social drinker,few hours a day,2.0,4.0,2.0,1.0,1.0,2.0,2.0,3.0,4.0,3.0,2.0,3.0,3.0,3.0,3.0,2.0,1.0,2.0,1.0
+20.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,4.0,3.0,2.0,2.0,4.0,3.0,4.0,2.0,1.0,1.0,4.0,1.0,3.0,4.0,2.0,4.0,2.0,2.0
+20.0,male,secondary school,never smoked,never,few hours a day,5.0,4.0,5.0,4.0,5.0,4.0,5.0,5.0,5.0,5.0,5.0,2.0,5.0,5.0,5.0,5.0,5.0,5.0,4.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,1.0,1.0,1.0,3.0,3.0,5.0,2.0,1.0,1.0,2.0,1.0,1.0,1.0,2.0,2.0,1.0,2.0
+20.0,female,secondary school,former smoker,social drinker,less than an hour a day,5.0,3.0,4.0,1.0,1.0,1.0,3.0,3.0,3.0,1.0,2.0,3.0,2.0,1.0,1.0,2.0,2.0,4.0,2.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,2.0,2.0,2.0,1.0,3.0,5.0,1.0,2.0,2.0,1.0,2.0,3.0,3.0,4.0,4.0,1.0
+16.0,female,currently a primary school pupil,never smoked,social drinker,less than an hour a day,5.0,3.0,2.0,3.0,4.0,3.0,3.0,3.0,1.0,1.0,3.0,3.0,2.0,4.0,4.0,3.0,3.0,2.0,1.0
+18.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,4.0,3.0,2.0,4.0,5.0,5.0,4.0,1.0,2.0,3.0,3.0,4.0,3.0,4.0,4.0,3.0,2.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,2.0,2.0,2.0,2.0,3.0,5.0,4.0,3.0,2.0,3.0,2.0,2.0,5.0,2.0,4.0,1.0
+16.0,female,college/bachelor degree,never smoked,never,few hours a day,5.0,3.0,3.0,2.0,4.0,3.0,4.0,4.0,5.0,2.0,2.0,5.0,2.0,3.0,5.0,3.0,4.0,3.0,1.0
+18.0,female,primary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,2.0,1.0,4.0,3.0,2.0,5.0,5.0,5.0,1.0,3.0,3.0,5.0,5.0,3.0,1.0,2.0
+20.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,2.0,2.0,1.0,4.0,5.0,4.0,5.0,4.0,1.0,3.0,1.0,1.0,1.0,3.0,1.0,3.0,1.0,5.0
+18.0,female,primary school,never smoked,social drinker,few hours a day,5.0,3.0,4.0,2.0,2.0,2.0,2.0,5.0,3.0,2.0,3.0,2.0,3.0,3.0,3.0,3.0,3.0,2.0,2.0
+19.0,male,secondary school,tried smoking,social drinker,less than an hour a day,5.0,3.0,4.0,4.0,3.0,3.0,3.0,4.0,4.0,4.0,4.0,5.0,5.0,2.0,4.0,3.0,3.0,4.0,2.0
+19.0,female,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,4.0,3.0,2.0,2.0,3.0,2.0,5.0,4.0,2.0,2.0,2.0,3.0,3.0,3.0,3.0,3.0,3.0,1.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,1.0,4.0,4.0,5.0,3.0,1.0,1.0,5.0,4.0,3.0,4.0,2.0,3.0,1.0,2.0
+18.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,5.0,3.0,3.0,4.0,2.0,1.0,2.0,5.0,4.0,5.0,2.0,4.0,3.0,2.0,5.0,3.0,1.0,1.0
+17.0,female,primary school,never smoked,drink a lot,few hours a day,5.0,3.0,4.0,2.0,3.0,3.0,2.0,4.0,4.0,1.0,2.0,4.0,2.0,2.0,3.0,2.0,2.0,3.0,1.0
+22.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,1.0,4.0,3.0,3.0,5.0,3.0,3.0,3.0,2.0,3.0,3.0,4.0,2.0,3.0,2.0
+17.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,5.0,3.0,2.0,3.0,3.0,3.0,2.0,5.0,2.0,2.0,5.0,1.0,5.0,5.0,1.0,2.0,4.0,1.0
+22.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,3.0,2.0,3.0,3.0,5.0,3.0,2.0,1.0,1.0,2.0,3.0,1.0,1.0,1.0,5.0,1.0,1.0
+16.0,female,secondary school,never smoked,never,few hours a day,5.0,2.0,3.0,2.0,3.0,3.0,4.0,5.0,4.0,2.0,2.0,3.0,2.0,3.0,3.0,2.0,3.0,2.0,2.0
+24.0,female,masters degree,never smoked,never,few hours a day,5.0,2.0,2.0,3.0,3.0,2.0,3.0,2.0,3.0,2.0,2.0,2.0,2.0,4.0,1.0,4.0,4.0,1.0,1.0
+17.0,male,primary school,tried smoking,social drinker,few hours a day,5.0,5.0,4.0,3.0,2.0,3.0,3.0,4.0,4.0,2.0,2.0,4.0,4.0,4.0,3.0,2.0,2.0,4.0,2.0
+17.0,male,secondary school,never smoked,never,few hours a day,5.0,4.0,3.0,1.0,2.0,3.0,2.0,5.0,3.0,1.0,2.0,3.0,3.0,3.0,2.0,3.0,1.0,4.0,2.0
+17.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,5.0,1.0,2.0,3.0,2.0,3.0,3.0,1.0,1.0,5.0,2.0,2.0,1.0,2.0,1.0,5.0,3.0
+15.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,4.0,3.0,3.0,5.0,2.0,2.0,2.0,1.0,1.0,2.0,1.0,1.0,2.0,2.0
+18.0,female,primary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,2.0,1.0,5.0,3.0,2.0,5.0,5.0,5.0,1.0,3.0,3.0,5.0,5.0,2.0,1.0,3.0
+18.0,female,primary school,tried smoking,social drinker,few hours a day,5.0,1.0,1.0,3.0,2.0,5.0,3.0,2.0,3.0,1.0,2.0,3.0,3.0,2.0,2.0,4.0,2.0,1.0,3.0
+16.0,male,primary school,former smoker,social drinker,most of the day,5.0,4.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,2.0,2.0,5.0,1.0,1.0,1.0,1.0,1.0,5.0,1.0
+20.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,3.0,3.0,2.0,2.0,2.0,4.0,3.0,3.0,1.0,2.0,4.0,4.0,3.0,3.0,3.0,4.0,3.0,2.0
+29.0,female,masters degree,tried smoking,social drinker,less than an hour a day,5.0,4.0,3.0,5.0,2.0,2.0,5.0,5.0,4.0,2.0,2.0,1.0,2.0,2.0,5.0,2.0,5.0,1.0,2.0
+24.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,4.0,4.0,1.0,2.0,5.0,3.0,1.0,1.0,2.0,1.0,1.0,4.0,3.0,3.0,1.0,1.0
+18.0,female,secondary school,tried smoking,social drinker,less than an hour a day,4.0,3.0,4.0,2.0,1.0,1.0,2.0,4.0,4.0,3.0,4.0,2.0,3.0,2.0,2.0,2.0,2.0,3.0,1.0
+17.0,male,primary school,current smoker,drink a lot,few hours a day,5.0,4.0,1.0,1.0,1.0,1.0,1.0,3.0,3.0,1.0,1.0,5.0,5.0,1.0,3.0,1.0,2.0,4.0,1.0
+18.0,male,primary school,tried smoking,drink a lot,most of the day,5.0,4.0,3.0,2.0,2.0,2.0,2.0,4.0,4.0,4.0,4.0,2.0,2.0,3.0,2.0,1.0,1.0,2.0,1.0
+16.0,male,secondary school,never smoked,never,few hours a day,5.0,4.0,3.0,5.0,2.0,5.0,5.0,4.0,2.0,1.0,1.0,1.0,2.0,5.0,5.0,3.0,3.0,2.0,5.0
+17.0,female,primary school,never smoked,social drinker,few hours a day,5.0,4.0,5.0,2.0,1.0,2.0,3.0,5.0,2.0,1.0,1.0,3.0,2.0,3.0,3.0,1.0,2.0,4.0,1.0
+20.0,male,college/bachelor degree,tried smoking,social drinker,most of the day,2.0,3.0,4.0,2.0,2.0,1.0,1.0,4.0,4.0,3.0,3.0,2.0,3.0,1.0,1.0,3.0,1.0,2.0,1.0
+16.0,female,primary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,4.0,5.0,3.0,5.0,5.0,2.0,4.0,1.0,4.0,4.0,4.0,5.0,3.0,1.0,3.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,5.0,2.0,1.0,3.0,2.0,1.0,2.0,5.0,5.0,1.0,1.0,1.0,1.0,5.0,1.0,2.0,1.0,2.0
+18.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,3.0,1.0,2.0,3.0,2.0,4.0,2.0,1.0,1.0,4.0,2.0,2.0,3.0,5.0,2.0,1.0,3.0
+20.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,3.0,3.0,2.0,4.0,4.0,4.0,4.0,2.0,3.0,3.0,2.0,2.0,2.0,3.0,2.0,3.0,4.0
+19.0,male,secondary school,former smoker,drink a lot,few hours a day,5.0,4.0,2.0,1.0,3.0,1.0,2.0,4.0,3.0,1.0,1.0,5.0,2.0,1.0,2.0,1.0,3.0,2.0,1.0
+18.0,male,secondary school,tried smoking,social drinker,few hours a day,4.0,4.0,3.0,3.0,4.0,4.0,4.0,5.0,5.0,3.0,2.0,4.0,4.0,3.0,4.0,2.0,3.0,2.0,3.0
+21.0,male,secondary school,never smoked,never,few hours a day,5.0,4.0,3.0,1.0,1.0,2.0,2.0,2.0,4.0,4.0,3.0,5.0,2.0,2.0,1.0,1.0,4.0,3.0,2.0
+19.0,male,college/bachelor degree,current smoker,social drinker,less than an hour a day,4.0,3.0,5.0,3.0,3.0,2.0,1.0,3.0,5.0,2.0,1.0,3.0,3.0,3.0,4.0,1.0,2.0,2.0,3.0
+20.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,4.0,2.0,4.0,3.0,2.0,5.0,2.0,1.0,2.0,4.0,4.0,2.0,3.0,1.0,3.0,2.0,3.0
+23.0,female,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,3.0,4.0,1.0,2.0,1.0,3.0,5.0,5.0,1.0,1.0,5.0,5.0,3.0,4.0,3.0,3.0,1.0,2.0
+19.0,female,college/bachelor degree,tried smoking,social drinker,less than an hour a day,5.0,1.0,3.0,5.0,5.0,5.0,2.0,2.0,5.0,4.0,2.0,3.0,4.0,5.0,1.0,1.0,1.0,1.0,1.0
+19.0,female,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,3.0,2.0,3.0,2.0,4.0,5.0,3.0,5.0,4.0,5.0,2.0,4.0,3.0,4.0,3.0,4.0,2.0,4.0
+19.0,female,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,3.0,1.0,3.0,2.0,4.0,5.0,3.0,5.0,3.0,5.0,2.0,4.0,1.0,4.0,4.0,4.0,1.0,5.0
+20.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,2.0,4.0,4.0,2.0,3.0,3.0,2.0,4.0,5.0,4.0,3.0,3.0,3.0,2.0,4.0,3.0,1.0,2.0,1.0
+24.0,male,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,3.0,2.0,2.0,3.0,4.0,2.0,1.0,5.0,4.0,5.0,1.0,5.0,4.0,5.0,5.0,1.0,2.0,4.0
+19.0,male,college/bachelor degree,tried smoking,social drinker,most of the day,5.0,2.0,2.0,1.0,2.0,2.0,2.0,4.0,4.0,2.0,2.0,3.0,3.0,1.0,1.0,1.0,1.0,3.0,1.0
+20.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,3.0,1.0,3.0,4.0,1.0,5.0,5.0,4.0,4.0,1.0,2.0,5.0,5.0,5.0,1.0,3.0,1.0
+18.0,female,primary school,current smoker,drink a lot,few hours a day,5.0,4.0,5.0,2.0,2.0,3.0,3.0,5.0,3.0,1.0,1.0,3.0,4.0,3.0,3.0,1.0,5.0,1.0,3.0
+17.0,male,primary school,tried smoking,never,less than an hour a day,5.0,3.0,5.0,3.0,2.0,1.0,1.0,4.0,2.0,4.0,2.0,3.0,2.0,1.0,2.0,3.0,1.0,5.0,1.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,4.0,3.0,3.0,2.0,4.0,3.0,5.0,5.0,3.0,3.0,4.0,3.0,3.0,3.0,2.0,4.0,1.0,2.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,3.0,3.0,2.0,2.0,5.0,5.0,3.0,5.0,2.0,5.0
+20.0,male,secondary school,tried smoking,social drinker,most of the day,4.0,4.0,2.0,2.0,2.0,2.0,2.0,2.0,4.0,2.0,5.0,1.0,4.0,2.0,3.0,4.0,2.0,4.0,2.0
+20.0,male,college/bachelor degree,never smoked,drink a lot,most of the day,5.0,4.0,2.0,1.0,1.0,1.0,1.0,5.0,3.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,2.0,2.0,1.0,2.0,5.0,3.0,1.0,1.0,3.0,3.0,2.0,2.0,1.0,2.0,3.0,1.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,1.0,1.0,3.0,5.0,4.0,2.0,2.0,5.0,2.0,2.0,1.0,1.0,3.0,1.0,1.0
+20.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,5.0,3.0,1.0,1.0,1.0,1.0,4.0,1.0,1.0,1.0,5.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0
+17.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,2.0,3.0,3.0,4.0,2.0,3.0,5.0,4.0,3.0,1.0,3.0,4.0,4.0,5.0,3.0,1.0,1.0
+20.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,5.0,5.0,2.0,2.0,2.0,4.0,5.0,4.0,1.0,1.0,4.0,5.0,1.0,2.0,2.0,3.0,3.0,1.0
+25.0,male,masters degree,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,4.0,3.0,4.0,5.0,4.0,4.0,2.0,2.0,3.0,3.0,4.0,3.0,2.0,4.0,2.0,4.0
+20.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,4.0,4.0,3.0,2.0,2.0,3.0,4.0,4.0,1.0,1.0,4.0,2.0,2.0,4.0,2.0,5.0,5.0,1.0
+21.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,4.0,2.0,2.0,3.0,4.0,3.0,2.0,5.0,3.0,3.0,1.0,1.0,3.0,3.0,3.0,2.0,1.0,4.0
+21.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,4.0,3.0,4.0,2.0,2.0,5.0,1.0,1.0,1.0,4.0,2.0,1.0,2.0,2.0,5.0,4.0,1.0
+22.0,male,college/bachelor degree,current smoker,drink a lot,most of the day,5.0,3.0,2.0,2.0,2.0,3.0,4.0,3.0,5.0,3.0,4.0,3.0,3.0,3.0,3.0,5.0,1.0,2.0,3.0
+19.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,4.0,3.0,1.0,1.0,2.0,3.0,3.0,5.0,5.0,3.0,4.0,4.0,4.0,4.0,5.0,2.0,1.0,1.0
+25.0,male,college/bachelor degree,current smoker,drink a lot,few hours a day,5.0,3.0,5.0,4.0,4.0,5.0,4.0,4.0,5.0,3.0,3.0,4.0,5.0,5.0,5.0,4.0,5.0,3.0,3.0
+19.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,2.0,1.0,2.0,3.0,4.0,5.0,3.0,3.0,5.0,4.0,2.0,3.0,3.0,2.0,4.0,1.0
+25.0,female,masters degree,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,2.0,2.0,2.0,4.0,5.0,2.0,1.0,1.0,5.0,5.0,3.0,3.0,2.0,5.0,2.0,1.0
+25.0,female,masters degree,former smoker,social drinker,few hours a day,5.0,3.0,3.0,4.0,2.0,4.0,4.0,5.0,4.0,1.0,3.0,4.0,5.0,5.0,4.0,3.0,5.0,3.0,3.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,2.0,2.0,3.0,3.0,3.0,2.0,1.0,1.0,2.0,2.0,4.0,3.0,2.0,5.0,1.0,2.0
+20.0,male,secondary school,never smoked,social drinker,few hours a day,4.0,3.0,1.0,1.0,2.0,3.0,2.0,2.0,2.0,1.0,2.0,2.0,2.0,3.0,3.0,4.0,3.0,3.0,3.0
+24.0,female,masters degree,never smoked,social drinker,few hours a day,4.0,4.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,2.0,1.0,3.0,3.0,3.0,3.0,2.0,2.0,1.0,2.0
+30.0,female,masters degree,tried smoking,social drinker,less than an hour a day,5.0,4.0,4.0,3.0,1.0,3.0,2.0,4.0,3.0,1.0,1.0,5.0,3.0,1.0,2.0,2.0,5.0,2.0,1.0
+21.0,male,secondary school,former smoker,never,few hours a day,5.0,4.0,1.0,1.0,3.0,1.0,1.0,1.0,3.0,5.0,3.0,2.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0
+27.0,male,masters degree,never smoked,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,2.0,1.0,3.0,4.0,2.0,1.0,1.0,2.0,2.0,3.0,2.0,2.0,1.0,1.0
+21.0,male,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,4.0,3.0,1.0,3.0,1.0,2.0,3.0,4.0,5.0,3.0,3.0,2.0,2.0,4.0,5.0,1.0,5.0,1.0
+16.0,female,primary school,never smoked,social drinker,few hours a day,5.0,3.0,3.0,4.0,2.0,5.0,4.0,3.0,3.0,1.0,1.0,2.0,3.0,4.0,3.0,1.0,2.0,2.0,5.0
+21.0,female,college/bachelor degree,current smoker,never,most of the day,5.0,3.0,3.0,5.0,2.0,2.0,3.0,4.0,1.0,1.0,1.0,4.0,2.0,1.0,2.0,1.0,4.0,1.0,1.0
+20.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,4.0,3.0,3.0,2.0,2.0,2.0,2.0,3.0,3.0,3.0,5.0,5.0,3.0,4.0,3.0,4.0,5.0,2.0
+22.0,female,secondary school,former smoker,social drinker,less than an hour a day,5.0,4.0,2.0,4.0,1.0,5.0,5.0,4.0,4.0,3.0,4.0,2.0,4.0,3.0,3.0,4.0,2.0,1.0,5.0
+19.0,male,secondary school,tried smoking,social drinker,most of the day,5.0,3.0,4.0,1.0,2.0,3.0,1.0,4.0,2.0,1.0,1.0,3.0,3.0,2.0,2.0,2.0,1.0,4.0,3.0
+20.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,2.0,1.0,3.0,1.0,3.0,2.0,5.0,4.0,1.0,1.0,1.0,1.0,2.0,2.0,3.0,1.0,2.0
+25.0,male,masters degree,tried smoking,social drinker,most of the day,5.0,3.0,5.0,5.0,1.0,5.0,2.0,4.0,5.0,4.0,1.0,1.0,1.0,1.0,1.0,3.0,1.0,3.0,3.0
+23.0,male,secondary school,former smoker,social drinker,less than an hour a day,2.0,3.0,2.0,3.0,3.0,3.0,4.0,3.0,4.0,2.0,2.0,2.0,4.0,2.0,4.0,3.0,3.0,1.0,3.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,5.0,5.0,5.0,2.0,4.0,5.0,1.0,5.0,3.0,2.0,2.0,5.0,5.0,1.0,5.0,3.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,2.0,1.0,2.0,4.0,2.0,4.0,3.0,3.0,3.0,2.0,3.0
+21.0,female,secondary school,tried smoking,social drinker,less than an hour a day,5.0,3.0,4.0,5.0,1.0,4.0,5.0,5.0,4.0,1.0,1.0,3.0,3.0,4.0,4.0,1.0,5.0,4.0,4.0
+19.0,female,secondary school,current smoker,drink a lot,less than an hour a day,5.0,3.0,4.0,2.0,3.0,3.0,3.0,3.0,3.0,1.0,3.0,3.0,3.0,5.0,3.0,2.0,2.0,2.0,2.0
+21.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,5.0,3.0,4.0,3.0,5.0,5.0,3.0,1.0,1.0,1.0,1.0,1.0,4.0,5.0,3.0,5.0,1.0,5.0
+16.0,female,currently a primary school pupil,never smoked,never,few hours a day,5.0,4.0,5.0,1.0,5.0,1.0,5.0,4.0,4.0,1.0,3.0,4.0,2.0,3.0,4.0,3.0,2.0,4.0,1.0
+20.0,male,secondary school,current smoker,social drinker,few hours a day,5.0,5.0,4.0,2.0,1.0,3.0,1.0,4.0,5.0,1.0,5.0,4.0,1.0,1.0,5.0,3.0,1.0,1.0,1.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,3.0,4.0,5.0,5.0,1.0,1.0,4.0,2.0,4.0,3.0,1.0,5.0,2.0,2.0
+21.0,female,secondary school,current smoker,never,less than an hour a day,5.0,5.0,3.0,1.0,1.0,1.0,1.0,3.0,5.0,5.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,5.0,1.0
+21.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,4.0,3.0,1.0,2.0,2.0,4.0,4.0,4.0,4.0,2.0,2.0,2.0,4.0,2.0,2.0,3.0,2.0
+18.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,3.0,2.0,5.0,3.0,5.0,3.0,2.0,1.0,3.0,2.0,3.0,4.0,4.0,2.0,2.0,2.0
+19.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,3.0,1.0,1.0,1.0,1.0,5.0,5.0,1.0,2.0,4.0,2.0,1.0,5.0,3.0,3.0,3.0,1.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,2.0,5.0,1.0,1.0,4.0,2.0,4.0,3.0,2.0,2.0,3.0,2.0,2.0,2.0,1.0,3.0,4.0,1.0
+18.0,male,secondary school,current smoker,drink a lot,most of the day,5.0,5.0,1.0,2.0,1.0,2.0,2.0,1.0,2.0,4.0,5.0,1.0,5.0,1.0,4.0,4.0,1.0,1.0,2.0
+18.0,female,primary school,tried smoking,social drinker,less than an hour a day,5.0,1.0,4.0,4.0,2.0,2.0,3.0,5.0,1.0,1.0,1.0,1.0,2.0,1.0,2.0,2.0,4.0,1.0,2.0
+23.0,female,secondary school,former smoker,never,less than an hour a day,5.0,3.0,5.0,2.0,5.0,5.0,5.0,5.0,5.0,1.0,1.0,3.0,3.0,4.0,5.0,5.0,3.0,3.0,5.0
+20.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,4.0,1.0,1.0,1.0,3.0,1.0,2.0,5.0,3.0,5.0,1.0,3.0,2.0,1.0,1.0,1.0,1.0,3.0
+18.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,2.0,2.0,3.0,2.0,5.0,5.0,5.0,4.0,1.0,1.0,2.0,2.0,5.0,3.0,2.0,3.0,2.0,3.0
+28.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,5.0,4.0,1.0,1.0,1.0,4.0,5.0,1.0,1.0,1.0,4.0,2.0,1.0,1.0,1.0,5.0,5.0,3.0
+24.0,female,masters degree,tried smoking,never,few hours a day,5.0,2.0,3.0,2.0,1.0,3.0,3.0,5.0,4.0,3.0,3.0,1.0,3.0,3.0,3.0,3.0,3.0,2.0,3.0
+19.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,5.0,5.0,3.0,3.0,2.0,2.0,3.0,5.0,1.0,1.0,5.0,3.0,4.0,1.0,1.0,2.0,5.0,1.0
+21.0,female,secondary school,former smoker,social drinker,less than an hour a day,5.0,3.0,3.0,1.0,1.0,2.0,3.0,4.0,5.0,3.0,5.0,3.0,4.0,3.0,4.0,5.0,1.0,2.0,3.0
+22.0,female,masters degree,current smoker,social drinker,less than an hour a day,5.0,2.0,1.0,1.0,1.0,1.0,1.0,2.0,5.0,4.0,1.0,1.0,3.0,4.0,4.0,4.0,2.0,1.0,1.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,3.0,1.0,5.0,1.0,2.0,3.0,1.0,2.0,2.0,3.0,5.0,3.0,5.0,3.0,2.0,4.0
+18.0,female,primary school,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,3.0,2.0,4.0,5.0,5.0,3.0,2.0,4.0,3.0,2.0,2.0,2.0,1.0,2.0,3.0,3.0
+21.0,female,secondary school,tried smoking,drink a lot,most of the day,5.0,4.0,2.0,1.0,2.0,3.0,2.0,2.0,5.0,4.0,4.0,2.0,1.0,2.0,3.0,3.0,1.0,1.0,2.0
+19.0,female,masters degree,tried smoking,never,less than an hour a day,5.0,5.0,3.0,3.0,3.0,4.0,2.0,4.0,4.0,2.0,2.0,2.0,4.0,3.0,3.0,3.0,4.0,3.0,2.0
+19.0,male,secondary school,tried smoking,never,few hours a day,4.0,3.0,4.0,1.0,3.0,2.0,3.0,2.0,2.0,1.0,1.0,3.0,3.0,3.0,2.0,2.0,4.0,5.0,4.0
+20.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,2.0,2.0,2.0,3.0,1.0,1.0,5.0,4.0,3.0,3.0,3.0,3.0,4.0,5.0,3.0,1.0,1.0
+19.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,4.0,4.0,4.0,2.0,4.0,5.0,4.0,3.0,4.0,2.0,2.0,2.0,3.0,5.0,3.0,2.0,2.0
+18.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,4.0,1.0,2.0,2.0,3.0,5.0,3.0,1.0,1.0,4.0,3.0,3.0,2.0,1.0,5.0,4.0,1.0
+18.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,1.0,1.0,1.0,1.0,2.0,3.0,5.0,5.0,3.0,2.0,1.0,1.0,5.0,3.0,1.0,1.0,1.0
+19.0,male,secondary school,tried smoking,drink a lot,few hours a day,4.0,3.0,2.0,2.0,2.0,2.0,1.0,4.0,4.0,2.0,2.0,2.0,3.0,2.0,3.0,2.0,4.0,3.0,2.0
+18.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,2.0,1.0,1.0,1.0,2.0,3.0,3.0,1.0,2.0,3.0,1.0,1.0,3.0,1.0,1.0,4.0,1.0
+18.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,1.0,1.0,1.0,2.0,3.0,4.0,5.0,4.0,4.0,4.0,3.0,1.0,2.0,1.0,2.0,1.0,2.0
+19.0,male,secondary school,current smoker,social drinker,few hours a day,5.0,5.0,5.0,2.0,2.0,1.0,1.0,4.0,2.0,1.0,1.0,4.0,2.0,2.0,3.0,3.0,2.0,4.0,1.0
+19.0,female,secondary school,former smoker,drink a lot,few hours a day,5.0,3.0,4.0,1.0,2.0,4.0,3.0,4.0,4.0,1.0,1.0,3.0,3.0,3.0,4.0,3.0,3.0,4.0,1.0
+19.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,1.0,3.0,2.0,1.0,2.0,2.0,5.0,5.0,1.0,3.0,1.0,1.0,1.0,1.0,1.0,5.0,1.0,1.0
+18.0,female,secondary school,former smoker,drink a lot,few hours a day,5.0,3.0,4.0,2.0,4.0,3.0,3.0,5.0,4.0,1.0,4.0,3.0,4.0,4.0,4.0,2.0,2.0,2.0,1.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,2.0,2.0,2.0,4.0,3.0,3.0,3.0,1.0,2.0,3.0,3.0,3.0,3.0,2.0,3.0,3.0,3.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,2.0,4.0,2.0,2.0,2.0,3.0,4.0,4.0,2.0,5.0,4.0,5.0,5.0,2.0,4.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,2.0,2.0,3.0,5.0,3.0,1.0,1.0,4.0,2.0,3.0,2.0,2.0,5.0,1.0,1.0
+19.0,male,secondary school,current smoker,drink a lot,few hours a day,4.0,3.0,4.0,1.0,2.0,2.0,1.0,3.0,3.0,1.0,1.0,4.0,2.0,1.0,2.0,1.0,1.0,4.0,1.0
+26.0,female,masters degree,never smoked,social drinker,less than an hour a day,3.0,2.0,1.0,3.0,3.0,3.0,4.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0
+19.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,4.0,2.0,2.0,2.0,2.0,4.0,4.0,1.0,1.0,4.0,1.0,2.0,4.0,3.0,2.0,3.0,2.0
+19.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,3.0,3.0,1.0,2.0,5.0,3.0,4.0,2.0,2.0,2.0,3.0,3.0,5.0,2.0,5.0,1.0,1.0
+22.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,4.0,3.0,1.0,5.0,3.0,5.0,3.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,3.0,1.0,4.0
+20.0,male,college/bachelor degree,tried smoking,social drinker,less than an hour a day,5.0,3.0,3.0,2.0,2.0,3.0,1.0,4.0,4.0,1.0,1.0,3.0,2.0,3.0,2.0,2.0,3.0,3.0,1.0
+28.0,female,masters degree,former smoker,social drinker,less than an hour a day,5.0,3.0,4.0,1.0,1.0,1.0,1.0,5.0,3.0,3.0,3.0,3.0,3.0,2.0,4.0,3.0,1.0,3.0,1.0
+19.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,4.0,2.0,2.0,1.0,1.0,5.0,3.0,4.0,2.0,2.0,2.0,3.0,3.0,5.0,2.0,5.0,1.0,1.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,4.0,2.0,1.0,1.0,2.0,3.0,4.0,5.0,3.0,4.0,3.0,5.0,4.0,4.0,4.0,2.0,1.0,1.0
+19.0,female,secondary school,never smoked,social drinker,less than an hour a day,5.0,3.0,4.0,2.0,1.0,2.0,3.0,5.0,5.0,2.0,5.0,3.0,3.0,2.0,3.0,2.0,2.0,4.0,2.0
+22.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,5.0,3.0,1.0,1.0,1.0,1.0,3.0,2.0,1.0,4.0,5.0,5.0,1.0,2.0,3.0,1.0,1.0,1.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,4.0,2.0,1.0,2.0,1.0,4.0,5.0,2.0,3.0,2.0,2.0,2.0,3.0,3.0,2.0,4.0,1.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,5.0,5.0,5.0,5.0,5.0,1.0,1.0,1.0,5.0,1.0,1.0,5.0,5.0,5.0,5.0,5.0
+19.0,female,secondary school,tried smoking,social drinker,less than an hour a day,4.0,2.0,2.0,2.0,3.0,3.0,3.0,2.0,3.0,2.0,3.0,1.0,4.0,3.0,3.0,5.0,2.0,3.0,3.0
+22.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,4.0,3.0,1.0,1.0,1.0,1.0,2.0,4.0,2.0,4.0,5.0,5.0,1.0,1.0,3.0,1.0,1.0,1.0
+29.0,male,masters degree,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,4.0,3.0,3.0,3.0,3.0,3.0,1.0,1.0,1.0,3.0,3.0,3.0,3.0,4.0,2.0,4.0
+19.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,4.0,3.0,3.0,1.0,2.0,3.0,1.0,3.0,5.0,1.0,4.0,3.0,3.0,3.0,3.0,4.0,2.0,3.0,1.0
+18.0,female,secondary school,never smoked,social drinker,less than an hour a day,5.0,3.0,3.0,1.0,1.0,3.0,3.0,5.0,3.0,1.0,1.0,3.0,3.0,1.0,1.0,5.0,5.0,1.0,1.0
+22.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,4.0,3.0,3.0,3.0,2.0,3.0,4.0,1.0,4.0,2.0,3.0,2.0,4.0,2.0,5.0,3.0,2.0
+17.0,female,secondary school,never smoked,never,less than an hour a day,5.0,3.0,3.0,2.0,2.0,3.0,4.0,3.0,1.0,1.0,2.0,2.0,4.0,4.0,2.0,3.0,5.0,2.0,2.0
+19.0,male,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,3.0,3.0,1.0,3.0,3.0,3.0,4.0,3.0,1.0,1.0,4.0,1.0,3.0,3.0,1.0,3.0,5.0,1.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,2.0,4.0,3.0,2.0,3.0,2.0,3.0,2.0,2.0,1.0,4.0,2.0,1.0,2.0,2.0,2.0,2.0,1.0
+18.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,4.0,4.0,2.0,4.0,5.0,2.0,2.0,5.0,4.0,4.0,5.0,2.0,2.0,2.0,2.0
+22.0,male,secondary school,tried smoking,drink a lot,most of the day,5.0,5.0,5.0,1.0,1.0,1.0,1.0,4.0,3.0,1.0,3.0,4.0,4.0,2.0,5.0,4.0,1.0,4.0,1.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,4.0,3.0,4.0,3.0,1.0,2.0,3.0,5.0,2.0,1.0,1.0,3.0,3.0,2.0,3.0,1.0,3.0,1.0,3.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,2.0,2.0,2.0,3.0,5.0,4.0,5.0,2.0,5.0,3.0,4.0,5.0,2.0,2.0,1.0
+25.0,male,masters degree,never smoked,social drinker,few hours a day,3.0,3.0,2.0,2.0,4.0,3.0,2.0,4.0,3.0,1.0,2.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,2.0
+29.0,male,masters degree,current smoker,drink a lot,less than an hour a day,5.0,2.0,1.0,1.0,1.0,1.0,1.0,2.0,4.0,4.0,3.0,1.0,1.0,1.0,1.0,4.0,1.0,1.0,1.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,1.0,1.0,3.0,1.0,5.0,3.0,1.0,1.0,5.0,2.0,1.0,1.0,3.0,1.0,5.0,1.0
+18.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,3.0,2.0,5.0,4.0,5.0,3.0,5.0,4.0,4.0,3.0,4.0,3.0,5.0,3.0,4.0,1.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,1.0,1.0,4.0,3.0,4.0,5.0,4.0,3.0,3.0,3.0,5.0,5.0,5.0,5.0,1.0,2.0
+18.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,3.0,2.0,1.0,1.0,2.0,4.0,2.0,5.0,3.0,3.0,1.0,2.0,3.0,5.0,5.0,2.0,1.0,1.0
+30.0,male,masters degree,former smoker,never,most of the day,5.0,4.0,5.0,2.0,3.0,2.0,3.0,4.0,4.0,2.0,2.0,2.0,2.0,2.0,4.0,4.0,2.0,3.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,3.0,3.0,3.0,4.0,3.0,4.0,3.0,3.0,4.0,4.0,3.0,4.0,2.0,2.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,5.0,3.0,5.0,3.0,4.0,5.0,4.0,2.0,3.0,4.0,3.0,4.0,5.0,4.0,5.0,4.0,4.0
+22.0,male,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,4.0,4.0,4.0,1.0,5.0,1.0,1.0,2.0,4.0,1.0,1.0,1.0,4.0,4.0,4.0,1.0,5.0,4.0
+22.0,male,secondary school,tried smoking,drink a lot,few hours a day,3.0,4.0,2.0,1.0,3.0,1.0,1.0,3.0,4.0,2.0,4.0,4.0,4.0,3.0,1.0,1.0,1.0,1.0,1.0
+20.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,4.0,3.0,2.0,1.0,5.0,3.0,4.0,5.0,3.0,5.0,3.0,2.0,4.0,3.0,1.0,5.0,1.0,1.0
+20.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,1.0,2.0,2.0,2.0,4.0,4.0,3.0,3.0,3.0,3.0,3.0,2.0,2.0,2.0,2.0,2.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,4.0,2.0,1.0,2.0,1.0,4.0,5.0,1.0,1.0,1.0,3.0,5.0,4.0,4.0,4.0,1.0,1.0
+28.0,female,masters degree,tried smoking,social drinker,few hours a day,3.0,3.0,4.0,2.0,2.0,2.0,1.0,4.0,2.0,1.0,1.0,3.0,2.0,3.0,3.0,3.0,3.0,2.0,1.0
+19.0,female,secondary school,current smoker,drink a lot,most of the day,5.0,5.0,5.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,4.0,3.0,3.0,3.0,3.0,1.0,1.0,1.0
+22.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,4.0,3.0,5.0,4.0,3.0,5.0,3.0,2.0,3.0,3.0,5.0,5.0,4.0,3.0,1.0,4.0
+20.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,5.0,2.0,2.0,2.0,1.0,1.0,2.0,5.0,1.0,5.0,3.0,5.0,2.0,5.0,5.0,1.0,1.0,1.0
+16.0,female,primary school,never smoked,never,less than an hour a day,4.0,3.0,3.0,2.0,2.0,2.0,3.0,3.0,2.0,1.0,1.0,5.0,1.0,1.0,2.0,1.0,5.0,4.0,2.0
+19.0,female,secondary school,former smoker,social drinker,less than an hour a day,5.0,3.0,3.0,2.0,2.0,2.0,2.0,4.0,4.0,2.0,3.0,3.0,2.0,2.0,3.0,1.0,5.0,1.0,2.0
+20.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,5.0,3.0,3.0,1.0,4.0,4.0,2.0,5.0,2.0,2.0,1.0,2.0,3.0,4.0,5.0,3.0,2.0,2.0
+21.0,male,college/bachelor degree,current smoker,drink a lot,most of the day,5.0,3.0,4.0,1.0,2.0,2.0,1.0,5.0,3.0,1.0,1.0,5.0,2.0,2.0,3.0,3.0,4.0,2.0,1.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,2.0,1.0,2.0,4.0,2.0,5.0,2.0,2.0,1.0,4.0,5.0,4.0,5.0,2.0,1.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,3.0,2.0,1.0,2.0,2.0,2.0,3.0,5.0,2.0,4.0,2.0,2.0,1.0,5.0,5.0,2.0,2.0,1.0
+25.0,female,college/bachelor degree,never smoked,social drinker,less than an hour a day,3.0,2.0,3.0,2.0,4.0,5.0,4.0,3.0,3.0,1.0,1.0,2.0,2.0,2.0,4.0,3.0,4.0,2.0,4.0
+20.0,female,secondary school,former smoker,social drinker,less than an hour a day,5.0,4.0,3.0,3.0,3.0,4.0,4.0,5.0,5.0,2.0,3.0,1.0,3.0,5.0,5.0,1.0,4.0,1.0,5.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,1.0,3.0,2.0,2.0,4.0,1.0,1.0,1.0,3.0,2.0,3.0,5.0,3.0,1.0,1.0
+22.0,male,secondary school,tried smoking,drink a lot,most of the day,5.0,4.0,2.0,4.0,2.0,3.0,2.0,4.0,4.0,2.0,4.0,1.0,3.0,1.0,3.0,3.0,1.0,3.0,2.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,5.0,2.0,4.0,2.0,2.0,4.0,2.0,1.0,1.0,2.0,2.0,4.0,5.0,4.0,4.0,4.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,5.0,3.0,4.0,2.0,4.0,4.0,2.0,2.0,2.0,2.0,4.0,4.0,2.0,5.0,2.0,2.0
+22.0,male,masters degree,tried smoking,drink a lot,most of the day,5.0,4.0,4.0,3.0,2.0,4.0,2.0,2.0,5.0,3.0,4.0,3.0,3.0,4.0,5.0,3.0,1.0,3.0,3.0
+28.0,female,masters degree,never smoked,social drinker,few hours a day,5.0,3.0,2.0,2.0,1.0,5.0,5.0,4.0,4.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,4.0,5.0,4.0
+21.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,3.0,5.0,1.0,1.0,2.0,2.0,5.0,1.0,1.0,1.0,5.0,2.0,1.0,2.0,2.0,2.0,1.0,1.0
+20.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,3.0,4.0,2.0,2.0,2.0,3.0,5.0,3.0,4.0,3.0,3.0,2.0,4.0,4.0,2.0,1.0,1.0
+19.0,male,secondary school,former smoker,drink a lot,few hours a day,5.0,4.0,2.0,1.0,1.0,1.0,1.0,2.0,2.0,3.0,3.0,5.0,1.0,1.0,1.0,2.0,1.0,2.0,1.0
+21.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,4.0,3.0,3.0,4.0,2.0,2.0,1.0,1.0,2.0,5.0,4.0,4.0,4.0,4.0,1.0,2.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,1.0,3.0,5.0,4.0,1.0,3.0,5.0,2.0,1.0,1.0,3.0,3.0,5.0,5.0,1.0,1.0,1.0
+16.0,female,secondary school,tried smoking,never,few hours a day,4.0,5.0,4.0,5.0,2.0,3.0,4.0,4.0,1.0,1.0,1.0,4.0,3.0,3.0,1.0,3.0,3.0,4.0,1.0
+22.0,male,college/bachelor degree,never smoked,social drinker,less than an hour a day,5.0,3.0,5.0,3.0,3.0,4.0,4.0,4.0,4.0,3.0,2.0,4.0,4.0,4.0,3.0,3.0,3.0,2.0,4.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,2.0,3.0,2.0,3.0,3.0,1.0,1.0,4.0,4.0,4.0,3.0,3.0,2.0,1.0,1.0
+22.0,female,college/bachelor degree,tried smoking,never,few hours a day,5.0,1.0,2.0,4.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,3.0,2.0,4.0,2.0
+20.0,male,secondary school,never smoked,drink a lot,most of the day,5.0,4.0,3.0,1.0,1.0,2.0,3.0,3.0,4.0,5.0,5.0,3.0,2.0,1.0,3.0,3.0,3.0,3.0,1.0
+22.0,male,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,3.0,1.0,5.0,5.0,2.0,2.0,3.0,5.0,1.0,1.0,1.0,2.0,1.0,5.0,3.0,2.0,1.0,2.0
+19.0,male,secondary school,former smoker,drink a lot,most of the day,5.0,4.0,4.0,3.0,3.0,3.0,4.0,4.0,5.0,5.0,3.0,1.0,2.0,3.0,3.0,4.0,2.0,1.0,2.0
+22.0,male,secondary school,tried smoking,never,few hours a day,5.0,5.0,5.0,3.0,1.0,2.0,3.0,5.0,4.0,4.0,3.0,5.0,3.0,2.0,3.0,3.0,2.0,4.0,3.0
+17.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,4.0,4.0,4.0,4.0,3.0,3.0,4.0,3.0,1.0,1.0,3.0,4.0,4.0,4.0
+18.0,female,secondary school,former smoker,social drinker,less than an hour a day,5.0,4.0,4.0,2.0,2.0,3.0,2.0,5.0,4.0,1.0,2.0,4.0,3.0,3.0,2.0,2.0,5.0,4.0,4.0
+19.0,male,primary school,tried smoking,drink a lot,few hours a day,5.0,4.0,4.0,3.0,1.0,2.0,1.0,1.0,2.0,2.0,1.0,4.0,4.0,2.0,2.0,2.0,2.0,4.0,1.0
+23.0,female,masters degree,former smoker,social drinker,less than an hour a day,5.0,3.0,3.0,1.0,2.0,2.0,2.0,4.0,2.0,1.0,1.0,4.0,4.0,2.0,2.0,2.0,4.0,2.0,1.0
+20.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,5.0,5.0,1.0,5.0,4.0,5.0,3.0,2.0,2.0,3.0,3.0,4.0,4.0,2.0,5.0,3.0,3.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,2.0,3.0,3.0,4.0,3.0,1.0,2.0,3.0,3.0,3.0,3.0,3.0,4.0,4.0,3.0
+19.0,male,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,3.0,5.0,2.0,1.0,2.0,1.0,1.0,3.0,1.0,1.0,2.0,3.0,3.0,4.0,2.0,2.0,3.0,1.0
+19.0,female,secondary school,current smoker,drink a lot,less than an hour a day,5.0,3.0,2.0,1.0,2.0,4.0,2.0,2.0,5.0,5.0,5.0,2.0,5.0,3.0,3.0,5.0,2.0,1.0,3.0
+28.0,female,masters degree,tried smoking,social drinker,few hours a day,3.0,4.0,3.0,3.0,3.0,3.0,3.0,3.0,5.0,1.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,1.0,3.0
+21.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,1.0,1.0,2.0,2.0,4.0,4.0,4.0,4.0,5.0,5.0,3.0,4.0,3.0,3.0,1.0,1.0
+23.0,female,masters degree,current smoker,social drinker,few hours a day,4.0,5.0,3.0,1.0,3.0,2.0,3.0,4.0,4.0,1.0,1.0,2.0,4.0,4.0,4.0,4.0,4.0,2.0,1.0
+20.0,male,secondary school,tried smoking,social drinker,most of the day,5.0,4.0,3.0,1.0,1.0,5.0,3.0,5.0,5.0,1.0,2.0,5.0,1.0,3.0,5.0,1.0,1.0,3.0,2.0
+20.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,2.0,1.0,2.0,2.0,2.0,1.0,3.0,5.0,3.0,2.0,1.0,1.0,2.0,3.0,4.0,3.0,1.0,2.0
+28.0,female,secondary school,former smoker,social drinker,most of the day,5.0,3.0,3.0,5.0,2.0,3.0,3.0,5.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,4.0,3.0,1.0,1.0
+22.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,4.0,2.0,5.0,4.0,5.0,2.0,2.0,5.0,4.0,3.0,1.0,2.0,3.0,5.0,5.0,2.0,1.0,1.0
+19.0,female,secondary school,former smoker,drink a lot,few hours a day,5.0,3.0,4.0,2.0,1.0,3.0,3.0,4.0,4.0,2.0,1.0,2.0,4.0,5.0,3.0,3.0,4.0,4.0,2.0
+21.0,male,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,3.0,3.0,1.0,2.0,2.0,2.0,3.0,5.0,2.0,3.0,2.0,2.0,3.0,5.0,5.0,3.0,3.0,2.0
+21.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,3.0,3.0,1.0,3.0,3.0,4.0,3.0,1.0,1.0,4.0,4.0,4.0,3.0,3.0,4.0,2.0,2.0
+17.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,1.0,3.0,3.0,4.0,4.0,4.0,5.0,5.0,3.0,4.0,4.0,3.0,4.0,5.0,1.0,4.0,4.0,1.0
+19.0,female,college/bachelor degree,current smoker,drink a lot,few hours a day,5.0,5.0,2.0,1.0,1.0,1.0,2.0,4.0,2.0,2.0,1.0,5.0,3.0,1.0,1.0,1.0,3.0,5.0,1.0
+25.0,male,masters degree,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,2.0,1.0,4.0,3.0,3.0,4.0,1.0,3.0,3.0,3.0,1.0,3.0,5.0,1.0,2.0,3.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,1.0,3.0,3.0,4.0,4.0,4.0,4.0,4.0,2.0,1.0,3.0,3.0,3.0,3.0,2.0
+26.0,male,college/bachelor degree,current smoker,social drinker,most of the day,5.0,3.0,3.0,2.0,2.0,5.0,1.0,4.0,5.0,4.0,1.0,1.0,1.0,1.0,3.0,4.0,1.0,1.0,4.0
+21.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,3.0,5.0,1.0,5.0,5.0,5.0,5.0,1.0,2.0,4.0,4.0,2.0,5.0,3.0,3.0,3.0,5.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,2.0,2.0,2.0,3.0,3.0,2.0,2.0,2.0,4.0,3.0,2.0,2.0,2.0,3.0,1.0,1.0
+29.0,female,masters degree,former smoker,drink a lot,most of the day,5.0,3.0,5.0,2.0,1.0,2.0,2.0,4.0,4.0,3.0,5.0,5.0,5.0,4.0,3.0,5.0,4.0,2.0,2.0
+25.0,male,masters degree,tried smoking,social drinker,most of the day,5.0,4.0,4.0,1.0,1.0,4.0,2.0,4.0,4.0,4.0,3.0,3.0,2.0,5.0,4.0,4.0,4.0,4.0,2.0
+21.0,male,masters degree,former smoker,drink a lot,few hours a day,5.0,4.0,2.0,3.0,1.0,4.0,5.0,2.0,5.0,4.0,3.0,2.0,2.0,2.0,4.0,5.0,3.0,1.0,3.0
+20.0,male,secondary school,former smoker,social drinker,most of the day,5.0,3.0,3.0,3.0,3.0,3.0,1.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,1.0,3.0,1.0
+27.0,male,masters degree,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,5.0,5.0,4.0,5.0,3.0,3.0,2.0,5.0,5.0,5.0,4.0,5.0,1.0,5.0
+21.0,male,secondary school,current smoker,social drinker,few hours a day,5.0,4.0,1.0,4.0,2.0,5.0,3.0,1.0,4.0,5.0,2.0,2.0,2.0,1.0,4.0,3.0,1.0,1.0,5.0
+20.0,female,secondary school,never smoked,social drinker,less than an hour a day,4.0,3.0,1.0,3.0,3.0,3.0,1.0,2.0,5.0,1.0,2.0,1.0,2.0,1.0,4.0,4.0,1.0,1.0,1.0
+19.0,female,college/bachelor degree,current smoker,social drinker,less than an hour a day,5.0,4.0,5.0,1.0,2.0,2.0,3.0,5.0,3.0,1.0,1.0,5.0,3.0,3.0,1.0,2.0,4.0,4.0,2.0
+17.0,female,primary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,5.0,4.0,3.0,3.0,3.0,5.0,2.0,2.0,1.0,3.0,3.0,5.0,4.0,2.0,1.0,2.0
+16.0,female,secondary school,tried smoking,never,less than an hour a day,5.0,4.0,3.0,3.0,3.0,2.0,2.0,4.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,2.0
+19.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,2.0,3.0,1.0,3.0,3.0,2.0,4.0,2.0,1.0,1.0,4.0,5.0,3.0,5.0,5.0,2.0,2.0
+18.0,female,secondary school,never smoked,social drinker,few hours a day,3.0,3.0,4.0,4.0,2.0,2.0,2.0,3.0,2.0,1.0,1.0,3.0,1.0,1.0,1.0,3.0,2.0,3.0,2.0
+19.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,4.0,3.0,3.0,4.0,2.0,3.0,4.0,3.0,3.0,2.0,2.0,3.0,1.0,2.0,3.0,2.0,3.0,3.0,1.0
+21.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,5.0,5.0,3.0,1.0,1.0,2.0,5.0,1.0,1.0,2.0,4.0,5.0,3.0,1.0,2.0,4.0,2.0,1.0
+16.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,3.0,3.0,4.0,1.0,1.0,1.0,4.0,1.0,1.0,3.0,1.0,1.0,2.0,1.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,3.0,3.0,2.0,3.0,4.0,4.0,2.0,2.0,2.0,4.0,4.0,4.0,3.0,3.0,1.0,2.0
+19.0,female,primary school,never smoked,social drinker,few hours a day,5.0,2.0,3.0,1.0,2.0,2.0,4.0,4.0,2.0,1.0,1.0,1.0,2.0,2.0,3.0,2.0,5.0,2.0,2.0
+20.0,female,secondary school,current smoker,social drinker,most of the day,5.0,3.0,5.0,2.0,2.0,1.0,2.0,2.0,4.0,2.0,1.0,5.0,3.0,1.0,2.0,1.0,1.0,1.0,1.0
+16.0,female,currently a primary school pupil,never smoked,social drinker,less than an hour a day,5.0,5.0,4.0,3.0,3.0,4.0,3.0,4.0,3.0,4.0,4.0,4.0,4.0,3.0,4.0,3.0,4.0,2.0,3.0
+20.0,male,secondary school,tried smoking,never,less than an hour a day,5.0,3.0,4.0,3.0,3.0,4.0,2.0,4.0,4.0,1.0,3.0,5.0,3.0,4.0,4.0,2.0,4.0,4.0,3.0
+18.0,male,currently a primary school pupil,tried smoking,social drinker,less than an hour a day,5.0,5.0,5.0,3.0,2.0,2.0,2.0,4.0,3.0,3.0,3.0,5.0,1.0,2.0,2.0,2.0,2.0,1.0,1.0
+20.0,male,secondary school,tried smoking,never,few hours a day,5.0,4.0,4.0,1.0,3.0,3.0,1.0,4.0,5.0,2.0,3.0,5.0,3.0,1.0,3.0,3.0,1.0,2.0,1.0
+20.0,male,college/bachelor degree,tried smoking,social drinker,less than an hour a day,5.0,5.0,5.0,1.0,1.0,1.0,1.0,1.0,5.0,1.0,5.0,3.0,3.0,1.0,2.0,1.0,1.0,2.0,1.0
+16.0,female,primary school,former smoker,social drinker,few hours a day,5.0,3.0,5.0,2.0,2.0,2.0,3.0,4.0,2.0,1.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,3.0,3.0
+19.0,female,secondary school,never smoked,social drinker,less than an hour a day,5.0,3.0,3.0,2.0,2.0,2.0,3.0,2.0,2.0,1.0,1.0,4.0,3.0,1.0,2.0,1.0,3.0,2.0,1.0
+19.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,4.0,4.0,2.0,2.0,1.0,1.0,3.0,3.0,2.0,2.0,3.0,4.0,2.0,3.0,2.0,2.0,2.0,1.0
+23.0,female,college/bachelor degree,tried smoking,social drinker,most of the day,5.0,4.0,5.0,2.0,1.0,2.0,1.0,5.0,3.0,1.0,1.0,3.0,1.0,1.0,1.0,3.0,3.0,3.0,1.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,4.0,2.0,3.0,2.0,3.0,3.0,2.0,2.0,2.0,3.0,1.0,2.0,3.0,3.0,2.0,1.0
+23.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,2.0,1.0,3.0,3.0,1.0,2.0,2.0,1.0,1.0,3.0,2.0,2.0,1.0,1.0
+19.0,male,currently a primary school pupil,current smoker,never,few hours a day,3.0,5.0,4.0,2.0,1.0,2.0,3.0,4.0,1.0,3.0,2.0,5.0,3.0,2.0,1.0,1.0,2.0,4.0,1.0
+22.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,4.0,3.0,3.0,3.0,3.0,1.0,2.0,2.0,1.0,2.0,1.0,1.0,1.0,2.0
+17.0,male,primary school,never smoked,social drinker,most of the day,4.0,3.0,3.0,1.0,1.0,1.0,1.0,2.0,4.0,3.0,3.0,3.0,1.0,1.0,3.0,4.0,1.0,4.0,1.0
+20.0,female,secondary school,never smoked,social drinker,less than an hour a day,5.0,5.0,5.0,3.0,1.0,1.0,3.0,3.0,3.0,1.0,1.0,3.0,2.0,1.0,1.0,2.0,2.0,5.0,1.0
+21.0,female,secondary school,tried smoking,social drinker,less than an hour a day,5.0,4.0,3.0,4.0,3.0,4.0,4.0,2.0,4.0,2.0,3.0,2.0,2.0,3.0,3.0,4.0,5.0,2.0,2.0
+21.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,2.0,4.0,3.0,5.0,3.0,3.0,1.0,2.0,5.0,5.0,2.0,2.0,2.0,2.0,3.0,2.0
+19.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,4.0,4.0,2.0,1.0,2.0,5.0,3.0,3.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0
+20.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,3.0,2.0,3.0,2.0,4.0,5.0,2.0,1.0,1.0,4.0,3.0,2.0,4.0,3.0,4.0,1.0,2.0
+19.0,male,college/bachelor degree,never smoked,social drinker,most of the day,5.0,3.0,4.0,3.0,2.0,5.0,2.0,5.0,5.0,4.0,3.0,3.0,2.0,5.0,5.0,3.0,2.0,5.0,1.0
+21.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,5.0,3.0,2.0,2.0,2.0,1.0,3.0,1.0
+22.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,2.0,2.0,1.0,1.0,4.0,3.0,4.0,3.0,4.0,4.0,5.0,3.0,2.0,5.0,2.0,5.0,1.0
+22.0,male,college/bachelor degree,never smoked,drink a lot,few hours a day,3.0,3.0,4.0,3.0,1.0,3.0,3.0,2.0,3.0,2.0,1.0,4.0,4.0,4.0,3.0,3.0,3.0,4.0,2.0
+22.0,male,college/bachelor degree,tried smoking,social drinker,most of the day,5.0,4.0,2.0,1.0,1.0,3.0,4.0,5.0,4.0,1.0,1.0,5.0,3.0,4.0,4.0,2.0,3.0,1.0,1.0
+28.0,female,masters degree,current smoker,drink a lot,most of the day,5.0,3.0,4.0,3.0,3.0,2.0,2.0,5.0,3.0,1.0,1.0,2.0,3.0,3.0,3.0,1.0,4.0,4.0,2.0
+21.0,male,secondary school,tried smoking,social drinker,less than an hour a day,5.0,3.0,3.0,3.0,3.0,3.0,2.0,3.0,4.0,3.0,1.0,3.0,2.0,4.0,4.0,3.0,4.0,4.0,2.0
+21.0,male,college/bachelor degree,never smoked,never,few hours a day,5.0,5.0,5.0,3.0,4.0,4.0,3.0,2.0,3.0,4.0,2.0,1.0,3.0,2.0,1.0,5.0,3.0,5.0,1.0
+17.0,female,primary school,former smoker,drink a lot,few hours a day,5.0,3.0,2.0,1.0,1.0,1.0,1.0,2.0,4.0,4.0,5.0,3.0,4.0,1.0,3.0,2.0,1.0,2.0,1.0
+21.0,female,secondary school,tried smoking,social drinker,less than an hour a day,5.0,3.0,4.0,1.0,1.0,2.0,5.0,2.0,1.0,1.0,1.0,4.0,1.0,1.0,2.0,1.0,5.0,1.0,2.0
+17.0,female,primary school,current smoker,social drinker,few hours a day,5.0,4.0,1.0,1.0,1.0,3.0,4.0,1.0,5.0,5.0,5.0,1.0,2.0,1.0,5.0,3.0,2.0,2.0,2.0
+28.0,male,masters degree,never smoked,drink a lot,few hours a day,5.0,3.0,3.0,2.0,3.0,3.0,4.0,3.0,5.0,4.0,3.0,1.0,4.0,4.0,5.0,3.0,4.0,1.0,2.0
+20.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,4.0,3.0,3.0,3.0,2.0,1.0,5.0,4.0,1.0,1.0,1.0,4.0,2.0,4.0,2.0,2.0,5.0,1.0,2.0
+19.0,female,secondary school,tried smoking,never,few hours a day,5.0,3.0,3.0,3.0,1.0,3.0,3.0,4.0,1.0,1.0,1.0,4.0,2.0,2.0,2.0,2.0,5.0,4.0,1.0
+21.0,female,secondary school,tried smoking,social drinker,less than an hour a day,5.0,3.0,2.0,3.0,1.0,4.0,3.0,2.0,5.0,3.0,2.0,2.0,4.0,3.0,3.0,4.0,4.0,1.0,2.0
+23.0,male,college/bachelor degree,current smoker,never,few hours a day,5.0,3.0,2.0,3.0,1.0,5.0,1.0,3.0,4.0,1.0,4.0,2.0,2.0,4.0,1.0,5.0,1.0,1.0,3.0
+17.0,male,primary school,current smoker,drink a lot,most of the day,5.0,5.0,1.0,1.0,1.0,1.0,3.0,1.0,4.0,4.0,5.0,1.0,4.0,1.0,2.0,1.0,1.0,1.0,1.0
+20.0,male,primary school,current smoker,drink a lot,few hours a day,5.0,3.0,4.0,1.0,1.0,2.0,1.0,4.0,3.0,1.0,1.0,4.0,4.0,2.0,2.0,2.0,2.0,5.0,1.0
+19.0,male,secondary school,tried smoking,social drinker,less than an hour a day,5.0,4.0,4.0,2.0,2.0,2.0,2.0,5.0,5.0,2.0,3.0,4.0,2.0,2.0,4.0,3.0,3.0,3.0,2.0
+19.0,male,secondary school,never smoked,never,few hours a day,4.0,3.0,4.0,2.0,3.0,2.0,1.0,3.0,4.0,2.0,4.0,4.0,3.0,3.0,3.0,2.0,5.0,3.0,2.0
+19.0,male,secondary school,never smoked,drink a lot,few hours a day,5.0,4.0,5.0,3.0,4.0,2.0,2.0,5.0,4.0,3.0,3.0,4.0,4.0,2.0,4.0,4.0,2.0,3.0,1.0
+18.0,female,secondary school,current smoker,social drinker,most of the day,5.0,3.0,2.0,1.0,1.0,5.0,3.0,4.0,4.0,4.0,3.0,5.0,5.0,2.0,2.0,4.0,1.0,4.0,1.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,1.0,4.0,3.0,4.0,3.0,2.0,4.0,1.0,2.0,1.0,1.0,4.0,5.0,5.0,4.0,1.0,2.0
+22.0,male,secondary school,former smoker,drink a lot,few hours a day,4.0,4.0,4.0,2.0,3.0,2.0,2.0,5.0,4.0,4.0,2.0,3.0,1.0,4.0,4.0,3.0,3.0,3.0,1.0
+21.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,4.0,3.0,2.0,2.0,3.0,4.0,4.0,4.0,2.0,2.0,5.0,3.0,4.0,2.0,4.0,4.0,4.0,2.0
+21.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,1.0,3.0,4.0,4.0,1.0,5.0,4.0,4.0,2.0,2.0,5.0,2.0,1.0,1.0
+21.0,male,college/bachelor degree,never smoked,social drinker,less than an hour a day,5.0,3.0,1.0,5.0,5.0,2.0,3.0,3.0,5.0,3.0,4.0,1.0,3.0,3.0,4.0,1.0,1.0,1.0,2.0
+22.0,male,secondary school,never smoked,never,few hours a day,4.0,3.0,3.0,2.0,1.0,2.0,2.0,5.0,4.0,1.0,2.0,2.0,1.0,2.0,3.0,2.0,2.0,1.0,2.0
+19.0,female,secondary school,current smoker,drink a lot,less than an hour a day,3.0,3.0,3.0,1.0,3.0,3.0,3.0,4.0,3.0,3.0,3.0,1.0,3.0,3.0,4.0,1.0,4.0,1.0,2.0
+25.0,male,secondary school,current smoker,drink a lot,few hours a day,3.0,4.0,2.0,4.0,2.0,4.0,2.0,5.0,1.0,1.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,1.0,5.0
+18.0,male,currently a primary school pupil,never smoked,social drinker,few hours a day,4.0,3.0,3.0,2.0,2.0,5.0,2.0,3.0,3.0,2.0,2.0,5.0,2.0,3.0,2.0,3.0,2.0,4.0,3.0
+20.0,male,secondary school,current smoker,social drinker,few hours a day,5.0,4.0,3.0,2.0,2.0,3.0,2.0,4.0,5.0,4.0,2.0,2.0,2.0,4.0,5.0,4.0,2.0,3.0,2.0
+18.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,3.0,3.0,2.0,1.0,1.0,1.0,5.0,3.0,1.0,1.0,3.0,2.0,1.0,2.0,1.0,1.0,3.0,1.0
+23.0,male,secondary school,current smoker,social drinker,most of the day,5.0,3.0,5.0,1.0,1.0,3.0,2.0,3.0,4.0,3.0,3.0,4.0,4.0,3.0,2.0,3.0,5.0,5.0,3.0
+18.0,female,secondary school,former smoker,drink a lot,most of the day,5.0,2.0,3.0,2.0,2.0,2.0,1.0,3.0,4.0,3.0,1.0,5.0,2.0,4.0,3.0,4.0,4.0,3.0,1.0
+22.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,4.0,1.0,1.0,3.0,2.0,4.0,4.0,1.0,1.0,1.0,4.0,5.0,3.0,1.0,2.0,5.0,1.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,3.0,1.0,5.0,4.0,4.0,5.0,2.0,3.0,2.0,2.0,5.0,3.0,5.0,3.0,3.0,2.0
+19.0,male,secondary school,tried smoking,drink a lot,few hours a day,3.0,3.0,4.0,1.0,5.0,4.0,1.0,3.0,5.0,3.0,2.0,1.0,4.0,3.0,5.0,1.0,4.0,4.0,1.0
+19.0,female,secondary school,current smoker,drink a lot,most of the day,5.0,3.0,3.0,2.0,4.0,5.0,5.0,3.0,4.0,1.0,1.0,1.0,2.0,2.0,1.0,1.0,5.0,1.0,5.0
+23.0,female,college/bachelor degree,current smoker,social drinker,most of the day,5.0,5.0,5.0,4.0,2.0,5.0,5.0,5.0,5.0,1.0,1.0,5.0,5.0,5.0,1.0,3.0,5.0,1.0,5.0
+27.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,1.0,3.0,3.0,1.0,5.0,4.0,3.0,3.0,2.0,2.0,3.0,2.0,3.0,3.0,2.0,3.0,2.0,5.0
+20.0,male,secondary school,former smoker,drink a lot,most of the day,5.0,3.0,2.0,1.0,1.0,5.0,2.0,4.0,4.0,1.0,3.0,4.0,1.0,1.0,3.0,3.0,2.0,2.0,1.0
+20.0,female,secondary school,tried smoking,social drinker,most of the day,4.0,1.0,4.0,1.0,2.0,2.0,2.0,1.0,3.0,4.0,1.0,1.0,1.0,1.0,2.0,5.0,2.0,5.0,1.0
+18.0,female,primary school,former smoker,drink a lot,few hours a day,5.0,3.0,5.0,4.0,4.0,5.0,5.0,5.0,4.0,2.0,4.0,3.0,4.0,4.0,5.0,3.0,3.0,4.0,3.0
+21.0,male,secondary school,former smoker,drink a lot,few hours a day,5.0,4.0,2.0,3.0,3.0,1.0,1.0,1.0,2.0,2.0,3.0,5.0,4.0,3.0,2.0,1.0,1.0,1.0,1.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,2.0,3.0,1.0,2.0,1.0,2.0,5.0,5.0,2.0,1.0,4.0,2.0,2.0,4.0,1.0,2.0,1.0,1.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,5.0,3.0,2.0,3.0,3.0,5.0,2.0,1.0,3.0,4.0,1.0,2.0,4.0,3.0,5.0,2.0,1.0
+22.0,female,secondary school,current smoker,never,less than an hour a day,5.0,3.0,4.0,2.0,2.0,1.0,1.0,3.0,3.0,2.0,1.0,4.0,4.0,4.0,2.0,2.0,3.0,4.0,2.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,less than an hour a day,5.0,5.0,4.0,4.0,3.0,1.0,4.0,2.0,1.0,1.0,1.0,1.0,2.0,3.0,3.0,4.0,3.0,2.0,1.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,4.0,4.0,3.0,1.0,1.0,2.0,2.0,3.0,5.0,5.0,5.0,4.0,4.0,3.0,3.0,3.0,3.0,2.0,1.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,3.0,2.0,2.0,2.0,4.0,4.0,1.0,1.0,5.0,3.0,2.0,2.0,2.0,5.0,3.0,2.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,5.0,4.0,1.0,3.0,2.0,3.0,5.0,4.0,3.0,2.0,4.0,5.0,4.0,4.0,2.0,5.0,5.0,1.0
+18.0,female,secondary school,never smoked,never,few hours a day,5.0,3.0,5.0,2.0,1.0,4.0,5.0,4.0,5.0,3.0,2.0,2.0,2.0,3.0,2.0,3.0,5.0,3.0,3.0
+17.0,male,primary school,never smoked,never,few hours a day,5.0,4.0,4.0,3.0,2.0,2.0,2.0,4.0,3.0,3.0,2.0,5.0,2.0,2.0,3.0,3.0,2.0,4.0,2.0
+21.0,male,secondary school,never smoked,social drinker,less than an hour a day,5.0,4.0,3.0,5.0,3.0,1.0,1.0,4.0,3.0,1.0,1.0,2.0,3.0,3.0,2.0,1.0,3.0,1.0,1.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,3.0,4.0,2.0,4.0,4.0,4.0,3.0,2.0,2.0,4.0,3.0,4.0,3.0,4.0,3.0,2.0,3.0
+25.0,female,masters degree,tried smoking,drink a lot,less than an hour a day,4.0,2.0,4.0,4.0,2.0,3.0,4.0,4.0,4.0,1.0,1.0,2.0,4.0,4.0,4.0,1.0,4.0,1.0,2.0
+24.0,male,doctorate degree,current smoker,drink a lot,few hours a day,5.0,3.0,3.0,5.0,4.0,3.0,3.0,4.0,4.0,1.0,4.0,5.0,5.0,3.0,5.0,5.0,5.0,3.0,4.0
+29.0,male,masters degree,never smoked,social drinker,less than an hour a day,5.0,2.0,2.0,3.0,2.0,4.0,3.0,5.0,5.0,2.0,5.0,2.0,1.0,2.0,2.0,1.0,1.0,2.0,3.0
+21.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,3.0,3.0,2.0,2.0,5.0,5.0,5.0,3.0,5.0,4.0,4.0,3.0,4.0,3.0,3.0,1.0,3.0
+18.0,male,primary school,never smoked,social drinker,few hours a day,5.0,3.0,2.0,1.0,2.0,1.0,1.0,1.0,5.0,5.0,3.0,1.0,2.0,5.0,5.0,5.0,1.0,1.0,1.0
+21.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,4.0,5.0,2.0,2.0,4.0,3.0,5.0,5.0,4.0,5.0,5.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0
+17.0,male,secondary school,tried smoking,social drinker,most of the day,5.0,3.0,3.0,3.0,3.0,3.0,3.0,4.0,3.0,2.0,2.0,5.0,4.0,3.0,3.0,3.0,3.0,3.0,3.0
+22.0,male,secondary school,tried smoking,social drinker,most of the day,4.0,3.0,4.0,4.0,2.0,5.0,5.0,3.0,3.0,2.0,2.0,2.0,2.0,1.0,1.0,3.0,3.0,3.0,5.0
+18.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,4.0,2.0,1.0,3.0,3.0,4.0,5.0,1.0,1.0,4.0,1.0,3.0,4.0,1.0,5.0,2.0,4.0
+18.0,female,primary school,tried smoking,social drinker,few hours a day,4.0,5.0,3.0,3.0,2.0,2.0,2.0,5.0,4.0,2.0,2.0,4.0,4.0,2.0,2.0,1.0,3.0,1.0,2.0
+23.0,male,secondary school,tried smoking,never,few hours a day,5.0,4.0,4.0,2.0,1.0,4.0,4.0,3.0,2.0,1.0,1.0,4.0,2.0,3.0,2.0,4.0,4.0,5.0,3.0
+22.0,male,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,3.0,1.0,2.0,3.0,4.0,4.0,4.0,1.0,1.0,3.0,2.0,2.0,3.0,1.0,3.0,2.0,2.0
+21.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,3.0,3.0,1.0,3.0,5.0,4.0,5.0,3.0,1.0,1.0,5.0,2.0,4.0,5.0,3.0,5.0,1.0,1.0
+23.0,female,masters degree,never smoked,never,few hours a day,5.0,4.0,5.0,5.0,2.0,2.0,5.0,4.0,3.0,1.0,1.0,3.0,2.0,2.0,4.0,1.0,5.0,2.0,2.0
+17.0,female,currently a primary school pupil,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,2.0,2.0,2.0,2.0,3.0,3.0,3.0,3.0,4.0,4.0,4.0,4.0,3.0,3.0,2.0,2.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,1.0,1.0,1.0,2.0,4.0,2.0,1.0,1.0,4.0,2.0,1.0,2.0,1.0,2.0,3.0,1.0
+22.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,4.0,2.0,2.0,3.0,2.0,3.0,3.0,2.0,2.0,4.0,3.0,3.0,3.0,3.0,4.0,4.0,3.0
+21.0,male,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,3.0,2.0,1.0,3.0,1.0,5.0,4.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,2.0,1.0,1.0
+22.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,3.0,2.0,3.0,5.0,5.0,2.0,1.0,3.0,4.0,5.0,2.0,4.0,1.0,4.0
+24.0,male,secondary school,tried smoking,drink a lot,few hours a day,4.0,3.0,4.0,3.0,2.0,3.0,2.0,5.0,3.0,2.0,1.0,3.0,2.0,2.0,2.0,2.0,4.0,3.0,2.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,2.0,2.0,3.0,5.0,3.0,4.0,3.0,4.0,2.0,3.0,3.0,2.0,4.0,1.0
+18.0,female,secondary school,never smoked,never,few hours a day,5.0,3.0,2.0,2.0,2.0,4.0,2.0,2.0,5.0,3.0,3.0,2.0,1.0,4.0,4.0,3.0,1.0,1.0,4.0
+24.0,female,college/bachelor degree,never smoked,never,most of the day,5.0,3.0,4.0,1.0,1.0,1.0,3.0,5.0,3.0,1.0,2.0,4.0,2.0,1.0,2.0,2.0,2.0,1.0,1.0
+22.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,5.0,2.0,2.0,3.0,2.0,2.0,2.0,2.0,1.0,5.0,2.0,3.0,2.0,3.0,2.0,4.0,1.0
+20.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,2.0,2.0,1.0,1.0,3.0,3.0,4.0,5.0,4.0,4.0,2.0,1.0,3.0,3.0,5.0,2.0,1.0,2.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,less than an hour a day,5.0,3.0,2.0,2.0,1.0,3.0,1.0,4.0,5.0,3.0,4.0,3.0,5.0,4.0,3.0,3.0,2.0,1.0,2.0
+19.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,3.0,1.0,1.0,2.0,3.0,3.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0
+21.0,female,secondary school,former smoker,drink a lot,few hours a day,5.0,4.0,3.0,2.0,2.0,1.0,3.0,4.0,4.0,1.0,1.0,3.0,4.0,1.0,3.0,1.0,1.0,2.0,2.0
+25.0,male,masters degree,never smoked,never,no time at all,5.0,3.0,3.0,3.0,2.0,4.0,3.0,4.0,3.0,4.0,5.0,3.0,4.0,3.0,3.0,4.0,3.0,2.0,2.0
+28.0,female,masters degree,never smoked,never,few hours a day,5.0,2.0,3.0,4.0,4.0,3.0,4.0,1.0,2.0,1.0,1.0,1.0,2.0,3.0,4.0,3.0,5.0,1.0,3.0
+20.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,1.0,2.0,1.0,3.0,1.0,2.0,5.0,5.0,5.0,5.0,5.0,3.0,5.0,5.0,3.0,4.0,4.0
+20.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,2.0,1.0,2.0,2.0,2.0,2.0,5.0,3.0,2.0,1.0,1.0,1.0,4.0,5.0,1.0,1.0,1.0
+23.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,2.0,1.0,1.0,5.0,3.0,1.0,2.0,1.0,3.0,5.0,4.0,4.0,1.0,2.0,2.0,1.0,2.0
+27.0,male,doctorate degree,tried smoking,drink a lot,few hours a day,5.0,3.0,1.0,2.0,3.0,4.0,2.0,2.0,5.0,5.0,1.0,2.0,2.0,4.0,5.0,5.0,4.0,1.0,2.0
+21.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,4.0,3.0,4.0,2.0,3.0,3.0,4.0,3.0,3.0,3.0,4.0,4.0,3.0,3.0,3.0,4.0,4.0,4.0,2.0
+23.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,2.0,3.0,3.0,3.0,3.0,1.0,2.0,3.0,3.0,2.0,2.0,5.0,2.0,2.0
+22.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,3.0,3.0,2.0,3.0,3.0,3.0,1.0,1.0,4.0,4.0,4.0,4.0,4.0,4.0,4.0,3.0
+28.0,female,masters degree,former smoker,social drinker,few hours a day,3.0,1.0,2.0,4.0,2.0,5.0,5.0,4.0,4.0,2.0,2.0,1.0,1.0,3.0,2.0,3.0,3.0,1.0,5.0
+22.0,female,secondary school,tried smoking,social drinker,less than an hour a day,4.0,3.0,2.0,2.0,1.0,3.0,4.0,5.0,4.0,2.0,1.0,3.0,2.0,4.0,4.0,3.0,4.0,1.0,4.0
+18.0,male,college/bachelor degree,tried smoking,social drinker,less than an hour a day,5.0,4.0,3.0,3.0,1.0,3.0,1.0,3.0,5.0,3.0,3.0,4.0,1.0,1.0,3.0,1.0,3.0,1.0,1.0
+25.0,female,secondary school,never smoked,social drinker,most of the day,5.0,3.0,3.0,3.0,3.0,3.0,5.0,5.0,4.0,2.0,1.0,2.0,2.0,2.0,3.0,1.0,3.0,3.0,2.0
+20.0,female,college/bachelor degree,current smoker,drink a lot,few hours a day,5.0,4.0,2.0,2.0,1.0,2.0,2.0,1.0,2.0,2.0,1.0,2.0,1.0,2.0,1.0,5.0,2.0,2.0,2.0
+28.0,female,secondary school,current smoker,social drinker,few hours a day,4.0,3.0,3.0,2.0,1.0,3.0,3.0,4.0,3.0,2.0,3.0,3.0,3.0,2.0,3.0,1.0,4.0,1.0,1.0
+23.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,3.0,3.0,3.0,3.0,2.0,5.0,5.0,4.0,1.0,5.0,3.0,4.0,4.0,4.0,1.0,5.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,2.0,1.0,2.0,2.0,1.0,5.0,2.0,5.0,3.0,5.0,4.0,5.0,5.0,2.0,3.0,1.0
+25.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,4.0,4.0,3.0,4.0,2.0,4.0,5.0,5.0,2.0,3.0,5.0,5.0,2.0,5.0,2.0,5.0,5.0,1.0
+28.0,female,masters degree,former smoker,drink a lot,few hours a day,5.0,5.0,4.0,3.0,2.0,4.0,4.0,3.0,5.0,5.0,4.0,4.0,5.0,4.0,3.0,4.0,4.0,4.0,4.0
+19.0,male,secondary school,tried smoking,drink a lot,few hours a day,4.0,4.0,4.0,2.0,3.0,3.0,3.0,4.0,4.0,3.0,4.0,3.0,4.0,3.0,4.0,3.0,2.0,5.0,2.0
+30.0,female,secondary school,never smoked,never,less than an hour a day,5.0,3.0,2.0,5.0,5.0,3.0,3.0,5.0,5.0,4.0,3.0,3.0,3.0,3.0,5.0,1.0,5.0,1.0,1.0
+28.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,5.0,5.0,1.0,1.0,2.0,3.0,5.0,4.0,1.0,2.0,4.0,2.0,2.0,3.0,2.0,4.0,1.0,1.0
+19.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,3.0,3.0,4.0,4.0,3.0,2.0,3.0,4.0,3.0,4.0,4.0,1.0,4.0,3.0,2.0
+21.0,male,college/bachelor degree,tried smoking,social drinker,less than an hour a day,2.0,4.0,4.0,4.0,4.0,4.0,3.0,4.0,4.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0
+19.0,male,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,3.0,3.0,1.0,2.0,3.0,3.0,3.0,5.0,4.0,4.0,5.0,3.0,3.0,5.0,3.0,2.0,1.0,1.0
+18.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,4.0,4.0,3.0,1.0,3.0,4.0,4.0,5.0,1.0,5.0,3.0,1.0,1.0,2.0,1.0,4.0,1.0,1.0
+18.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,2.0,2.0,1.0,4.0,4.0,1.0,2.0,4.0,2.0,2.0,2.0,2.0,4.0,3.0,2.0
+18.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,4.0,1.0,2.0,3.0,2.0,2.0,4.0,1.0,3.0,3.0,3.0,3.0,4.0,4.0,3.0,3.0,2.0
+17.0,female,college/bachelor degree,current smoker,drink a lot,less than an hour a day,5.0,3.0,4.0,2.0,2.0,2.0,3.0,3.0,4.0,4.0,2.0,4.0,2.0,4.0,5.0,5.0,4.0,2.0,2.0
+21.0,male,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,3.0,2.0,3.0,3.0,3.0,3.0,4.0,5.0,5.0,4.0,4.0,3.0,4.0,4.0,4.0,2.0,2.0,2.0
+18.0,female,secondary school,tried smoking,never,few hours a day,5.0,3.0,3.0,2.0,2.0,3.0,2.0,4.0,3.0,2.0,1.0,4.0,3.0,3.0,3.0,3.0,4.0,4.0,1.0
+21.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,3.0,4.0,5.0,2.0,3.0,5.0,4.0,2.0,3.0,3.0,5.0,5.0,1.0,5.0,4.0,3.0
+23.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,4.0,2.0,2.0,3.0,5.0,5.0,4.0,2.0,2.0,5.0,3.0,4.0,4.0,4.0,4.0,3.0,4.0
+18.0,female,primary school,never smoked,social drinker,less than an hour a day,5.0,3.0,3.0,5.0,3.0,1.0,5.0,5.0,3.0,1.0,1.0,3.0,1.0,3.0,3.0,1.0,3.0,3.0,1.0
+20.0,female,secondary school,never smoked,social drinker,most of the day,5.0,3.0,3.0,1.0,1.0,3.0,3.0,4.0,5.0,3.0,5.0,3.0,1.0,1.0,2.0,2.0,3.0,1.0,2.0
+19.0,female,secondary school,current smoker,social drinker,most of the day,5.0,5.0,5.0,4.0,1.0,3.0,3.0,5.0,3.0,1.0,1.0,5.0,5.0,3.0,2.0,2.0,5.0,2.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,3.0,1.0,2.0,3.0,5.0,3.0,1.0,2.0,3.0,3.0,2.0,2.0,1.0,5.0,2.0,1.0
+26.0,female,college/bachelor degree,current smoker,never,few hours a day,5.0,3.0,3.0,3.0,2.0,1.0,1.0,1.0,4.0,2.0,1.0,4.0,2.0,1.0,2.0,1.0,4.0,1.0,1.0
+21.0,female,college/bachelor degree,never smoked,never,few hours a day,5.0,5.0,5.0,4.0,3.0,4.0,2.0,2.0,2.0,1.0,1.0,2.0,2.0,3.0,3.0,2.0,3.0,5.0,4.0
+19.0,male,secondary school,current smoker,social drinker,most of the day,5.0,2.0,1.0,3.0,3.0,5.0,2.0,4.0,5.0,5.0,2.0,1.0,1.0,2.0,3.0,3.0,3.0,1.0,4.0
+23.0,male,secondary school,current smoker,drink a lot,few hours a day,4.0,3.0,3.0,3.0,3.0,3.0,2.0,3.0,4.0,4.0,4.0,3.0,5.0,3.0,3.0,3.0,3.0,1.0,2.0
+21.0,female,secondary school,tried smoking,social drinker,less than an hour a day,5.0,3.0,4.0,2.0,1.0,2.0,4.0,5.0,5.0,1.0,2.0,4.0,5.0,2.0,4.0,3.0,5.0,2.0,1.0
+22.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,5.0,1.0,2.0,4.0,3.0,3.0,5.0,3.0,4.0,3.0,5.0,4.0,4.0,5.0,3.0,3.0,2.0
+18.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,4.0,2.0,3.0,3.0,4.0,5.0,4.0,2.0,1.0,4.0,3.0,2.0,1.0,3.0,2.0,3.0,2.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,2.0,1.0,3.0,4.0,3.0,4.0,5.0,2.0,2.0,2.0,2.0,3.0,4.0,2.0,2.0,4.0
+23.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,2.0,1.0,1.0,2.0,3.0,5.0,3.0,1.0,1.0,5.0,4.0,1.0,1.0,4.0,1.0,4.0,1.0
+17.0,female,college/bachelor degree,current smoker,drink a lot,less than an hour a day,5.0,3.0,3.0,2.0,2.0,2.0,2.0,3.0,5.0,5.0,3.0,4.0,3.0,4.0,4.0,5.0,4.0,2.0,2.0
+20.0,female,secondary school,former smoker,drink a lot,few hours a day,4.0,4.0,4.0,3.0,3.0,2.0,2.0,5.0,4.0,1.0,2.0,4.0,5.0,3.0,2.0,2.0,2.0,1.0,1.0
+22.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,3.0,3.0,4.0,2.0,2.0,4.0,4.0,2.0,3.0,2.0,4.0,2.0,4.0,1.0,4.0,1.0,1.0
+20.0,female,secondary school,never smoked,never,few hours a day,5.0,3.0,2.0,2.0,2.0,2.0,4.0,4.0,3.0,1.0,1.0,1.0,1.0,3.0,2.0,2.0,4.0,1.0,3.0
+19.0,female,college/bachelor degree,former smoker,social drinker,most of the day,5.0,3.0,3.0,4.0,4.0,3.0,3.0,3.0,4.0,1.0,5.0,4.0,5.0,5.0,5.0,5.0,4.0,2.0,2.0
+25.0,female,masters degree,tried smoking,social drinker,less than an hour a day,5.0,3.0,5.0,3.0,3.0,1.0,3.0,3.0,5.0,1.0,1.0,4.0,5.0,1.0,3.0,3.0,3.0,3.0,1.0
+29.0,male,secondary school,never smoked,never,few hours a day,4.0,3.0,2.0,3.0,3.0,3.0,4.0,2.0,5.0,5.0,4.0,1.0,4.0,3.0,3.0,2.0,3.0,1.0,3.0
+29.0,male,secondary school,former smoker,drink a lot,less than an hour a day,5.0,3.0,2.0,4.0,5.0,5.0,3.0,2.0,3.0,2.0,1.0,4.0,5.0,3.0,3.0,2.0,2.0,3.0,3.0
+17.0,female,primary school,tried smoking,social drinker,few hours a day,5.0,3.0,1.0,1.0,1.0,4.0,3.0,4.0,4.0,2.0,1.0,1.0,1.0,3.0,3.0,3.0,1.0,1.0,1.0
+17.0,female,secondary school,never smoked,social drinker,less than an hour a day,5.0,4.0,3.0,2.0,2.0,4.0,3.0,5.0,5.0,4.0,5.0,2.0,3.0,5.0,3.0,3.0,2.0,1.0,4.0
+19.0,male,secondary school,former smoker,social drinker,few hours a day,4.0,3.0,3.0,1.0,3.0,3.0,1.0,5.0,3.0,3.0,2.0,2.0,3.0,2.0,2.0,2.0,2.0,3.0,1.0
+18.0,female,secondary school,former smoker,social drinker,few hours a day,4.0,3.0,4.0,2.0,1.0,5.0,3.0,3.0,2.0,4.0,2.0,4.0,4.0,5.0,3.0,5.0,4.0,2.0,4.0
+20.0,female,college/bachelor degree,never smoked,social drinker,less than an hour a day,5.0,3.0,3.0,5.0,1.0,5.0,3.0,4.0,4.0,1.0,1.0,1.0,1.0,3.0,3.0,4.0,3.0,1.0,2.0
+21.0,female,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,3.0,3.0,3.0,2.0,5.0,3.0,5.0,5.0,2.0,2.0,4.0,3.0,5.0,4.0,5.0,5.0,2.0,2.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,3.0,3.0,4.0,5.0,4.0,1.0,1.0,2.0,1.0,4.0,3.0,2.0,2.0,1.0,2.0
+19.0,female,primary school,tried smoking,social drinker,few hours a day,4.0,3.0,5.0,3.0,3.0,2.0,5.0,5.0,3.0,2.0,2.0,3.0,3.0,3.0,4.0,2.0,5.0,2.0,3.0
+19.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,4.0,2.0,2.0,4.0,1.0,4.0,2.0,1.0,1.0,4.0,1.0,4.0,2.0,4.0,3.0,3.0,1.0
+20.0,male,secondary school,current smoker,drink a lot,less than an hour a day,5.0,3.0,2.0,4.0,2.0,1.0,1.0,5.0,2.0,1.0,1.0,5.0,5.0,3.0,2.0,1.0,2.0,4.0,1.0
+19.0,male,secondary school,tried smoking,never,less than an hour a day,5.0,2.0,2.0,1.0,3.0,1.0,1.0,5.0,5.0,3.0,3.0,2.0,2.0,3.0,3.0,1.0,5.0,5.0,1.0
+18.0,female,primary school,never smoked,social drinker,few hours a day,5.0,4.0,5.0,1.0,3.0,2.0,5.0,5.0,2.0,1.0,1.0,5.0,2.0,2.0,3.0,3.0,2.0,3.0,1.0
+18.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,2.0,2.0,2.0,5.0,4.0,4.0,5.0,4.0,3.0,4.0,4.0,3.0,5.0,4.0,3.0,3.0,3.0
+16.0,female,primary school,former smoker,never,few hours a day,5.0,4.0,1.0,2.0,1.0,3.0,3.0,1.0,5.0,5.0,5.0,3.0,3.0,4.0,2.0,4.0,1.0,1.0,2.0
+18.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,3.0,2.0,4.0,4.0,1.0,2.0,4.0,3.0,4.0,4.0,5.0,3.0,2.0,2.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,2.0,1.0,1.0,4.0,2.0,3.0,3.0,2.0,2.0,4.0,3.0,4.0,3.0,2.0,3.0,2.0,2.0
+24.0,female,college/bachelor degree,never smoked,social drinker,most of the day,4.0,3.0,3.0,5.0,5.0,5.0,4.0,3.0,4.0,2.0,1.0,1.0,4.0,4.0,4.0,3.0,5.0,1.0,4.0
+19.0,female,secondary school,never smoked,social drinker,less than an hour a day,5.0,3.0,3.0,4.0,5.0,5.0,5.0,3.0,2.0,2.0,1.0,1.0,2.0,3.0,3.0,2.0,4.0,1.0,5.0
+19.0,female,masters degree,never smoked,never,no time at all,2.0,1.0,1.0,3.0,2.0,4.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,1.0,3.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,4.0,3.0,5.0,2.0,4.0,5.0,5.0,4.0,5.0,4.0,3.0,2.0,2.0,4.0,5.0,2.0,5.0,2.0,4.0
+21.0,female,college/bachelor degree,former smoker,drink a lot,most of the day,5.0,1.0,3.0,2.0,1.0,3.0,4.0,3.0,4.0,2.0,1.0,1.0,1.0,4.0,5.0,4.0,4.0,3.0,2.0
+23.0,male,college/bachelor degree,current smoker,drink a lot,few hours a day,5.0,5.0,4.0,1.0,1.0,1.0,1.0,3.0,5.0,4.0,2.0,5.0,1.0,1.0,4.0,1.0,1.0,1.0,2.0
+23.0,male,college/bachelor degree,tried smoking,drink a lot,few hours a day,5.0,5.0,3.0,3.0,4.0,4.0,4.0,4.0,5.0,5.0,3.0,1.0,2.0,2.0,5.0,2.0,3.0,3.0,4.0
+17.0,male,secondary school,tried smoking,social drinker,less than an hour a day,4.0,3.0,5.0,2.0,2.0,2.0,2.0,4.0,4.0,2.0,1.0,5.0,2.0,3.0,3.0,3.0,3.0,2.0,1.0
+18.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,3.0,5.0,1.0,5.0,3.0,3.0,3.0,1.0,1.0,1.0,2.0,5.0,4.0,4.0,4.0,1.0,5.0
+26.0,male,masters degree,former smoker,drink a lot,few hours a day,5.0,3.0,1.0,3.0,4.0,5.0,3.0,2.0,4.0,2.0,1.0,3.0,4.0,2.0,3.0,4.0,5.0,5.0,2.0
+22.0,male,college/bachelor degree,tried smoking,drink a lot,few hours a day,2.0,3.0,2.0,2.0,2.0,2.0,2.0,2.0,4.0,4.0,4.0,3.0,3.0,3.0,3.0,4.0,2.0,1.0,1.0
+22.0,male,secondary school,tried smoking,social drinker,less than an hour a day,5.0,4.0,2.0,3.0,2.0,5.0,4.0,2.0,5.0,4.0,5.0,1.0,3.0,3.0,5.0,5.0,2.0,1.0,3.0
+25.0,male,college/bachelor degree,tried smoking,social drinker,most of the day,5.0,3.0,3.0,4.0,3.0,2.0,2.0,3.0,4.0,2.0,2.0,1.0,3.0,2.0,3.0,2.0,2.0,5.0,2.0
+21.0,female,secondary school,never smoked,drink a lot,few hours a day,5.0,3.0,3.0,1.0,2.0,3.0,3.0,4.0,5.0,2.0,3.0,1.0,3.0,3.0,4.0,4.0,4.0,2.0,2.0
+18.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,4.0,3.0,1.0,5.0,4.0,4.0,2.0,4.0,3.0,5.0,4.0,5.0,2.0,5.0,3.0,3.0,5.0
+15.0,female,currently a primary school pupil,never smoked,never,less than an hour a day,5.0,3.0,3.0,3.0,3.0,5.0,4.0,3.0,4.0,4.0,5.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0
+17.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,4.0,4.0,1.0,1.0,1.0,5.0,3.0,3.0,1.0,1.0,3.0,5.0,5.0,1.0,1.0,1.0
+22.0,female,college/bachelor degree,never smoked,social drinker,less than an hour a day,5.0,3.0,5.0,5.0,2.0,5.0,3.0,3.0,3.0,1.0,1.0,5.0,1.0,5.0,4.0,5.0,5.0,1.0,4.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,4.0,1.0,5.0,5.0,5.0,5.0,3.0,4.0,1.0,2.0,3.0,3.0,3.0,4.0,2.0,5.0
+21.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,5.0,2.0,1.0,3.0,4.0,5.0,3.0,1.0,3.0,4.0,2.0,4.0,2.0,2.0,5.0,4.0,2.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,4.0,3.0,3.0,4.0,2.0,2.0,1.0,3.0,2.0,5.0,5.0,3.0,1.0,2.0
+26.0,male,college/bachelor degree,former smoker,drink a lot,few hours a day,4.0,4.0,2.0,1.0,3.0,2.0,1.0,4.0,3.0,2.0,3.0,4.0,3.0,3.0,3.0,2.0,4.0,3.0,3.0
+26.0,female,masters degree,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,2.0,3.0,3.0,3.0,3.0,5.0,5.0,4.0,1.0,4.0,4.0,5.0,2.0,3.0,1.0,1.0
+25.0,male,secondary school,former smoker,drink a lot,few hours a day,5.0,4.0,3.0,2.0,4.0,3.0,3.0,4.0,5.0,5.0,5.0,2.0,5.0,3.0,4.0,4.0,3.0,4.0,2.0
+19.0,female,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,3.0,5.0,3.0,3.0,5.0,5.0,2.0,3.0,1.0,2.0,5.0,5.0,5.0,3.0,2.0,5.0,5.0,3.0
+20.0,male,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,5.0,4.0,1.0,1.0,2.0,1.0,3.0,1.0,1.0,1.0,3.0,1.0,1.0,2.0,2.0,1.0,5.0,1.0
+18.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,4.0,3.0,5.0,5.0,5.0,4.0,3.0,3.0,3.0,3.0,4.0,5.0,4.0,4.0,2.0,5.0
+25.0,female,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,3.0,5.0,2.0,2.0,2.0,2.0,5.0,5.0,4.0,4.0,2.0,3.0,2.0,4.0,4.0,2.0,3.0,2.0
+23.0,male,secondary school,former smoker,drink a lot,few hours a day,5.0,4.0,3.0,1.0,1.0,1.0,1.0,4.0,1.0,1.0,2.0,5.0,5.0,1.0,1.0,3.0,1.0,2.0,1.0
+24.0,male,college/bachelor degree,tried smoking,social drinker,less than an hour a day,5.0,3.0,4.0,1.0,1.0,1.0,1.0,3.0,3.0,1.0,3.0,4.0,5.0,1.0,3.0,5.0,1.0,3.0,1.0
+20.0,male,college/bachelor degree,tried smoking,never,few hours a day,5.0,3.0,3.0,2.0,1.0,3.0,3.0,3.0,5.0,3.0,5.0,1.0,1.0,3.0,3.0,4.0,1.0,3.0,3.0
+19.0,female,college/bachelor degree,never smoked,social drinker,less than an hour a day,5.0,2.0,3.0,1.0,2.0,3.0,4.0,5.0,3.0,1.0,2.0,2.0,2.0,3.0,3.0,2.0,4.0,1.0,3.0
+18.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,2.0,1.0,2.0,4.0,3.0,4.0,5.0,5.0,5.0,2.0,2.0,3.0,5.0,4.0,2.0,2.0,1.0
+25.0,female,secondary school,current smoker,drink a lot,most of the day,5.0,5.0,5.0,5.0,5.0,4.0,4.0,4.0,4.0,5.0,4.0,4.0,4.0,4.0,5.0,3.0,4.0,4.0,4.0
+22.0,male,masters degree,former smoker,never,few hours a day,1.0,1.0,2.0,3.0,4.0,3.0,3.0,2.0,2.0,5.0,2.0,2.0,2.0,3.0,4.0,4.0,3.0,2.0,3.0
+26.0,male,masters degree,current smoker,social drinker,few hours a day,4.0,3.0,3.0,1.0,2.0,3.0,1.0,4.0,3.0,2.0,2.0,5.0,3.0,3.0,3.0,3.0,3.0,3.0,1.0
+19.0,female,secondary school,never smoked,never,less than an hour a day,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0
+16.0,female,college/bachelor degree,former smoker,social drinker,less than an hour a day,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+18.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,2.0,2.0,4.0,4.0,4.0,2.0,3.0,5.0,5.0,4.0,2.0,3.0,2.0,3.0,2.0,2.0,1.0,4.0
+20.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,4.0,3.0,1.0,2.0,4.0,3.0,4.0,2.0,1.0,1.0,4.0,1.0,1.0,4.0,2.0,4.0,1.0,2.0
+17.0,female,college/bachelor degree,current smoker,drink a lot,less than an hour a day,5.0,4.0,4.0,2.0,2.0,2.0,2.0,3.0,5.0,5.0,3.0,4.0,3.0,5.0,4.0,4.0,4.0,2.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,most of the day,3.0,3.0,2.0,1.0,1.0,4.0,3.0,2.0,2.0,1.0,1.0,2.0,2.0,3.0,3.0,2.0,3.0,1.0,4.0
+19.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,1.0,1.0,4.0,3.0,3.0,4.0,1.0,2.0,4.0,2.0,2.0,3.0,4.0,4.0,5.0,4.0
+25.0,male,masters degree,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,5.0,1.0,3.0,3.0,4.0,5.0,1.0,1.0,3.0,1.0,3.0,5.0,2.0,5.0,5.0,3.0
+19.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,5.0,3.0,1.0,2.0,3.0,2.0,5.0,3.0,1.0,1.0,5.0,3.0,3.0,3.0,3.0,3.0,3.0,2.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,1.0,1.0,1.0,3.0,5.0,2.0,1.0,1.0,3.0,2.0,1.0,2.0,1.0,1.0,1.0,1.0
+17.0,female,secondary school,never smoked,social drinker,less than an hour a day,5.0,3.0,3.0,3.0,4.0,4.0,4.0,3.0,3.0,2.0,2.0,4.0,2.0,5.0,3.0,4.0,2.0,3.0,3.0
+18.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,2.0,2.0,3.0,4.0,4.0,1.0,2.0,3.0,3.0,3.0,3.0,2.0,4.0,4.0,2.0
+20.0,female,secondary school,never smoked,social drinker,less than an hour a day,4.0,2.0,4.0,1.0,2.0,3.0,2.0,3.0,3.0,1.0,1.0,1.0,1.0,4.0,4.0,1.0,3.0,2.0,3.0
+17.0,female,secondary school,never smoked,social drinker,most of the day,5.0,3.0,2.0,3.0,4.0,4.0,4.0,3.0,5.0,5.0,5.0,2.0,5.0,5.0,5.0,5.0,4.0,2.0,3.0
+21.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,2.0,5.0,2.0,4.0,5.0,4.0,5.0,4.0,1.0,2.0,3.0,3.0,3.0,2.0,3.0,4.0,3.0
+19.0,male,secondary school,never smoked,social drinker,few hours a day,4.0,3.0,4.0,3.0,1.0,4.0,4.0,4.0,3.0,1.0,1.0,3.0,3.0,5.0,2.0,2.0,3.0,4.0,3.0
+19.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,4.0,4.0,3.0,3.0,3.0,3.0,4.0,5.0,2.0,3.0,3.0,4.0,3.0,3.0,2.0,3.0,3.0,1.0,3.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,4.0,3.0,4.0,5.0,4.0,1.0,2.0,2.0,5.0,5.0,4.0,4.0,3.0,2.0
+16.0,male,primary school,current smoker,drink a lot,few hours a day,5.0,3.0,2.0,2.0,1.0,2.0,4.0,5.0,2.0,2.0,1.0,5.0,3.0,2.0,3.0,3.0,3.0,3.0,1.0
+18.0,female,primary school,tried smoking,social drinker,less than an hour a day,5.0,3.0,2.0,1.0,2.0,3.0,3.0,4.0,3.0,2.0,3.0,4.0,4.0,2.0,2.0,4.0,3.0,1.0,2.0
+19.0,male,college/bachelor degree,tried smoking,drink a lot,most of the day,5.0,5.0,4.0,3.0,3.0,5.0,3.0,5.0,4.0,1.0,2.0,4.0,1.0,1.0,1.0,3.0,3.0,4.0,4.0
+20.0,female,secondary school,former smoker,never,few hours a day,5.0,5.0,3.0,2.0,2.0,4.0,1.0,2.0,5.0,5.0,4.0,2.0,1.0,1.0,5.0,5.0,1.0,4.0,1.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,3.0,1.0,3.0,2.0,1.0,1.0,4.0,3.0,5.0,3.0,4.0,3.0,3.0,2.0
+21.0,male,masters degree,former smoker,social drinker,less than an hour a day,5.0,4.0,3.0,2.0,2.0,3.0,1.0,3.0,4.0,3.0,2.0,4.0,3.0,3.0,1.0,1.0,3.0,3.0,1.0
+24.0,male,doctorate degree,former smoker,never,few hours a day,2.0,3.0,3.0,1.0,2.0,3.0,3.0,3.0,2.0,4.0,2.0,5.0,3.0,4.0,3.0,3.0,4.0,4.0,2.0
+23.0,male,secondary school,tried smoking,social drinker,less than an hour a day,4.0,5.0,3.0,1.0,1.0,1.0,1.0,5.0,2.0,1.0,1.0,5.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+30.0,female,secondary school,current smoker,drink a lot,most of the day,5.0,1.0,5.0,1.0,5.0,1.0,5.0,1.0,5.0,1.0,5.0,1.0,5.0,1.0,5.0,1.0,5.0,1.0,5.0
+27.0,male,doctorate degree,tried smoking,social drinker,less than an hour a day,3.0,5.0,3.0,2.0,2.0,4.0,3.0,5.0,1.0,4.0,3.0,4.0,4.0,2.0,4.0,3.0,4.0,2.0,3.0
+19.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,1.0,5.0,1.0,2.0,3.0,4.0,2.0,2.0,1.0,1.0,5.0,2.0,2.0,2.0,2.0,1.0,3.0,1.0
+18.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,1.0,4.0,3.0,4.0,5.0,3.0,3.0,3.0,3.0,2.0,2.0,3.0,2.0,2.0,2.0
+18.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,1.0,2.0,3.0,4.0,5.0,2.0,4.0,5.0,4.0,1.0,1.0,2.0,4.0,4.0,2.0,2.0,4.0
+17.0,male,secondary school,never smoked,never,few hours a day,5.0,3.0,4.0,1.0,1.0,2.0,4.0,4.0,3.0,1.0,4.0,4.0,1.0,1.0,3.0,1.0,1.0,1.0,1.0
+30.0,female,secondary school,current smoker,drink a lot,less than an hour a day,4.0,5.0,5.0,1.0,1.0,1.0,1.0,4.0,5.0,3.0,2.0,1.0,1.0,1.0,5.0,3.0,1.0,4.0,1.0
+19.0,female,secondary school,former smoker,drink a lot,few hours a day,5.0,5.0,5.0,3.0,2.0,2.0,2.0,5.0,4.0,4.0,3.0,5.0,3.0,1.0,3.0,3.0,2.0,4.0,2.0
+27.0,female,secondary school,current smoker,social drinker,most of the day,5.0,5.0,2.0,1.0,1.0,2.0,4.0,3.0,5.0,4.0,5.0,1.0,1.0,2.0,3.0,2.0,1.0,1.0,2.0
+21.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,1.0,4.0,1.0,1.0,4.0,4.0,5.0,5.0,3.0,4.0,4.0,4.0,4.0,4.0,2.0,2.0,2.0,2.0
+17.0,female,primary school,former smoker,social drinker,few hours a day,5.0,4.0,4.0,3.0,1.0,3.0,5.0,5.0,5.0,5.0,5.0,3.0,4.0,2.0,5.0,4.0,3.0,3.0,3.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+20.0,male,secondary school,current smoker,never,few hours a day,3.0,3.0,1.0,3.0,3.0,5.0,5.0,3.0,2.0,2.0,2.0,1.0,1.0,1.0,3.0,1.0,1.0,1.0,4.0
+20.0,male,college/bachelor degree,tried smoking,drink a lot,few hours a day,5.0,4.0,3.0,1.0,2.0,3.0,2.0,5.0,5.0,3.0,4.0,3.0,2.0,1.0,2.0,2.0,2.0,3.0,1.0
+18.0,male,secondary school,never smoked,drink a lot,most of the day,4.0,3.0,4.0,1.0,1.0,2.0,1.0,2.0,2.0,2.0,1.0,4.0,1.0,1.0,3.0,1.0,1.0,1.0,1.0
+20.0,male,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,3.0,2.0,3.0,4.0,5.0,5.0,1.0,5.0,5.0,3.0,1.0,3.0,4.0,5.0,4.0,2.0,1.0,5.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,3.0,3.0,4.0,2.0,3.0,5.0,4.0,4.0,3.0,2.0,3.0,4.0,4.0,2.0,1.0,4.0
+17.0,female,secondary school,never smoked,never,few hours a day,5.0,4.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,2.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0
+19.0,male,secondary school,never smoked,never,few hours a day,5.0,4.0,2.0,1.0,1.0,1.0,1.0,2.0,2.0,3.0,1.0,2.0,1.0,1.0,3.0,1.0,1.0,1.0,1.0
+20.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,4.0,4.0,3.0,1.0,5.0,4.0,4.0,3.0,2.0,3.0,5.0,4.0,3.0,3.0,1.0,2.0,5.0,4.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,5.0,2.0,3.0,4.0,3.0,1.0,2.0,5.0,5.0,3.0,5.0,4.0,4.0,5.0,2.0,4.0,2.0,2.0
+21.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,3.0,3.0,1.0,4.0,3.0,4.0,5.0,5.0,5.0,4.0,4.0,5.0,5.0,5.0,4.0,3.0,2.0
+23.0,male,primary school,former smoker,drink a lot,most of the day,3.0,4.0,1.0,1.0,1.0,1.0,2.0,5.0,5.0,2.0,2.0,5.0,4.0,4.0,5.0,1.0,1.0,1.0,2.0
+24.0,male,secondary school,never smoked,social drinker,few hours a day,4.0,4.0,3.0,3.0,1.0,4.0,1.0,4.0,4.0,4.0,3.0,2.0,1.0,1.0,3.0,3.0,1.0,4.0,1.0
+17.0,female,secondary school,never smoked,social drinker,less than an hour a day,5.0,5.0,3.0,1.0,2.0,2.0,1.0,4.0,2.0,1.0,2.0,3.0,2.0,1.0,1.0,2.0,5.0,2.0,1.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,2.0,2.0,4.0,5.0,3.0,5.0,2.0,2.0,4.0,4.0,4.0,4.0,5.0,3.0,1.0,4.0
+17.0,male,secondary school,never smoked,never,few hours a day,5.0,3.0,2.0,2.0,2.0,5.0,4.0,4.0,5.0,5.0,5.0,1.0,3.0,4.0,5.0,5.0,2.0,1.0,4.0
+19.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,3.0,1.0,1.0,2.0,3.0,5.0,4.0,1.0,3.0,5.0,4.0,3.0,3.0,3.0,4.0,1.0,2.0
+21.0,male,secondary school,current smoker,never,few hours a day,5.0,2.0,3.0,2.0,2.0,3.0,1.0,3.0,2.0,1.0,1.0,5.0,2.0,2.0,1.0,3.0,3.0,3.0,1.0
+29.0,female,college/bachelor degree,current smoker,social drinker,most of the day,5.0,3.0,1.0,1.0,2.0,5.0,1.0,3.0,5.0,3.0,2.0,1.0,3.0,2.0,5.0,3.0,2.0,1.0,5.0
+21.0,female,college/bachelor degree,tried smoking,drink a lot,few hours a day,4.0,3.0,1.0,3.0,1.0,4.0,2.0,2.0,5.0,4.0,2.0,1.0,2.0,2.0,2.0,4.0,2.0,1.0,2.0
+20.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,3.0,1.0,4.0,4.0,4.0,5.0,3.0,3.0,3.0,3.0,5.0,5.0,3.0,4.0,1.0,4.0
+20.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,4.0,3.0,4.0,5.0,4.0,5.0,3.0,3.0,2.0,4.0,3.0,5.0,5.0,2.0,1.0,2.0
+19.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,1.0,3.0,4.0,1.0,2.0,1.0,2.0,4.0,5.0,3.0,4.0,5.0,2.0,1.0,3.0,3.0,4.0,4.0,1.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,1.0,2.0,2.0,5.0,4.0,3.0,5.0,5.0,4.0,3.0,2.0,4.0,4.0,4.0,2.0,1.0,3.0
+21.0,female,secondary school,former smoker,drink a lot,most of the day,5.0,3.0,4.0,2.0,1.0,3.0,2.0,4.0,3.0,1.0,1.0,5.0,4.0,4.0,3.0,3.0,5.0,2.0,3.0
+17.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,4.0,4.0,4.0,5.0,4.0,3.0,4.0,5.0,4.0,4.0,5.0,3.0,4.0,3.0,4.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,4.0,5.0,5.0,5.0,2.0,5.0,3.0,4.0,1.0,4.0,4.0,5.0,3.0,4.0,1.0,5.0
+19.0,male,secondary school,current smoker,social drinker,few hours a day,3.0,3.0,2.0,1.0,1.0,4.0,3.0,3.0,4.0,1.0,1.0,1.0,1.0,5.0,3.0,5.0,2.0,2.0,4.0
+21.0,male,secondary school,tried smoking,social drinker,less than an hour a day,4.0,3.0,4.0,3.0,2.0,4.0,4.0,3.0,5.0,4.0,2.0,2.0,2.0,2.0,3.0,2.0,2.0,2.0,3.0
+19.0,male,secondary school,never smoked,social drinker,few hours a day,4.0,3.0,3.0,2.0,2.0,2.0,3.0,5.0,4.0,1.0,1.0,1.0,4.0,3.0,3.0,3.0,3.0,1.0,1.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,1.0,1.0,2.0,3.0,4.0,5.0,5.0,5.0,4.0,3.0,5.0,4.0,3.0,1.0,1.0,3.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,3.0,2.0,5.0,3.0,2.0,5.0,5.0,4.0,2.0,4.0,5.0,5.0,4.0,5.0,1.0,3.0
+21.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,5.0,4.0,1.0,1.0,1.0,2.0,5.0,4.0,1.0,1.0,4.0,5.0,3.0,4.0,4.0,4.0,2.0,1.0
+23.0,female,masters degree,current smoker,drink a lot,few hours a day,4.0,3.0,4.0,2.0,1.0,2.0,4.0,4.0,3.0,1.0,2.0,3.0,3.0,3.0,4.0,4.0,4.0,1.0,2.0
+24.0,female,college/bachelor degree,former smoker,social drinker,most of the day,5.0,4.0,2.0,3.0,3.0,1.0,4.0,5.0,5.0,1.0,1.0,4.0,3.0,3.0,2.0,2.0,4.0,1.0,2.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,5.0,4.0,3.0,3.0,2.0,1.0,4.0,4.0,3.0,4.0,5.0,2.0,2.0,2.0,3.0,2.0,5.0,1.0
+24.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,5.0,4.0,2.0,1.0,3.0,3.0,4.0,5.0,1.0,4.0,1.0,3.0,2.0,2.0,5.0,2.0,2.0,1.0
+20.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,4.0,4.0,2.0,3.0,3.0,3.0,4.0,4.0,2.0,2.0,5.0,3.0,2.0,2.0,1.0,3.0,3.0,2.0
+30.0,male,masters degree,former smoker,never,few hours a day,5.0,4.0,2.0,5.0,4.0,5.0,5.0,2.0,3.0,2.0,3.0,2.0,3.0,5.0,4.0,4.0,3.0,4.0,5.0
+20.0,female,secondary school,current smoker,drink a lot,most of the day,4.0,4.0,3.0,1.0,1.0,1.0,3.0,5.0,1.0,1.0,1.0,4.0,2.0,2.0,1.0,1.0,3.0,1.0,1.0
+23.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,5.0,2.0,2.0,3.0,3.0,4.0,2.0,1.0,1.0,4.0,2.0,4.0,2.0,2.0,3.0,5.0,3.0
+19.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,2.0,3.0,4.0,2.0,5.0,5.0,5.0,5.0,2.0,2.0,1.0,4.0,4.0,5.0,5.0,2.0,1.0,4.0
+19.0,male,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,2.0,2.0,1.0,1.0,3.0,1.0,3.0,5.0,3.0,4.0,1.0,4.0,2.0,3.0,5.0,1.0,2.0,1.0
+22.0,female,college/bachelor degree,current smoker,never,most of the day,3.0,2.0,1.0,4.0,4.0,5.0,3.0,2.0,2.0,1.0,1.0,1.0,2.0,4.0,2.0,1.0,3.0,1.0,5.0
+17.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,4.0,1.0,2.0,3.0,4.0,4.0,2.0,1.0,1.0,4.0,4.0,3.0,3.0,1.0,1.0,1.0,1.0
+20.0,male,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,5.0,3.0,1.0,1.0,2.0,2.0,2.0,2.0,1.0,2.0,5.0,3.0,2.0,2.0,2.0,2.0,5.0,1.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,2.0,1.0,2.0,2.0,1.0,2.0,2.0,1.0,1.0,5.0,3.0,2.0,2.0,2.0,3.0,3.0,1.0
+30.0,female,masters degree,former smoker,social drinker,few hours a day,5.0,3.0,4.0,4.0,2.0,3.0,4.0,3.0,3.0,1.0,1.0,2.0,3.0,2.0,2.0,2.0,3.0,1.0,4.0
+27.0,male,college/bachelor degree,tried smoking,drink a lot,few hours a day,5.0,2.0,4.0,2.0,1.0,1.0,2.0,3.0,3.0,1.0,1.0,5.0,3.0,3.0,2.0,2.0,2.0,1.0,1.0
+19.0,male,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,4.0,5.0,3.0,3.0,3.0,2.0,5.0,4.0,3.0,4.0,5.0,4.0,2.0,3.0,2.0,4.0,4.0,2.0
+17.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,3.0,2.0,1.0,3.0,4.0,4.0,5.0,3.0,3.0,3.0,3.0,5.0,3.0,2.0,4.0,3.0,3.0
+20.0,male,secondary school,current smoker,social drinker,most of the day,5.0,4.0,4.0,2.0,3.0,3.0,5.0,4.0,3.0,1.0,2.0,2.0,3.0,3.0,3.0,4.0,2.0,5.0,2.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,3.0,1.0,3.0,3.0,2.0,5.0,3.0,2.0,3.0,3.0,1.0,1.0,5.0,5.0,5.0,3.0,1.0,1.0,1.0
+20.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,4.0,4.0,2.0,3.0,3.0,4.0,3.0,2.0,2.0,5.0,3.0,3.0,3.0,2.0,3.0,4.0,2.0
+20.0,male,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,4.0,3.0,3.0,3.0,3.0,3.0,4.0,4.0,3.0,4.0,3.0,3.0,1.0,3.0,2.0,5.0,3.0
+18.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,2.0,1.0,3.0,1.0,3.0,5.0,1.0,2.0,1.0,3.0,3.0,3.0,4.0,1.0,2.0,1.0
+21.0,male,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,4.0,4.0,2.0,2.0,3.0,2.0,5.0,4.0,3.0,1.0,4.0,3.0,4.0,2.0,3.0,5.0,4.0,2.0
+21.0,male,secondary school,current smoker,social drinker,few hours a day,5.0,5.0,3.0,2.0,2.0,4.0,4.0,3.0,2.0,1.0,1.0,2.0,2.0,3.0,3.0,4.0,1.0,5.0,2.0
+20.0,male,secondary school,former smoker,drink a lot,few hours a day,5.0,3.0,3.0,2.0,3.0,3.0,4.0,3.0,5.0,4.0,4.0,4.0,3.0,3.0,4.0,4.0,2.0,3.0,3.0
+17.0,female,secondary school,former smoker,social drinker,less than an hour a day,4.0,2.0,4.0,3.0,2.0,3.0,4.0,3.0,4.0,2.0,3.0,4.0,2.0,1.0,2.0,4.0,3.0,2.0,2.0
+23.0,male,college/bachelor degree,tried smoking,drink a lot,most of the day,4.0,3.0,2.0,3.0,3.0,4.0,4.0,2.0,5.0,4.0,4.0,3.0,4.0,2.0,4.0,4.0,1.0,1.0,3.0
+25.0,female,masters degree,never smoked,social drinker,few hours a day,5.0,3.0,4.0,2.0,4.0,2.0,3.0,4.0,3.0,1.0,1.0,1.0,3.0,1.0,3.0,3.0,4.0,1.0,1.0
+18.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,3.0,4.0,3.0,2.0,4.0,4.0,5.0,3.0,2.0,5.0,2.0,2.0,3.0,1.0,3.0,2.0,2.0
+18.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,2.0,1.0,2.0,5.0,4.0,4.0,5.0,3.0,3.0,2.0,1.0,3.0,5.0,5.0,2.0,1.0,1.0
+25.0,female,masters degree,tried smoking,never,few hours a day,5.0,4.0,4.0,2.0,1.0,2.0,1.0,5.0,3.0,3.0,2.0,3.0,1.0,1.0,1.0,2.0,3.0,4.0,1.0
+21.0,male,college/bachelor degree,tried smoking,drink a lot,most of the day,5.0,3.0,3.0,2.0,1.0,4.0,3.0,3.0,5.0,4.0,2.0,2.0,3.0,4.0,5.0,4.0,2.0,3.0,3.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,2.0,3.0,1.0,3.0,3.0,3.0,5.0,3.0,2.0,2.0,2.0,3.0,2.0,5.0,1.0,4.0,1.0
+21.0,male,secondary school,tried smoking,drink a lot,few hours a day,4.0,4.0,4.0,2.0,2.0,3.0,3.0,3.0,4.0,2.0,1.0,3.0,3.0,3.0,3.0,3.0,2.0,4.0,3.0
+18.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,5.0,1.0,1.0,1.0,2.0,3.0,2.0,1.0,2.0,3.0,2.0,2.0,2.0,2.0,5.0,3.0,1.0
+20.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,1.0,3.0,3.0,2.0,1.0,1.0,4.0,1.0,1.0,1.0,3.0,1.0,4.0,1.0
+19.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,3.0,1.0,2.0,3.0,1.0,4.0,1.0,1.0,1.0,5.0,5.0,4.0,4.0,1.0,3.0,3.0,1.0
+22.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,1.0,3.0,5.0,3.0,1.0,1.0,5.0,3.0,4.0,3.0,3.0,4.0,5.0,5.0,2.0,1.0,1.0
+26.0,male,secondary school,never smoked,never,less than an hour a day,4.0,2.0,2.0,2.0,2.0,4.0,5.0,4.0,4.0,2.0,2.0,5.0,4.0,4.0,4.0,3.0,2.0,4.0,3.0
+23.0,male,secondary school,tried smoking,social drinker,less than an hour a day,4.0,5.0,5.0,1.0,4.0,2.0,1.0,2.0,4.0,5.0,3.0,2.0,1.0,2.0,4.0,4.0,2.0,5.0,2.0
+18.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,5.0,1.0,2.0,1.0,2.0,3.0,2.0,1.0,3.0,4.0,2.0,2.0,2.0,1.0,5.0,4.0,1.0
+18.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,1.0,1.0,3.0,5.0,5.0,4.0,5.0,2.0,2.0,1.0,1.0,4.0,5.0,5.0,2.0,1.0,1.0
+16.0,female,primary school,former smoker,social drinker,few hours a day,5.0,4.0,4.0,1.0,1.0,2.0,1.0,2.0,4.0,3.0,5.0,3.0,2.0,2.0,3.0,2.0,1.0,4.0,1.0
+19.0,female,secondary school,tried smoking,drink a lot,few hours a day,5.0,3.0,3.0,1.0,1.0,2.0,3.0,4.0,3.0,1.0,1.0,2.0,3.0,4.0,3.0,3.0,4.0,3.0,1.0
+19.0,female,college/bachelor degree,tried smoking,drink a lot,few hours a day,5.0,3.0,4.0,2.0,1.0,4.0,1.0,4.0,5.0,3.0,4.0,3.0,4.0,4.0,4.0,5.0,1.0,4.0,1.0
+23.0,female,secondary school,current smoker,social drinker,few hours a day,3.0,4.0,3.0,2.0,2.0,2.0,3.0,4.0,4.0,4.0,1.0,5.0,4.0,2.0,3.0,1.0,1.0,3.0,1.0
+21.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,5.0,3.0,2.0,1.0,3.0,1.0,3.0,4.0,5.0,4.0,1.0,1.0,1.0,3.0,4.0,1.0,2.0,1.0
+19.0,male,secondary school,tried smoking,drink a lot,less than an hour a day,4.0,3.0,3.0,2.0,4.0,3.0,3.0,2.0,5.0,3.0,2.0,4.0,3.0,2.0,3.0,2.0,1.0,3.0,2.0
+20.0,female,college/bachelor degree,tried smoking,social drinker,less than an hour a day,5.0,3.0,3.0,2.0,1.0,2.0,2.0,4.0,4.0,3.0,2.0,2.0,1.0,2.0,4.0,2.0,5.0,2.0,2.0
+22.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,3.0,4.0,5.0,3.0,3.0,4.0,3.0,2.0,2.0,3.0,3.0,5.0,4.0,2.0,2.0,2.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,1.0,2.0,3.0,2.0,4.0,3.0,1.0,1.0,4.0,2.0,2.0,3.0,1.0,1.0,4.0,1.0
+21.0,male,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,4.0,3.0,2.0,1.0,3.0,4.0,4.0,2.0,2.0,2.0,4.0,1.0,3.0,2.0,2.0,3.0,1.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,3.0,2.0,2.0,3.0,3.0,5.0,3.0,2.0,3.0,2.0,2.0,3.0,1.0,2.0,1.0,2.0
+17.0,female,primary school,former smoker,social drinker,less than an hour a day,5.0,3.0,2.0,3.0,4.0,3.0,2.0,2.0,4.0,3.0,2.0,4.0,3.0,2.0,3.0,2.0,2.0,3.0,4.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,1.0,1.0,2.0,3.0,3.0,5.0,3.0,2.0,2.0,4.0,3.0,4.0,2.0,2.0,1.0,1.0
+16.0,male,secondary school,never smoked,social drinker,few hours a day,4.0,4.0,4.0,2.0,3.0,2.0,2.0,3.0,3.0,1.0,1.0,4.0,3.0,3.0,2.0,1.0,2.0,3.0,2.0
+22.0,male,college/bachelor degree,tried smoking,drink a lot,few hours a day,5.0,3.0,2.0,3.0,4.0,3.0,4.0,2.0,5.0,3.0,3.0,1.0,2.0,4.0,4.0,4.0,3.0,1.0,2.0
+23.0,male,college/bachelor degree,current smoker,never,few hours a day,5.0,3.0,2.0,2.0,3.0,1.0,2.0,4.0,3.0,1.0,2.0,3.0,2.0,3.0,2.0,4.0,3.0,2.0,3.0
+28.0,female,masters degree,former smoker,social drinker,less than an hour a day,5.0,3.0,2.0,2.0,1.0,3.0,2.0,2.0,5.0,2.0,3.0,1.0,3.0,5.0,5.0,5.0,3.0,1.0,1.0
+20.0,male,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,2.0,2.0,2.0,2.0,1.0,3.0,3.0,2.0,2.0,5.0,3.0,3.0,1.0,3.0,1.0,1.0,1.0
+21.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,2.0,2.0,1.0,2.0,3.0,4.0,3.0,3.0,1.0,1.0,2.0,4.0,4.0,2.0,1.0,3.0,1.0,3.0
+22.0,female,secondary school,tried smoking,never,less than an hour a day,4.0,3.0,1.0,2.0,2.0,2.0,2.0,3.0,3.0,1.0,2.0,1.0,2.0,3.0,3.0,2.0,2.0,1.0,2.0
+19.0,male,masters degree,never smoked,never,few hours a day,5.0,3.0,1.0,2.0,2.0,3.0,1.0,2.0,3.0,2.0,3.0,5.0,4.0,3.0,3.0,2.0,2.0,2.0,1.0
+19.0,male,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,5.0,2.0,4.0,3.0,2.0,1.0,1.0,5.0,5.0,4.0,2.0,3.0,5.0,4.0,4.0,3.0,1.0,1.0
+24.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,3.0,3.0,2.0,1.0,2.0,2.0,5.0,5.0,3.0,1.0,1.0,2.0,2.0,2.0,3.0,1.0,5.0,1.0,2.0
+23.0,male,college/bachelor degree,never smoked,social drinker,few hours a day,5.0,3.0,4.0,3.0,3.0,2.0,2.0,4.0,4.0,1.0,3.0,5.0,3.0,3.0,3.0,2.0,2.0,3.0,2.0
+21.0,female,secondary school,current smoker,drink a lot,less than an hour a day,5.0,3.0,5.0,3.0,1.0,5.0,5.0,2.0,1.0,1.0,1.0,2.0,3.0,4.0,3.0,5.0,5.0,5.0,4.0
+22.0,female,secondary school,tried smoking,drink a lot,most of the day,5.0,4.0,4.0,3.0,2.0,2.0,3.0,5.0,3.0,2.0,3.0,3.0,3.0,2.0,2.0,1.0,3.0,1.0,1.0
+18.0,male,secondary school,current smoker,social drinker,few hours a day,5.0,2.0,3.0,2.0,3.0,2.0,1.0,4.0,4.0,3.0,3.0,2.0,2.0,3.0,2.0,2.0,2.0,3.0,2.0
+28.0,female,masters degree,tried smoking,drink a lot,less than an hour a day,5.0,3.0,4.0,3.0,2.0,3.0,4.0,4.0,3.0,2.0,3.0,4.0,4.0,2.0,5.0,3.0,2.0,2.0,3.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,2.0,1.0,1.0,3.0,4.0,4.0,5.0,1.0,1.0,4.0,4.0,5.0,5.0,5.0,4.0,1.0,2.0
+23.0,female,college/bachelor degree,former smoker,social drinker,few hours a day,5.0,3.0,2.0,2.0,1.0,4.0,5.0,3.0,5.0,5.0,4.0,1.0,1.0,3.0,4.0,5.0,4.0,1.0,5.0
+22.0,female,secondary school,former smoker,social drinker,less than an hour a day,5.0,4.0,4.0,2.0,1.0,1.0,1.0,4.0,3.0,2.0,4.0,3.0,3.0,2.0,4.0,2.0,3.0,3.0,2.0
+21.0,female,secondary school,former smoker,drink a lot,few hours a day,5.0,3.0,4.0,4.0,2.0,4.0,3.0,3.0,4.0,1.0,3.0,1.0,2.0,4.0,4.0,4.0,2.0,3.0,4.0
+20.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,2.0,3.0,1.0,5.0,3.0,3.0,5.0,4.0,4.0,2.0,3.0,4.0,5.0,5.0,5.0,2.0,4.0
+18.0,female,primary school,former smoker,social drinker,few hours a day,4.0,4.0,5.0,2.0,3.0,1.0,3.0,4.0,4.0,3.0,1.0,4.0,2.0,2.0,3.0,3.0,3.0,4.0,1.0
+21.0,male,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,2.0,2.0,1.0,3.0,1.0,3.0,5.0,4.0,4.0,1.0,3.0,3.0,5.0,4.0,1.0,1.0,1.0
+20.0,male,college/bachelor degree,current smoker,social drinker,few hours a day,5.0,4.0,2.0,2.0,2.0,3.0,2.0,2.0,5.0,4.0,4.0,2.0,2.0,2.0,4.0,4.0,2.0,3.0,2.0
+21.0,female,secondary school,tried smoking,social drinker,most of the day,4.0,3.0,2.0,2.0,1.0,2.0,4.0,4.0,5.0,5.0,5.0,3.0,4.0,3.0,3.0,2.0,4.0,1.0,3.0
+21.0,female,secondary school,former smoker,drink a lot,few hours a day,5.0,1.0,3.0,2.0,1.0,3.0,1.0,3.0,4.0,4.0,3.0,3.0,3.0,3.0,3.0,5.0,5.0,1.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,4.0,3.0,3.0,3.0,3.0,5.0,3.0,4.0,3.0,3.0,2.0,3.0,3.0,5.0,1.0,3.0,1.0,3.0
+17.0,male,primary school,never smoked,never,few hours a day,5.0,3.0,4.0,2.0,2.0,1.0,1.0,4.0,3.0,2.0,3.0,4.0,2.0,3.0,2.0,3.0,2.0,3.0,2.0
+20.0,female,secondary school,current smoker,social drinker,few hours a day,5.0,3.0,5.0,1.0,1.0,3.0,2.0,5.0,3.0,1.0,1.0,4.0,3.0,2.0,1.0,1.0,2.0,4.0,3.0
+23.0,female,college/bachelor degree,tried smoking,drink a lot,few hours a day,5.0,4.0,2.0,2.0,1.0,5.0,2.0,4.0,4.0,2.0,5.0,3.0,1.0,4.0,5.0,5.0,2.0,3.0,3.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,1.0,1.0,3.0,2.0,1.0,1.0,2.0,2.0,1.0,1.0,1.0,1.0,1.0,1.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,3.0,3.0,2.0,4.0,3.0,2.0,1.0,1.0,3.0,3.0,4.0,3.0,2.0,5.0,2.0,3.0
+22.0,male,secondary school,never smoked,never,few hours a day,5.0,3.0,3.0,2.0,2.0,2.0,2.0,2.0,4.0,3.0,3.0,1.0,2.0,2.0,2.0,5.0,2.0,1.0,2.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,5.0,1.0,1.0,1.0,1.0,5.0,3.0,1.0,2.0,4.0,4.0,1.0,2.0,3.0,1.0,3.0,1.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,4.0,2.0,2.0,5.0,3.0,4.0,3.0,2.0,2.0,4.0,4.0,2.0,4.0,3.0,4.0,3.0,3.0
+27.0,female,college/bachelor degree,tried smoking,never,few hours a day,3.0,2.0,3.0,5.0,1.0,4.0,2.0,4.0,2.0,3.0,4.0,2.0,5.0,2.0,3.0,5.0,3.0,3.0,3.0
+18.0,female,primary school,former smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,1.0,2.0,3.0,3.0,2.0,2.0,3.0,5.0,3.0,1.0,1.0,1.0,3.0,3.0,2.0
+18.0,male,secondary school,current smoker,social drinker,most of the day,5.0,3.0,4.0,2.0,2.0,1.0,3.0,4.0,3.0,4.0,3.0,2.0,3.0,2.0,3.0,1.0,2.0,2.0,3.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,2.0,1.0,3.0,5.0,3.0,2.0,1.0,4.0,3.0,2.0,2.0,1.0,3.0,4.0,2.0
+17.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,2.0,2.0,3.0,5.0,4.0,3.0,4.0,2.0,3.0,1.0,4.0,5.0,5.0,4.0,3.0,1.0,2.0
+19.0,female,primary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,2.0,2.0,2.0,3.0,3.0,4.0,5.0,4.0,2.0,2.0,2.0,2.0,3.0,3.0,4.0,1.0
+16.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,1.0,2.0,5.0,2.0,1.0,1.0,2.0,1.0,1.0,1.0,1.0,3.0,1.0,1.0
+21.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,2.0,3.0,2.0,3.0,1.0,4.0,3.0,4.0,4.0,2.0,3.0,4.0,3.0,2.0,3.0,3.0,2.0
+18.0,female,primary school,never smoked,social drinker,few hours a day,5.0,3.0,4.0,1.0,1.0,5.0,4.0,5.0,5.0,4.0,5.0,4.0,5.0,5.0,5.0,5.0,5.0,2.0,5.0
+19.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,2.0,5.0,1.0,5.0,1.0,4.0,5.0,2.0,4.0,4.0,1.0,3.0,5.0,5.0,1.0,5.0,3.0
+20.0,female,secondary school,never smoked,never,few hours a day,4.0,3.0,4.0,1.0,4.0,5.0,3.0,4.0,4.0,1.0,2.0,1.0,2.0,3.0,4.0,3.0,4.0,4.0,2.0
+16.0,male,primary school,tried smoking,never,few hours a day,5.0,3.0,2.0,1.0,1.0,3.0,3.0,3.0,3.0,1.0,1.0,4.0,3.0,5.0,2.0,2.0,1.0,5.0,1.0
+18.0,female,primary school,current smoker,social drinker,few hours a day,5.0,3.0,3.0,2.0,1.0,2.0,2.0,4.0,4.0,3.0,3.0,4.0,5.0,4.0,4.0,4.0,3.0,1.0,1.0
+24.0,male,college/bachelor degree,tried smoking,drink a lot,most of the day,5.0,2.0,5.0,3.0,2.0,4.0,1.0,4.0,2.0,1.0,2.0,1.0,3.0,5.0,3.0,3.0,3.0,5.0,2.0
+22.0,female,secondary school,current smoker,social drinker,less than an hour a day,4.0,3.0,3.0,2.0,1.0,5.0,2.0,3.0,5.0,1.0,4.0,4.0,4.0,4.0,3.0,3.0,3.0,2.0,2.0
+19.0,female,secondary school,never smoked,social drinker,few hours a day,5.0,4.0,3.0,3.0,2.0,4.0,3.0,5.0,4.0,1.0,1.0,2.0,1.0,3.0,3.0,2.0,3.0,2.0,3.0
+22.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,2.0,5.0,2.0,3.0,3.0,3.0,4.0,4.0,4.0,4.0,5.0,4.0,2.0,4.0,3.0,4.0,1.0,3.0
+22.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,5.0,2.0,1.0,2.0,4.0,3.0,3.0,5.0,5.0,5.0,2.0,1.0,4.0,5.0,4.0,2.0,2.0,3.0
+16.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,1.0,2.0,1.0,3.0,3.0,3.0,2.0,4.0,3.0,2.0,1.0,2.0,1.0,1.0,1.0
+18.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,3.0,2.0,3.0,4.0,4.0,3.0,1.0,1.0,2.0,3.0,2.0,3.0,2.0,4.0,2.0,2.0
+18.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,3.0,3.0,2.0,3.0,1.0,2.0,3.0,4.0,3.0,3.0,2.0,3.0,3.0,3.0,2.0,3.0,2.0,1.0
+15.0,male,currently a primary school pupil,never smoked,never,most of the day,5.0,3.0,2.0,3.0,2.0,4.0,2.0,4.0,5.0,5.0,5.0,4.0,4.0,3.0,4.0,2.0,2.0,3.0,3.0
+26.0,male,masters degree,former smoker,drink a lot,most of the day,4.0,3.0,4.0,1.0,1.0,1.0,1.0,4.0,3.0,2.0,2.0,4.0,5.0,3.0,5.0,4.0,1.0,5.0,1.0
+19.0,male,secondary school,never smoked,never,few hours a day,5.0,2.0,3.0,3.0,3.0,4.0,3.0,4.0,5.0,3.0,3.0,1.0,3.0,3.0,3.0,4.0,4.0,4.0,2.0
+20.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,3.0,1.0,3.0,3.0,3.0,5.0,4.0,1.0,4.0,4.0,4.0,4.0,4.0,3.0,5.0,1.0,1.0
+20.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,5.0,3.0,2.0,2.0,3.0,3.0,3.0,1.0,2.0,4.0,4.0,3.0,3.0,2.0,5.0,4.0,3.0
+19.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,2.0,1.0,2.0,1.0,1.0,2.0,5.0,5.0,5.0,1.0,3.0,1.0,3.0,1.0,3.0,1.0,1.0
+20.0,male,secondary school,current smoker,drink a lot,most of the day,5.0,4.0,3.0,1.0,4.0,3.0,4.0,4.0,4.0,3.0,3.0,3.0,3.0,4.0,4.0,1.0,1.0,1.0,2.0
+20.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,4.0,2.0,1.0,1.0,1.0,2.0,2.0,2.0,1.0,1.0,5.0,1.0,2.0,1.0,1.0,2.0,2.0,1.0
+22.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,5.0,5.0,3.0,1.0,3.0,3.0,4.0,1.0,1.0,1.0,3.0,2.0,2.0,2.0,3.0,2.0,4.0,2.0
+24.0,female,masters degree,current smoker,social drinker,few hours a day,4.0,3.0,3.0,2.0,3.0,4.0,4.0,4.0,3.0,2.0,4.0,2.0,5.0,4.0,5.0,4.0,3.0,1.0,2.0
+19.0,female,masters degree,never smoked,social drinker,few hours a day,5.0,3.0,4.0,4.0,1.0,5.0,1.0,3.0,5.0,5.0,5.0,3.0,3.0,5.0,2.0,5.0,1.0,1.0,4.0
+20.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,4.0,1.0,3.0,4.0,5.0,3.0,1.0,1.0,5.0,4.0,3.0,2.0,3.0,4.0,4.0,3.0
+21.0,female,secondary school,never smoked,never,less than an hour a day,5.0,2.0,3.0,4.0,4.0,5.0,3.0,2.0,1.0,1.0,1.0,1.0,1.0,4.0,1.0,1.0,3.0,1.0,3.0
+23.0,male,secondary school,current smoker,social drinker,most of the day,4.0,4.0,4.0,3.0,3.0,5.0,1.0,5.0,4.0,1.0,1.0,3.0,1.0,4.0,1.0,1.0,2.0,4.0,4.0
+21.0,male,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,2.0,3.0,3.0,3.0,3.0,5.0,5.0,5.0,3.0,4.0,3.0,4.0,5.0,3.0,2.0,4.0
+17.0,female,primary school,tried smoking,social drinker,few hours a day,5.0,5.0,5.0,3.0,3.0,3.0,5.0,5.0,5.0,2.0,4.0,1.0,3.0,2.0,5.0,2.0,5.0,4.0,3.0
+19.0,female,college/bachelor degree,tried smoking,social drinker,less than an hour a day,5.0,5.0,1.0,1.0,1.0,5.0,5.0,1.0,1.0,1.0,1.0,1.0,3.0,4.0,1.0,5.0,5.0,1.0,5.0
+18.0,male,primary school,never smoked,social drinker,few hours a day,5.0,3.0,2.0,2.0,2.0,3.0,2.0,2.0,5.0,5.0,5.0,1.0,4.0,4.0,4.0,2.0,3.0,2.0,3.0
+19.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,2.0,2.0,3.0,3.0,4.0,3.0,2.0,1.0,5.0,3.0,3.0,3.0,2.0,2.0,3.0,2.0
+19.0,male,college/bachelor degree,former smoker,drink a lot,few hours a day,5.0,3.0,2.0,1.0,2.0,3.0,2.0,4.0,5.0,4.0,3.0,2.0,2.0,3.0,4.0,3.0,2.0,1.0,1.0
+22.0,male,masters degree,current smoker,drink a lot,few hours a day,5.0,3.0,5.0,1.0,4.0,5.0,5.0,3.0,4.0,2.0,1.0,4.0,2.0,5.0,4.0,4.0,2.0,1.0,5.0
+18.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,2.0,4.0,3.0,4.0,2.0,2.0,5.0,4.0,4.0,1.0,4.0,3.0,4.0,3.0,2.0,3.0,2.0
+19.0,female,secondary school,tried smoking,social drinker,less than an hour a day,5.0,3.0,3.0,3.0,3.0,3.0,4.0,3.0,5.0,2.0,4.0,1.0,3.0,3.0,5.0,5.0,3.0,2.0,2.0
+20.0,female,secondary school,current smoker,social drinker,most of the day,5.0,3.0,2.0,5.0,5.0,4.0,5.0,2.0,5.0,5.0,5.0,1.0,4.0,5.0,2.0,3.0,1.0,1.0,3.0
+21.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,3.0,1.0,2.0,2.0,2.0,2.0,2.0,5.0,5.0,5.0,1.0,5.0,3.0,4.0,4.0,2.0,2.0,1.0
+23.0,female,secondary school,current smoker,drink a lot,most of the day,5.0,3.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,3.0,4.0,2.0,3.0,3.0,5.0,5.0,5.0,2.0,2.0,3.0,4.0,4.0,4.0,2.0,5.0,2.0,3.0
+19.0,male,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,4.0,2.0,2.0,1.0,1.0,4.0,4.0,3.0,2.0,4.0,2.0,1.0,2.0,3.0,2.0,4.0,1.0
+21.0,female,college/bachelor degree,tried smoking,social drinker,few hours a day,5.0,2.0,2.0,1.0,2.0,2.0,1.0,4.0,5.0,5.0,3.0,2.0,3.0,5.0,5.0,3.0,3.0,1.0,2.0
+19.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,3.0,4.0,2.0,2.0,4.0,4.0,5.0,5.0,1.0,1.0,3.0,2.0,4.0,4.0,1.0,4.0,2.0,3.0
+18.0,female,secondary school,tried smoking,drink a lot,less than an hour a day,5.0,3.0,2.0,2.0,2.0,5.0,1.0,4.0,4.0,4.0,2.0,1.0,3.0,5.0,4.0,1.0,4.0,1.0,4.0
+19.0,female,secondary school,tried smoking,social drinker,most of the day,5.0,4.0,1.0,2.0,4.0,5.0,5.0,3.0,4.0,1.0,1.0,1.0,2.0,3.0,4.0,5.0,2.0,1.0,2.0
+18.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,4.0,2.0,1.0,1.0,3.0,2.0,2.0,4.0,3.0,2.0,2.0,4.0,3.0,4.0,5.0,1.0,1.0,2.0
+22.0,female,secondary school,tried smoking,social drinker,few hours a day,5.0,4.0,3.0,1.0,1.0,3.0,3.0,5.0,3.0,1.0,1.0,4.0,4.0,2.0,3.0,3.0,4.0,2.0,1.0
+21.0,female,secondary school,current smoker,drink a lot,most of the day,5.0,2.0,1.0,3.0,2.0,3.0,3.0,3.0,4.0,4.0,3.0,1.0,2.0,1.0,4.0,3.0,3.0,1.0,1.0
+20.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,2.0,1.0,3.0,2.0,4.0,2.0,4.0,5.0,3.0,3.0,1.0,4.0,2.0,3.0,5.0,2.0,1.0,2.0
+19.0,female,secondary school,tried smoking,social drinker,few hours a day,4.0,3.0,2.0,5.0,3.0,5.0,2.0,2.0,4.0,2.0,4.0,3.0,3.0,4.0,4.0,4.0,2.0,4.0,4.0
+20.0,male,secondary school,current smoker,drink a lot,few hours a day,4.0,3.0,2.0,2.0,3.0,2.0,1.0,1.0,5.0,3.0,2.0,4.0,3.0,3.0,3.0,4.0,2.0,1.0,1.0
+19.0,male,secondary school,tried smoking,drink a lot,few hours a day,5.0,2.0,3.0,2.0,2.0,5.0,2.0,2.0,5.0,2.0,4.0,3.0,5.0,5.0,5.0,5.0,5.0,1.0,3.0
+30.0,female,masters degree,former smoker,drink a lot,most of the day,5.0,5.0,3.0,2.0,2.0,4.0,5.0,5.0,5.0,5.0,1.0,5.0,2.0,3.0,3.0,3.0,5.0,5.0,3.0
+29.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,4.0,2.0,1.0,1.0,2.0,2.0,3.0,4.0,4.0,1.0,1.0,1.0,2.0,3.0,1.0,2.0,1.0,2.0
+21.0,male,secondary school,tried smoking,social drinker,most of the day,5.0,5.0,2.0,1.0,1.0,1.0,1.0,1.0,5.0,5.0,4.0,5.0,2.0,1.0,4.0,2.0,1.0,2.0,1.0
+30.0,male,masters degree,never smoked,never,most of the day,4.0,4.0,4.0,1.0,4.0,4.0,1.0,3.0,4.0,4.0,3.0,2.0,3.0,2.0,1.0,1.0,2.0,5.0,2.0
+21.0,female,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,3.0,1.0,2.0,3.0,1.0,4.0,4.0,1.0,1.0,4.0,1.0,1.0,1.0,4.0,1.0,2.0,1.0
+20.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,4.0,3.0,2.0,2.0,3.0,4.0,3.0,5.0,3.0,4.0,2.0,4.0,3.0,5.0,3.0,1.0,1.0,1.0
+18.0,female,secondary school,tried smoking,never,few hours a day,5.0,4.0,2.0,1.0,1.0,1.0,2.0,1.0,4.0,4.0,3.0,3.0,2.0,1.0,1.0,2.0,2.0,5.0,1.0
+20.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,1.0,1.0,1.0,3.0,2.0,1.0,4.0,3.0,1.0,4.0,4.0,2.0,3.0,3.0,1.0,1.0,1.0
+19.0,female,secondary school,tried smoking,social drinker,less than an hour a day,5.0,4.0,3.0,3.0,3.0,1.0,3.0,3.0,4.0,2.0,4.0,2.0,4.0,1.0,1.0,2.0,4.0,1.0,1.0
+28.0,male,masters degree,tried smoking,social drinker,few hours a day,5.0,4.0,4.0,3.0,1.0,3.0,2.0,3.0,5.0,5.0,4.0,3.0,2.0,1.0,5.0,3.0,3.0,5.0,2.0
+19.0,male,secondary school,never smoked,social drinker,few hours a day,5.0,5.0,5.0,3.0,4.0,5.0,4.0,4.0,4.0,3.0,1.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,3.0
+16.0,female,primary school,never smoked,never,few hours a day,5.0,3.0,3.0,3.0,2.0,3.0,3.0,4.0,3.0,1.0,1.0,5.0,3.0,2.0,3.0,3.0,3.0,3.0,1.0
+18.0,female,primary school,former smoker,never,few hours a day,5.0,5.0,5.0,1.0,2.0,1.0,4.0,4.0,3.0,2.0,4.0,4.0,3.0,1.0,4.0,1.0,2.0,3.0,1.0
+22.0,male,secondary school,current smoker,social drinker,few hours a day,5.0,5.0,3.0,1.0,3.0,1.0,1.0,2.0,5.0,5.0,3.0,1.0,4.0,2.0,2.0,4.0,1.0,3.0,1.0
+20.0,female,secondary school,former smoker,social drinker,few hours a day,4.0,3.0,4.0,3.0,2.0,2.0,3.0,4.0,5.0,2.0,3.0,2.0,4.0,4.0,4.0,2.0,4.0,4.0,2.0
+22.0,male,secondary school,former smoker,social drinker,few hours a day,5.0,3.0,4.0,1.0,2.0,3.0,2.0,3.0,3.0,4.0,3.0,5.0,4.0,2.0,3.0,2.0,2.0,5.0,3.0
+20.0,female,secondary school,current smoker,drink a lot,few hours a day,5.0,2.0,5.0,2.0,2.0,5.0,4.0,4.0,4.0,3.0,2.0,4.0,1.0,5.0,4.0,4.0,3.0,3.0,2.0
+27.0,male,masters degree,never smoked,social drinker,less than an hour a day,4.0,4.0,5.0,1.0,3.0,4.0,1.0,4.0,1.0,1.0,4.0,1.0,1.0,2.0,3.0,1.0,3.0,4.0,1.0
+18.0,female,secondary school,tried smoking,social drinker,most of the day,4.0,3.0,1.0,1.0,2.0,2.0,2.0,3.0,4.0,1.0,2.0,3.0,3.0,2.0,2.0,5.0,1.0,1.0,1.0
+25.0,female,college/bachelor degree,tried smoking,social drinker,most of the day,5.0,3.0,3.0,3.0,1.0,3.0,1.0,3.0,4.0,1.0,1.0,2.0,2.0,3.0,2.0,5.0,2.0,2.0,1.0
+21.0,male,secondary school,tried smoking,social drinker,few hours a day,5.0,5.0,4.0,3.0,2.0,3.0,3.0,4.0,1.0,1.0,2.0,3.0,1.0,1.0,3.0,2.0,2.0,3.0,1.0
