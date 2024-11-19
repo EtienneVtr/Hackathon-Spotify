@@ -9,6 +9,11 @@ DATABASE = 'base_de_données/database.db'
 app = Flask(__name__)
 app.secret_key = "HACKATHON "
 app.config['SECRET_KEY'] = "HACKATHON "
+def get_db():
+    db = getattr(g, '_database', None)
+    if db is None:
+        db = g._database = sqlite3.connect(DATABASE)
+    return db
 
 @app.route('/', methods=['GET', 'POST'])
 def acceuil_projet():
