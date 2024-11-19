@@ -1,12 +1,11 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
-from sklearn.multioutput import MultiOutputRegressor
 from sklearn.linear_model import Ridge
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, mean_absolute_error
+import matplotlib.pyplot as plt
 import joblib
 
 # Charger le fichier CSV
@@ -16,13 +15,17 @@ data = pd.read_csv(file_path)
 # Définir les caractéristiques et les cibles
 categorical_columns = ['gender', 'education', 'smoking', 'alcohol', 'internet_usage', 'village_town']
 numerical_columns = ['age']
-target_columns = ['music', 'slow_songs', 'dance', 'folk', 'country', 'classical',
-                  'musical', 'pop', 'rock', 'metal_hardrock', 'punk', 'hiphop_rap',
-                  'reggae_ska', 'swing_jazz', 'rock_n_roll', 'alternative', 'latino',
-                  'techno_trance', 'opera']
+target_columns = ['slow_songs', 'dance', 'folk', 'country', 'classical',
+                  'musical', 'pop', 'rock', 'metal_hardrock', 'punk', 
+                  'hiphop_rap', 'reggae_ska', 'swing_jazz', 'rock_n_roll',
+                  'alternative', 'latino', 'techno_trance', 'opera']
+
+# La colonne 'music' sera utilisée comme poids
+weights_column = 'music'
 
 X = data[categorical_columns + numerical_columns]
 y = data[target_columns]
+weights = data[weights_column]
 
 # Prétraitement : Encodage et normalisation
 preprocessor = ColumnTransformer(
@@ -36,28 +39,61 @@ preprocessor = ColumnTransformer(
 X_preprocessed = preprocessor.fit_transform(X)
 
 # Division des données en ensembles d'entraînement et de test
-X_train, X_test, y_train, y_test = train_test_split(X_preprocessed, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test, weights_train, weights_test = train_test_split(
+    X_preprocessed, y, weights, test_size=0.2, random_state=42
+)
 
-# Modèle unique : Ridge Regression
-model_name = "Ridge Regression"
-model = MultiOutputRegressor(Ridge(alpha=1.0))
+# Entraînement Ridge Regression avec recherche d'hyperparamètre alpha
+alphas = [0.1, 1, 10, 100, 1000]
+best_alpha = None
+best_mse = float('inf')
+mse_scores = {}
 
-# Entraînement du modèle
-print(f"Entraînement du modèle {model_name}...")
-model.fit(X_train, y_train)
+# Recherche de l'alpha optimal
+for alpha in alphas:
+    model = Ridge(alpha=alpha)
+    model.fit(X_train, y_train, sample_weight=weights_train)
+    y_pred = model.predict(X_test)
+    mse = mean_squared_error(y_test, y_pred, multioutput='raw_values').mean()
+    mse_scores[alpha] = mse
+    if mse < best_mse:
+        best_mse = mse
+        best_alpha = alpha
 
-# Prédictions
-y_pred = model.predict(X_test)
+print(f"Meilleur alpha pour Ridge Regression : {best_alpha}")
 
-# Évaluation du modèle
-mse = mean_squared_error(y_test, y_pred, multioutput='raw_values')
-print(f"{model_name} - MSE moyenne : {mse.mean()}")
+# Réentraînement avec le meilleur alpha
+final_model = Ridge(alpha=best_alpha)
+final_model.fit(X_train, y_train, sample_weight=weights_train)
+y_pred = final_model.predict(X_test)
 
-# Sauvegarder le modèle
-joblib.dump(model, f'./src/profil_prediction/models/{model_name}_model.pkl')
+# Évaluation finale
+mse_per_genre = mean_squared_error(y_test, y_pred, multioutput='raw_values')
+mae_per_genre = mean_absolute_error(y_test, y_pred)
+print("MSE pour chaque genre :", mse_per_genre)
+print("MSE moyenne :", mse_per_genre.mean())
+print("MAE pour chaque genre :", mae_per_genre)
+print("MAE moyenne :", mae_per_genre.mean())
+
+# Graphiques des performances
+plt.figure(figsize=(12, 6))
+genres = target_columns
+
+'''# MSE par genre
+plt.bar(genres, mse_per_genre, color='lightcoral', alpha=0.7, label='MSE')
+plt.bar(genres, mae_per_genre, color='skyblue', alpha=0.7, label='MAE')
+plt.xticks(rotation=45)
+plt.ylabel('Erreur')
+plt.title('Performances par genre musical')
+plt.legend()
+plt.tight_layout()
+plt.show()'''
+
+# Sauvegarde du modèle
+joblib.dump(final_model, './src/profil_prediction/models/ridge_model.pkl')
 joblib.dump(preprocessor, './src/profil_prediction/models/preprocessor.pkl')
+print("Modèle final et préprocesseur sauvegardés.")
 
-print(f"Modèle sauvegardé : {model_name}")
 
 '''
 Exemple d'utilisation du modèle sauvegardé :
@@ -73,7 +109,8 @@ new_user = pd.DataFrame([{
     'smoking': 'never smoked',
     'alcohol': 'drink a lot',
     'internet_usage': 'few hours a day',
-    'village_town': 'city'
+    'village_town': 'city',
+    'music': 4.0 # Poids pour la musique
 }])
 
 # Prétraiter les données
