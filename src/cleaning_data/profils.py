@@ -4,18 +4,18 @@ import pandas as pd
 df = pd.read_csv("data/profils.csv")
 
 # Ne garder que les colonnes utiles : 
-# 'Age', 'Gender', 'Education', 'Smoking', 'Alcohol', 'Internet usage', 
+# 'Age', 'Gender', 'Education', 'Smoking', 'Alcohol', 'Internet usage', 'Village - town', 
 # "Music","Slow songs or fast songs","Dance","Folk","Country","Classical music","Musical","Pop","Rock",
 # "Metal or Hardrock","Punk","Hiphop, Rap","Reggae, Ska","Swing, Jazz","Rock n roll","Alternative","Latino",
 # "Techno, Trance","Opera"
 df = df[[
-        'Age', 'Gender', 'Education', 'Smoking', 'Alcohol', 'Internet usage',
+        'Age', 'Gender', 'Education', 'Smoking', 'Alcohol', 'Internet usage', 'Village - town',
          'Music', 'Slow songs or fast songs', 'Dance', 'Folk', 'Country', 'Classical music', 'Musical', 'Pop', 'Rock',
             'Metal or Hardrock', 'Punk', 'Hiphop, Rap', 'Reggae, Ska', 'Swing, Jazz', 'Rock n roll', 'Alternative', 'Latino',
             'Techno, Trance', 'Opera']]
 
 # Renommer les colonnes
-df.columns = ['age', 'gender', 'education', 'smoking', 'alcohol', 'internet_usage',
+df.columns = ['age', 'gender', 'education', 'smoking', 'alcohol', 'internet_usage', 'village_town',
             'music', 'slow_songs', 'dance', 'folk', 'country', 'classical', 'musical', 'pop', 'rock',
                 'metal_hardrock', 'punk', 'hiphop_rap', 'reggae_ska', 'swing_jazz', 'rock_n_roll', 'alternative', 'latino',
                 'techno_trance', 'opera']
