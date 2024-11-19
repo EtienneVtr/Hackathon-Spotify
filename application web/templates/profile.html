@@ -1,0 +1,85 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    Profil - Hackathon Spotify
+{% endblock %}
+{% block title %}
+    Profil
+{% endblock %}
+{% block body %}
+<section id="profile">
+    <div class="inner">
+        <h2>Bienvenue, {{ user.firstname }} {{ user.lastname }}</h2>
+        
+        <h3>Informations personnelles</h3>
+        <form method="POST" action="/profile">
+            <label for="firstname">Prénom :</label><br>
+            <input type="text" id="firstname" name="firstname" value="{{ user.firstname }}" required><br><br>
+            
+            <label for="lastname">Nom :</label><br>
+            <input type="text" id="lastname" name="lastname" value="{{ user.lastname }}" required><br><br>
+            
+            <label for="age">Âge :</label><br>
+            <input type="number" id="age" name="age" value="{{ user.age }}"><br><br>
+            
+            <label for="gender">Genre :</label><br>
+            <select id="gender" name="gender">
+                <option value="male" {% if user.gender == "male" %}selected{% endif %}>Homme</option>
+                <option value="female" {% if user.gender == "female" %}selected{% endif %}>Femme</option>
+                <option value="other" {% if user.gender == "other" %}selected{% endif %}>Autre</option>
+            </select><br><br>
+            
+            <label for="education">Éducation :</label><br>
+            <select id="education" name="education">
+                <option value="secondary school" {% if user.education == "secondary school" %}selected{% endif %}>École secondaire</option>
+                <option value="college bachelor degree" {% if user.education == "college bachelor degree" %}selected{% endif %}>Licence</option>
+                <option value="other" {% if user.education == "other" %}selected{% endif %}>Autre</option>
+            </select><br><br>
+            
+            <label for="smoking">Tabac :</label><br>
+            <select id="smoking" name="smoking">
+                <option value="never smoked" {% if user.smoking == "never smoked" %}selected{% endif %}>Jamais fumé</option>
+                <option value="tried smoked" {% if user.smoking == "tried smoked" %}selected{% endif %}>A déjà essayé</option>
+                <option value="other" {% if user.smoking == "other" %}selected{% endif %}>Autre</option>
+            </select><br><br>
+            
+            <label for="alcohol">Alcool :</label><br>
+            <select id="alcohol" name="alcohol">
+                <option value="social drinker" {% if user.alcohol == "social drinker" %}selected{% endif %}>Buveur social</option>
+                <option value="drink a lot" {% if user.alcohol == "drink a lot" %}selected{% endif %}>Boit beaucoup</option>
+                <option value="other" {% if user.alcohol == "other" %}selected{% endif %}>Autre</option>
+            </select><br><br>
+            
+            <label for="internet_usage">Utilisation d'internet :</label><br>
+            <select id="internet_usage" name="internet_usage">
+                <option value="few hours a day" {% if user.internet_usage == "few hours a day" %}selected{% endif %}>Quelques heures par jour</option>
+                <option value="less than an hour a day" {% if user.internet_usage == "less than an hour a day" %}selected{% endif %}>Moins d'une heure par jour</option>
+                <option value="other" {% if user.internet_usage == "other" %}selected{% endif %}>Autre</option>
+            </select><br><br>
+            
+            <label for="village_town">Lieu de résidence :</label><br>
+            <select id="village_town" name="village_town">
+                <option value="city" {% if user.village_town == "city" %}selected{% endif %}>Ville</option>
+                <option value="village" {% if user.village_town == "village" %}selected{% endif %}>Village</option>
+                <option value="other" {% if user.village_town == "other" %}selected{% endif %}>Autre</option>
+            </select><br><br>
+            
+            <button type="submit" class="bouton">Mettre à jour</button>
+        </form>
+        
+        <h3>Ajouter une musique</h3>
+        <form method="POST" action="/add_music">
+            <label for="music_name">Nom de la musique :</label><br>
+            <input type="text" id="music_name" name="music_name" placeholder="Entrez le nom de la musique" required><br><br>
+            <button type="submit" class="bouton">Ajouter</button>
+        </form>
+        
+        <h3>Musique dans votre profil</h3>
+        <ul>
+            {% for music_id in user.music %}
+                <li>{{ music_id }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}

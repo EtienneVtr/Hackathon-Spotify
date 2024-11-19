@@ -1,0 +1,25 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    Sélectionner une Musique
+{% endblock %}
+{% block body %}
+<section id="select_music">
+    <h2>Résultats de recherche</h2>
+    
+    {% if musics %}
+        <ul>
+            {% for music in musics %}
+                <li>
+                    <strong>{{ music.title }}</strong> - {{ ', '.join(music.artists) }}
+                    <form method="POST" action="{{ url_for('add_selected_music', music_id=music.music_id) }}" style="display:inline;">
+                        <button type="submit" class="bouton">Ajouter</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucune musique trouvée.</p>
+    {% endif %}
+</section>
+{% endblock %}

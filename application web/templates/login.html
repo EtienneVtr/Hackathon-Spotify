@@ -1,0 +1,26 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    Connexion - Hackathon Spotify
+{% endblock %}
+{% block title %}
+    Connexion
+{% endblock %}
+{% block body %}
+<section id="login">
+    <div style="color:hsl(0, 0%, 0%)" class="inner">
+        <h4 style="color:#000000">Connexion</h4><br />
+        <form method="POST" action="/login">
+            <label for="username">Nom d'utilisateur :</label><br />
+            <input type="text" id="username" name="username" required><br /><br />
+            
+            <label for="password">Mot de passe :</label><br />
+            <input type="password" id="password" name="password" required><br /><br />
+            
+            <button type="submit" class="bouton">Se connecter</button>
+        </form>
+        <br />
+        <p>Pas encore inscrit ? <a href="/signup">Créez un compte</a></p>
+    </div>
+</section>
+{% endblock %}
