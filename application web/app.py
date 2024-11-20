@@ -4,10 +4,15 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
+from urllib.parse import urlencode  # Ajoute cette importation
 
+CLIENT_ID = 'e8e84fc16bc347d7968ab474352b6d97'  # Remplace par ton client_id Spotify
+CLIENT_SECRET = '3506cee44a2c42159bb89d3260c38e18'  # Remplace par ton client_secret Spotify
+REDIRECT_URI = 'http://127.0.0.1:5000/spotify_callback'
+SCOPE = 'user-read-private user-read-email'
+STATE_KEY = "spotify_auth_state"
 
-
-
+access_token = None
 
 # Charger les données JSON
 def load_json_data(filename):
@@ -59,11 +64,22 @@ def login():
     
     return render_template('login.html')
 
-# Route pour la page de profil
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
+    global access_token
+    
+    access_token = session.get('spotify_access_token')
+    
     if not g.user:
         return redirect(url_for('login'))
+    
+    spotify_user = session.get('spotify_user')
+    if spotify_user:
+        spotify_username = spotify_user.get('display_name', 'Utilisateur Spotify')
+    else:
+        spotify_username = None
+        
+    spotify_token = session.get('spotify_access_token')
     
     user_id = session.get('user_id')
     user = next((u for u in data['profiles'] if u['id'] == user_id), None)
@@ -87,11 +103,61 @@ def profile():
         flash("Profil mis à jour avec succès.")
         return redirect(url_for('profile'))
     
-    # Récupérer les détails des musiques
-    user_music_details = [get_music_details(music_id) for music_id in user['music'] if get_music_details(music_id)]
+    # Récupérer les détails des musiques et la couverture de l'album
+    user_music_details = []
+    for music_id in user['music']:
+        music_detail = get_music_details(music_id)
+        if music_detail:
+            # Récupérer l'URL de la couverture d'album pour chaque musique
+            cover_url = get_album_cover(music_id, spotify_token)  # Utilisez votre fonction ici pour récupérer l'URL
+            music_detail['cover_url'] = cover_url
+            user_music_details.append(music_detail)
 
-    return render_template('profile.html', user=user, musics=data.get('musics', []), user_music_details=user_music_details)
+    return render_template('profile.html', 
+                           user=user, 
+                           spotify_username=spotify_username, 
+                           musics=data.get('musics', []), 
+                           user_music_details=user_music_details, 
+                           spotify_token=spotify_token)
 
+# Route pour la page de connexion à Spotify
+@app.route('/spotify_callback')
+def profile_callback():
+    code = request.args.get('code')
+    state = request.args.get('state')
+
+    # Vérifie le state (facultatif, selon ton implémentation)
+    stored_state = session.get('state')
+    if not state or state != stored_state:
+        return "Erreur : le state ne correspond pas.", 400
+
+    # Échange le code contre un token d'accès
+    token_url = 'https://accounts.spotify.com/api/token'
+    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+    payload = {
+        'grant_type': 'authorization_code',
+        'code': code,
+        'redirect_uri': REDIRECT_URI,
+        'client_id': CLIENT_ID,
+        'client_secret': CLIENT_SECRET
+    }
+
+    response = requests.post(token_url, headers=headers, data=payload)
+
+    if response.status_code == 200:
+        token_info = response.json()
+        access_token = token_info['access_token']
+        refresh_token = token_info['refresh_token']
+        expires_in = token_info['expires_in']
+
+        # Sauvegarder les tokens dans la session
+        session['spotify_access_token'] = access_token
+        session['spotify_refresh_token'] = refresh_token
+
+        print(f"Access Token: {access_token}")  # Affiche dans la console
+        return "Authentification réussie ! Vous pouvez maintenant utiliser l'API Spotify."
+    else:
+        return "Erreur lors de la récupération du token.", 400
 
 # Route pour ajouter une musique au profil
 @app.route('/add_music', methods=['POST'])
@@ -251,14 +317,52 @@ def get_music_details(music_id):
         }
     return None
 
+# Route pour la connexion à Spotify
+@app.route('/spotify_login')
+def spotify_login():
+    import random, string
+    state = ''.join(random.choices(string.ascii_letters + string.digits, k=16))
+    session[STATE_KEY] = state
 
+    query_params = {
+        'response_type': 'code',
+        'client_id': CLIENT_ID,
+        'scope': SCOPE,
+        'redirect_uri': REDIRECT_URI,
+        'state': state
+    }
 
+    spotify_auth_url = 'https://accounts.spotify.com/authorize?' + urlencode(query_params)
+    return redirect(spotify_auth_url)
+
+# Route pour la déconnexion de Spotify
+@app.route('/spotify_logout')
+def spotify_logout():
+    session.pop('spotify_access_token', None)
+    session.pop('spotify_user', None)
+    return redirect(url_for('logout'))
 
 # Route pour la déconnexion
 @app.route('/logout')
 def logout():
     session.clear()
     return redirect(url_for('login'))
+
+def get_album_cover(music_id, access_token):
+    url = f"https://api.spotify.com/v1/tracks/{music_id}"
+    headers = {
+        "Authorization": f"Bearer {access_token}"
+    }
+    
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        track_data = response.json()
+        album_images = track_data.get('album', {}).get('images', [])
+        if album_images:
+            return album_images[0]['url']  # URL de la meilleure résolution
+    return None
+
 
 if __name__ == '__main__':
     app.run()
