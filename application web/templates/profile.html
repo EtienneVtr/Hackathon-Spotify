@@ -13,8 +13,10 @@
         
         {% if spotify_username %}
             <p>Connecté à Spotify en tant que {{ spotify_username }}</p>
+            <a href="{{ url_for('spotify_logout') }}" class="btn btn-danger">Se déconnecter de Spotify</a>
         {% else %}
             <a href="{{ url_for('spotify_login') }}" class="btn btn-primary">Se connecter à Spotify</a>
+            <a href="{{ url_for('spotify_logout') }}" class="btn btn-danger">Se déconnecter de Spotify</a>
         {% endif %}
 
         <h3>Informations personnelles</h3>
@@ -107,11 +109,17 @@
                 <img src="{{ music.cover_url }}" alt="Album cover" style="width: 50px; height: 50px; object-fit: cover; margin-left: 10px;">
             {% endif %}
             
+            <!-- Bouton pour lancer la musique -->
+            <form action="{{ url_for('play_music') }}" method="POST" style="display:inline;">
+                <input type="hidden" name="track_uri" value="{{ music.spotify_uri }}">
+                <input type="hidden" name="device_id" value="{{ spotify_device_id }}"> <!-- Assurez-vous d'obtenir l'ID de l'appareil -->
+                <button type="submit" class="bouton">Jouer</button>
+            </form>
+            
             <button class="bouton" onclick="removeMusic('{{ music.music_id }}')">Supprimer</button>
         </li>
     {% endfor %}
 </ul>
-
 
 
 

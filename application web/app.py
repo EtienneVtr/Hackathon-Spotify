@@ -6,8 +6,12 @@ from bs4 import BeautifulSoup
 
 from urllib.parse import urlencode  # Ajoute cette importation
 
-CLIENT_ID = 'e8e84fc16bc347d7968ab474352b6d97'  # Remplace par ton client_id Spotify
-CLIENT_SECRET = '3506cee44a2c42159bb89d3260c38e18'  # Remplace par ton client_secret Spotify
+import random
+import string
+import time
+
+CLIENT_ID = '27e6e375a4e1446ab580670055e248fe'  # Remplace par ton client_id Spotify
+CLIENT_SECRET = 'e79258ab68124cac9d66bcd43bfd19c2'  # Remplace par ton client_secret Spotify
 REDIRECT_URI = 'http://127.0.0.1:5000/spotify_callback'
 SCOPE = 'user-read-private user-read-email'
 STATE_KEY = "spotify_auth_state"
@@ -74,6 +78,7 @@ def profile():
         return redirect(url_for('login'))
     
     spotify_user = session.get('spotify_user')
+    print(spotify_user)
     if spotify_user:
         spotify_username = spotify_user.get('display_name', 'Utilisateur Spotify')
     else:
@@ -154,10 +159,27 @@ def profile_callback():
         session['spotify_access_token'] = access_token
         session['spotify_refresh_token'] = refresh_token
 
-        print(f"Access Token: {access_token}")  # Affiche dans la console
-        return "Authentification réussie ! Vous pouvez maintenant utiliser l'API Spotify."
+        # Récupérer les informations de l'utilisateur depuis l'API Spotify
+        user_info_url = 'https://api.spotify.com/v1/me'
+        user_headers = {
+            'Authorization': f'Bearer {access_token}'
+        }
+        user_response = requests.get(user_info_url, headers=user_headers)
+
+        if user_response.status_code == 200:
+            user_info = user_response.json()
+
+            # Sauvegarder les informations de l'utilisateur Spotify dans la session
+            session['spotify_user'] = user_info
+            print(f"Utilisateur Spotify: {user_info['display_name']}")  # Affiche dans la console
+
+            # Affiche un message de succès et redirige l'utilisateur vers le profil
+            return redirect(url_for('profile'))
+        else:
+            return "Erreur lors de la récupération des informations utilisateur.", 400
     else:
         return "Erreur lors de la récupération du token.", 400
+
 
 # Route pour ajouter une musique au profil
 @app.route('/add_music', methods=['POST'])
@@ -317,23 +339,24 @@ def get_music_details(music_id):
         }
     return None
 
-# Route pour la connexion à Spotify
+def generate_state():
+    """Génère un `state` aléatoire pour prévenir les attaques CSRF."""
+    return ''.join(random.choices(string.ascii_letters + string.digits, k=16))
+
+# Route pour initier la connexion à Spotify
 @app.route('/spotify_login')
 def spotify_login():
-    import random, string
-    state = ''.join(random.choices(string.ascii_letters + string.digits, k=16))
-    session[STATE_KEY] = state
-
-    query_params = {
-        'response_type': 'code',
-        'client_id': CLIENT_ID,
-        'scope': SCOPE,
-        'redirect_uri': REDIRECT_URI,
-        'state': state
-    }
-
-    spotify_auth_url = 'https://accounts.spotify.com/authorize?' + urlencode(query_params)
-    return redirect(spotify_auth_url)
+    # Générer un `state` aléatoire et le stocker dans la session
+    state = generate_state()
+    session['state'] = state
+    
+    # URL d'autorisation Spotify
+    auth_url = (
+        f"https://accounts.spotify.com/authorize?response_type=code"
+        f"&client_id={CLIENT_ID}&scope={SCOPE}&redirect_uri={REDIRECT_URI}"
+        f"&state={state}"
+    )
+    return redirect(auth_url)
 
 # Route pour la déconnexion de Spotify
 @app.route('/spotify_logout')
@@ -347,6 +370,64 @@ def spotify_logout():
 def logout():
     session.clear()
     return redirect(url_for('login'))
+
+@app.route('/play_music', methods=['POST'])
+def play_music():
+    spotify_token = session.get('spotify_access_token')
+    if not spotify_token:
+        return redirect(url_for('login'))
+    
+    track_uri = request.form.get('track_uri')  # URI de la musique
+    device_id = request.form.get('device_id')  # ID de l'appareil
+
+    devices = get_devices(spotify_token)
+    if not devices:
+        return "Aucun appareil disponible pour la lecture.", 400
+    
+    # Si aucun device_id n'est spécifié, utiliser le premier appareil disponible
+    if not device_id:
+        device_id = devices[0]['id']
+
+    # Démarrer la lecture sur le dispositif spécifié
+    result = start_playback(spotify_token, device_id, track_uri)
+    return result
+
+def get_devices(access_token):
+    url = "https://api.spotify.com/v1/me/player/devices"
+    headers = {
+        "Authorization": f"Bearer {access_token}"
+    }
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        return response.json()['devices']
+    else:
+        return None
+
+def start_playback(access_token, device_id, track_uri=None):
+    url = "https://api.spotify.com/v1/me/player/play"
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        "Content-Type": "application/json"
+    }
+    data = {}
+    
+    # Si vous voulez démarrer une chanson spécifique, fournissez son URI
+    if track_uri:
+        data = {
+            "uris": [track_uri]
+        }
+    
+    # Si vous souhaitez spécifier un appareil (optionnel)
+    if device_id:
+        url += f"?device_id={device_id}"
+    
+    response = requests.put(url, headers=headers, json=data)
+    
+    if response.status_code == 204:
+        return "Lecture démarrée avec succès"
+    else:
+        return f"Erreur: {response.status_code}"
+
 
 def get_album_cover(music_id, access_token):
     url = f"https://api.spotify.com/v1/tracks/{music_id}"
