@@ -1,4 +1,4 @@
-from flask import Flask, render_template, g, request, redirect, url_for, session, flash
+from flask import Flask, render_template, g, request, redirect, url_for, session, flash, jsonify
 import json
 
 # Charger les données JSON
@@ -153,6 +153,54 @@ def add_selected_music(music_id):
     
     return redirect(url_for('profile'))
 
+
+
+@app.route('/api/search_music', methods=['GET'])
+def api_search_music():
+    query = request.args.get('query', '').lower()
+    matching_musics = [
+        {"title": music['title'], "artists": music['artists'], "music_id": music['music_id']}
+        for music in data.get('musics', [])
+        if music['title'].lower().startswith(query)  # Utiliser startswith pour les préfixes
+    ]
+    matching_musics.sort(key=lambda x: x['title'])  # Trier par ordre alphabétique
+    limited_musics = matching_musics[:15]  # Limiter à 15 résultats
+    return jsonify(limited_musics)
+
+
+
+# Route pour la page d'inscription
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        firstname = request.form['firstname']
+        lastname = request.form['lastname']
+        username = request.form['username']
+        password = request.form['password']
+
+        # Vérifier si l'utilisateur existe déjà
+        if any(profile['identifiant'] == username for profile in data.get('profiles', [])):
+            flash("Ce nom d'utilisateur est déjà pris.")
+            return redirect(url_for('signup'))
+
+        # Créer un nouvel utilisateur
+        new_user = {
+            'id': len(data['profiles']) + 1,  # Assurez-vous que l'ID est unique
+            'firstname': firstname,
+            'lastname': lastname,
+            'identifiant': username,
+            'password': password,
+            'music': []  # Initialiser la liste des musiques
+        }
+
+        # Ajouter le nouvel utilisateur à la base de données
+        data['profiles'].append(new_user)
+        save_json_data(DATA_FILE, data)
+
+        flash("Inscription réussie ! Vous pouvez maintenant vous connecter.")
+        return redirect(url_for('login'))
+
+    return render_template('signup.html')
 # Route pour la déconnexion
 @app.route('/logout')
 def logout():
