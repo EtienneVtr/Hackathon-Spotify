@@ -16,13 +16,12 @@ def download_audio_from_youtube(url):
         'format': 'bestaudio/best',
         'extractaudio': True,
         'audioformat': 'mp3',
-        'outtmpl': f'{"./data/audios"}/%(title)s.%(ext)s',
+        'outtmpl': f'{"./data"}/%(title)s.%(ext)s',
     }
     with yt_dlp.YoutubeDL(options) as ydl:
         ydl.download([url])
 
-'''
-# Étapes :
+'''# Étapes :
 # 1. Chercher l'URL avec le nom
 music_name = "Aieaieouille"
 api_key = API_KEY
@@ -33,5 +32,4 @@ if youtube_url:
     print(f"Downloading audio from: {youtube_url}")
     download_audio_from_youtube(youtube_url, )
 else:
-    print("Music not found!")
-'''
+    print("Music not found!")'''
