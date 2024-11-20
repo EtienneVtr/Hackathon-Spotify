@@ -55,4 +55,49 @@ def get_recommandations_from_playlist(list_id_music, n_recommandations):
     # On récupère les clusters des musiques de la playlist
     clusters = data[data['id'].isin(list_id_music)]['cluster'].values
     
-    # On récupère les musiques des mêmes clusters
+    # On calcule le "centre" des musiques dans leur cluster respectif à l'aide des attributs 'danceability', 'energy', 'loudness', 'speechiness', 'acousticness',
+    #                                                                  'instrumentalness', 'liveness', 'valence', 'tempo'
+    centers = {}
+    feature_columns = ['danceability', 'energy', 'loudness', 'speechiness', 
+                        'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo']
+    for cluster in clusters:
+        musics = data[(data['cluster'] == cluster) & (data['id'].isin(list_id_music))]
+        center = musics[feature_columns].mean()
+        centers[cluster] = center
+        
+    # On récupère les musiques de chaque cluster dans des tableaux différents
+    musics = {}
+    for cluster in clusters:
+        musics[cluster] = data[(data['cluster'] == cluster) & (~data['id'].isin(list_id_music))]
+        
+    # On cherche les n_recommandations musiques les plus proches
+    # Pour cela, on commence par calculer la distance entre les musiques des clusters par rapport aux centres calculés
+    # On calcule la distance entre les musiques à l'aide des attributs 'danceability', 'energy', 'loudness', 'speechiness', 'acousticness',
+    #                                                                  'instrumentalness', 'liveness', 'valence', 'tempo'
+    # On utilise la distance euclidienne
+    
+    # On calcule les distances euclidiennes et les associe aux IDs
+    recommandations = []
+    for cluster in clusters:
+        # Features du centre
+        center_features = centers[cluster].values.reshape(1, -1)
+        
+        # Musiques dans le cluster
+        other_musics = musics[cluster]
+        other_features = other_musics[feature_columns].values
+        
+        # Distances euclidiennes
+        distances = euclidean_distances(center_features, other_features).flatten()
+        
+        # Associer ID et distances
+        cluster_recommandations = list(zip(other_musics['id'].values, distances))
+        
+        # Trier par distance (plus proche en premier) et garder les `n_recommandations` meilleures
+        cluster_recommandations = sorted(cluster_recommandations, key=lambda x: x[1])[:min(n_recommandations, len(cluster_recommandations))]
+        recommandations.extend(cluster_recommandations)
+    
+    # Retourner les recommandations triées par distance globale et garder les `n_recommandations` meilleures
+    recommandations = sorted(recommandations, key=lambda x: x[1])
+    recommandations = recommandations[:min(n_recommandations, len(recommandations))]
+    return [x[0] for x in recommandations]
+    
