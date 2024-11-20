@@ -9,16 +9,16 @@ import matplotlib.pyplot as plt
 import joblib
 
 # Charger le fichier CSV
-file_path = './data/cleaned_profils.csv'  # Remplace par ton fichier
+file_path = './data/cleaned_profils_with_clusters.csv'  # Remplace par ton fichier
 data = pd.read_csv(file_path)
 
 # Définir les caractéristiques et les cibles
 categorical_columns = ['gender', 'education', 'smoking', 'alcohol', 'internet_usage', 'village_town']
 numerical_columns = ['age']
-target_columns = ['slow_songs', 'dance', 'folk', 'country', 'classical',
-                  'musical', 'pop', 'rock', 'metal_hardrock', 'punk', 
-                  'hiphop_rap', 'reggae_ska', 'swing_jazz', 'rock_n_roll',
-                  'alternative', 'latino', 'techno_trance', 'opera']
+target_columns = ['Ambient', 'Fusion Beat', 'Fusion Hardcore', 'Metal', 'Jazz', 'Rock',
+    'World & Electronic Music', 'Punk', 'Folk', 'Traditional Music', 'Indie',
+    'Blues, Soul & Country', 'Hip Hop', 'Classical', 'Comedy, Literature & Cultural Narratives',
+    'Pop', 'Rap']
 
 # La colonne 'music' sera utilisée comme poids
 weights_column = 'music'
