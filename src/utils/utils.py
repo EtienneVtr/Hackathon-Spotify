@@ -52,3 +52,7 @@ def get_recommandations_from_playlist(list_id_music, n_recommandations):
     # Chargement des données
     data = pd.read_csv('data/data_w_clusters.csv')
     
+    # On récupère les clusters des musiques de la playlist
+    clusters = data[data['id'].isin(list_id_music)]['cluster'].values
+    
+    # On récupère les musiques des mêmes clusters

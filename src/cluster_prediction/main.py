@@ -16,6 +16,9 @@ def train_with_cross_validation(musics, n_splits=5):
                 'tempo', 'valence', 'popularity', 'key']]
     y = musics['cluster']
 
+    unique_labels = y.unique()
+    print(f"Labels uniques : {unique_labels}")
+
     # Normalisation des données
     scaler = StandardScaler()
     X_scaled = scaler.fit_transform(X)
