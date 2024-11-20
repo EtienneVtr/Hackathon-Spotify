@@ -74,6 +74,7 @@ def profile():
         user['alcohol'] = request.form.get('alcohol')
         user['internet_usage'] = request.form.get('internet_usage')
         user['village_town'] = request.form.get('village_town')
+        user['music_consumption'] = request.form.get('music_consumption')
 
         save_json_data(DATA_FILE, data)
         flash("Profil mis à jour avec succès.")
