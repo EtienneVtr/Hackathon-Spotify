@@ -223,3 +223,16 @@ table{
 #suggestions li:hover {
     background-color: #f0f0f0;
 }
+
+.bouton-supprimer {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.bouton-supprimer:hover {
+    background-color: #c0392b;
+}

@@ -178,6 +178,34 @@ def api_search_music():
     limited_musics = matching_musics[:15]  # Limiter à 15 résultats
     return jsonify(limited_musics)
 
+@app.route('/remove_music', methods=['POST'])
+def remove_music():
+    if not g.user:
+        return jsonify({"success": False, "message": "Utilisateur non connecté."}), 401
+    
+    data_json = request.get_json()
+    if not data_json or 'music_id' not in data_json:
+        return jsonify({"success": False, "message": "Données JSON invalides."}), 400
+    
+    music_id = data_json['music_id']
+    user_id = session.get('user_id')
+    user = next((u for u in data['profiles'] if u['id'] == user_id), None)
+    
+    if not user:
+        return jsonify({"success": False, "message": "Utilisateur introuvable."}), 404
+    
+    if not isinstance(user.get('music', []), list):
+        return jsonify({"success": False, "message": "Erreur interne dans la liste des musiques."}), 500
+    
+    if music_id in user['music']:
+        user['music'].remove(music_id)
+        save_json_data(DATA_FILE, data)
+        return jsonify({"success": True, "message": "Musique supprimée avec succès.", "music_id": music_id})
+    else:
+        return jsonify({"success": False, "message": "Musique introuvable dans le profil."}), 400
+
+
+
 
 
 # Route pour la page d'inscription
@@ -219,7 +247,7 @@ def get_music_details(music_id):
         return {
             "title": music['title'],
             "artists": music['artists'],
-            "album": music.get('album', "Inconnu")
+            "music_id": music_id
         }
     return None
 
