@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from src.utils.utils import get_recommandations_from_music, get_recommandations_from_playlist
 from flask import Flask, render_template, g, request, redirect, url_for, session, flash, jsonify
 import json
 
@@ -29,7 +33,7 @@ def save_json_data(filename, data):
         json.dump(data, json_file, indent=4)
 
 # Charger les données depuis le JSON
-DATA_FILE = 'base_de_données/data.json'
+DATA_FILE = 'application web/base_de_données/data.json'
 data = load_json_data(DATA_FILE)
 
 app = Flask(__name__)
@@ -67,6 +71,42 @@ def login():
         return redirect(url_for('login'))
     
     return render_template('login.html')
+
+@app.route('/recommandationsuniques', methods=['GET', 'POST'])
+def recommandationsuniques():
+    recommendations = []
+    
+    if request.method == 'POST':
+        music_name = request.form.get('music_name')
+        user_id = session.get('user_id')
+        user = next((u for u in data['profiles'] if u['id'] == user_id), None)
+        
+        if user:
+            # Rechercher la musique par son titre
+            matching_musics = [
+                music for music in data.get('musics', [])
+                if music_name.lower() in music['title'].lower()
+            ]
+            
+            if matching_musics:
+                # Prendre le premier résultat trouvé
+                selected_music_id = matching_musics[0]['music_id']
+                recommendations = get_recommandations_from_music(selected_music_id, 5)
+            else:
+                flash("Aucune musique trouvée avec ce nom.")
+    
+    user_music_details = []
+    for music_id in recommendations:
+        user_music_details.append(get_music_details(music_id))
+    
+    return render_template(
+        'recommandationsuniques.html', 
+        recommandations=user_music_details,
+        music_name=request.form.get('music_name', '')  # Renvoyer la valeur recherchée
+    )
+
+    
+   
 
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():

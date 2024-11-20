@@ -1,0 +1,94 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    Recommandations - Hackathon Spotify
+{% endblock %}
+{% block title %}
+    Recommandations
+{% endblock %}
+{% block body %}
+<section id="recommendation">
+    <div class="inner">
+        <h2>Recommandations de musique</h2>
+        
+        <form method="POST" action="/recommandationsuniques">
+            <label for="music_name">Nom de la musique :</label><br>
+            <input 
+                type="text" 
+                id="music_name" 
+                name="music_name" 
+                placeholder="Entrez le nom de la musique" 
+                oninput="fetchSuggestions()" 
+                required 
+                autocomplete="off" 
+                value="{{ music_name|default('') }}"><!-- Affiche la valeur soumise -->
+            <br>
+            <ul id="suggestions" style="border: 1px solid #ccc; max-height: 150px; overflow-y: auto; display: none;"></ul>
+            <button type="submit" class="bouton">Valider</button>
+        </form>
+
+        {% if recommandations %}
+            <h3>Résultats pour "{{ music_name }}" :</h3>
+            <ul>
+                {% for music in recommandations %}
+                    <li style="margin-bottom: 10px;">
+                        <strong>{{ music.title }}</strong> 
+                        <br>
+                        Artistes : {{ music.artists | join(", ") }}
+                        {% if music.cover_url %}
+                            <div style="margin-top: 10px;">
+                                <img src="{{ music.cover_url }}" alt="Album cover" style="width: 50px; height: 50px; object-fit: cover;">
+                            </div>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Aucune recommandation trouvée pour "{{ music_name }}". Essayez un autre titre !</p>
+        {% endif %}
+    </div>
+</section>
+
+<script>
+    function fetchSuggestions() {
+        const input = document.getElementById('music_name');
+        const suggestionsList = document.getElementById('suggestions');
+        const query = input.value.trim();
+    
+        if (query.length === 0) {
+            suggestionsList.style.display = 'none';
+            suggestionsList.innerHTML = '';
+            return;
+        }
+    
+        fetch(`/api/search_music?query=${encodeURIComponent(query)}`)
+            .then(response => response.json())
+            .then(data => {
+                suggestionsList.innerHTML = ''; // Clear previous suggestions
+    
+                if (data.length === 0) {
+                    suggestionsList.style.display = 'none';
+                    return;
+                }
+    
+                data.forEach(music => {
+                    const li = document.createElement('li');
+                    li.textContent = `${music.title} - ${music.artists.join(', ')}`;
+                    li.style.cursor = 'pointer';
+                    li.onclick = () => {
+                        input.value = music.title;
+                        suggestionsList.style.display = 'none';
+                    };
+                    suggestionsList.appendChild(li);
+                });
+    
+                suggestionsList.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error fetching suggestions:', error);
+                suggestionsList.style.display = 'none';
+            });
+    }
+</script>
+
+{% endblock %}
