@@ -392,41 +392,38 @@ def play_music():
     result = start_playback(spotify_token, device_id, track_uri)
     return result
 
-def get_devices(access_token):
-    url = "https://api.spotify.com/v1/me/player/devices"
+
+
+def get_devices(spotify_token):
+    url = 'https://api.spotify.com/v1/me/player/devices'
     headers = {
-        "Authorization": f"Bearer {access_token}"
+        'Authorization': f'Bearer {spotify_token}'
     }
+    
     response = requests.get(url, headers=headers)
+    
     if response.status_code == 200:
-        return response.json()['devices']
+        devices = response.json().get('devices', [])
+        return devices
     else:
         return None
 
-def start_playback(access_token, device_id, track_uri=None):
-    url = "https://api.spotify.com/v1/me/player/play"
+def start_playback(spotify_token, device_id, track_uri):
+    url = f'https://api.spotify.com/v1/me/player/play?device_id={device_id}'
     headers = {
-        "Authorization": f"Bearer {access_token}",
-        "Content-Type": "application/json"
+        'Authorization': f'Bearer {spotify_token}'
     }
-    data = {}
+    payload = {
+        'uris': [track_uri]
+    }
     
-    # Si vous voulez démarrer une chanson spécifique, fournissez son URI
-    if track_uri:
-        data = {
-            "uris": [track_uri]
-        }
-    
-    # Si vous souhaitez spécifier un appareil (optionnel)
-    if device_id:
-        url += f"?device_id={device_id}"
-    
-    response = requests.put(url, headers=headers, json=data)
+    response = requests.put(url, headers=headers, json=payload)
     
     if response.status_code == 204:
-        return "Lecture démarrée avec succès"
+        return "Lecture lancée avec succès!"
     else:
-        return f"Erreur: {response.status_code}"
+        return f"Erreur lors du démarrage de la lecture : {response.status_code}"
+
 
 
 def get_album_cover(music_id, access_token):
