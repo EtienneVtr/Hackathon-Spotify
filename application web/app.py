@@ -17,7 +17,7 @@ import time
 CLIENT_ID = '27e6e375a4e1446ab580670055e248fe'  # Remplace par ton client_id Spotify
 CLIENT_SECRET = 'e79258ab68124cac9d66bcd43bfd19c2'  # Remplace par ton client_secret Spotify
 REDIRECT_URI = 'http://127.0.0.1:5000/spotify_callback'
-SCOPE = 'user-read-private user-read-email'
+SCOPE = 'user-read-private user-read-email user-read-playback-state user-modify-playback-state'
 STATE_KEY = "spotify_auth_state"
 
 access_token = None
@@ -118,7 +118,7 @@ def profile():
         return redirect(url_for('login'))
     
     spotify_user = session.get('spotify_user')
-    print(spotify_user)
+    
     if spotify_user:
         spotify_username = spotify_user.get('display_name', 'Utilisateur Spotify')
     else:
@@ -420,15 +420,26 @@ def play_music():
     track_uri = request.form.get('track_uri')  # URI de la musique
     device_id = request.form.get('device_id')  # ID de l'appareil
 
+    # Récupérer les appareils disponibles
     devices = get_devices(spotify_token)
+    
     if not devices:
         return "Aucun appareil disponible pour la lecture.", 400
-    
+
     # Si aucun device_id n'est spécifié, utiliser le premier appareil disponible
     if not device_id:
         device_id = devices[0]['id']
 
-    # Démarrer la lecture sur le dispositif spécifié
+    # Vérifier si l'appareil est déjà actif
+    active_device = next((device for device in devices if device['id'] == device_id and device['is_active']), None)
+
+    if not active_device:
+        # Si l'appareil n'est pas actif, on lance la lecture pour l'activer
+        result = start_playback(spotify_token, device_id, track_uri)
+        if result != "Lecture démarrée avec succès.":
+            return result  # Retourner une erreur si la lecture n'a pas pu être démarrée
+
+    # Démarrer la lecture sur l'appareil spécifié
     result = start_playback(spotify_token, device_id, track_uri)
     return result
 
@@ -458,6 +469,7 @@ def start_playback(spotify_token, device_id, track_uri):
     }
     
     response = requests.put(url, headers=headers, json=payload)
+    print(response.json())
     
     if response.status_code == 204:
         return "Lecture lancée avec succès!"
