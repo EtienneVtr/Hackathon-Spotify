@@ -161,9 +161,13 @@ def api_search_music():
     matching_musics = [
         {"title": music['title'], "artists": music['artists'], "music_id": music['music_id']}
         for music in data.get('musics', [])
-        if query in music['title'].lower()
+        if music['title'].lower().startswith(query)  # Utiliser startswith pour les préfixes
     ]
-    return jsonify(matching_musics)
+    matching_musics.sort(key=lambda x: x['title'])  # Trier par ordre alphabétique
+    limited_musics = matching_musics[:15]  # Limiter à 15 résultats
+    return jsonify(limited_musics)
+
+
 
 # Route pour la page d'inscription
 @app.route('/signup', methods=['GET', 'POST'])
