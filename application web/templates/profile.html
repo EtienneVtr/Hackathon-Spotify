@@ -91,12 +91,19 @@
 </form>
 
         
-        <h3>Musique dans votre profil</h3>
-        <ul>
-            {% for music_id in user.music %}
-                <li>{{ music_id }}</li>
-            {% endfor %}
-        </ul>
+<h3>Musique dans votre profil</h3>
+<ul>
+    {% for music in user_music_details %}
+        <li>
+            <strong>{{ music.title }}</strong> - {{ music.artists | join(", ") }}
+            
+           
+        </li>
+    {% endfor %}
+</ul>
+
+
+
     </div>
     <script>
         function fetchSuggestions() {

@@ -1,6 +1,14 @@
 from flask import Flask, render_template, g, request, redirect, url_for, session, flash, jsonify
 import json
 
+import requests
+from bs4 import BeautifulSoup
+
+
+
+
+
+
 # Charger les données JSON
 def load_json_data(filename):
     with open(filename, 'r') as json_file:
@@ -57,7 +65,6 @@ def profile():
     if not g.user:
         return redirect(url_for('login'))
     
-    # Récupérer l'utilisateur connecté
     user_id = session.get('user_id')
     user = next((u for u in data['profiles'] if u['id'] == user_id), None)
     if not user:
@@ -80,8 +87,11 @@ def profile():
         flash("Profil mis à jour avec succès.")
         return redirect(url_for('profile'))
     
-    # Passer les données nécessaires au template
-    return render_template('profile.html', user=user, musics=data.get('musics', []))
+    # Récupérer les détails des musiques
+    user_music_details = [get_music_details(music_id) for music_id in user['music'] if get_music_details(music_id)]
+
+    return render_template('profile.html', user=user, musics=data.get('musics', []), user_music_details=user_music_details)
+
 
 # Route pour ajouter une musique au profil
 @app.route('/add_music', methods=['POST'])
@@ -202,6 +212,20 @@ def signup():
         return redirect(url_for('login'))
 
     return render_template('signup.html')
+
+def get_music_details(music_id):
+    music = next((m for m in data.get('musics', []) if m['music_id'] == music_id), None)
+    if music:
+        return {
+            "title": music['title'],
+            "artists": music['artists'],
+            "album": music.get('album', "Inconnu")
+        }
+    return None
+
+
+
+
 # Route pour la déconnexion
 @app.route('/logout')
 def logout():
