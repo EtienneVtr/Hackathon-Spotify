@@ -1,4 +1,4 @@
-from flask import Flask, render_template, g, request, redirect, url_for, session, flash
+from flask import Flask, render_template, g, request, redirect, url_for, session, flash, jsonify
 import json
 
 # Charger les données JSON
@@ -152,6 +152,19 @@ def add_selected_music(music_id):
         flash("Cette musique est déjà dans votre profil.")
     
     return redirect(url_for('profile'))
+
+
+
+@app.route('/api/search_music', methods=['GET'])
+def api_search_music():
+    query = request.args.get('query', '').lower()
+    matching_musics = [
+        {"title": music['title'], "artists": music['artists'], "music_id": music['music_id']}
+        for music in data.get('musics', [])
+        if query in music['title'].lower()
+    ]
+    return jsonify(matching_musics)
+
 # Route pour la page d'inscription
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
