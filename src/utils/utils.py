@@ -499,6 +499,63 @@ def get_next_flow(user_id, music_id, like=None):
 
     return next_music_id
 
+# Fonction pour mettre à jour les sessions avec les nouveaux profils
+def maj_db_sessions():
+    # Charger les profils et les sessions existantes
+    with open('application web/base_de_données/data.json', 'r') as file:
+        data = json.load(file)
+    
+    with open('application web/base_de_données/sessions.json', 'r') as file:
+        sessions_db = json.load(file)
+    
+    existing_sessions = {session['id']: session for session in sessions_db['sessions']}
+    existing_profiles = {profile['id']: profile for profile in data.get('profiles', [])}
+    
+    # Ajouter les nouveaux utilisateurs (profils)
+    new_sessions = []
+    for profile in data.get('profiles', []):
+        profile_id = profile['id']
+        if profile_id not in existing_sessions:
+            list_id_music = profile.get('music', [])  # Musiques associées au profil
+            if list_id_music:  # Si le profil a des musiques
+                recommendations = get_recommandations_from_playlist(list_id_music, 100)
+            else:
+                recommendations = []  # Pas de recommandations si pas de musiques associées
+
+            genres_weights = [1] * 17  # Liste de poids par défaut pour chaque genre
+
+            # Ajouter la nouvelle session pour ce profil
+            new_sessions.append({
+                "id": profile_id,
+                "music_flow": recommendations,
+                "music_seen": [],
+                "genres_weights": genres_weights
+            })
+    
+    # Mettre à jour les sessions existantes avec celles de 'new_sessions'
+    sessions_db['sessions'] = list(existing_sessions.values()) + new_sessions
+    
+    # Supprimer les utilisateurs obsolètes (profils qui ne sont plus dans data.json)
+    sessions_db['sessions'] = [session for session in sessions_db['sessions']
+                                if session['id'] in existing_profiles]
+    
+    # Recalculer le 'music_flow' si des musiques ont été ajoutées ou supprimées
+    all_music_ids = set(data.get('music', []))  # Tous les identifiants de musique dans le nouveau fichier
+    for session in sessions_db['sessions']:
+        current_music_flow = session['music_flow']
+        # Vérifier si la musique dans le flow est encore valide
+        new_music_flow = [music for music in current_music_flow if music in all_music_ids]
+        
+        # Recalculer les musiques du flow si des musiques ont été ajoutées ou supprimées
+        if len(new_music_flow) != len(current_music_flow):
+            session['music_flow'] = get_recommandations_from_playlist(new_music_flow, 100)
+
+    # Sauvegarder les modifications dans sessions.json
+    with open('application web/base_de_données/sessions.json', 'w') as file:
+        json.dump(sessions_db, file, indent=4)
+    
+    print("Base de données des sessions mise à jour avec succès.")
+
 
 '''# Exemple d'utilisation
 if __name__ == "__main__":
