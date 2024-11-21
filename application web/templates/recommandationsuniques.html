@@ -24,6 +24,15 @@
                 value="{{ music_name|default('') }}"><!-- Affiche la valeur soumise -->
             <br>
             <ul id="suggestions" style="border: 1px solid #ccc; max-height: 150px; overflow-y: auto; display: none;"></ul>
+            
+            <label for="cluster">Cluster :</label><br>
+            <input type="radio" id="cluster" name="cluster" value="cluster" required>
+            <label for="cluster">Hors cluster :</label><br>
+            <input type="radio" id="horscluster" name="cluster" value="horscluster" required>
+            <label for="autre">Autre :</label><br>
+            <input type="radio" id="autre" name="cluster" value="autre" required>
+            <br>
+            
             <button type="submit" class="bouton">Valider</button>
         </form>
 

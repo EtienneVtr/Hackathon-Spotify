@@ -124,6 +124,7 @@ def recommandationsuniques():
     page_actuelle = 'recommandationsuniques'
     if request.method == 'POST':
         music_name = request.form.get('music_name')
+        cluster_mode = request.form.get('cluster')  # Récupérer la valeur du mode de cluster
         user_id = session.get('user_id')
         user = next((u for u in data['profiles'] if u['id'] == user_id), None)
         
@@ -137,7 +138,7 @@ def recommandationsuniques():
             if matching_musics:
                 # Prendre le premier résultat trouvé
                 selected_music_id = matching_musics[0]['music_id']
-                recommendations = get_recommandations_from_music(selected_music_id, 5)
+                recommendations = get_recommandations_from_music(selected_music_id, 5, cluster_mode)
             else:
                 flash("Aucune musique trouvée avec ce nom.")
     
