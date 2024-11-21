@@ -266,7 +266,7 @@ h3 {
     overflow-y: auto;
     display: none;
     position: absolute;
-    background-color: #ffffff; /* Fond blanc pour les suggestions */
+    background-color: #000000; /* Fond blanc pour les suggestions */
     z-index: 10;
 }
 
@@ -276,7 +276,7 @@ h3 {
 }
 
 #suggestions li:hover {
-    background-color: #f0f0f0; /* Fond gris clair au survol */
+    background-color: #000000; /* Fond gris clair au survol */
 }
 
 
