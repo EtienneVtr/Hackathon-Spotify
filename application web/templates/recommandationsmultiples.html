@@ -139,26 +139,25 @@
         .catch(error => console.error('Erreur réseau :', error));
     }
 </script>
-<script> 
+<script>
     function addToProfile(musicId) {
-        fetch('/add_to_profile', {
+        fetch('/api/add_music', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                
             },
-            body: JSON.stringify({
-                music_id: musicId
-            })
+            body: JSON.stringify({ music_id: musicId })
         })
         .then(response => response.json())
         .then(data => {
-            if (data.error) {
-                alert("Erreur : " + data.error);
+            if (data.success) {
+                alert(`Musique ajoutée : ${data.message}`);
             } else {
-                alert(data.message);
+                alert(`Erreur : ${data.message}`);
             }
         })
-        .catch(error => console.error('Erreur réseau :', error));
+        .catch(error => console.error('Erreur :', error));
     }
-</script>
+    </script>
 {% endblock %}
