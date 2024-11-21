@@ -124,7 +124,50 @@ def recommandationsmultiples():
         selected_playlist_names=selected_playlist_names  # Passer les noms des playlists sélectionnées au template
     )
 
+#création de la route flow pour la page flow
+@app.route('/flow', methods=['GET', 'POST'])
+def flow():
+    global current_flow_music_id
+
+    global page_actuelle
+    page_actuelle = 'flow'
+
+    if not g.user:
+        return redirect(url_for('login'))
+
+    user_id = session.get('user_id')
+    user = next((u for u in data['profiles'] if u['id'] == user_id), None)
+
+    if not user:
+        return redirect(url_for('logout'))
+
+    # Utiliser la fonction get_first_flow pour obtenir l'id de la musique
+    if request.method == 'POST':
+        # Récupérer la liste des likes (True, False, None) depuis le formulaire
+        like = request.form.get('like')  # Peut être 'like', 'dislike', ou 'none'
+        if like == "like" :
+            like=True
+        elif like == "dislike" :
+            like=False
+        else :
+            like=None
+        print(like)
+        music_id = get_next_flow(user_id,current_flow_music_id, like)  # Obtenir le prochain id_music
+        print (user_id)
+        print(music_id)
+    else:
+        music_id = get_first_flow(user_id)  # Obtenir le premier id_music
+
+    # Récupérer les détails de la musique avec sa couverture d'album
+    spotify_token = session.get('spotify_access_token')
     
+    music_detail = get_music_details(music_id, data)
+    current_flow_music_id = music_id
+    if music_detail:
+        cover_url = get_album_cover(music_id, spotify_token)
+        music_detail['cover_url'] = cover_url
+
+    return render_template('flow.html', music_detail=music_detail)
 @app.route('/recommandationsuniques', methods=['GET', 'POST'])
 def recommandationsuniques():
     recommendations = []
