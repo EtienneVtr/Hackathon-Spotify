@@ -47,12 +47,18 @@ def test_get_cluster_name(cluster_id):
     cluster_name = get_cluster_name(cluster_id)
     print(cluster_name)
 
+def test_get_first_flow():
+    print("Test de la fonction get_first_flow")
+    first_flow = get_first_flow(2)
+    print(first_flow)
+
 def main(): 
     # Mettre en commentaire les tests que vous ne voulez pas exécuter
     # test_get_recommandations_from_music()
     # test_get_recommandations_from_playlist()
     # test_get_genres_from_user_profile()
-    test_get_cluster_name(16)
+    # test_get_cluster_name(16)
+    test_get_first_flow()
     
 if __name__ == "__main__":
     main()

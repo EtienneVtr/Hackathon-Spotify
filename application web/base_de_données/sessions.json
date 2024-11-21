@@ -84,7 +84,6 @@
                 "3QuEpyj4kTRWiWuckd1hcK",
                 "1bYItjcPRtxZs6Ir71O5RB",
                 "26Q7f4tUntDtlL4EyZz65X",
-                "21LDnCDpGk717CR3iLMhxc",
                 "5ovyalYBu4LOEPinCfkOo0",
                 "73681b7Hc0THHGZrSzl75y",
                 "51sf8K5TcoLvuMF24c84Lv",
@@ -109,7 +108,9 @@
                 "3bh9jyKSTLGto75BPXmJNd",
                 "7BSMSvK0WxrDeI98bswYa8"
             ],
-            "music_seen": []
+            "music_seen": [
+                "21LDnCDpGk717CR3iLMhxc"
+            ]
         },
         {
             "id": 3,
