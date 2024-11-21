@@ -16,7 +16,7 @@ import string
 # Fonction pour donner une liste de recommandations à partir d'une musique
 def get_recommandations_from_music(id_music, n_recommandations, option):
     # Chargement des données
-    data = pd.read_csv('data/data_w_clusters.csv')
+    data = pd.read_csv('data/genred_data.csv')
 
     # On récupère le cluster de la musique
     cluster = data[data['id'] == id_music]['cluster'].values[0]
@@ -38,7 +38,7 @@ def get_recommandations_from_music(id_music, n_recommandations, option):
     # On utilise la distance euclidienne
     
     # Extraire les colonnes pertinentes pour le calcul des distances
-    feature_columns = ['danceability', 'energy', 'loudness', 'speechiness', 
+    feature_columns = ['danceability', 'year', 'energy', 'loudness', 'speechiness', 
                        'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo']
     
     # Trouver les attributs de la musique cible
@@ -68,7 +68,7 @@ def get_recommandations_from_music(id_music, n_recommandations, option):
 # Fonction pour donner une liste de recommandations à partir d'une playlist
 def get_recommandations_from_playlist(list_id_music, n_recommandations):
     # Chargement des données
-    data = pd.read_csv('data/data_w_clusters.csv')
+    data = pd.read_csv('data/genred_data.csv')
     
     # On récupère les clusters des musiques de la playlist
     clusters = data[data['id'].isin(list_id_music)]['cluster'].values
@@ -76,7 +76,7 @@ def get_recommandations_from_playlist(list_id_music, n_recommandations):
     # On calcule le "centre" des musiques dans leur cluster respectif à l'aide des attributs 'danceability', 'energy', 'loudness', 'speechiness', 'acousticness',
     #                                                                  'instrumentalness', 'liveness', 'valence', 'tempo'
     centers = {}
-    feature_columns = ['danceability', 'energy', 'loudness', 'speechiness', 
+    feature_columns = ['danceability', 'year', 'energy', 'loudness', 'speechiness', 
                         'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo']
     for cluster in clusters:
         musics = data[(data['cluster'] == cluster) & (data['id'].isin(list_id_music))]
@@ -261,7 +261,7 @@ def get_music_details(music_id, data):
 
 # Colonnes pour les caractéristiques
 feature_columns = [
-    'mode', 'acousticness', 'danceability', 'duration_ms', 
+    'mode', 'year', 'acousticness', 'danceability', 'duration_ms', 
     'energy', 'instrumentalness', 'liveness', 'loudness', 
     'speechiness', 'tempo', 'valence', 'popularity', 'key'
 ]
@@ -283,7 +283,7 @@ def get_recommandations_hors_cluster_adapt(id_music, n_recommandations, feature_
     - genre_weights : Poids pour les genres musicaux.
     """
     # Chargement des données
-    musics = pd.read_csv('/data/data_w_clusters.csv')
+    musics = pd.read_csv('/data/genred_data.csv')
 
     # Vérification de la colonne 'cluster' dans le dataset
     if 'cluster' not in musics.columns:
@@ -450,7 +450,7 @@ def get_next_flow(user_id, music_id, like=None):
         user_session['genres_weights'] = [1] * 17  # Liste par défaut avec 17 valeurs à 1
 
     # Charger les données des musiques
-    data = pd.read_csv('data/data_w_clusters.csv')
+    data = pd.read_csv('data/genred_data.csv')
 
     if music_id not in data['id'].values:
         return {'error': 'Musique introuvable.'}
@@ -469,7 +469,7 @@ def get_next_flow(user_id, music_id, like=None):
     print("Poids des genres : ", user_session['genres_weights'])
 
     # Récupérer les caractéristiques de la musique
-    feature_columns = ['danceability', 'energy', 'loudness', 'speechiness', 
+    feature_columns = ['danceability', 'year', 'energy', 'loudness', 'speechiness', 
                        'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo']
     features = data.loc[data['id'] == music_id, feature_columns].values[0]
 
