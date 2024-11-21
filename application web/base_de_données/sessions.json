@@ -490,7 +490,6 @@
                 "2dxjKgT0li4qBI3QwuN9Ih",
                 "6cblRiEGDRNZgowcm951R3",
                 "5SV9SnHkuHMh446QsgQtry",
-                "4gwWbm2qtOkbnrdgAgul5n",
                 "0MuqFuh4MerIiFsYWuEFaP",
                 "7cFFhb9Wz2ZXLSpEk2VDKd",
                 "2c5Isyd07hWsl7AQia2Dig",
@@ -556,7 +555,6 @@
                 "62wtttQzoIA9HnNmGVd9Yq",
                 "2OsEJFTfzfjG4oC92cuP2c",
                 "0ke4zs9hCtCiKsKAYNRaLJ",
-                "0u695M7KyzXaPIjpEbxOkB",
                 "4Onlx3t98YDeu8bM7wRS5K",
                 "1A0UmBR1wBagHBUzRwEvON",
                 "0JlYNNkFTSuvlkSXcyPHHP",
@@ -580,7 +578,9 @@
                 "6gm9s2EBA0XD7LlJn5fuLo",
                 "4NTWZqvfQTlOMitlVn6tew"
             ],
-            "music_seen": [],
+            "music_seen": [
+                "4gwWbm2qtOkbnrdgAgul5n"
+            ],
             "genres_weights": [
                 1,
                 1,

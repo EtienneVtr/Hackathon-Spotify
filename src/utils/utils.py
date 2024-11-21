@@ -466,8 +466,6 @@ def get_next_flow(user_id, music_id, like=None):
         # Incrémenter le poids pour le cluster et éviter qu'il ne dépasse 2
         user_session['genres_weights'][cluster] = min(2, user_session['genres_weights'][cluster] + 0.1)
 
-    print("Poids des genres : ", user_session['genres_weights'])
-
     # Récupérer les caractéristiques de la musique
     feature_columns = ['danceability', 'year', 'energy', 'loudness', 'speechiness', 
                        'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo']

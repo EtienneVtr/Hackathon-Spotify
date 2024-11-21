@@ -142,6 +142,9 @@ def flow():
     if not user:
         return redirect(url_for('logout'))
 
+    # Mise à jour de la db sessions au besoin
+    maj_db_sessions(user_id)
+
     # Utiliser la fonction get_first_flow pour obtenir l'id de la musique
     if request.method == 'POST':
         # Récupérer la liste des likes (True, False, None) depuis le formulaire
@@ -152,10 +155,7 @@ def flow():
             like=False
         else :
             like=None
-        print(like)
         music_id = get_next_flow(user_id,current_flow_music_id, like)  # Obtenir le prochain id_music
-        print (user_id)
-        print(music_id)
     else:
         music_id = get_first_flow(user_id)  # Obtenir le premier id_music
 
