@@ -10,23 +10,6 @@ import ast
 
 from src.utils.utils import get_cluster_name
 
-def init_db_artists():
-    # Charger le fichier CSV contenant les artistes
-    data_artist = pd.read_csv('data/data_by_artist.csv')
-    
-    # Initialiser un ensemble pour les artistes afin d'éviter les doublons
-    artists_set = set()
-
-    for index, row in data_artist.iterrows():
-        artist = row['artists'].strip('"')  # Supprimer les guillemets
-        artists_set.add(artist)  # Ajouter l'artiste à l'ensemble
-
-    # Convertir l'ensemble d'artistes en liste de dictionnaires
-    artists_list = [{"name": artist} for artist in artists_set]
-    
-    return artists_list
-
-
 def init_db_musics():
     # Charger le fichier CSV contenant les musiques
     data_music = pd.read_csv('data/genred_data.csv')
@@ -70,12 +53,10 @@ def init_db():
     del old_data['artists']
     del old_data['musics']
     
-    # Initialiser les bases de données 'artists' et 'musics'
-    artists_list = init_db_artists()
+    # Initialiser la base de données 'musics'
     musics_list = init_db_musics()
     
     # Ajouter les nouvelles bases de données 'artists' et 'musics' au fichier JSON
-    old_data['artists'] = artists_list
     old_data['musics'] = musics_list
     
     # Écrire le fichier JSON

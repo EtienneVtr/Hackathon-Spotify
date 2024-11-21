@@ -127,6 +127,7 @@ def recommandationsmultiples():
 #création de la route flow pour la page flow
 @app.route('/flow', methods=['GET', 'POST'])
 def flow():
+    
     global current_flow_music_id
 
     global page_actuelle

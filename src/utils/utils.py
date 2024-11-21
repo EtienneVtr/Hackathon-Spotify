@@ -499,8 +499,8 @@ def get_next_flow(user_id, music_id, like=None):
 
     return next_music_id
 
-# Fonction pour mettre à jour les sessions avec les nouveaux profils
-def maj_db_sessions():
+# Fonction pour mettre à jour, au besoin, la base de données des sessions du profil actuel
+def maj_db_sessions(user_id):
     # Charger les profils et les sessions existantes
     with open('application web/base_de_données/data.json', 'r') as file:
         data = json.load(file)
@@ -508,56 +508,66 @@ def maj_db_sessions():
     with open('application web/base_de_données/sessions.json', 'r') as file:
         sessions_db = json.load(file)
     
-    existing_sessions = {session['id']: session for session in sessions_db['sessions']}
-    existing_profiles = {profile['id']: profile for profile in data.get('profiles', [])}
+    # Vérifier si l'utilisateur est déjà dans la base de données
+    if user_id not in [p['id'] for p in data['profiles']]:
+        return {'error': 'Utilisateur introuvable.'}
     
-    # Ajouter les nouveaux utilisateurs (profils)
-    new_sessions = []
-    for profile in data.get('profiles', []):
-        profile_id = profile['id']
-        if profile_id not in existing_sessions:
-            list_id_music = profile.get('music', [])  # Musiques associées au profil
-            if list_id_music:  # Si le profil a des musiques
-                recommendations = get_recommandations_from_playlist(list_id_music, 100)
-            else:
-                recommendations = []  # Pas de recommandations si pas de musiques associées
-
-            genres_weights = [1] * 17  # Liste de poids par défaut pour chaque genre
-
-            # Ajouter la nouvelle session pour ce profil
-            new_sessions.append({
-                "id": profile_id,
-                "music_flow": recommendations,
-                "music_seen": [],
-                "genres_weights": genres_weights
-            })
-    
-    # Mettre à jour les sessions existantes avec celles de 'new_sessions'
-    sessions_db['sessions'] = list(existing_sessions.values()) + new_sessions
-    
-    # Supprimer les utilisateurs obsolètes (profils qui ne sont plus dans data.json)
-    sessions_db['sessions'] = [session for session in sessions_db['sessions']
-                                if session['id'] in existing_profiles]
-    
-    # Récupérer tous les identifiants de musique dans le champ 'music' de l'utilisateur
-    for session in sessions_db['sessions']:
-        user_id = session['id']
-        user_profile = existing_profiles.get(user_id, None)
+    # Si l'utilisateur n'est pas encore dans la base de données des sessions, l'ajouter
+    if user_id not in [s['id'] for s in sessions_db['sessions']]:
+        # Récupérer les musiques du profil utilisateur
+        user_music = next((p['music'] for p in data['profiles'] if p['id'] == user_id), None)
         
-        if user_profile:
-            user_music_ids = user_profile.get('music', [])
-            
-            # Limiter à 100 musiques si nécessaire
-            new_music_flow = get_recommandations_from_playlist(user_music_ids[:100], 100)
-            
-            # Mettre à jour le 'music_flow' de la session
-            session['music_flow'] = new_music_flow
-
-    # Sauvegarder les modifications dans sessions.json
-    with open('application web/base_de_données/sessions.json', 'w') as file:
-        json.dump(sessions_db, file, indent=4)
+        # Donner des recommandations à l'utilisateur
+        if user_music:
+            recommendations = get_recommandations_from_playlist(user_music, 100)
+        else:
+            recommendations = []
+        
+        # Créer une nouvelle session pour l'utilisateur
+        new_session = {
+            'id': user_id,
+            'musics': user_music,
+            'music_flow': recommendations,
+            'music_seen': [],
+            'genres_weights': [1] * 17
+        }
+        
+        # Ajouter la nouvelle session à la base de données
+        sessions_db['sessions'].append(new_session)
+        
+        # Sauvegarder les modifications
+        save_json_data('application web/base_de_données/sessions.json', sessions_db)
+        
+        print("Session ajoutée avec succès.")
+        
+    # Comparer la liste des musiques du profil avec la session actuelle
+    # Récupérer la session de l'utilisateur
+    user_session = next((s for s in sessions_db['sessions'] if s['id'] == user_id), None)
     
-    print("Base de données des sessions mise à jour avec succès.")
+    if user_session is None:
+        return {'error': 'Session introuvable.'}
+    
+    # Vérifier si la liste des musiques du profil a changé
+    user_music = next((p['music'] for p in data['profiles'] if p['id'] == user_id), None)
+    
+    if user_music != user_session['musics']:
+        # Mettre à jour la session avec les nouvelles recommandations
+        if user_music:
+            recommendations = get_recommandations_from_playlist(user_music, 100)
+        else:
+            recommendations = []
+        
+        # Mettre à jour la session
+        user_session['musics'] = user_music
+        user_session['music_flow'] = recommendations
+        user_session['music_seen'] = []
+        
+        # Sauvegarder les modifications
+        save_json_data('application web/base_de_données/sessions.json', sessions_db)
+        
+        print("Session mise à jour avec succès.")
+    
+    
 
 
 '''# Exemple d'utilisation

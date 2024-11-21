@@ -34,6 +34,8 @@ def init_db_sessions():
         # Ajouter une session pour ce profil
         sessions.append({
             "id": profile_id,
+            "musics": list_id_music, # Musiques associées au profil. On utilise cette variable pour comparer le profil mis à jour avec le profil initial
+                                     # dans la fonction maj_db_sessions
             "music_flow": recommendations,
             "music_seen": [],
             "genres_weights": genres_weights
