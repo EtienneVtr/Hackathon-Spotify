@@ -29,7 +29,7 @@ def init_db_artists():
 
 def init_db_musics():
     # Charger le fichier CSV contenant les musiques
-    data_music = pd.read_csv('data/data_w_clusters.csv')
+    data_music = pd.read_csv('data/genred_data.csv')
     
     # Initialiser une liste pour les musiques
     musics_list = []
