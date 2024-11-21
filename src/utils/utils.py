@@ -5,6 +5,10 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import euclidean_distances
 import joblib
+import json
+import requests
+import random
+import string
 
 # FONCTIONS
 
@@ -137,4 +141,89 @@ def get_genres_from_user_profile(user_profile, n_genres):
     # Retourner les genres
     return genres_preferences
 
-# Focntion pour ajouter une musique au dataset
+# Fonction pour ajouter une musique au dataset
+def add_music_to_dataset(music):
+    pass
+
+# Charger les données JSON
+def load_json_data(filename):
+    with open(filename, 'r') as json_file:
+        return json.load(json_file)
+
+# Sauvegarder les données JSON
+def save_json_data(filename, data):
+    with open(filename, 'w') as json_file:
+        json.dump(data, json_file, indent=4)
+        
+# Fonction pour renvoyer les appareils disponibles pour la lecture
+def get_devices(spotify_token):
+    url = 'https://api.spotify.com/v1/me/player/devices'
+    headers = {
+        'Authorization': f'Bearer {spotify_token}'
+    }
+    
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        devices = response.json().get('devices', [])
+        return devices
+    else:
+        return None
+
+# Fonction pour démarrer la lecture d'une piste
+def start_playback(spotify_token, device_id, track_uri):
+    url = f'https://api.spotify.com/v1/me/player/play?device_id={device_id}'
+    headers = {
+        'Authorization': f'Bearer {spotify_token}'
+    }
+    
+    # Ajout du préfixe si ce n'est pas déjà une URI complète
+    if not track_uri.startswith("spotify:track:"):
+        track_uri = f"spotify:track:{track_uri}"
+        
+    payload = {
+        'uris': [track_uri]  # Liste contenant l'URI de la piste
+    }
+    
+    response = requests.put(url, headers=headers, json=payload)
+    
+    if response.status_code == 204:
+        return {'message': 'Lecture démarrée avec succès.'}
+    else:
+        try:
+            error_message = response.json().get('error', {}).get('message', 'Unknown error')
+        except ValueError:
+            error_message = "Aucune information d'erreur disponible."
+        return {'error': error_message, 'status': response.status_code}
+    
+# Fonction pour obtenir la pochette d'un album
+def get_album_cover(music_id, access_token):
+    url = f"https://api.spotify.com/v1/tracks/{music_id}"
+    headers = {
+        "Authorization": f"Bearer {access_token}"
+    }
+    
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        track_data = response.json()
+        album_images = track_data.get('album', {}).get('images', [])
+        if album_images:
+            return album_images[0]['url']  # URL de la meilleure résolution
+    return None
+
+# Fonction pour générer un `state` aléatoire
+def generate_state():
+    """Génère un `state` aléatoire pour prévenir les attaques CSRF."""
+    return ''.join(random.choices(string.ascii_letters + string.digits, k=16))
+
+# Fonction pour obtenir les détails d'une musique
+def get_music_details(music_id, data):
+    music = next((m for m in data.get('musics', []) if m['music_id'] == music_id), None)
+    if music:
+        return {
+            "title": music['title'],
+            "artists": music['artists'],
+            "music_id": music_id
+        }
+    return None

@@ -1,20 +1,17 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from src.utils.utils import get_recommandations_from_music, get_recommandations_from_playlist
+
+# Importer les fonctions de l'application
+from src.utils.utils import *
+
+# Importer les modules Flask et les librairies nécessaires
 from flask import Flask, render_template, g, request, redirect, url_for, session, flash, jsonify
-import json
-
 import requests
-from bs4 import BeautifulSoup
-
-from urllib.parse import urlencode  # Ajoute cette importation
-
-import random
-import string
 from datetime import datetime
 import time
 
+# Variables globales
 CLIENT_ID = '27e6e375a4e1446ab580670055e248fe'  # Remplace par ton client_id Spotify
 CLIENT_SECRET = 'e79258ab68124cac9d66bcd43bfd19c2'  # Remplace par ton client_secret Spotify
 REDIRECT_URI = 'http://127.0.0.1:5000/spotify_callback'
@@ -23,15 +20,6 @@ STATE_KEY = "spotify_auth_state"
 
 access_token = None
 page_actuelle = None
-# Charger les données JSON
-def load_json_data(filename):
-    with open(filename, 'r') as json_file:
-        return json.load(json_file)
-
-# Sauvegarder les données JSON
-def save_json_data(filename, data):
-    with open(filename, 'w') as json_file:
-        json.dump(data, json_file, indent=4)
 
 # Charger les données depuis le JSON
 DATA_FILE = 'application web/base_de_données/data.json'
@@ -41,6 +29,7 @@ app = Flask(__name__)
 app.secret_key = "HACKATHON"
 app.config['SECRET_KEY'] = "HACKATHON"
 
+
 # Middleware pour vérifier si l'utilisateur est connecté
 @app.before_request
 def check_logged_in_user():
@@ -48,10 +37,13 @@ def check_logged_in_user():
         g.user = session['username']
     else:
         g.user = None
+        
+
 # Route pour la page d'accueil
 @app.route('/', methods=['GET', 'POST'])
 def acceuil_projet():
     return render_template('acceuil_projet.html')
+
 
 # Route pour la page de connexion
 @app.route('/login', methods=['GET', 'POST'])
@@ -108,7 +100,7 @@ def recommandationsmultiples():
     spotify_token = session.get('spotify_access_token')  # Récupérer le token Spotify
 
     for music_id in recommendations:
-        music_detail = get_music_details(music_id)
+        music_detail = get_music_details(music_id, data)
         if music_detail:
             # Ajouter l'URL de la couverture d'album
             cover_url = get_album_cover(music_id, spotify_token)
@@ -154,7 +146,7 @@ def recommandationsuniques():
     spotify_token = session.get('spotify_access_token')  # Récupérer le token Spotify
     
     for music_id in recommendations:
-        music_detail = get_music_details(music_id)
+        music_detail = get_music_details(music_id, data)
         if music_detail:
             # Ajouter l'URL de la couverture d'album pour chaque musique
             cover_url = get_album_cover(music_id, spotify_token)
@@ -166,6 +158,7 @@ def recommandationsuniques():
         recommandations=user_music_details,
         music_name=request.form.get('music_name', '')  # Renvoyer la valeur recherchée
     )
+
 
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
@@ -222,7 +215,7 @@ def profile():
     # Récupérer les détails des musiques et la couverture de l'album
     user_music_details = []
     for music_id in user['music']:
-        music_detail = get_music_details(music_id)
+        music_detail = get_music_details(music_id, data)
         if music_detail:
             # Récupérer l'URL de la couverture d'album pour chaque musique
             cover_url = get_album_cover(music_id, spotify_token)  # Utilisez votre fonction ici pour récupérer l'URL
@@ -288,7 +281,6 @@ def profile_callback():
 
             # Sauvegarder les informations de l'utilisateur Spotify dans la session
             session['spotify_user'] = user_info
-            print(f"Utilisateur Spotify: {user_info['display_name']}")  # Affiche dans la console
 
             # Affiche un message de succès et redirige l'utilisateur vers le profil
             return redirect(url_for('profile'))
@@ -330,6 +322,8 @@ def add_music():
         flash("Aucune musique trouvée avec ce nom.")
     
     return redirect(url_for('profile'))
+
+
 # Route pour rechercher une musique
 @app.route('/search_music', methods=['POST'])
 def search_music():
@@ -347,6 +341,7 @@ def search_music():
         return redirect(url_for('profile'))
     
     return render_template('select_music.html', musics=matching_musics)
+
 
 # Route pour ajouter la musique sélectionnée
 @app.route('/add_selected_music/<music_id>', methods=['POST'])
@@ -370,7 +365,6 @@ def add_selected_music(music_id):
     return redirect(url_for('profile'))
 
 
-
 @app.route('/api/search_music', methods=['GET'])
 def api_search_music():
     query = request.args.get('query', '').lower()
@@ -382,6 +376,7 @@ def api_search_music():
     matching_musics.sort(key=lambda x: x['title'])  # Trier par ordre alphabétique
     limited_musics = matching_musics[:15]  # Limiter à 15 résultats
     return jsonify(limited_musics)
+
 
 @app.route('/remove_music', methods=['POST'])
 def remove_music():
@@ -408,9 +403,6 @@ def remove_music():
         return jsonify({"success": True, "message": "Musique supprimée avec succès.", "music_id": music_id})
     else:
         return jsonify({"success": False, "message": "Musique introuvable dans le profil."}), 400
-
-
-
 
 
 # Route pour la page d'inscription
@@ -446,19 +438,6 @@ def signup():
 
     return render_template('signup.html')
 
-def get_music_details(music_id):
-    music = next((m for m in data.get('musics', []) if m['music_id'] == music_id), None)
-    if music:
-        return {
-            "title": music['title'],
-            "artists": music['artists'],
-            "music_id": music_id
-        }
-    return None
-
-def generate_state():
-    """Génère un `state` aléatoire pour prévenir les attaques CSRF."""
-    return ''.join(random.choices(string.ascii_letters + string.digits, k=16))
 
 # Route pour initier la connexion à Spotify
 @app.route('/spotify_login')
@@ -475,12 +454,15 @@ def spotify_login():
     )
     return redirect(auth_url)
 
+
 # Route pour la déconnexion de Spotify
 @app.route('/spotify_logout')
 def spotify_logout():
     session.pop('spotify_access_token', None)
     session.pop('spotify_user', None)
+    session.pop('spotify_token_expires_at', None)
     return redirect(url_for('profile'))
+
 
 # Route pour la déconnexion
 @app.route('/logout')
@@ -488,6 +470,8 @@ def logout():
     session.clear()
     return redirect(url_for('login'))
 
+
+# Route pour la lecture de musique
 @app.route('/play_music', methods=['POST'])
 def play_music():
     spotify_token = session.get('spotify_access_token')
@@ -520,6 +504,7 @@ def play_music():
     result = start_playback(spotify_token, device_id, track_uri)
     return jsonify(result)
 
+
 @app.route('/stop_music', methods=['POST'])
 def stop_music():
     spotify_token = session.get('spotify_access_token')
@@ -539,61 +524,6 @@ def stop_music():
         except ValueError:
             error_message = "Aucune information d'erreur disponible."
         return jsonify({'error': error_message}), response.status_code
-
-    
-def get_devices(spotify_token):
-    url = 'https://api.spotify.com/v1/me/player/devices'
-    headers = {
-        'Authorization': f'Bearer {spotify_token}'
-    }
-    
-    response = requests.get(url, headers=headers)
-    
-    if response.status_code == 200:
-        devices = response.json().get('devices', [])
-        return devices
-    else:
-        return None
-
-def start_playback(spotify_token, device_id, track_uri):
-    url = f'https://api.spotify.com/v1/me/player/play?device_id={device_id}'
-    headers = {
-        'Authorization': f'Bearer {spotify_token}'
-    }
-    
-    # Ajout du préfixe si ce n'est pas déjà une URI complète
-    if not track_uri.startswith("spotify:track:"):
-        track_uri = f"spotify:track:{track_uri}"
-        
-    payload = {
-        'uris': [track_uri]  # Liste contenant l'URI de la piste
-    }
-    
-    response = requests.put(url, headers=headers, json=payload)
-    
-    if response.status_code == 204:
-        return {'message': 'Lecture démarrée avec succès.'}
-    else:
-        try:
-            error_message = response.json().get('error', {}).get('message', 'Unknown error')
-        except ValueError:
-            error_message = "Aucune information d'erreur disponible."
-        return {'error': error_message, 'status': response.status_code}
-
-def get_album_cover(music_id, access_token):
-    url = f"https://api.spotify.com/v1/tracks/{music_id}"
-    headers = {
-        "Authorization": f"Bearer {access_token}"
-    }
-    
-    response = requests.get(url, headers=headers)
-    
-    if response.status_code == 200:
-        track_data = response.json()
-        album_images = track_data.get('album', {}).get('images', [])
-        if album_images:
-            return album_images[0]['url']  # URL de la meilleure résolution
-    return None
 
 
 if __name__ == '__main__':
