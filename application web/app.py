@@ -12,6 +12,7 @@ from urllib.parse import urlencode  # Ajoute cette importation
 
 import random
 import string
+from datetime import datetime
 import time
 
 CLIENT_ID = '27e6e375a4e1446ab580670055e248fe'  # Remplace par ton client_id Spotify
@@ -166,8 +167,6 @@ def recommandationsuniques():
         music_name=request.form.get('music_name', '')  # Renvoyer la valeur recherchée
     )
 
-   
-
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
     global page_actuelle
@@ -210,6 +209,16 @@ def profile():
         flash("Profil mis à jour avec succès.")
         return redirect(url_for('profile'))
     
+    # Calculer le temps restant pour le token
+    token_expires_at = session.get('spotify_token_expires_at')
+    if token_expires_at:
+        expires_at = datetime.fromtimestamp(token_expires_at)
+        time_left = (expires_at - datetime.now()).total_seconds()
+        if time_left < 0:
+            time_left = 0
+    else:
+        time_left = 0
+
     # Récupérer les détails des musiques et la couverture de l'album
     user_music_details = []
     for music_id in user['music']:
@@ -225,7 +234,9 @@ def profile():
                            spotify_username=spotify_username, 
                            musics=data.get('musics', []), 
                            user_music_details=user_music_details, 
-                           spotify_token=spotify_token)
+                           spotify_token=spotify_token, 
+                           token_time_left=time_left)
+
 
 # Route pour la page de connexion à Spotify
 @app.route('/spotify_callback')
@@ -257,9 +268,13 @@ def profile_callback():
         refresh_token = token_info['refresh_token']
         expires_in = token_info['expires_in']
 
+        # Calculer l'heure d'expiration
+        token_expires_at = int(time.time()) + expires_in
+
         # Sauvegarder les tokens dans la session
         session['spotify_access_token'] = access_token
         session['spotify_refresh_token'] = refresh_token
+        session['spotify_token_expires_at'] = token_expires_at
 
         # Récupérer les informations de l'utilisateur depuis l'API Spotify
         user_info_url = 'https://api.spotify.com/v1/me'
@@ -477,16 +492,16 @@ def logout():
 def play_music():
     spotify_token = session.get('spotify_access_token')
     if not spotify_token:
-        return redirect(url_for('login'))
+        return jsonify({'error': 'Utilisateur non authentifié'}), 401
     
-    track_uri = request.form.get('track_uri')  # URI de la musique
-    device_id = request.form.get('device_id')  # ID de l'appareil
+    track_uri = request.json.get('track_uri')  # URI de la musique
+    device_id = request.json.get('device_id')  # ID de l'appareil
 
     # Récupérer les appareils disponibles
     devices = get_devices(spotify_token)
     
     if not devices:
-        return "Aucun appareil disponible pour la lecture.", 400
+        return jsonify({'error': 'Aucun appareil disponible pour la lecture.'}), 400
 
     # Si aucun device_id n'est spécifié, utiliser le premier appareil disponible
     if not device_id:
@@ -498,37 +513,32 @@ def play_music():
     if not active_device:
         # Si l'appareil n'est pas actif, on lance la lecture pour l'activer
         result = start_playback(spotify_token, device_id, track_uri)
-        if result != "Lecture démarrée avec succès.":
-            return result  # Retourner une erreur si la lecture n'a pas pu être démarrée
+        if result.get('error'):
+            return jsonify(result), 400
 
     # Démarrer la lecture sur l'appareil spécifié
     result = start_playback(spotify_token, device_id, track_uri)
-    return result
+    return jsonify(result)
 
 @app.route('/stop_music', methods=['POST'])
 def stop_music():
     spotify_token = session.get('spotify_access_token')
     if not spotify_token:
-        return redirect(url_for('login'))
+        return jsonify({'error': 'Not authenticated'}), 401
     
     url = 'https://api.spotify.com/v1/me/player/pause'
-    headers = {
-        'Authorization': f'Bearer {spotify_token}'
-    }
+    headers = {'Authorization': f'Bearer {spotify_token}'}
     
     response = requests.put(url, headers=headers)
     
-    # Gérer les codes d'état
     if response.status_code in [200, 204]:
-        return redirect(url_for(page_actuelle))
+        return jsonify({'message': 'Playback stopped successfully'})
     else:
-        # Essayer de récupérer un message d'erreur
         try:
             error_message = response.json().get('error', {}).get('message', 'Unknown error')
         except ValueError:
             error_message = "Aucune information d'erreur disponible."
-        
-        return f"Erreur lors de l'arrêt de la lecture : {response.status_code} - {error_message}"
+        return jsonify({'error': error_message}), response.status_code
 
     
 def get_devices(spotify_token):
@@ -562,9 +572,13 @@ def start_playback(spotify_token, device_id, track_uri):
     response = requests.put(url, headers=headers, json=payload)
     
     if response.status_code == 204:
-        return redirect(url_for(page_actuelle))
+        return {'message': 'Lecture démarrée avec succès.'}
     else:
-        return f"Erreur lors du démarrage de la lecture : {response.status_code} - {response.json().get('error', {}).get('message', 'Unknown error')}"
+        try:
+            error_message = response.json().get('error', {}).get('message', 'Unknown error')
+        except ValueError:
+            error_message = "Aucune information d'erreur disponible."
+        return {'error': error_message, 'status': response.status_code}
 
 def get_album_cover(music_id, access_token):
     url = f"https://api.spotify.com/v1/tracks/{music_id}"

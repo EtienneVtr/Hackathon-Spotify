@@ -47,15 +47,8 @@
                     
                     
                     <div>
-                        <form action="{{ url_for('play_music') }}" method="POST" style="margin-bottom: 10px;">
-                            <input type="hidden" name="track_uri" value="{{ music.music_id }}">
-                            <input type="hidden" name="device_id" value="{{ spotify_device_id }}">
-                            <button type="submit" class="bouton">Jouer</button>
-                        </form>
-                        <form action="{{ url_for('stop_music') }}" method="POST">
-                            <input type="hidden" name="device_id" value="{{ spotify_device_id }}">
-                            <button type="submit" class="bouton">Arrêter</button>
-                        </form>
+                        <button onclick="playMusic('spotify:track:{{ music.music_id }}')">Lancer la musique</button>
+                        <button onclick="stopMusic()">Arrêter la musique</button>
                     </div>
                 </li>
             {% endfor %}
@@ -106,6 +99,43 @@
                 console.error('Error fetching suggestions:', error);
                 suggestionsList.style.display = 'none';
             });
+    }
+
+    function playMusic(trackUri, deviceId = null) {
+        fetch('/play_music', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                track_uri: trackUri,
+                device_id: deviceId
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert("Erreur : " + data.error);
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => console.error('Erreur réseau :', error));
+    }
+
+    function stopMusic() {
+        fetch('/stop_music', {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert("Erreur : " + data.error);
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => console.error('Erreur réseau :', error));
     }
 </script>
 
