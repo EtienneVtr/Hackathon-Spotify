@@ -120,6 +120,7 @@ def recommandationsmultiples():
 @app.route('/recommandationsuniques', methods=['GET', 'POST'])
 def recommandationsuniques():
     recommendations = []
+    selected_music_id = None
     global page_actuelle
     page_actuelle = 'recommandationsuniques'
     if request.method == 'POST':
@@ -157,7 +158,8 @@ def recommandationsuniques():
     return render_template(
         'recommandationsuniques.html', 
         recommandations=user_music_details,
-        music_name=request.form.get('music_name', '')  # Renvoyer la valeur recherchée
+        music_name=request.form.get('music_name', ''),  # Renvoyer la valeur recherchée
+        selected_music_id=selected_music_id  # Renvoyer l'ID de la musique sélectionnée
     )
 
 
@@ -322,7 +324,33 @@ def add_music():
     else:
         flash("Aucune musique trouvée avec ce nom.")
     
-    return redirect(url_for('profile'))
+    return redirect(url_for(page_actuelle))
+@app.route('/api/add_music', methods=['POST'])
+def api_add_music():
+    if not g.user:
+        return jsonify({"success": False, "message": "Utilisateur non connecté."}), 401
+
+    data_json = request.get_json()
+    if not data_json or 'music_id' not in data_json:
+        return jsonify({"success": False, "message": "Données JSON invalides."}), 400
+
+    music_id = data_json['music_id']
+    user_id = session.get('user_id')
+    user = next((u for u in data['profiles'] if u['id'] == user_id), None)
+
+    if not user:
+        return jsonify({"success": False, "message": "Utilisateur introuvable."}), 404
+
+    if not isinstance(user.get('music', []), list):
+        return jsonify({"success": False, "message": "Erreur interne dans la liste des musiques."}), 500
+
+    if music_id in user['music']:
+        return jsonify({"success": False, "message": "Cette musique est déjà dans votre profil."}), 400
+
+    user['music'].append(music_id)
+    save_json_data(DATA_FILE, data)
+
+    return jsonify({"success": True, "message": f"Musique ajoutée avec succès (ID : {music_id}).", "music_id": music_id})
 
 
 # Route pour rechercher une musique

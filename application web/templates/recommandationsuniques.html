@@ -38,29 +38,28 @@
 
         {% if recommandations %}
         <h3>Résultats pour "{{ music_name }}" :</h3>
+       
+        <ul><button onclick="playMusic('spotify:track:{{ selected_music_id }}')">Lancer la musique</button></ul>
+      
         <ul id="user-music-list" style="list-style: none; padding: 0;">
             {% for music in recommandations %}
-                <li class="recommendation-item" id="music-{{ music.music_id }}" style="text-align: center; margin-bottom: 20px;">
-                    {% if music.cover_url %}
-                        <div style=" margin-bottom: 10px;">
-                            <img src="{{ music.cover_url }}" alt="Album cover" style="width: 100px; height: 100px; object-fit: cover;">
-                        </div>
-                    {% endif %}
-                    <div style="margin-bottom: 10px;">
-                        <strong>{{ music.title }} </strong>
-                        <br> 
-                        <span>{{ music.artists | join(", ") }}</span> 
-                    </div>
-                   
-                    
-                    
-                    
-                    <div>
-                        <button onclick="playMusic('spotify:track:{{ music.music_id }}')">Lancer la musique</button>
-                        <button onclick="stopMusic()">Arrêter la musique</button>
-                    </div>
-                </li>
-            {% endfor %}
+<li class="recommendation-item" id="music-{{ music.music_id }}" style="text-align: center; margin-bottom: 20px;">
+    {% if music.cover_url %}
+    <div style="margin-bottom: 10px;">
+        <img src="{{ music.cover_url }}" alt="Album cover" style="width: 100px; height: 100px; object-fit: cover;">
+    </div>
+    {% endif %}
+    <div style="margin-bottom: 10px;">
+        <strong>{{ music.title }}</strong><br>
+        <span>{{ music.artists | join(", ") }}</span>
+    </div>
+    <div>
+        <button onclick="playMusic('spotify:track:{{ music.music_id }}')">Lancer la musique</button>
+        <button onclick="stopMusic()">Arrêter la musique</button>
+        <button onclick="addToProfile('{{ music.music_id }}')">Ajouter au profil</button>
+    </div>
+</li>
+{% endfor %}
         </ul>
     {% else %}
         <p>Aucune recommandation trouvée pour "{{ music_name }}". Essayez un autre titre !</p>
@@ -147,5 +146,25 @@
         .catch(error => console.error('Erreur réseau :', error));
     }
 </script>
-
+<script>
+    function addToProfile(musicId) {
+        fetch('/api/add_music', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                
+            },
+            body: JSON.stringify({ music_id: musicId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert(`Musique ajoutée : ${data.message}`);
+            } else {
+                alert(`Erreur : ${data.message}`);
+            }
+        })
+        .catch(error => console.error('Erreur :', error));
+    }
+    </script>
 {% endblock %}
