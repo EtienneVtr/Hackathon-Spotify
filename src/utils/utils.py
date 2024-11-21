@@ -339,6 +339,16 @@ def update_weights(weights, target, liked, learning_rate=0.1):
     weights += factor * learning_rate * target
     return np.clip(weights, 0, 1)  # Conserver les poids entre 0 et 1
 
+# Fonction qui renvoit le nom d'un cluster à partir de son ID
+def get_cluster_name(cluster_id):
+    # Ouverture du fichier CSV des clusters
+    clusters = pd.read_csv('data/cluster_characteristics.csv')
+    
+    # Récupération du nom du cluster
+    cluster_name = clusters.loc[clusters['cluster'] == cluster_id, 'name'].values[0]
+    
+    return cluster_name
+
 # Exemple d'utilisation
 if __name__ == "__main__":
     # Initialiser les poids (tous égaux à 1 au départ)
