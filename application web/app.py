@@ -69,10 +69,14 @@ def login():
 ## pour récupérer la liste de musique il faut utiliser get_music_details sur les "music" dans "profiles" dans le .json
 
 
+# Variable globale pour stocker les IDs de playlists sélectionnées
+selected_playlist_ids = []
+
 @app.route('/recommandationsmultiples', methods=['GET', 'POST'])
 def recommandationsmultiples():
     recommendations = []
     global page_actuelle
+    global selected_playlist_ids
     page_actuelle = 'recommandationsmultiples'
     
     if not g.user:
@@ -89,11 +93,11 @@ def recommandationsmultiples():
 
     if request.method == 'POST':
         # Obtenir les IDs de playlist sélectionnés
-        playlist_ids = request.form.getlist('playlist_ids')  # Récupérer une liste d'IDs de playlists
+        selected_playlist_ids = request.form.getlist('playlist_ids')  # Récupérer une liste d'IDs de playlists
         num_recommendations = 10  # Nombre de recommandations à retourner
 
         # Obtenir les recommandations à partir des playlists
-        recommendations = get_recommandations_from_playlist(playlist_ids, num_recommendations)
+        recommendations = get_recommandations_from_playlist(selected_playlist_ids, num_recommendations)
 
     # Récupérer les détails des musiques avec leurs couvertures d'albums
     user_music_details = []
@@ -110,10 +114,14 @@ def recommandationsmultiples():
     # Récupérer les playlists de l'utilisateur
     user_playlists = [music for music in data['musics'] if music['music_id'] in user_music_ids]
 
+    # Récupérer les noms des playlists sélectionnées
+    selected_playlist_names = [music['title'] for music in data['musics'] if music['music_id'] in selected_playlist_ids]
+
     return render_template(
         'recommandationsmultiples.html',
         recommandations=user_music_details,
-        playlists=user_playlists  # Passer les playlists de l'utilisateur au template
+        playlists=user_playlists,  # Passer les playlists de l'utilisateur au template
+        selected_playlist_names=selected_playlist_names  # Passer les noms des playlists sélectionnées au template
     )
 
     

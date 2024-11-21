@@ -27,12 +27,16 @@ def init_db_sessions():
             recommendations = get_recommandations_from_playlist(list_id_music, 100)
         else:
             recommendations = []  # Pas de recommandations si pas de musiques associées
+            
+        # Initialise une liste de poids à 1 pour chaque genre = faire une liste de 17 éléments à 1
+        genres_weights = [1] * 17
         
         # Ajouter une session pour ce profil
         sessions.append({
             "id": profile_id,
             "music_flow": recommendations,
-            "music_seen": []
+            "music_seen": [],
+            "genres_weights": genres_weights
         })
     
     # Créer le fichier JSON des sessions

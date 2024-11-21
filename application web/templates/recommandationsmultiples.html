@@ -23,7 +23,13 @@
         </form>
 
         {% if recommandations %}
-    <h3>Recommandations :</h3>
+    <h3>Recommandations pour les playlists sélectionnées :</h3>
+    <p>Musiques sélectionnées :</p>
+    <ul>
+        {% for music_name in selected_playlist_names %}
+            <li>{{ music_name }}</li>
+        {% endfor %}
+    </ul>
     <ul id="user-music-list" style="list-style: none; padding: 0;">
         {% for music in recommandations %}
             <li class="recommendation-item" id="music-{{ music.music_id }}" style="text-align: center; margin-bottom: 20px;">
@@ -42,6 +48,7 @@
                 <div>
                     <button onclick="playMusic('spotify:track:{{ music.music_id }}')">Lancer la musique</button>
                     <button onclick="stopMusic()">Arrêter la musique</button>
+                    <button onclick="addToProfile('{{ music.music_id }}')">Ajouter au profil</button>
                 </div>
             </li>
         {% endfor %}
@@ -120,6 +127,28 @@
     function stopMusic() {
         fetch('/stop_music', {
             method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert("Erreur : " + data.error);
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => console.error('Erreur réseau :', error));
+    }
+</script>
+<script> 
+    function addToProfile(musicId) {
+        fetch('/add_to_profile', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                music_id: musicId
+            })
         })
         .then(response => response.json())
         .then(data => {
