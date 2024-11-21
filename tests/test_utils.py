@@ -57,6 +57,10 @@ def test_get_next_flow():
     next_flow = get_next_flow(2, "1X2XrrIBUUBMZdES4mkHzt", True)
     print(next_flow)
 
+def test_maj_db_sessions():
+    print("Test de la fonction maj_db_sessions")
+    maj_db_sessions()
+
 def main(): 
     # Mettre en commentaire les tests que vous ne voulez pas exécuter
     # test_get_recommandations_from_music()
@@ -65,6 +69,7 @@ def main():
     # test_get_cluster_name(16)
     # test_get_first_flow()
     test_get_next_flow()
+    test_maj_db_sessions()
     
 if __name__ == "__main__":
     main()

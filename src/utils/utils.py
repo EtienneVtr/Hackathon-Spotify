@@ -539,16 +539,19 @@ def maj_db_sessions():
     sessions_db['sessions'] = [session for session in sessions_db['sessions']
                                 if session['id'] in existing_profiles]
     
-    # Recalculer le 'music_flow' si des musiques ont été ajoutées ou supprimées
-    all_music_ids = set(data.get('music', []))  # Tous les identifiants de musique dans le nouveau fichier
+    # Récupérer tous les identifiants de musique dans le champ 'music' de l'utilisateur
     for session in sessions_db['sessions']:
-        current_music_flow = session['music_flow']
-        # Vérifier si la musique dans le flow est encore valide
-        new_music_flow = [music for music in current_music_flow if music in all_music_ids]
+        user_id = session['id']
+        user_profile = existing_profiles.get(user_id, None)
         
-        # Recalculer les musiques du flow si des musiques ont été ajoutées ou supprimées
-        if len(new_music_flow) != len(current_music_flow):
-            session['music_flow'] = get_recommandations_from_playlist(new_music_flow, 100)
+        if user_profile:
+            user_music_ids = user_profile.get('music', [])
+            
+            # Limiter à 100 musiques si nécessaire
+            new_music_flow = get_recommandations_from_playlist(user_music_ids[:100], 100)
+            
+            # Mettre à jour le 'music_flow' de la session
+            session['music_flow'] = new_music_flow
 
     # Sauvegarder les modifications dans sessions.json
     with open('application web/base_de_données/sessions.json', 'w') as file:
