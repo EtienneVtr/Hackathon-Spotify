@@ -3,17 +3,18 @@
 /* Styles généraux */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #121212; /* Noir */
     margin: 0;
     padding: 0;
+    color: #ffffff; /* Texte blanc pour contraster avec le fond noir */
 }
 
 /* En-tête et navigation */
 header.main-head {
-    background-color: #1db954;
+    background-color: #1db954; /* Vert Spotify */
     color: white;
     padding: 15px 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 header.main-head nav {
@@ -49,14 +50,13 @@ header.main-head ul li a {
 }
 
 header.main-head ul li a:hover {
-    background-color: #1db954;
-    color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.2); /* Légère transparence au survol */
 }
 
 /* Footer */
 footer {
     text-align: center;
-    background-color: #1db954;
+    background-color: #1db954; /* Vert Spotify */
     color: white;
     padding: 10px 20px;
     position: fixed;
@@ -85,22 +85,22 @@ footer {
 /* Section bannière */
 #banner {
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #1e1e1e; /* Noir légèrement plus clair */
     padding: 40px 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     margin: 20px auto;
     max-width: 600px;
 }
 
 #banner h4 {
     font-size: 24px;
-    color: #333;
+    color: #ffffff; /* Texte blanc */
     margin-bottom: 15px;
 }
 
 #banner p {
-    color: #555;
+    color: #aaaaaa; /* Texte gris pour le contenu */
     font-size: 16px;
     line-height: 1.6;
 }
@@ -124,14 +124,14 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #121212; /* Noir */
 }
 
 .inner {
-    background-color: #ffffff;
+    background-color: #1e1e1e; /* Noir légèrement plus clair */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 600px; /* Ajuster la largeur pour être plus cohérente avec le grand rectangle */
     text-align: center;
@@ -140,7 +140,7 @@ footer {
 .inner h4 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: #ffffff; /* Texte blanc */
 }
 
 form {
@@ -153,20 +153,21 @@ form {
 form input {
     width: calc(100% - 20px);
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #333333; /* Bordure gris foncé */
     border-radius: 4px;
     font-size: 14px;
+    background-color: #ffffff; /* Fond blanc pour les champs de formulaire */
 }
 
 form input:focus {
-    border-color: #1db954;
+    border-color: #1db954; /* Vert Spotify */
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 255, 128, 0.5);
+    box-shadow: 0 0 5px rgba(29,b, 185, 84, 0.5); /* Ombre verte au focus */
 }
 
 form .bouton {
     padding: 10px 15px;
-    background-color: #1db954;
+    background-color: #1db954; /* Vert Spotify */
     color: white;
     border: none;
     border-radius: 4px;
@@ -177,18 +178,18 @@ form .bouton {
 }
 
 form .bouton:hover {
-    background-color: #1db954;
+    background-color: #1aa34a; /* Une nuance légèrement plus foncée au survol */
 }
 
 /* Texte sous les formulaires */
 .center-text {
     margin-top: 15px;
     font-size: 14px;
-    color: #555;
+    color: #aaaaaa; /* Texte gris pour le contenu */
 }
 
 .center-text a {
-    color: #1db954;
+    color: #1db954; /* Vert Spotify */
     text-decoration: none;
 }
 
@@ -211,11 +212,12 @@ form .bouton:hover {
 .recommendation-item h4 {
     margin: 10px 0 5px;
     font-size: 16px;
+    color: #ffffff; /* Texte blanc */
 }
 
 .recommendation-item p {
     margin: 0;
-    color: #555;
+    color: #aaaaaa; /* Texte gris pour le contenu */
 }
 
 /* Profil et recommandations */
@@ -223,18 +225,18 @@ form .bouton:hover {
     max-width: 600px; /* Réduction de la largeur maximale pour correspondre au petit rectangle */
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #1e1e1e; /* Noir légèrement plus clair */
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
     text-align: center;
-    color: #333;
+    color: #ffffff; /* Texte blanc */
 }
 
 h3 {
-    color: #666;
+    color: #aaaaaa; /* Texte gris pour le contenu */
 }
 
 /* Liste des musiques de l'utilisateur */
@@ -248,7 +250,7 @@ h3 {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #333333; /* Bordure gris foncé */
 }
 
 #user-music-list li img {
@@ -259,12 +261,12 @@ h3 {
 }
 
 #suggestions {
-    border: 1px solid #ccc;
+    border: 1px solid #333333; /* Bordure gris foncé */
     max-height: 150px;
     overflow-y: auto;
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #ffffff; /* Fond blanc pour les suggestions */
     z-index: 10;
 }
 
@@ -274,5 +276,5 @@ h3 {
 }
 
 #suggestions li:hover {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0; /* Fond gris clair au survol */
 }
