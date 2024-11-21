@@ -39,7 +39,10 @@
             <label for="education">Éducation :</label><br>
             <select id="education" name="education">
                 <option value="secondary school" {% if user.education == "secondary school" %}selected{% endif %}>École secondaire</option>
-                <option value="college bachelor degree" {% if user.education == "college bachelor degree" %}selected{% endif %}>Licence</option>
+                <option value="college/bachelor degree" {% if user.education == "college/bachelor degree" %}selected{% endif %}>college/bachelor degree</option>
+                <option value="primary school" {% if user.education == "primary school" %}selected{% endif %}>École primaire</option>
+                <option value="masters degree" {% if user.education == "masters degree" %}selected{% endif %}>Masters degree</option>
+                <option value="doctorate degree" {% if user.education == "doctorate degree" %}selected{% endif %}>Doctorate degree</option>
                 <option value="other" {% if user.education == "other" %}selected{% endif %}>Autre</option>
             </select><br>
             

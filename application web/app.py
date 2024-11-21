@@ -21,7 +21,7 @@ SCOPE = 'user-read-private user-read-email user-read-playback-state user-modify-
 STATE_KEY = "spotify_auth_state"
 
 access_token = None
-
+page_actuelle = None
 # Charger les données JSON
 def load_json_data(filename):
     with open(filename, 'r') as json_file:
@@ -167,9 +167,11 @@ def recommandationsuniques():
 
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
+    global page_actuelle
     global access_token
     
     access_token = session.get('spotify_access_token')
+    page_actuelle = 'profile'
     
     if not g.user:
         return redirect(url_for('login'))
@@ -515,7 +517,7 @@ def stop_music():
     
     # Gérer les codes d'état
     if response.status_code in [200, 204]:
-        return redirect(url_for('profile'))
+        return redirect(url_for(page_actuelle))
     else:
         # Essayer de récupérer un message d'erreur
         try:
@@ -557,7 +559,7 @@ def start_playback(spotify_token, device_id, track_uri):
     response = requests.put(url, headers=headers, json=payload)
     
     if response.status_code == 204:
-        return redirect(url_for('profile'))
+        return redirect(url_for(page_actuelle))
     else:
         return f"Erreur lors du démarrage de la lecture : {response.status_code} - {response.json().get('error', {}).get('message', 'Unknown error')}"
 
