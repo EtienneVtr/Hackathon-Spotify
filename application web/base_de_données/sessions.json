@@ -28,7 +28,6 @@
             "id": 2,
             "music_flow": [
                 "7zACUQbWQxzT4aER7ityBV",
-                "3L7P7HZVQ3wxzKoUyxaC9H",
                 "51Euzw1UH76LsCm8FY7kcn",
                 "17EMfJzJqG8ND5oroo5o6j",
                 "17EMfJzJqG8ND5oroo5o6j",
@@ -54,7 +53,6 @@
                 "3BYIzNZ3t9lRQCACXSMLrT",
                 "3BYIzNZ3t9lRQCACXSMLrT",
                 "7Adzy6kc6H1Da4wBVZ1XLN",
-                "7Adzy6kc6H1Da4wBVZ1XLN",
                 "0hwkukpHcBJfGcIUxi1tK2",
                 "0hwkukpHcBJfGcIUxi1tK2",
                 "5tHj7TuWS1h6GDU0Ajcm32",
@@ -68,9 +66,7 @@
                 "6EidGY4S6hkU6fwNdSSabg",
                 "6EidGY4S6hkU6fwNdSSabg",
                 "6EidGY4S6hkU6fwNdSSabg",
-                "6EidGY4S6hkU6fwNdSSabg",
                 "7I0N7ZNYjtSG0qKEWMQxXB",
-                "2IAaBzOLUtr2hqcwOItFWJ",
                 "2IAaBzOLUtr2hqcwOItFWJ",
                 "2IAaBzOLUtr2hqcwOItFWJ",
                 "0Ps4Eh6SQjeLnubbCsQTDD",
@@ -91,7 +87,6 @@
                 "76fUOrKOcUnAceODDPBidy",
                 "1pwCxz81iX8TxMKBIAEqsZ",
                 "0pvwmAfJnszOzg2gw5wvn1",
-                "6FSHigAWfTd5Zx3jYfehbO",
                 "0pvwmAfJnszOzg2gw5wvn1",
                 "6FSHigAWfTd5Zx3jYfehbO",
                 "6piAUJJQFD8oHDUr0b7l7q",
@@ -120,14 +115,11 @@
                 "0p1HtkrNYxv0iDfEKwXSTp"
             ],
             "music_seen": [
-                "2IAaBzOLUtr2hqcwOItFWJ",
-                "5lNuqFVMca4vPupY10cH0J",
-                "4v0134PgBTGsFJiGcV4eJk",
-                "01vv2AjxgP4uUyb8waYO5Y"
+                "7Adzy6kc6H1Da4wBVZ1XLN",
+                "6TLcWhEFySe0lTNgUWVPc4"
             ],
             "genres_weights": [
                 1,
-                1.0,
                 1,
                 1,
                 1,
@@ -141,7 +133,8 @@
                 1,
                 1,
                 1,
-                0.9,
+                1,
+                1,
                 1
             ]
         },

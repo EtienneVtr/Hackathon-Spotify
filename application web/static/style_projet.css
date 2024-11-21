@@ -221,7 +221,7 @@ form .bouton:hover {
 }
 
 /* Profil et recommandations */
-#profile, #recommendation {
+#profile, #recommendation,#flow {
     max-width: 600px; /* Réduction de la largeur maximale pour correspondre au petit rectangle */
     margin: 20px auto;
     padding: 20px;
@@ -278,3 +278,5 @@ h3 {
 #suggestions li:hover {
     background-color: #f0f0f0; /* Fond gris clair au survol */
 }
+
+
