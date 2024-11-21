@@ -14,15 +14,23 @@ import string
 # FONCTIONS
 
 # Fonction pour donner une liste de recommandations à partir d'une musique
-def get_recommandations_from_music(id_music, n_recommandations):
+def get_recommandations_from_music(id_music, n_recommandations, option):
     # Chargement des données
     data = pd.read_csv('data/data_w_clusters.csv')
 
     # On récupère le cluster de la musique
     cluster = data[data['id'] == id_music]['cluster'].values[0]
     
-    # On récupère les musiques du même cluster
-    musics = data[data['cluster'] == cluster]
+    if option == "cluster":
+        # On récupère les musiques du même cluster
+        musics = data[data['cluster'] == cluster]
+
+    elif option == "horscluster":
+        musics = data[data['cluster'] != cluster]
+
+    else: 
+        #cas de base
+        musics = data
     
     # On cherche les n_recommandations musiques les plus proches
     # On calcule la distance entre les musiques à l'aide des attributs 'danceability', 'energy', 'loudness', 'speechiness', 'acousticness',
@@ -49,6 +57,10 @@ def get_recommandations_from_music(id_music, n_recommandations):
     # Trier les recommandations par distance
     recommandations.sort(key=lambda x: x[1])
     recommandations = recommandations[:min(n_recommandations, len(recommandations))]
+
+    for x in recommandations:
+        music_genre = musics.loc[musics['id'] == x[0], 'cluster'].values[0]
+        print(f"ID: {x[0]}, Distance: {x[1]:.4f}, Cluster: {music_genre}")
     
     # On retourne les id des musiques recommandées
     return [x[0] for x in recommandations]
