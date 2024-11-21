@@ -1,0 +1,31 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    Pokedex - Hackathon Spotify
+{% endblock %}
+
+{% block title %}
+    Pokedex
+{% endblock %}
+
+{% block body %}
+<section id="pokedex">
+    <div class="inner">
+        <h2>Pokedex de Musique</h2>
+        <h3>Analyse de votre profil musical</h3>
+
+        <div class="results">
+            <h4>Pourcentage de Genres</h4>
+            <p>{{ genre_percentage | round(2) }}%</p>
+
+            <h4>Pourcentage d'Années</h4>
+            <p>{{ year_percentage | round(2) }}%</p>
+
+            <h4>Pourcentage d'Artistes</h4>
+            <p>{{ artist_percentage | round(2) }}%</p>
+        </div>
+
+        <a href="{{ url_for('profile') }}" class="btn">Retour au Profil</a>
+    </div>
+</section>
+{% endblock %}
