@@ -4,6 +4,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import euclidean_distances
+from sklearn.preprocessing import StandardScaler
 import joblib
 import json
 import requests
@@ -227,3 +228,127 @@ def get_music_details(music_id, data):
             "music_id": music_id
         }
     return None
+
+
+# Colonnes pour les caractéristiques
+feature_columns = [
+    'mode', 'acousticness', 'danceability', 'duration_ms', 
+    'energy', 'instrumentalness', 'liveness', 'loudness', 
+    'speechiness', 'tempo', 'valence', 'popularity', 'key'
+]
+genre_columns = [
+    'Ambient', 'Fusion Beat', 'Fusion Hardcore', 'Metal', 'Jazz', 'Rock',
+    'World & Electronic Music', 'Punk', 'Folk', 'Traditional Music', 'Indie',
+    'Blues, Soul & Country', 'Hip Hop', 'Classical', 'Comedy, Literature & Cultural Narratives',
+    'Pop', 'Rap'
+]
+
+# Fonction principale mise à jour
+def get_recommandations_hors_cluster_adapt(id_music, n_recommandations, feature_weights, genre_weights):
+    """
+    Recommande des musiques hors cluster avec pondération adaptative.
+
+    - id_music : ID de la musique cible.
+    - n_recommandations : Nombre de recommandations souhaitées.
+    - feature_weights : Poids pour les caractéristiques des musiques.
+    - genre_weights : Poids pour les genres musicaux.
+    """
+    # Chargement des données
+    musics = pd.read_csv('/data/data_w_clusters.csv')
+
+    # Vérification de la colonne 'cluster' dans le dataset
+    if 'cluster' not in musics.columns:
+        print("Erreur : La colonne 'cluster' n'est pas présente dans le dataset.")
+        return []
+
+    # Trouver les caractéristiques de la musique cible
+    target_music_features = musics.loc[musics['id'] == id_music, feature_columns].values
+    if target_music_features.shape[0] == 0:
+        raise ValueError(f"La musique avec l'ID {id_music} est introuvable dans le dataset.")
+
+    # Trouver le genre (cluster) de la musique cible
+    target_music_cluster = musics.loc[musics['id'] == id_music, 'cluster'].values[0]
+
+    # Filtrer les autres musiques
+    other_musics = musics[musics['id'] != id_music]
+    other_features = other_musics[feature_columns].values
+    other_clusters = other_musics['cluster'].values  # Récupérer les clusters des autres musiques
+
+    # Standardisation des caractéristiques
+    standardized_features = StandardScaler().fit_transform(np.vstack([target_music_features, other_features]))
+    target_music_features = standardized_features[0]
+    other_features = standardized_features[1:]
+
+    # Application des poids
+    weighted_target_features = target_music_features * feature_weights
+    weighted_other_features = other_features * feature_weights
+
+    # Calcul des distances pondérées pour les caractéristiques
+    feature_distances = euclidean_distances(
+        weighted_target_features.reshape(1, -1), weighted_other_features
+    ).flatten()
+
+    # Trier les recommandations par distance (les plus proches en premier)
+    recommandations = list(zip(other_musics['id'].values, feature_distances))
+    recommandations.sort(key=lambda x: x[1])
+    recommandations = recommandations[:min(n_recommandations, len(recommandations))]
+
+    # Affichage des recommandations et mise à jour des poids
+    print("Recommandations :")
+    for rec in recommandations:
+        music_name = musics.loc[musics['id'] == rec[0], 'name'].values[0]
+        music_genre = musics.loc[musics['id'] == rec[0], 'cluster'].values[0]
+        print(f"ID: {rec[0]}, Name: {music_name}, Distance: {rec[1]:.4f}, Cluster: {music_genre}")
+
+        # Demander à l'utilisateur si la musique est aimée
+        #liked = input(f"Avez-vous aimé la musique {music_name} (oui/non) ? ").strip().lower() == 'oui'
+        liked = np.random.choice([True, False])
+        print(liked)
+        
+        # Mettre à jour les poids
+        music_id = rec[0]
+        recommended_features = musics.loc[musics['id'] == music_id, feature_columns].values.flatten()
+        recommended_cluster = musics.loc[musics['id'] == music_id, 'cluster'].values[0]
+
+        # Le genre est l'indice du cluster dans genre_columns
+        recommended_genres = np.zeros(len(genre_columns))
+        recommended_genres[recommended_cluster] = 1
+
+        # Mettre à jour les poids des caractéristiques et des genres
+        feature_weights = update_weights(feature_weights, recommended_features, liked)
+        genre_weights = update_weights(genre_weights, recommended_genres, liked)
+
+        # Afficher les nouveaux poids
+        #print("Nouveaux poids des caractéristiques : ", feature_weights)
+        #print("Nouveaux poids des genres : ", genre_weights)
+
+    # Retourner les IDs des musiques recommandées
+    return [x[0] for x in recommandations]
+
+# Fonction pour mettre à jour les poids en fonction des retours utilisateur
+def update_weights(weights, target, liked, learning_rate=0.1):
+    """
+    Met à jour les poids en fonction des retours utilisateur.
+
+    - weights : Poids actuels (caractéristiques ou genres).
+    - target : Valeurs associées à la musique cible (caractéristiques ou genres).
+    - liked : Booléen indiquant si l'utilisateur a aimé la recommandation.
+    - learning_rate : Taux d'apprentissage.
+    """
+    factor = 1 if liked else -1
+    weights += factor * learning_rate * target
+    return np.clip(weights, 0, 1)  # Conserver les poids entre 0 et 1
+
+# Exemple d'utilisation
+if __name__ == "__main__":
+    # Initialiser les poids (tous égaux à 1 au départ)
+    feature_weights = np.ones(13)  # 13 colonnes de caractéristiques
+    genre_weights = np.ones(17)    # 17 genres musicaux
+
+    # ID de la musique cible
+    id_music = random_id  # Remplacez par un ID valide de votre dataset
+
+    # Obtenir des recommandations
+    recommandations = get_recommandations_hors_cluster_adapt(
+        id_music, n_recommandations=5, feature_weights=feature_weights, genre_weights=genre_weights
+    )
