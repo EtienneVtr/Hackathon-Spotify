@@ -102,6 +102,7 @@ def get_recommandations_from_playlist(list_id_music, n_recommandations):
     recommandations = recommandations[:min(n_recommandations, len(recommandations))]
     return [x[0] for x in recommandations]
 
+# Fonction pour proposer des genres musicaux à un utilisateur en fonction de son profil
 def get_genres_from_user_profile(user_profile, n_genres):
     # Charger le modèle et le préprocesseur
     model = joblib.load('./src/profil_prediction/models/ridge_model.pkl')
@@ -135,3 +136,5 @@ def get_genres_from_user_profile(user_profile, n_genres):
     
     # Retourner les genres
     return genres_preferences
+
+# Focntion pour ajouter une musique au dataset

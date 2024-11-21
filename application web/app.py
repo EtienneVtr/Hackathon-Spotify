@@ -465,7 +465,7 @@ def spotify_login():
 def spotify_logout():
     session.pop('spotify_access_token', None)
     session.pop('spotify_user', None)
-    return redirect(url_for('logout'))
+    return redirect(url_for('profile'))
 
 # Route pour la déconnexion
 @app.route('/logout')
