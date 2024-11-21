@@ -500,8 +500,32 @@ def play_music():
     result = start_playback(spotify_token, device_id, track_uri)
     return result
 
+@app.route('/stop_music', methods=['POST'])
+def stop_music():
+    spotify_token = session.get('spotify_access_token')
+    if not spotify_token:
+        return redirect(url_for('login'))
+    
+    url = 'https://api.spotify.com/v1/me/player/pause'
+    headers = {
+        'Authorization': f'Bearer {spotify_token}'
+    }
+    
+    response = requests.put(url, headers=headers)
+    
+    # Gérer les codes d'état
+    if response.status_code in [200, 204]:
+        return redirect(url_for('profile'))
+    else:
+        # Essayer de récupérer un message d'erreur
+        try:
+            error_message = response.json().get('error', {}).get('message', 'Unknown error')
+        except ValueError:
+            error_message = "Aucune information d'erreur disponible."
+        
+        return f"Erreur lors de l'arrêt de la lecture : {response.status_code} - {error_message}"
 
-
+    
 def get_devices(spotify_token):
     url = 'https://api.spotify.com/v1/me/player/devices'
     headers = {
@@ -521,19 +545,21 @@ def start_playback(spotify_token, device_id, track_uri):
     headers = {
         'Authorization': f'Bearer {spotify_token}'
     }
+    
+    # Ajout du préfixe si ce n'est pas déjà une URI complète
+    if not track_uri.startswith("spotify:track:"):
+        track_uri = f"spotify:track:{track_uri}"
+        
     payload = {
-        'uris': [track_uri]
+        'uris': [track_uri]  # Liste contenant l'URI de la piste
     }
     
     response = requests.put(url, headers=headers, json=payload)
-    print(response.json())
     
     if response.status_code == 204:
-        return "Lecture lancée avec succès!"
+        return redirect(url_for('profile'))
     else:
-        return f"Erreur lors du démarrage de la lecture : {response.status_code}"
-
-
+        return f"Erreur lors du démarrage de la lecture : {response.status_code} - {response.json().get('error', {}).get('message', 'Unknown error')}"
 
 def get_album_cover(music_id, access_token):
     url = f"https://api.spotify.com/v1/tracks/{music_id}"
