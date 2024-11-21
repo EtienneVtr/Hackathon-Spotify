@@ -164,8 +164,25 @@ def load_json_data(filename):
         return json.load(json_file)
 
 # Sauvegarder les données JSON
-def save_json_data(filename, data):
-    with open(filename, 'w') as json_file:
+def save_json_data(file_path, data):
+    # Convertir les clés en types compatibles avec JSON
+    def convert_keys(obj):
+        if isinstance(obj, dict):
+            return {str(k): convert_keys(v) for k, v in obj.items()}
+        elif isinstance(obj, list):
+            return [convert_keys(i) for i in obj]
+        elif isinstance(obj, np.integer):  # Conversion des int64
+            return int(obj)
+        elif isinstance(obj, np.floating):  # Conversion des float64
+            return float(obj)
+        elif isinstance(obj, np.ndarray):  # Conversion des tableaux numpy en listes
+            return obj.tolist()
+        return obj
+
+    data = convert_keys(data)
+
+    # Sauvegarder le fichier JSON
+    with open(file_path, 'w') as json_file:
         json.dump(data, json_file, indent=4)
         
 # Fonction pour renvoyer les appareils disponibles pour la lecture
@@ -377,6 +394,9 @@ def get_first_flow(user_id):
     # Vider la liste des musiques déjà vues
     user_session['music_seen'] = []
     
+    # Remettre tous les poids des clusters à 1
+    user_session['genres_weights'] = [1] * 17
+    
     # Récupérer une musique aléatoire de music_flow et la supprimer de la liste
     if user_session['music_flow']:
         music_id = user_session['music_flow'].pop(random.randint(0, len(user_session['music_flow']) - 1))
@@ -414,6 +434,70 @@ def get_first_flow(user_id):
         else:
             return {'error': 'Aucune musique disponible.'}
 
+def get_next_flow(user_id, music_id, like=None):
+    # Charger la session de l'utilisateur
+    sessions = load_json_data('application web/base_de_données/sessions.json')
+    user_session = next((s for s in sessions.get('sessions', []) if s['id'] == user_id), None)
+    
+    if user_session is None:
+        return {'error': 'Session introuvable.'}
+
+    # Vérifier si genres_weights est une liste et l'utiliser comme telle
+    if isinstance(user_session['genres_weights'], list):
+        # Rien à changer, genres_weights est déjà une liste
+        pass
+    elif not isinstance(user_session['genres_weights'], list):
+        user_session['genres_weights'] = [1] * 17  # Liste par défaut avec 17 valeurs à 1
+
+    # Charger les données des musiques
+    data = pd.read_csv('data/data_w_clusters.csv')
+
+    if music_id not in data['id'].values:
+        return {'error': 'Musique introuvable.'}
+
+    # Récupérer le cluster de la musique (assurez-vous que cluster est un entier)
+    cluster = int(data.loc[data['id'] == music_id, 'cluster'].values[0])
+
+    # Mettre à jour les poids des clusters dans la liste
+    if like is True:
+        # Décrémenter le poids pour le cluster et éviter qu'il ne devienne inférieur à 0.1
+        user_session['genres_weights'][cluster] = max(0.1, user_session['genres_weights'][cluster] - 0.1)
+    elif like is False:
+        # Incrémenter le poids pour le cluster et éviter qu'il ne dépasse 2
+        user_session['genres_weights'][cluster] = min(2, user_session['genres_weights'][cluster] + 0.1)
+
+    print("Poids des genres : ", user_session['genres_weights'])
+
+    # Récupérer les caractéristiques de la musique
+    feature_columns = ['danceability', 'energy', 'loudness', 'speechiness', 
+                       'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo']
+    features = data.loc[data['id'] == music_id, feature_columns].values[0]
+
+    # Calculer les distances euclidiennes
+    distances = euclidean_distances(features.reshape(1, -1), data[feature_columns].values).flatten()
+
+    # Obtenir les clusters des musiques
+    clusters = data['cluster'].values
+    # Utiliser les poids des genres de la liste pour pondérer les distances
+    genres_weights = np.array([user_session['genres_weights'][int(c)] for c in clusters])
+    weighted_distances = distances * genres_weights
+
+    # Trier les musiques en fonction des distances pondérées
+    sorted_indices = np.argsort(weighted_distances)
+    recommended_music = data.iloc[sorted_indices]
+    recommended_music = recommended_music[~recommended_music['id'].isin(user_session['music_seen'])]
+
+    if recommended_music.empty:
+        return {'error': 'Aucune musique recommandée disponible.'}
+
+    # Sélectionner la musique suivante
+    next_music_id = recommended_music.iloc[0]['id']
+    user_session['music_seen'].append(next_music_id)
+
+    # Sauvegarder les modifications
+    save_json_data('application web/base_de_données/sessions.json', sessions)
+
+    return next_music_id
 
 
 '''# Exemple d'utilisation
