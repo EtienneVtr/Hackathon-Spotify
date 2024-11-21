@@ -349,7 +349,62 @@ def get_cluster_name(cluster_id):
     
     return cluster_name
 
-# Exemple d'utilisation
+
+# Fonction qui renvoit la première musique pour le flow
+def get_first_flow(user_id):
+    # Charger la liste des sessions
+    sessions = load_json_data('application web/base_de_données/sessions.json')
+    
+    # Trouver la session de l'utilisateur
+    user_session = next((s for s in sessions.get('sessions', []) if s['id'] == user_id), None)
+
+    # Si la session n'existe pas, retourner une erreur
+    if user_session is None:
+        return {'error': 'Session introuvable.'}
+    
+    # Vider la liste des musiques déjà vues
+    user_session['music_seen'] = []
+    
+    # Récupérer une musique aléatoire de music_flow et la supprimer de la liste
+    if user_session['music_flow']:
+        music_id = user_session['music_flow'].pop(random.randint(0, len(user_session['music_flow']) - 1))
+        user_session['music_seen'].append(music_id)
+        save_json_data('application web/base_de_données/sessions.json', sessions)
+        
+        # Renvoyer l'id de la musique
+        return music_id
+    else:
+        # Si la liste est vide, la remplir avec get_recommandations_from_playlist
+        # Récupérer les musiques associées à l'utilisateur
+        with open('application web/base_de_données/data.json', 'r') as file:
+            data = json.load(file)
+            
+        # Chercher les musiques associées à l'utilisateur
+        user_music = next((p['music'] for p in data.get('profiles', []) if p['id'] == user_id), None)
+        
+        # Créer une liste de recommandations
+        recommendations = get_recommandations_from_playlist(user_music, 100)
+        
+        # Ajouter les recommandations à la session
+        user_session['music_flow'] = recommendations
+        
+        # Sauvegarder les changements
+        save_json_data('application web/base_de_données/sessions.json', sessions)
+        
+        # Récupérer une musique aléatoire de music_flow et la supprimer de la liste
+        if user_session['music_flow']:
+            music_id = user_session['music_flow'].pop(random.randint(0, len(user_session['music_flow']) - 1))
+            user_session['music_seen'].append(music_id)
+            save_json_data('application web/base_de_données/sessions.json', sessions)
+            
+            # Renvoyer l'id de la musique
+            return music_id
+        else:
+            return {'error': 'Aucune musique disponible.'}
+
+
+
+'''# Exemple d'utilisation
 if __name__ == "__main__":
     # Initialiser les poids (tous égaux à 1 au départ)
     feature_weights = np.ones(13)  # 13 colonnes de caractéristiques
@@ -361,4 +416,4 @@ if __name__ == "__main__":
     # Obtenir des recommandations
     recommandations = get_recommandations_hors_cluster_adapt(
         id_music, n_recommandations=5, feature_weights=feature_weights, genre_weights=genre_weights
-    )
+    )'''
