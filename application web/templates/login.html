@@ -8,19 +8,19 @@
 {% endblock %}
 {% block body %}
 <section id="login">
-    <div style="color:hsl(0, 0%, 0%)" class="inner">
-        <h4 style="color:#000000">Connexion</h4><br />
+    <div class="inner">
+        <h4>Connexion</h4>
         <form method="POST" action="/login">
-            <label for="username">Nom d'utilisateur :</label><br />
-            <input type="text" id="username" name="username" required><br /><br />
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
             
-            <label for="password">Mot de passe :</label><br />
-            <input type="password" id="password" name="password" required><br /><br />
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
             
             <button type="submit" class="bouton">Se connecter</button>
         </form>
-        <br />
-        <p>Pas encore inscrit ? <a href="/signup">Créez un compte</a></p>
+        
+        <p class="center-text">Pas encore inscrit ? <a href="/signup">Créez un compte</a></p>
     </div>
 </section>
 {% endblock %}

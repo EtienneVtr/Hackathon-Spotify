@@ -1,15 +1,15 @@
 {% extends "projet_layout.html" %}
 
 {% block titre %}
-    Recommandations - Hackathon Spotify
+    Recommandations uniques
 {% endblock %}
 {% block title %}
-    Recommandations
+    Recommandations uniques
 {% endblock %}
 {% block body %}
 <section id="recommendation">
     <div class="inner">
-        <h2>Recommandations de musique</h2>
+        <h2>Recommandations uniques de musique</h2>
         
         <form method="POST" action="/recommandationsuniques">
             <label for="music_name">Nom de la musique :</label><br>
@@ -29,20 +29,20 @@
 
         {% if recommandations %}
             <h3>Résultats pour "{{ music_name }}" :</h3>
-            <ul>
-                {% for music in recommandations %}
-                    <li style="margin-bottom: 10px;">
-                        <strong>{{ music.title }}</strong> 
-                        <br>
-                        Artistes : {{ music.artists | join(", ") }}
-                        {% if music.cover_url %}
-                            <div style="margin-top: 10px;">
-                                <img src="{{ music.cover_url }}" alt="Album cover" style="width: 50px; height: 50px; object-fit: cover;">
-                            </div>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
+<ul>
+    {% for music in recommandations %}
+        <li class="recommendation-item" id="music-{{ music.music_id }}">
+            <strong>{{ music.title }}</strong> - {{ music.artists | join(", ") }}
+            
+            {% if music.cover_url %}
+                <div style="margin-top: 10px;">
+                    <img src="{{ music.cover_url }}" alt="Album cover" style="width: 100px; height: 100px; object-fit: cover;">
+                </div>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+
         {% else %}
             <p>Aucune recommandation trouvée pour "{{ music_name }}". Essayez un autre titre !</p>
         {% endif %}

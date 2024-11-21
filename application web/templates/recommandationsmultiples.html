@@ -1,0 +1,88 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    Recommandations Multiples - Hackathon Spotify
+{% endblock %}
+{% block title %}
+    Recommandations Multiples
+{% endblock %}
+{% block body %}
+<section id="recommendation">
+    <div class="inner">
+        <h2>Recommandations de musique à partir des playlists</h2>
+        
+        <form method="POST" action="/recommandationsmultiples">
+            <label for="playlist_ids">Sélectionnez les playlists :</label><br>
+            <select id="playlist_ids" name="playlist_ids" multiple required>
+                {% for playlist in playlists %}
+                    <option value="{{ playlist.music_id }}">{{ playlist.title }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <button type="submit" class="bouton">Obtenir Recommandations</button>
+        </form>
+
+        {% if recommandations %}
+            <h3>Recommandations :</h3>
+            <ul>
+                {% for music in recommandations %}
+                    <li class="recommendation-item" id="music-{{ music.music_id }}">
+                        <strong>{{ music.title }}</strong> - {{ music.artists | join(", ") }}
+                        
+                        {% if music.cover_url %}
+                            <div style="margin-top: 10px;">
+                                <img src="{{ music.cover_url }}" alt="Album cover" style="width: 100px; height: 100px; object-fit: cover;">
+                            </div>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Aucune recommandation trouvée.</p>
+        {% endif %}
+    </div>
+</section>
+
+<script>
+    function fetchSuggestions() {
+        const input = document.getElementById('music_name');
+        const suggestionsList = document.getElementById('suggestions');
+        const query = input.value.trim();
+    
+        if (query.length === 0) {
+            suggestionsList.style
+            suggestionsList.style.display = 'none';
+            suggestionsList.innerHTML = '';
+            return;
+        }
+    
+        fetch(`/api/search_music?query=${encodeURIComponent(query)}`)
+            .then(response => response.json())
+            .then(data => {
+                suggestionsList.innerHTML = ''; // Clear previous suggestions
+    
+                if (data.length === 0) {
+                    suggestionsList.style.display = 'none';
+                    return;
+                }
+    
+                data.forEach(music => {
+                    const li = document.createElement('li');
+                    li.textContent = `${music.title} - ${music.artists.join(', ')}`;
+                    li.style.cursor = 'pointer';
+                    li.onclick = () => {
+                        input.value = music.title;
+                        suggestionsList.style.display = 'none';
+                    };
+                    suggestionsList.appendChild(li);
+                });
+    
+                suggestionsList.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error fetching suggestions:', error);
+                suggestionsList.style.display = 'none';
+            });
+    }
+</script>
+{% endblock %}

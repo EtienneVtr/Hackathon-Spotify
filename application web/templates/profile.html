@@ -21,108 +21,103 @@
         <h3>Informations personnelles</h3>
         <form method="POST" action="/profile">
             <label for="firstname">Prénom :</label><br>
-            <input type="text" id="firstname" name="firstname" value="{{ user.firstname }}" required><br><br>
+            <input type="text" id="firstname" name="firstname" value="{{ user.firstname }}" required><br>
             
             <label for="lastname">Nom :</label><br>
-            <input type="text" id="lastname" name="lastname" value="{{ user.lastname }}" required><br><br>
+            <input type="text" id="lastname" name="lastname" value="{{ user.lastname }}" required><br>
             
             <label for="age">Âge :</label><br>
-            <input type="number" id="age" name="age" value="{{ user.age }}"><br><br>
+            <input type="number" id="age" name="age" value="{{ user.age }}"><br>
             
             <label for="gender">Genre :</label><br>
             <select id="gender" name="gender">
                 <option value="male" {% if user.gender == "male" %}selected{% endif %}>Homme</option>
                 <option value="female" {% if user.gender == "female" %}selected{% endif %}>Femme</option>
                 <option value="other" {% if user.gender == "other" %}selected{% endif %}>Autre</option>
-            </select><br><br>
+            </select><br>
             
             <label for="education">Éducation :</label><br>
             <select id="education" name="education">
                 <option value="secondary school" {% if user.education == "secondary school" %}selected{% endif %}>École secondaire</option>
                 <option value="college bachelor degree" {% if user.education == "college bachelor degree" %}selected{% endif %}>Licence</option>
                 <option value="other" {% if user.education == "other" %}selected{% endif %}>Autre</option>
-            </select><br><br>
+            </select><br>
             
             <label for="smoking">Tabac :</label><br>
             <select id="smoking" name="smoking">
                 <option value="never smoked" {% if user.smoking == "never smoked" %}selected{% endif %}>Jamais fumé</option>
                 <option value="tried smoked" {% if user.smoking == "tried smoked" %}selected{% endif %}>A déjà essayé</option>
                 <option value="other" {% if user.smoking == "other" %}selected{% endif %}>Autre</option>
-            </select><br><br>
+            </select><br>
             
             <label for="alcohol">Alcool :</label><br>
             <select id="alcohol" name="alcohol">
                 <option value="social drinker" {% if user.alcohol == "social drinker" %}selected{% endif %}>Buveur social</option>
                 <option value="drink a lot" {% if user.alcohol == "drink a lot" %}selected{% endif %}>Boit beaucoup</option>
                 <option value="other" {% if user.alcohol == "other" %}selected{% endif %}>Autre</option>
-            </select><br><br>
+            </select><br>
             
             <label for="internet_usage">Utilisation d'internet :</label><br>
             <select id="internet_usage" name="internet_usage">
                 <option value="few hours a day" {% if user.internet_usage == "few hours a day" %}selected{% endif %}>Quelques heures par jour</option>
                 <option value="less than an hour a day" {% if user.internet_usage == "less than an hour a day" %}selected{% endif %}>Moins d'une heure par jour</option>
                 <option value="other" {% if user.internet_usage == "other" %}selected{% endif %}>Autre</option>
-            </select><br><br>
+            </select><br>
             
             <label for="village_town">Lieu de résidence :</label><br>
             <select id="village_town" name="village_town">
-                <option value="city" {% if user.village_town == "city" %}selected{% endif %}>Ville</option>
+                <option value="                <option value="city" {% if user.village_town == "city" %}selected{% endif %}>Ville</option>
                 <option value="village" {% if user.village_town == "village" %}selected{% endif %}>Village</option>
                 <option value="other" {% if user.village_town == "other" %}selected{% endif %}>Autre</option>
-            </select><br><br>
+            </select><br>
           
             <label for="music_consumption">Consommation de musique :</label><br>
             <select id="music_consumption" name="music_consumption">
-                <option value="1" {% if user.music_consumption == "1" %}selected
-                {% endif %}>1</option>
-                <option value="2" {% if user.music_consumption == "2" %}selected
-                {% endif %}>2</option>
-                <option value="3" {% if user.music_consumption == "3" %}selected
-                {% endif %}>3</option>
-                <option value="4" {% if user.music_consumption == "4" %}selected
-                {% endif %}>4</option>
-                <option value="5" {% if user.music_consumption == "5" %}selected
-                {% endif %}>5</option>
-                </select><br><br>
-                
-            </select>
+                <option value="1" {% if user.music_consumption == "1" %}selected{% endif %}>1</option>
+                <option value="2" {% if user.music_consumption == "2" %}selected{% endif %}>2</option>
+                <option value="3" {% if user.music_consumption == "3" %}selected{% endif %}>3</option>
+                <option value="4" {% if user.music_consumption == "4" %}selected{% endif %}>4</option>
+                <option value="5" {% if user.music_consumption == "5" %}selected{% endif %}>5</option>
+            </select><br>
+
             <button type="submit" class="bouton">Mettre à jour</button>
         </form>
         
         <h3>Ajouter une musique</h3>
-<form method="POST" action="/add_music">
-    <label for="music_name">Nom de la musique :</label><br>
-    <input type="text" id="music_name" name="music_name" placeholder="Entrez le nom de la musique" oninput="fetchSuggestions()" autocomplete="off" required><br>
-    <ul id="suggestions" style="border: 1px solid #ccc; max-height: 150px; overflow-y: auto; display: none;"></ul>
-    <button type="submit" class="bouton">Ajouter</button>
-</form>
+        <form method="POST" action="/add_music">
+            <label for="music_name">Nom de la musique :</label><br>
+            <input type="text" id="music_name" name="music_name" placeholder="Entrez le nom de la musique" oninput="fetchSuggestions()" autocomplete="off" required><br>
+            <ul id="suggestions" style="border: 1px solid #ccc; max-height: 150px; overflow-y: auto; display: none;"></ul>
+            <button type="submit" class="bouton">Ajouter</button>
+        </form>
 
+        <h3>Musique dans votre profil</h3>
+        <ul id="user-music-list" style="list-style: none; padding: 0;">
+            {% for music in user_music_details %}
+                <li class="recommendation-item" id="music-{{ music.music_id }}" style="text-align: center; margin-bottom: 20px;">
+                    {% if music.cover_url %}
+                        <div style="margin-bottom: 10px;">
+                            <img src="{{ music.cover_url }}" alt="Album cover" style="width: 100px; height: 100px; object-fit: cover;">
+                        </div>
+                    {% endif %}
+                    <div style="margin-bottom: 10px;">
+                        <strong>{{ music.title }}</strong>
+                        <br>
+                        <span>{{ music.artists | join(", ") }}</span>
+                    </div>
+                    <div>
+                        <form action="{{ url_for('play_music') }}" method="POST" style="margin-bottom: 10px;">
+                            <input type="hidden" name="track_uri" value="{{ music.spotify_uri }}">
+                            <input type="hidden" name="device_id" value="{{ spotify_device_id }}">
+                            <button type="submit" class="bouton">Jouer</button>
+                        </form>
+                        <button class="bouton" onclick="removeMusic('{{ music.music_id }}')">Supprimer</button>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
         
-<h3>Musique dans votre profil</h3>
-<ul id="user-music-list">
-    {% for music in user_music_details %}
-        <li id="music-{{ music.music_id }}">
-            <strong>{{ music.title }}</strong> - {{ music.artists | join(", ") }}
-            
-            {% if music.cover_url %}
-                <img src="{{ music.cover_url }}" alt="Album cover" style="width: 50px; height: 50px; object-fit: cover; margin-left: 10px;">
-            {% endif %}
-            
-            <!-- Bouton pour lancer la musique -->
-            <form action="{{ url_for('play_music') }}" method="POST" style="display:inline;">
-                <input type="hidden" name="track_uri" value="{{ music.spotify_uri }}">
-                <input type="hidden" name="device_id" value="{{ spotify_device_id }}"> <!-- Assurez-vous d'obtenir l'ID de l'appareil -->
-                <button type="submit" class="bouton">Jouer</button>
-            </form>
-            
-            <button class="bouton" onclick="removeMusic('{{ music.music_id }}')">Supprimer</button>
-        </li>
-    {% endfor %}
-</ul>
-
-
-
-
+        
     </div>
     <script>
         function fetchSuggestions() {
@@ -164,32 +159,28 @@
                     suggestionsList.style.display = 'none';
                 });
         }
-        function removeMusic(music_id) {
-    fetch('/remove_music', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ music_id: music_id })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            // Supprimer l'élément du DOM si succès
-            document.getElementById(`music-${music_id}`).remove();
-            alert(data.message);
-        } else {
-            alert("Erreur : " + data.message);
-        }
-    })
-    .catch(error => {
-        console.error('Erreur lors de la suppression :', error);
-    });
-}
 
+        function removeMusic(music_id) {
+            fetch('/remove_music', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ music_id: music_id })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById(`music-${music_id}`).remove();
+                    alert(data.message);
+                } else {
+                    alert("Erreur : " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors de la suppression :', error);
+            });
+        }
     </script>
-    
-    
-    
 </section>
 {% endblock %}

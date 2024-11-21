@@ -8,28 +8,24 @@
 {% endblock %}
 {% block body %}
 <section id="signup">
-    <div style="color:hsl(0, 0%, 0%)" class="inner">
-        <h4 style="color:#000000">Inscription</h4><br />
-        
-       
-        
+    <div class="inner">
+        <h4>Inscription</h4>
         <form method="POST" action="/signup">
-            <label for="firstname">Prénom :</label><br />
-            <input type="text" id="firstname" name="firstname" required><br /><br />
+            <label for="firstname">Prénom :</label>
+            <input type="text" id="firstname" name="firstname" required>
             
-            <label for="lastname">Nom :</label><br />
-            <input type="text" id="lastname" name="lastname" required><br /><br />
+            <label for="lastname">Nom :</label>
+            <input type="text" id="lastname" name="lastname" required>
             
-            <label for="username">Nom d'utilisateur :</label><br />
-            <input type="text" id="username" name="username" required><br /><br />
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
             
-            <label for="password">Mot de passe :</label><br />
-            <input type="password" id="password" name="password" required><br /><br />
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
             
             <button type="submit" class="bouton">Créer un compte</button>
         </form>
-        <br />
-        <p>Déjà inscrit ? <a href="/login">Connectez-vous</a></p>
+        <p class="center-text">Déjà inscrit ? <a href="/login">Connectez-vous</a></p>
     </div>
 </section>
 {% endblock %}

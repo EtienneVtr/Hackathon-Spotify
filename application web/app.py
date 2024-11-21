@@ -71,7 +71,57 @@ def login():
         return redirect(url_for('login'))
     
     return render_template('login.html')
+##recommandationsmultiples utilise get_recommandations_from_playlist, il prend en paramètre une liste d'id de playlist et un nombre de recommandations à retourner ici 10
+## il retourne une liste de musique
+## pour récupérer la liste de musique il faut utiliser get_music_details sur les "music" dans "profiles" dans le .json
 
+
+@app.route('/recommandationsmultiples', methods=['GET', 'POST'])
+def recommandationsmultiples():
+    recommendations = []
+    
+    if not g.user:
+        return redirect(url_for('login'))
+
+    user_id = session.get('user_id')
+    user = next((u for u in data['profiles'] if u['id'] == user_id), None)
+
+    if not user:
+        return redirect(url_for('logout'))
+
+    # Récupérer les musiques du profil de l'utilisateur
+    user_music_ids = user.get('music', [])
+
+    if request.method == 'POST':
+        # Obtenir les IDs de playlist sélectionnés
+        playlist_ids = request.form.getlist('playlist_ids')  # Récupérer une liste d'IDs de playlists
+        num_recommendations = 10  # Nombre de recommandations à retourner
+
+        # Obtenir les recommandations à partir des playlists
+        recommendations = get_recommandations_from_playlist(playlist_ids, num_recommendations)
+
+    # Récupérer les détails des musiques avec leurs couvertures d'albums
+    user_music_details = []
+    spotify_token = session.get('spotify_access_token')  # Récupérer le token Spotify
+
+    for music_id in recommendations:
+        music_detail = get_music_details(music_id)
+        if music_detail:
+            # Ajouter l'URL de la couverture d'album
+            cover_url = get_album_cover(music_id, spotify_token)
+            music_detail['cover_url'] = cover_url
+            user_music_details.append(music_detail)
+
+    # Récupérer les playlists de l'utilisateur
+    user_playlists = [music for music in data['musics'] if music['music_id'] in user_music_ids]
+
+    return render_template(
+        'recommandationsmultiples.html',
+        recommandations=user_music_details,
+        playlists=user_playlists  # Passer les playlists de l'utilisateur au template
+    )
+
+    
 @app.route('/recommandationsuniques', methods=['GET', 'POST'])
 def recommandationsuniques():
     recommendations = []
@@ -95,17 +145,24 @@ def recommandationsuniques():
             else:
                 flash("Aucune musique trouvée avec ce nom.")
     
+    # Récupérer les détails des musiques et la couverture de l'album
     user_music_details = []
-    for music_id in recommendations:
-        user_music_details.append(get_music_details(music_id))
+    spotify_token = session.get('spotify_access_token')  # Récupérer le token Spotify
     
+    for music_id in recommendations:
+        music_detail = get_music_details(music_id)
+        if music_detail:
+            # Ajouter l'URL de la couverture d'album pour chaque musique
+            cover_url = get_album_cover(music_id, spotify_token)
+            music_detail['cover_url'] = cover_url
+            user_music_details.append(music_detail)
+
     return render_template(
         'recommandationsuniques.html', 
         recommandations=user_music_details,
         music_name=request.form.get('music_name', '')  # Renvoyer la valeur recherchée
     )
 
-    
    
 
 @app.route('/profile', methods=['GET', 'POST'])
