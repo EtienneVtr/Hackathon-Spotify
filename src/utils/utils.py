@@ -4,6 +4,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import euclidean_distances
+import joblib
 
 # FONCTIONS
 
@@ -100,4 +101,37 @@ def get_recommandations_from_playlist(list_id_music, n_recommandations):
     recommandations = sorted(recommandations, key=lambda x: x[1])
     recommandations = recommandations[:min(n_recommandations, len(recommandations))]
     return [x[0] for x in recommandations]
+
+def get_genres_from_user_profile(user_profile, n_genres):
+    # Charger le modèle et le préprocesseur
+    model = joblib.load('./src/profil_prediction/models/ridge_model.pkl')
+    preprocessor = joblib.load('./src/profil_prediction/models/preprocessor.pkl')
     
+    # Convertir le profil utilisateur en DataFrame
+    user_df = pd.DataFrame([user_profile])
+    
+    # Enlever les champs inutiles avant transformation
+    user_df = user_df.drop(columns=['id', 'firstname', 'lastname', 'identifiant', 'password', 'music'])
+    
+    # Prétraiter les données
+    X_new = preprocessor.transform(user_df)
+    
+    # Prédire les préférences 
+    predicted_preferences = model.predict(X_new)
+    
+    # Associer les préférences aux genres musicaux
+    genres = ['Ambient', 'Fusion Beat', 'Fusion Hardcore', 'Metal', 'Jazz', 'Rock', 'World & Electronic Music', 'Punk', 
+              'Folk', 'Traditional Music', 'Indie', 'Blues, Soul & Country', 'Hip Hop', 'Classical', 
+              'Comedy, Literature & Cultural Narratives', 'Pop', 'Rap']
+    
+    # Associer les préférences aux genres
+    genres_preferences = list(zip(genres, predicted_preferences[0]))
+    
+    # Trier les genres par préférence
+    genres_preferences.sort(key=lambda x: x[1], reverse=True)
+    
+    # Garder les `n_genres` meilleurs genres
+    genres_preferences = genres_preferences[:min(n_genres, len(genres_preferences))]
+    
+    # Retourner les genres
+    return genres_preferences

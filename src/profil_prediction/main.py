@@ -7,10 +7,14 @@ from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import matplotlib.pyplot as plt
 import joblib
+from sklearn.model_selection import cross_val_score
 
 # Charger le fichier CSV
 file_path = './data/cleaned_profils_with_clusters.csv'  # Remplace par ton fichier
 data = pd.read_csv(file_path)
+
+# Changer le nom de la colonne 'music' en 'music_consumption'
+data.rename(columns={'music': 'music_consumption'}, inplace=True)
 
 # Définir les caractéristiques et les cibles
 categorical_columns = ['gender', 'education', 'smoking', 'alcohol', 'internet_usage', 'village_town']
@@ -21,7 +25,7 @@ target_columns = ['Ambient', 'Fusion Beat', 'Fusion Hardcore', 'Metal', 'Jazz', 
     'Pop', 'Rap']
 
 # La colonne 'music' sera utilisée comme poids
-weights_column = 'music'
+weights_column = 'music_consumption'
 
 X = data[categorical_columns + numerical_columns]
 y = data[target_columns]
@@ -66,6 +70,11 @@ print(f"Meilleur alpha pour Ridge Regression : {best_alpha}")
 final_model = Ridge(alpha=best_alpha)
 final_model.fit(X_train, y_train, sample_weight=weights_train)
 y_pred = final_model.predict(X_test)
+# Validation croisée pour évaluer le modèle
+cv_scores = cross_val_score(final_model, X_train, y_train, cv=5, scoring='neg_mean_squared_error', fit_params={'sample_weight': weights_train})
+cv_mse_scores = -cv_scores
+print("Scores MSE de la validation croisée :", cv_mse_scores)
+print("MSE moyenne de la validation croisée :", cv_mse_scores.mean())
 
 # Évaluation finale
 mse_per_genre = mean_squared_error(y_test, y_pred, multioutput='raw_values')
@@ -110,7 +119,7 @@ new_user = pd.DataFrame([{
     'alcohol': 'drink a lot',
     'internet_usage': 'few hours a day',
     'village_town': 'city',
-    'music': 4.0 # Poids pour la musique
+    'music_consumption': 4.0 # Poids pour la musique
 }])
 
 # Prétraiter les données

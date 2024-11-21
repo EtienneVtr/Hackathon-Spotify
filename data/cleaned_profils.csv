@@ -1,4 +1,4 @@
-age,gender,education,smoking,alcohol,internet_usage,village_town,music,slow_songs,dance,folk,country,classical,musical,pop,rock,metal_hardrock,punk,hiphop_rap,reggae_ska,swing_jazz,rock_n_roll,alternative,latino,techno_trance,opera
+age,gender,education,smoking,alcohol,internet_usage,village_town,music_consumption,slow_songs,dance,folk,country,classical,musical,pop,rock,metal_hardrock,punk,hiphop_rap,reggae_ska,swing_jazz,rock_n_roll,alternative,latino,techno_trance,opera
 20.0,female,college/bachelor degree,never smoked,drink a lot,few hours a day,village,5.0,3.0,2.0,1.0,2.0,2.0,1.0,5.0,5.0,1.0,1.0,1.0,1.0,1.0,3.0,1.0,1.0,1.0,1.0
 19.0,female,college/bachelor degree,never smoked,drink a lot,few hours a day,city,4.0,4.0,2.0,1.0,1.0,1.0,2.0,3.0,5.0,4.0,4.0,1.0,3.0,1.0,4.0,4.0,2.0,1.0,1.0
 20.0,female,secondary school,tried smoking,drink a lot,few hours a day,city,5.0,5.0,2.0,2.0,3.0,4.0,5.0,3.0,5.0,3.0,4.0,1.0,4.0,3.0,5.0,5.0,5.0,1.0,3.0

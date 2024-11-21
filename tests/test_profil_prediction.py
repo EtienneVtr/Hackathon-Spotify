@@ -13,7 +13,7 @@ new_user = pd.DataFrame([{
     'alcohol': 'drink a lot',
     'internet_usage': 'few hours a day',
     'village_town': 'city',
-    'music': 5.0 # Poids pour la musique
+    'music_consumption': 5.0 # Poids pour la musique
 }])
 
 # Prétraiter les données
