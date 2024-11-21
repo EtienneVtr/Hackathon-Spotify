@@ -79,6 +79,8 @@ def login():
 @app.route('/recommandationsmultiples', methods=['GET', 'POST'])
 def recommandationsmultiples():
     recommendations = []
+    global page_actuelle
+    page_actuelle = 'recommandationsmultiples'
     
     if not g.user:
         return redirect(url_for('login'))
@@ -125,7 +127,8 @@ def recommandationsmultiples():
 @app.route('/recommandationsuniques', methods=['GET', 'POST'])
 def recommandationsuniques():
     recommendations = []
-    
+    global page_actuelle
+    page_actuelle = 'recommandationsuniques'
     if request.method == 'POST':
         music_name = request.form.get('music_name')
         user_id = session.get('user_id')

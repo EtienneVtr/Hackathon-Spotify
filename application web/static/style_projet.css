@@ -10,7 +10,7 @@ body {
 
 /* En-tête et navigation */
 header.main-head {
-    background-color: #007bff;
+    background-color: #1db954;
     color: white;
     padding: 15px 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -49,14 +49,14 @@ header.main-head ul li a {
 }
 
 header.main-head ul li a:hover {
-    background-color: #0056b3;
+    background-color: #1db954;
     color: #e0e0e0;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    background-color: #007bff;
+    background-color: #1db954;
     color: white;
     padding: 10px 20px;
     position: fixed;
@@ -159,14 +159,14 @@ form input {
 }
 
 form input:focus {
-    border-color: #007bff;
+    border-color: #1db954;
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 5px rgba(0, 255, 128, 0.5);
 }
 
 form .bouton {
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #1db954;
     color: white;
     border: none;
     border-radius: 4px;
@@ -177,7 +177,7 @@ form .bouton {
 }
 
 form .bouton:hover {
-    background-color: #0056b3;
+    background-color: #1db954;
 }
 
 /* Texte sous les formulaires */
@@ -188,7 +188,7 @@ form .bouton:hover {
 }
 
 .center-text a {
-    color: #007bff;
+    color: #1db954;
     text-decoration: none;
 }
 
