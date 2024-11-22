@@ -42,12 +42,14 @@ def check_logged_in_user():
 # Route pour la page d'accueil
 @app.route('/', methods=['GET', 'POST'])
 def acceuil_projet():
-    return render_template('acceuil_projet.html')
+    return render_template('acceuil_projet.html', user_name=g.user)
 
 
 # Route pour la page de connexion
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    global page_actuelle
+    
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -58,71 +60,90 @@ def login():
                 session['user_id'] = profile['id']
                 session['firstname'] = profile['firstname']
                 session['lastname'] = profile['lastname']
-                return redirect(url_for('profile'))
+                if page_actuelle == 'signup':
+                    page_actuelle = None
+                    return redirect(url_for('profile'))
+                elif page_actuelle == 'recommandationsmultiples':
+                    return redirect(url_for('recommandationsmultiples'))
+                else:
+                    return redirect(url_for('acceuil_projet'))
 
         flash("Identifiants incorrects.")
         return redirect(url_for('login'))
     
     return render_template('login.html')
+
+
 ##recommandationsmultiples utilise get_recommandations_from_playlist, il prend en paramètre une liste d'id de playlist et un nombre de recommandations à retourner ici 10
 ## il retourne une liste de musique
 ## pour récupérer la liste de musique il faut utiliser get_music_details sur les "music" dans "profiles" dans le .json
 
 
-# Variable globale pour stocker les IDs de playlists sélectionnées
-selected_playlist_ids = []
-
 @app.route('/recommandationsmultiples', methods=['GET', 'POST'])
 def recommandationsmultiples():
-    recommendations = []
     global page_actuelle
-    global selected_playlist_ids
     page_actuelle = 'recommandationsmultiples'
-    
-    if not g.user:
-        return redirect(url_for('login'))
 
-    user_id = session.get('user_id')
-    user = next((u for u in data['profiles'] if u['id'] == user_id), None)
+    recommendations = []
+    temporary_playlist = session.get('temporary_playlist', [])  # Playlist temporaire
+    user_playlists = []
+    user_music_details = []  # Détails des recommandations
+    spotify_token = session.get('spotify_access_token')  # Token Spotify
 
-    if not user:
-        return redirect(url_for('logout'))
+    # Gestion des utilisateurs connectés
+    if g.user:  
+        user_id = session.get('user_id')
+        user = next((u for u in data['profiles'] if u['id'] == user_id), None)
 
-    # Récupérer les musiques du profil de l'utilisateur
-    user_music_ids = user.get('music', [])
+        if not user:
+            return redirect(url_for('logout'))
 
+        # Récupérer les playlists et musiques personnelles
+        user_music_ids = user.get('music', [])
+        user_playlists = [music for music in data['musics'] if music['music_id'] in user_music_ids]
+
+    # Gestion de la requête POST
     if request.method == 'POST':
-        # Obtenir les IDs de playlist sélectionnés
-        selected_playlist_ids = request.form.getlist('playlist_ids')  # Récupérer une liste d'IDs de playlists
-        num_recommendations = 10  # Nombre de recommandations à retourner
+        action = request.form.get('action')
 
-        # Obtenir les recommandations à partir des playlists
-        recommendations = get_recommandations_from_playlist(selected_playlist_ids, num_recommendations)
+        # Ajouter une musique à la playlist temporaire
+        if action == 'add_to_temporary_playlist':
+            music_name = request.form.get('music_name')
+            music_id = search_music_id(music_name, data)  # Appel de la fonction pour obtenir l'ID
+            if music_id and music_id not in temporary_playlist:
+                temporary_playlist.append(music_id)
+                session['temporary_playlist'] = temporary_playlist
+            else:
+                flash("Musique déjà ajoutée ou introuvable.")
 
-    # Récupérer les détails des musiques avec leurs couvertures d'albums
-    user_music_details = []
-    spotify_token = session.get('spotify_access_token')  # Récupérer le token Spotify
 
-    for music_id in recommendations:
-        music_detail = get_music_details(music_id, data)
-        if music_detail:
-            # Ajouter l'URL de la couverture d'album
-            cover_url = get_album_cover(music_id, spotify_token)
-            music_detail['cover_url'] = cover_url
-            user_music_details.append(music_detail)
+        # Obtenir des recommandations
+        elif action == 'get_recommendations':
+            selected_playlist_ids = request.form.getlist('playlist_ids')  # Playlists sélectionnées
+            source_music_ids = temporary_playlist + selected_playlist_ids
+            recommendations = get_recommandations_from_playlist(source_music_ids, 10)
 
-    # Récupérer les playlists de l'utilisateur
-    user_playlists = [music for music in data['musics'] if music['music_id'] in user_music_ids]
+            # Récupérer les détails des musiques recommandées
+            for music_id in recommendations:
+                music_detail = get_music_details(music_id, data)
+                if music_detail:
+                    cover_url = get_album_cover(music_id, spotify_token)
+                    music_detail['cover_url'] = cover_url
+                    user_music_details.append(music_detail)
 
-    # Récupérer les noms des playlists sélectionnées
-    selected_playlist_names = [music['title'] for music in data['musics'] if music['music_id'] in selected_playlist_ids]
+    # Récupérer les noms des musiques ajoutées dans la playlist temporaire
+    temporary_playlist_details = [
+        get_music_details(music_id, data) for music_id in temporary_playlist
+    ]
 
     return render_template(
         'recommandationsmultiples.html',
         recommandations=user_music_details,
-        playlists=user_playlists,  # Passer les playlists de l'utilisateur au template
-        selected_playlist_names=selected_playlist_names  # Passer les noms des playlists sélectionnées au template
+        playlists=user_playlists,
+        temporary_playlist_details=temporary_playlist_details,
+        user_connected=bool(g.user)
     )
+
 
 #création de la route flow pour la page flow
 @app.route('/flow', methods=['GET', 'POST'])
@@ -169,6 +190,8 @@ def flow():
         music_detail['cover_url'] = cover_url
 
     return render_template('flow.html', music_detail=music_detail)
+
+
 @app.route('/recommandationsuniques', methods=['GET', 'POST'])
 def recommandationsuniques():
     recommendations = []
@@ -377,6 +400,8 @@ def add_music():
         flash("Aucune musique trouvée avec ce nom.")
     
     return redirect(url_for(page_actuelle))
+
+
 @app.route('/api/add_music', methods=['POST'])
 def api_add_music():
     if not g.user:
@@ -489,6 +514,8 @@ def remove_music():
 # Route pour la page d'inscription
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
+    global page_actuelle
+    
     if request.method == 'POST':
         firstname = request.form['firstname']
         lastname = request.form['lastname']
@@ -515,6 +542,7 @@ def signup():
         save_json_data(DATA_FILE, data)
 
         flash("Inscription réussie ! Vous pouvez maintenant vous connecter.")
+        page_actuelle = 'signup'
         return redirect(url_for('login'))
 
     return render_template('signup.html')
@@ -548,8 +576,9 @@ def spotify_logout():
 # Route pour la déconnexion
 @app.route('/logout')
 def logout():
-    session.clear()
-    return redirect(url_for('login'))
+    session.clear()  # Efface toutes les données de la session
+    g.user = None  # Réinitialise explicitement g.user si utilisé
+    return redirect(url_for('acceuil_projet'))  # Redirige vers la page d'accueil
 
 
 # Route pour la lecture de musique

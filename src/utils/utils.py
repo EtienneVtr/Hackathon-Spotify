@@ -565,7 +565,16 @@ def maj_db_sessions(user_id):
         
         print("Session mise à jour avec succès.")
     
-    
+# Fonction pour rechercher une musique par son titre
+def search_music_id(music_name, data):
+    """Recherche l'ID d'une musique par son titre."""
+    matching_musics = [
+        music for music in data.get('musics', [])
+        if music_name.lower() in music['title'].lower()
+    ]
+    if matching_musics:
+        return matching_musics[0]['music_id']  # Retourne l'ID de la première musique correspondante
+    return None  # Aucun résultat trouvé    
 
 
 '''# Exemple d'utilisation
