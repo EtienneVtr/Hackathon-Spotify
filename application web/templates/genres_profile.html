@@ -1,0 +1,46 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    Genres - Hackathon Spotify
+{% endblock %}
+{% block title %}
+    Genres de votre profil
+{% endblock %}
+{% block body %}
+<section id="genres_profile">
+    <div class="inner">
+        <h2>Genres de votre musique</h2>
+
+        <form method="POST" action="/genres_profile">
+            <label for="num_genres">Nombre de genres à afficher :</label><br>
+            <select id="num_genres" name="num_genres">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br>
+            <button type="submit" class="bouton">Afficher les genres</button>
+        </form>
+
+        {% if genres %}
+            <h3>Genres et pourcentages d'apparition</h3>
+            <ul id="genre-list" style="list-style: none; padding: 0;">
+                {% for genre in genres %}
+                    <li style="margin-bottom: 10px;">
+                        <strong>{{ genre[0] }}</strong>: {{ genre[1]  | int }}%
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Aucun genre à afficher. Veuillez sélectionner un nombre de genres.</p>
+        {% endif %}
+        
+    </div>
+</section>
+{% endblock %}

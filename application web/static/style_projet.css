@@ -221,7 +221,7 @@ form .bouton:hover {
 }
 
 /* Profil et recommandations */
-#profile, #recommendation,#flow {
+#profile, #recommendation,#flow,#genres_profile  {
     max-width: 600px; /* Réduction de la largeur maximale pour correspondre au petit rectangle */
     margin: 20px auto;
     padding: 20px;
