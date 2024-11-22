@@ -29,6 +29,30 @@
                 <button type="submit" name="like" value="dislike">Je n'aime pas</button>
                 <button type="submit" name="like" value="none">Rien</button>
             </form>
+
+            <form method="POST" action="/genre">
+                <h4>Voulez-vous changer de genre ?</h4>
+                <label for="genre-select">Choisissez un genre :</label>
+                <select id="genre-select" name="genre">
+                    <option value=15>Pop</option>
+                    <option value=5>Rock</option>
+                    <option value=16>Rap / Hip-Hop</option>
+                    <option value=10>Indie</option>
+                    <option value=4>Jazz</option>
+                    <option value=13>Classique</option>
+                    <option value=6>Électronique</option>
+                    <option value=1>Latino</option>
+                    <option value=8>Folk</option>
+                    <option value=7>Punk</option>
+                    <option value=3>Metal</option>
+                    <option value=11>Blues</option>
+                    <option value=2>Techno</option>
+                    <option value=0>Ambiance</option>
+                    <option value=9>Musique traditionelle</option>
+                    <option value=17>Ré-initialiser</option>
+                </select>
+                <button type="submit">Changer</button>
+            </form>
         </div>
         {% else %}
         <p>Aucune musique disponible.</p>

@@ -174,6 +174,47 @@ def flow():
 
     return render_template('flow.html', music_detail=music_detail)
 
+@app.route('/genre', methods=['GET', 'POST'])
+def genre():
+    global current_flow_music_id
+    global page_actuelle
+    page_actuelle = 'genre'
+
+    if not g.user:
+        return redirect(url_for('login'))
+
+    user_id = session.get('user_id')
+    user = next((u for u in data['profiles'] if u['id'] == user_id), None)
+
+    if not user:
+        return redirect(url_for('logout'))
+
+    # Mise à jour de la db sessions au besoin
+    maj_db_sessions(user_id)
+
+    if request.method == 'POST':
+        # Récupérer le genre choisi depuis le formulaire
+        selected_genre = request.form.get('genre')
+        try:
+            selected_genre = int(selected_genre)
+        except (ValueError, TypeError):
+            # Gestion en cas de valeur non entière
+            flash("Veuillez sélectionner un genre valide.", "error")
+            return redirect(url_for('genre'))  # Rediriger l'utilisateur vers la page actuelle
+        
+        if selected_genre:
+            change_genre_flow(user_id, selected_genre)  # Appliquer le changement de genre
+
+    # Récupérer les détails de la musique en cours
+    spotify_token = session.get('spotify_access_token')
+    music_detail = get_music_details(current_flow_music_id, data)
+    if music_detail:
+        cover_url = get_album_cover(current_flow_music_id, spotify_token)
+        music_detail['cover_url'] = cover_url
+
+    return render_template('flow.html', music_detail=music_detail)
+
+
 
 @app.route('/recommandationsuniques', methods=['GET', 'POST'])
 def recommandationsuniques():
