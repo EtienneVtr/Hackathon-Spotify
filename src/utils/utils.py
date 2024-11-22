@@ -495,12 +495,6 @@ def change_genre_flow(user_id, music_id, new_genre):
     elif not isinstance(user_session['genres_weights'], list):
         user_session['genres_weights'] = [1] * 17  # Liste par défaut avec 17 valeurs à 1
 
-    # Charger les données des musiques
-    data = pd.read_csv('data/genred_data.csv')
-
-    if music_id not in data['id'].values:
-        return {'error': 'Musique introuvable.'}
-
     if new_genre == 17: #cas de reinitialisation
         for i in range(len(user_session['genres_weights'])):
             user_session['genres_weights'][i] = 1
@@ -511,39 +505,8 @@ def change_genre_flow(user_id, music_id, new_genre):
             if i != new_genre:
                 user_session['genres_weights'][i] = 2
 
-    # Récupérer les caractéristiques de la musique
-    feature_columns = ['danceability', 'year', 'energy', 'loudness', 'speechiness', 
-                       'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo']
-    features = data.loc[data['id'] == music_id, feature_columns].values[0]
-
-    # Calculer les distances euclidiennes
-    distances = euclidean_distances(features.reshape(1, -1), data[feature_columns].values).flatten()
-
-    # Obtenir les clusters des musiques
-    clusters = data['cluster'].values
-    # Utiliser les poids des genres de la liste pour pondérer les distances
-    genres_weights = np.array([user_session['genres_weights'][int(c)] for c in clusters])
-    weighted_distances = distances * genres_weights
-
-    # Trier les musiques en fonction des distances pondérées
-    sorted_indices = np.argsort(weighted_distances)
-    recommended_music = data.iloc[sorted_indices]
-    recommended_music = recommended_music[~recommended_music['id'].isin(user_session['music_seen'])]
-
-    if recommended_music.empty:
-        return {'error': 'Aucune musique recommandée disponible.'}
-
-    # Sélectionner la musique suivante
-    next_music_id = recommended_music.iloc[0]['id']
-    user_session['music_seen'].append(next_music_id)
-
     # Sauvegarder les modifications
     save_json_data('application web/base_de_données/sessions.json', sessions)
     
-    for i in range(len(user_session['genres_weights'])):
-        print(user_session['genres_weights'][i])
-        
-    print(next_music_id)
 
-    return next_music_id
 
