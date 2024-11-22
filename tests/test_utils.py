@@ -60,6 +60,9 @@ def test_get_next_flow():
 def test_maj_db_sessions():
     print("Test de la fonction maj_db_sessions")
     maj_db_sessions(7)
+    
+def test_change_genre_flow():
+    change_genre_flow(7, "7xPhfUan2yNtyFG0cUWkt8", 0)
 
 def main(): 
     # Mettre en commentaire les tests que vous ne voulez pas exécuter
@@ -69,7 +72,8 @@ def main():
     # test_get_cluster_name(16)
     # test_get_first_flow()
     # test_get_next_flow()
-    test_maj_db_sessions()
+    # test_maj_db_sessions()
+    test_change_genre_flow()
     
 if __name__ == "__main__":
     main()

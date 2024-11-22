@@ -272,102 +272,6 @@ genre_columns = [
     'Pop', 'Rap'
 ]
 
-# Fonction principale mise à jour
-def get_recommandations_hors_cluster_adapt(id_music, n_recommandations, feature_weights, genre_weights):
-    """
-    Recommande des musiques hors cluster avec pondération adaptative.
-
-    - id_music : ID de la musique cible.
-    - n_recommandations : Nombre de recommandations souhaitées.
-    - feature_weights : Poids pour les caractéristiques des musiques.
-    - genre_weights : Poids pour les genres musicaux.
-    """
-    # Chargement des données
-    musics = pd.read_csv('/data/genred_data.csv')
-
-    # Vérification de la colonne 'cluster' dans le dataset
-    if 'cluster' not in musics.columns:
-        print("Erreur : La colonne 'cluster' n'est pas présente dans le dataset.")
-        return []
-
-    # Trouver les caractéristiques de la musique cible
-    target_music_features = musics.loc[musics['id'] == id_music, feature_columns].values
-    if target_music_features.shape[0] == 0:
-        raise ValueError(f"La musique avec l'ID {id_music} est introuvable dans le dataset.")
-
-    # Trouver le genre (cluster) de la musique cible
-    target_music_cluster = musics.loc[musics['id'] == id_music, 'cluster'].values[0]
-
-    # Filtrer les autres musiques
-    other_musics = musics[musics['id'] != id_music]
-    other_features = other_musics[feature_columns].values
-    other_clusters = other_musics['cluster'].values  # Récupérer les clusters des autres musiques
-
-    # Standardisation des caractéristiques
-    standardized_features = StandardScaler().fit_transform(np.vstack([target_music_features, other_features]))
-    target_music_features = standardized_features[0]
-    other_features = standardized_features[1:]
-
-    # Application des poids
-    weighted_target_features = target_music_features * feature_weights
-    weighted_other_features = other_features * feature_weights
-
-    # Calcul des distances pondérées pour les caractéristiques
-    feature_distances = euclidean_distances(
-        weighted_target_features.reshape(1, -1), weighted_other_features
-    ).flatten()
-
-    # Trier les recommandations par distance (les plus proches en premier)
-    recommandations = list(zip(other_musics['id'].values, feature_distances))
-    recommandations.sort(key=lambda x: x[1])
-    recommandations = recommandations[:min(n_recommandations, len(recommandations))]
-
-    # Affichage des recommandations et mise à jour des poids
-    print("Recommandations :")
-    for rec in recommandations:
-        music_name = musics.loc[musics['id'] == rec[0], 'name'].values[0]
-        music_genre = musics.loc[musics['id'] == rec[0], 'cluster'].values[0]
-        print(f"ID: {rec[0]}, Name: {music_name}, Distance: {rec[1]:.4f}, Cluster: {music_genre}")
-
-        # Demander à l'utilisateur si la musique est aimée
-        #liked = input(f"Avez-vous aimé la musique {music_name} (oui/non) ? ").strip().lower() == 'oui'
-        liked = np.random.choice([True, False])
-        print(liked)
-        
-        # Mettre à jour les poids
-        music_id = rec[0]
-        recommended_features = musics.loc[musics['id'] == music_id, feature_columns].values.flatten()
-        recommended_cluster = musics.loc[musics['id'] == music_id, 'cluster'].values[0]
-
-        # Le genre est l'indice du cluster dans genre_columns
-        recommended_genres = np.zeros(len(genre_columns))
-        recommended_genres[recommended_cluster] = 1
-
-        # Mettre à jour les poids des caractéristiques et des genres
-        feature_weights = update_weights(feature_weights, recommended_features, liked)
-        genre_weights = update_weights(genre_weights, recommended_genres, liked)
-
-        # Afficher les nouveaux poids
-        #print("Nouveaux poids des caractéristiques : ", feature_weights)
-        #print("Nouveaux poids des genres : ", genre_weights)
-
-    # Retourner les IDs des musiques recommandées
-    return [x[0] for x in recommandations]
-
-# Fonction pour mettre à jour les poids en fonction des retours utilisateur
-def update_weights(weights, target, liked, learning_rate=0.1):
-    """
-    Met à jour les poids en fonction des retours utilisateur.
-
-    - weights : Poids actuels (caractéristiques ou genres).
-    - target : Valeurs associées à la musique cible (caractéristiques ou genres).
-    - liked : Booléen indiquant si l'utilisateur a aimé la recommandation.
-    - learning_rate : Taux d'apprentissage.
-    """
-    factor = 1 if liked else -1
-    weights += factor * learning_rate * target
-    return np.clip(weights, 0, 1)  # Conserver les poids entre 0 et 1
-
 # Fonction qui renvoit le nom d'un cluster à partir de son ID
 def get_cluster_name(cluster_id):
     # Ouverture du fichier CSV des clusters
@@ -576,17 +480,70 @@ def search_music_id(music_name, data):
         return matching_musics[0]['music_id']  # Retourne l'ID de la première musique correspondante
     return None  # Aucun résultat trouvé    
 
+def change_genre_flow(user_id, music_id, new_genre):
+    # Charger la session de l'utilisateur
+    sessions = load_json_data('application web/base_de_données/sessions.json')
+    user_session = next((s for s in sessions.get('sessions', []) if s['id'] == user_id), None)
+    
+    if user_session is None:
+        return {'error': 'Session introuvable.'}
 
-'''# Exemple d'utilisation
-if __name__ == "__main__":
-    # Initialiser les poids (tous égaux à 1 au départ)
-    feature_weights = np.ones(13)  # 13 colonnes de caractéristiques
-    genre_weights = np.ones(17)    # 17 genres musicaux
+    # Vérifier si genres_weights est une liste et l'utiliser comme telle
+    if isinstance(user_session['genres_weights'], list):
+        # Rien à changer, genres_weights est déjà une liste
+        pass
+    elif not isinstance(user_session['genres_weights'], list):
+        user_session['genres_weights'] = [1] * 17  # Liste par défaut avec 17 valeurs à 1
 
-    # ID de la musique cible
-    id_music = random_id  # Remplacez par un ID valide de votre dataset
+    # Charger les données des musiques
+    data = pd.read_csv('data/genred_data.csv')
 
-    # Obtenir des recommandations
-    recommandations = get_recommandations_hors_cluster_adapt(
-        id_music, n_recommandations=5, feature_weights=feature_weights, genre_weights=genre_weights
-    )'''
+    if music_id not in data['id'].values:
+        return {'error': 'Musique introuvable.'}
+
+    if new_genre == 17: #cas de reinitialisation
+        for i in range(len(user_session['genres_weights'])):
+            user_session['genres_weights'][i] = 1
+    
+    else:
+        user_session['genres_weights'][new_genre] = 0.1
+        for i in range(len(user_session['genres_weights'])):
+            if i != new_genre:
+                user_session['genres_weights'][i] = 2
+
+    # Récupérer les caractéristiques de la musique
+    feature_columns = ['danceability', 'year', 'energy', 'loudness', 'speechiness', 
+                       'acousticness', 'instrumentalness', 'liveness', 'valence', 'tempo']
+    features = data.loc[data['id'] == music_id, feature_columns].values[0]
+
+    # Calculer les distances euclidiennes
+    distances = euclidean_distances(features.reshape(1, -1), data[feature_columns].values).flatten()
+
+    # Obtenir les clusters des musiques
+    clusters = data['cluster'].values
+    # Utiliser les poids des genres de la liste pour pondérer les distances
+    genres_weights = np.array([user_session['genres_weights'][int(c)] for c in clusters])
+    weighted_distances = distances * genres_weights
+
+    # Trier les musiques en fonction des distances pondérées
+    sorted_indices = np.argsort(weighted_distances)
+    recommended_music = data.iloc[sorted_indices]
+    recommended_music = recommended_music[~recommended_music['id'].isin(user_session['music_seen'])]
+
+    if recommended_music.empty:
+        return {'error': 'Aucune musique recommandée disponible.'}
+
+    # Sélectionner la musique suivante
+    next_music_id = recommended_music.iloc[0]['id']
+    user_session['music_seen'].append(next_music_id)
+
+    # Sauvegarder les modifications
+    save_json_data('application web/base_de_données/sessions.json', sessions)
+    
+    for i in range(len(user_session['genres_weights'])):
+        print(user_session['genres_weights'][i])
+        
+    print(next_music_id)
+
+    return next_music_id
+
