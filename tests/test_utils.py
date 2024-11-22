@@ -68,12 +68,12 @@ def main():
     # Mettre en commentaire les tests que vous ne voulez pas exécuter
     # test_get_recommandations_from_music()
     # test_get_recommandations_from_playlist()
-    # test_get_genres_from_user_profile()
+    test_get_genres_from_user_profile()
     # test_get_cluster_name(16)
     # test_get_first_flow()
     # test_get_next_flow()
     # test_maj_db_sessions()
-    test_change_genre_flow()
+    # test_change_genre_flow()
     
 if __name__ == "__main__":
     main()

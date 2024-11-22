@@ -139,7 +139,7 @@ def get_genres_from_user_profile(user_profile, n_genres):
     
     # Associer les préférences aux genres musicaux
     genres = ['Ambient', 'Fusion Beat', 'Fusion Hardcore', 'Metal', 'Jazz', 'Rock', 'World & Electronic Music', 'Punk', 
-              'Folk', 'Traditional Music', 'Indie', 'Blues, Soul & Country', 'Hip Hop', 'Classical', 
+              'Folk', 'Traditional Music', 'Indie', 'Blues, Soul & Country', 'Classical', 
               'Comedy, Literature & Cultural Narratives', 'Pop', 'Rap']
     
     # Associer les préférences aux genres

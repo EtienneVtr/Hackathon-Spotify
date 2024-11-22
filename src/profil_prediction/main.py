@@ -10,7 +10,7 @@ import joblib
 from sklearn.model_selection import cross_val_score
 
 # Charger le fichier CSV
-file_path = './data/cleaned_profils_with_clusters.csv'  # Remplace par ton fichier
+file_path = './data/genred_profils.csv'  # Remplace par ton fichier
 data = pd.read_csv(file_path)
 
 # Changer le nom de la colonne 'music' en 'music_consumption'
@@ -21,7 +21,7 @@ categorical_columns = ['gender', 'education', 'smoking', 'alcohol', 'internet_us
 numerical_columns = ['age']
 target_columns = ['Ambient', 'Fusion Beat', 'Fusion Hardcore', 'Metal', 'Jazz', 'Rock',
     'World & Electronic Music', 'Punk', 'Folk', 'Traditional Music', 'Indie',
-    'Blues, Soul & Country', 'Hip Hop', 'Classical', 'Comedy, Literature & Cultural Narratives',
+    'Blues, Soul & Country', 'Classical', 'Comedy, Literature & Cultural Narratives',
     'Pop', 'Rap']
 
 # La colonne 'music' sera utilisée comme poids
