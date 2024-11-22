@@ -2,7 +2,7 @@
 
 ## Membres du groupe : 
 - **Christophe HOYAU**
-- **Guilhem BARBIER-SAINT-HILAIRE**
+- **Guilhem BARBIER SAINT HILAIRE**
 - **Etienne VATRY**
 
 ## Lien du projet Kaggle : https://www.kaggle.com/code/vatsalmavani/music-recommendation-system-using-spotify-dataset/notebook 
