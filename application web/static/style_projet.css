@@ -181,6 +181,21 @@ form .bouton:hover {
     background-color: #1aa34a; /* Une nuance légèrement plus foncée au survol */
 }
 
+.bouton {
+    padding: 10px 15px;
+    background-color: #1db954; /* Vert Spotify */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Pour les boutons de formulaire, sinon vous pouvez ajuster */
+    text-align: center;
+}
+
+.bouton:hover {
+    background-color: #1aa34a; /* Une nuance légèrement plus foncée au survol */
+}
 /* Texte sous les formulaires */
 .center-text {
     margin-top: 15px;

@@ -16,25 +16,35 @@
         
         <!-- Section Connexion / Inscription -->
         <div class="auth-section">
-            {% if user_name %}
-                <p>Bonjour, {{ user_name }} !</p>
-            {% else %}
-                <ul class="actions">
-                    <li><a href="/login" class="bouton">Se connecter</a></li>
-                    <li><a href="/signup" class="bouton">S'inscrire</a></li>
-                </ul>
-            {% endif %}
-        </div>
-        
-        <!-- Section Navigation -->
-        <div class="nav-section">
-            <h5>Explorez nos fonctionnalités :</h5>
-            <ul class="actions">
-                <li><a href="/recommandationsmultiples" class="bouton">Recommandations Multiples</a></li>
-                <li><a href="/flow" class="bouton">Flow Musical</a></li>
-                <li><a href="/recommandationsuniques" class="bouton">Recommandations Uniques</a></li>
-            </ul>
-        </div>
+    {% if user_name %}
+        <p>Bonjour, {{ user_name }} !</p>
+    {% else %}
+        <ul class="actions">
+            <li>
+                <a href="/login" class="bouton" style="width: auto;">Se connecter</a>
+            </li>
+            <li>
+                <a href="/signup" class="bouton" style="width: auto;">S'inscrire</a>
+            </li>
+        </ul>
+    {% endif %}
+</div>
+
+<!-- Section Navigation -->
+<div class="nav-section">
+    <h5>Explorez nos fonctionnalités :</h5>
+    <ul class="actions">
+        <li>
+            <a href="/recommandationsmultiples" class="bouton" style="width: auto;">Recommandations Multiples</a>
+        </li>
+        <li>
+            <a href="/flow" class="bouton" style="width: auto;">Flow Musical</a>
+        </li>
+        <li>
+            <a href="/recommandationsuniques" class="bouton" style="width: auto;">Recommandations Uniques</a>
+        </li>
+    </ul>
+</div>
     </div> 
 </section>
 {% endblock %}
