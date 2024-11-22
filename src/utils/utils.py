@@ -480,7 +480,7 @@ def search_music_id(music_name, data):
         return matching_musics[0]['music_id']  # Retourne l'ID de la première musique correspondante
     return None  # Aucun résultat trouvé    
 
-def change_genre_flow(user_id, music_id, new_genre):
+def change_genre_flow(user_id, new_genre):
     # Charger la session de l'utilisateur
     sessions = load_json_data('application web/base_de_données/sessions.json')
     user_session = next((s for s in sessions.get('sessions', []) if s['id'] == user_id), None)
