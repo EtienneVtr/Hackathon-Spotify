@@ -83,65 +83,48 @@ def login():
 def recommandationsmultiples():
     global page_actuelle
     page_actuelle = 'recommandationsmultiples'
-
     recommendations = []
-    temporary_playlist = session.get('temporary_playlist', [])  # Playlist temporaire
-    user_playlists = []
-    user_music_details = []  # Détails des recommandations
-    spotify_token = session.get('spotify_access_token')  # Token Spotify
+    global selected_playlist_ids
+    selected_playlist_ids = request.form.getlist('playlist_ids') if request.method == 'POST' else []
+    
+    user_music_details = []  # Liste des recommandations détaillées
+    spotify_token = session.get('spotify_access_token')  # Récupérer le token Spotify
 
-    # Gestion des utilisateurs connectés
-    if g.user:  
+    if g.user:  # Si l'utilisateur est connecté
         user_id = session.get('user_id')
         user = next((u for u in data['profiles'] if u['id'] == user_id), None)
 
         if not user:
             return redirect(url_for('logout'))
 
-        # Récupérer les playlists et musiques personnelles
+        # Récupérer les musiques du profil de l'utilisateur
         user_music_ids = user.get('music', [])
+
+        if request.method == 'POST':
+            num_recommendations = 10  # Nombre de recommandations à retourner
+            recommendations = get_recommandations_from_playlist(selected_playlist_ids, num_recommendations)
+
+        for music_id in recommendations:
+            music_detail = get_music_details(music_id, data)
+            if music_detail:
+                cover_url = get_album_cover(music_id, spotify_token)
+                music_detail['cover_url'] = cover_url
+                user_music_details.append(music_detail)
+
+        # Récupérer les playlists de l'utilisateur
         user_playlists = [music for music in data['musics'] if music['music_id'] in user_music_ids]
+    else:
+        user_playlists = []  # Aucun playlist pour les utilisateurs non connectés
 
-    # Gestion de la requête POST
-    if request.method == 'POST':
-        action = request.form.get('action')
-
-        # Ajouter une musique à la playlist temporaire
-        if action == 'add_to_temporary_playlist':
-            music_name = request.form.get('music_name')
-            music_id = search_music_id(music_name, data)  # Appel de la fonction pour obtenir l'ID
-            if music_id and music_id not in temporary_playlist:
-                temporary_playlist.append(music_id)
-                session['temporary_playlist'] = temporary_playlist
-            else:
-                flash("Musique déjà ajoutée ou introuvable.")
-
-
-        # Obtenir des recommandations
-        elif action == 'get_recommendations':
-            selected_playlist_ids = request.form.getlist('playlist_ids')  # Playlists sélectionnées
-            source_music_ids = temporary_playlist + selected_playlist_ids
-            recommendations = get_recommandations_from_playlist(source_music_ids, 10)
-
-            # Récupérer les détails des musiques recommandées
-            for music_id in recommendations:
-                music_detail = get_music_details(music_id, data)
-                if music_detail:
-                    cover_url = get_album_cover(music_id, spotify_token)
-                    music_detail['cover_url'] = cover_url
-                    user_music_details.append(music_detail)
-
-    # Récupérer les noms des musiques ajoutées dans la playlist temporaire
-    temporary_playlist_details = [
-        get_music_details(music_id, data) for music_id in temporary_playlist
-    ]
+    # Récupérer les noms des playlists sélectionnées
+    selected_playlist_names = [music['title'] for music in data['musics'] if music['music_id'] in selected_playlist_ids]
 
     return render_template(
         'recommandationsmultiples.html',
         recommandations=user_music_details,
-        playlists=user_playlists,
-        temporary_playlist_details=temporary_playlist_details,
-        user_connected=bool(g.user)
+        playlists=user_playlists,  # Passer les playlists de l'utilisateur au template
+        selected_playlist_names=selected_playlist_names,  # Passer les noms des playlists sélectionnées au template
+        user_connected=bool(g.user)  # Indique si l'utilisateur est connecté
     )
 
 

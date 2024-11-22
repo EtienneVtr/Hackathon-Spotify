@@ -11,34 +11,10 @@
     <div class="inner">
         <h2>Recommandations de musique à partir des playlists</h2>
 
-        <!-- Formulaire pour ajouter une musique à la playlist temporaire -->
-        <h3>Ajouter une musique à la playlist temporaire</h3>
-        <form method="POST" action="/recommandationsmultiples">
-            <input type="hidden" name="action" value="add_to_temporary_playlist">
-            <label for="music_name">Nom de la musique :</label><br>
-            <input type="text" id="music_name" name="music_name" placeholder="Entrez le nom de la musique" 
-                   oninput="fetchSuggestions()" autocomplete="off" required>
-            <ul id="suggestions" style="border: 1px solid #ccc; max-height: 150px; overflow-y: auto; display: none;"></ul>
-            <button type="submit" class="bouton">Ajouter</button>
-        </form>
-
-        <!-- Playlist temporaire -->
-        {% if temporary_playlist_details %}
-            <h3>Playlist temporaire</h3>
-            <ul>
-                {% for music in temporary_playlist_details %}
-                    <li>{{ music.title }} - {{ music.artists | join(", ") }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-
-        <!-- Formulaire pour obtenir des recommandations -->
         {% if user_connected %}
-            <h3>Sélectionnez des playlists personnelles</h3>
             <form method="POST" action="/recommandationsmultiples">
-                <input type="hidden" name="action" value="get_recommendations">
-                <label for="playlist_ids">Sélectionnez vos playlists :</label><br>
-                <select id="playlist_ids" name="playlist_ids" multiple>
+                <label for="playlist_ids">Sélectionnez les playlists :</label><br>
+                <select id="playlist_ids" name="playlist_ids" multiple required>
                     {% for playlist in playlists %}
                         <option value="{{ playlist.music_id }}">{{ playlist.title }}</option>
                     {% endfor %}
@@ -47,29 +23,46 @@
                 <button type="submit" class="bouton">Obtenir Recommandations</button>
             </form>
         {% else %}
-            <p>Connectez-vous pour sélectionner vos playlists personnelles.</p>
+            <p>Veuillez vous connecter pour sélectionner vos playlists personnelles et obtenir des recommandations personnalisées.</p>
+            <a href="{{ url_for('login') }}" class="bouton">Se connecter</a>
         {% endif %}
 
-        <!-- Recommandations -->
         {% if recommandations %}
-            <h3>Recommandations :</h3>
+            <h3>Recommandations pour les playlists sélectionnées :</h3>
+            <p>Musiques sélectionnées :</p>
+            <ul>
+                {% for music_name in selected_playlist_names %}
+                    <li>{{ music_name }}</li>
+                {% endfor %}
+            </ul>
             <ul id="user-music-list" style="list-style: none; padding: 0;">
                 {% for music in recommandations %}
-                    <li style="margin-bottom: 20px;">
+                    <li class="recommendation-item" id="music-{{ music.music_id }}" style="text-align: center; margin-bottom: 20px;">
                         {% if music.cover_url %}
-                            <img src="{{ music.cover_url }}" alt="Album cover" style="width: 100px; height: 100px; object-fit: cover;">
+                            <div style="margin-top: 10px;">
+                                <img src="{{ music.cover_url }}" alt="Album cover" style="width: 100px; height: 100px; object-fit: cover;">
+                            </div>
                         {% endif %}
+                        <div style="margin-bottom: 10px;">
+                            <strong>{{ music.title }} </strong>
+                            <br> 
+                            <span>{{ music.artists | join(", ") }}</span> 
+                        </div>
+                        
                         <div>
-                            <strong>{{ music.title }}</strong> - {{ music.artists | join(", ") }}
+                            <button onclick="playMusic('spotify:track:{{ music.music_id }}')">Lancer la musique</button>
+                            <button onclick="stopMusic()">Arrêter la musique</button>
+                            <button onclick="addToProfile('{{ music.music_id }}')">Ajouter au profil</button>
                         </div>
                     </li>
                 {% endfor %}
             </ul>
+        {% else %}
+            <p>Aucune recommandation trouvée.</p>
         {% endif %}
     </div>
 </section>
 {% endblock %}
-
 
 <script>
     function fetchSuggestions() {
@@ -170,4 +163,4 @@
         })
         .catch(error => console.error('Erreur :', error));
     }
-</script>
+    </script>
