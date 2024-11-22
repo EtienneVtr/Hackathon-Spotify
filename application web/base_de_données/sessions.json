@@ -57,10 +57,7 @@
                 "3DV3fcJ1Cgc5lVAdvw73Kx",
                 "3DV3fcJ1Cgc5lVAdvw73Kx",
                 "0jdso14vaFnpRazMLEZovF",
-                "0jdso14vaFnpRazMLEZovF",
                 "1jQsKN68yE94tMYml0wHMd",
-                "1jQsKN68yE94tMYml0wHMd",
-                "4PzovBqgnSHKd8opsP7IVM",
                 "4PzovBqgnSHKd8opsP7IVM",
                 "1DunhgeZSEgWiIYbHqXl0c",
                 "1DunhgeZSEgWiIYbHqXl0c",
@@ -69,12 +66,10 @@
                 "2Xh7dyCHCErCv3PmdVEGw4",
                 "5GhJq5J9ZWIEDZdyw7EWzt",
                 "5GhJq5J9ZWIEDZdyw7EWzt",
-                "7jk7gqyEonmVVYahZN5zhW",
                 "3BYIzNZ3t9lRQCACXSMLrT",
                 "3BYIzNZ3t9lRQCACXSMLrT",
                 "7Adzy6kc6H1Da4wBVZ1XLN",
                 "7Adzy6kc6H1Da4wBVZ1XLN",
-                "0hwkukpHcBJfGcIUxi1tK2",
                 "0hwkukpHcBJfGcIUxi1tK2",
                 "5tHj7TuWS1h6GDU0Ajcm32",
                 "2CD8UvBi01dwnriCM8TivL",
@@ -84,7 +79,6 @@
                 "0mjkpjvUyXFqyZty6rMdqb",
                 "0mjkpjvUyXFqyZty6rMdqb",
                 "1TuYQSZHZQTCSIn9S6djBo",
-                "6EidGY4S6hkU6fwNdSSabg",
                 "6EidGY4S6hkU6fwNdSSabg",
                 "6EidGY4S6hkU6fwNdSSabg",
                 "7I0N7ZNYjtSG0qKEWMQxXB",
@@ -141,7 +135,7 @@
                 "0p1HtkrNYxv0iDfEKwXSTp"
             ],
             "music_seen": [
-                "6FSHigAWfTd5Zx3jYfehbO"
+                "0jdso14vaFnpRazMLEZovF"
             ],
             "genres_weights": [
                 1,
@@ -193,7 +187,6 @@
                 "4ywiiUqjEvx8RufPznNY8K",
                 "6fPm2XMi51l5GCEp19HscL",
                 "6zjN2FdfNZOBrbHbrxVbdb",
-                "0CcGLZQ2WvKkpPrsy0euFU",
                 "5yc5RHFsadRb5qz7Vj0o71",
                 "544KwUjmSnKMaGasAgipu1",
                 "1IKlR89VLfYNAxKGw8e6IW",
@@ -236,7 +229,6 @@
                 "5myJUFhCIrOGoIFfof3JfQ",
                 "1TMbYcBfOINL8OodfKVQmr",
                 "0ZmsacY1AKf7QMswJNMSlV",
-                "1jRQM9vBtEvWqjGcET1Gaw",
                 "7saUjNh5vYvqD1oe1ED5jF",
                 "5Nn4BKzfNhEsJIFIwhwOPN",
                 "4AOBtdCRSMhnn4dyPVgW8k",
@@ -269,7 +261,9 @@
                 "08kvJTpcthAvvvW0BAcGHN"
             ],
             "music_seen": [
-                "5nvRa7XTODdrFqGsuTcAjI"
+                "0CcGLZQ2WvKkpPrsy0euFU",
+                "0bLOiofyBB62YU2cNnONJG",
+                "6bz0BZSFljSbtS34FNfYF1"
             ],
             "genres_weights": [
                 1,
@@ -277,7 +271,7 @@
                 1,
                 1,
                 1,
-                1,
+                0.8,
                 1,
                 1,
                 1,
