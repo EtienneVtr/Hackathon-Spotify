@@ -62,31 +62,29 @@
         {% endif %}
     </div>
 </section>
-{% endblock %}
-
 <script>
+    // Fonction pour obtenir des suggestions de musique
     function fetchSuggestions() {
         const input = document.getElementById('music_name');
         const suggestionsList = document.getElementById('suggestions');
         const query = input.value.trim();
-    
+
         if (query.length === 0) {
-            suggestionsList.style
             suggestionsList.style.display = 'none';
             suggestionsList.innerHTML = '';
             return;
         }
-    
+
         fetch(`/api/search_music?query=${encodeURIComponent(query)}`)
             .then(response => response.json())
             .then(data => {
-                suggestionsList.innerHTML = ''; // Clear previous suggestions
-    
+                suggestionsList.innerHTML = ''; // Effacer les suggestions précédentes
+
                 if (data.length === 0) {
                     suggestionsList.style.display = 'none';
                     return;
                 }
-    
+
                 data.forEach(music => {
                     const li = document.createElement('li');
                     li.textContent = `${music.title} - ${music.artists.join(', ')}`;
@@ -97,15 +95,16 @@
                     };
                     suggestionsList.appendChild(li);
                 });
-    
+
                 suggestionsList.style.display = 'block';
             })
             .catch(error => {
-                console.error('Error fetching suggestions:', error);
+                console.error('Erreur lors de la récupération des suggestions:', error);
                 suggestionsList.style.display = 'none';
             });
     }
 
+    // Fonction pour jouer de la musique
     function playMusic(trackUri, deviceId = null) {
         fetch('/play_music', {
             method: 'POST',
@@ -128,6 +127,7 @@
         .catch(error => console.error('Erreur réseau :', error));
     }
 
+    // Fonction pour arrêter la musique
     function stopMusic() {
         fetch('/stop_music', {
             method: 'POST'
@@ -142,14 +142,13 @@
         })
         .catch(error => console.error('Erreur réseau :', error));
     }
-</script>
-<script>
+
+    // Fonction pour ajouter une musique au profil
     function addToProfile(musicId) {
         fetch('/api/add_music', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                
             },
             body: JSON.stringify({ music_id: musicId })
         })
@@ -163,4 +162,5 @@
         })
         .catch(error => console.error('Erreur :', error));
     }
-    </script>
+</script>
+{% endblock %}
