@@ -87,7 +87,6 @@
                 "6EidGY4S6hkU6fwNdSSabg",
                 "6EidGY4S6hkU6fwNdSSabg",
                 "6EidGY4S6hkU6fwNdSSabg",
-                "6EidGY4S6hkU6fwNdSSabg",
                 "7I0N7ZNYjtSG0qKEWMQxXB",
                 "2IAaBzOLUtr2hqcwOItFWJ",
                 "2IAaBzOLUtr2hqcwOItFWJ",
@@ -114,7 +113,6 @@
                 "1pwCxz81iX8TxMKBIAEqsZ",
                 "1pwCxz81iX8TxMKBIAEqsZ",
                 "0pvwmAfJnszOzg2gw5wvn1",
-                "6FSHigAWfTd5Zx3jYfehbO",
                 "0pvwmAfJnszOzg2gw5wvn1",
                 "6FSHigAWfTd5Zx3jYfehbO",
                 "6piAUJJQFD8oHDUr0b7l7q",
@@ -142,7 +140,9 @@
                 "0p1HtkrNYxv0iDfEKwXSTp",
                 "0p1HtkrNYxv0iDfEKwXSTp"
             ],
-            "music_seen": [],
+            "music_seen": [
+                "6FSHigAWfTd5Zx3jYfehbO"
+            ],
             "genres_weights": [
                 1,
                 1,
