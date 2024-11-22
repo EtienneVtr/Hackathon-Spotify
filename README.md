@@ -53,10 +53,10 @@ Pour lancer l'application web, il suffit de lancer le fichier `application_web\a
 ## Description des fonctonnalités de l'application web :
 
 - **Recommandation de musique** :
-  - **Recommandation de musique par rapport à une musique** : L'utilisateur peut renseigner le nom d'une musique et obtenir des recommandations de musiques similaires
-  - **Recommandation de musique par rapport à une playlist** : L'utilisateur peut sélectionner les musiques présentes dans sa playlist et obtenir des recommandations de musiques similaires
+  - **Recommandation de musique par rapport à une musique** : L'utilisateur peut renseigner le nom d'une musique et obtenir des recommandations de musiques similaires.
+  - **Recommandation de musique par rapport à une playlist** : L'utilisateur peut sélectionner les musiques présentes dans sa playlist et obtenir des recommandations de musiques similaires. L'utilisateur peut ajouter des musiques à son profil avant de tester cette fonctionnalité.
   - **Recommandation de musique par rapport à un profil utilisateur** : L'utilisateur obtient des genres susceptibles de lui plaire en fonction de son profil. Un modèle de prédiction par rapport à un dataset d'un papier de recherche Slovaque est utilisé pour obtenir ces recommandations.
-  - **Flow** : L'utilisateur obtient une musique de départ à partir de sa playlist personnelle et peut choisir s'il l'aime ou non. Cela met à jour les poids de recherche des musiques pour proposer des recommandations plus pertinentes. On utilise ici du *Reinforcement Learning* pour mettre à jour les poids de recherche des musiques.
+  - **Flow** : L'utilisateur obtient une musique de départ à partir de sa playlist personnelle et peut choisir s'il l'aime ou non. Cela met à jour les poids de recherche des musiques pour proposer des recommandations plus pertinentes. On utilise ici du *Reinforcement Learning* pour mettre à jour les poids de recherche des musiques. Plus l'utilisateur a ajouté de musiques à son profil et plus la recommandation sera adaptée.
 
 - **Création de compte utilisateur**
 - **Connexion à un compte Spotify**
