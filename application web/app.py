@@ -597,7 +597,26 @@ def play_music():
     result = start_playback(spotify_token, device_id, track_uri)
     return jsonify(result)
 
+## créer un route pour donner les genres d'un profile, dans une page genres_profile.html
+## qui utilise la fonction (get_genres_from_profile) qui prend en paramètre le profile d'un utilisateur ({id: , age: ...}) et un nombre de genre et retourne une liste de genres avec leur pourcentage d'apparition
+## on prend le profil qui est connecté et on lui donne les genres de sa musique
+@app.route('/genres_profile', methods=['GET', 'POST'])
+def genres_profile():
+    profile = session.get('user_id')
+    user_profil= next((u for u in data['profiles'] if u['id'] == profile), None)
+    page_actuelle = 'genres_profile'
+    if not user_profil :
+        return redirect(url_for('login'))
+    # récupère le nombre de genre à renvoyer à l'aide d'un formulaire où il peut choisir entre 1 à 10
+    if request.method == 'POST':
+        num_genres = request.form.get('num_genres')
+        genres = get_genres_from_user_profile(user_profil, int(num_genres))
+        genres = [(genre[0],int(genre[1]*20)) for genre in genres]
+        return render_template('genres_profile.html', genres=genres, page_actuelle=page_actuelle)
+    return render_template('genres_profile.html', page_actuelle=page_actuelle)
 
+    
+    
 @app.route('/stop_music', methods=['POST'])
 def stop_music():
     spotify_token = session.get('spotify_access_token')

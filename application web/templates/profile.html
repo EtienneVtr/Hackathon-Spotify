@@ -54,7 +54,7 @@
             <label for="smoking">Tabac :</label><br>
             <select id="smoking" name="smoking">
                 <option value="never smoked" {% if user.smoking == "never smoked" %}selected{% endif %}>Jamais fumé</option>
-                <option value="tried smoked" {% if user.smoking == "tried smoked" %}selected{% endif %}>A déjà essayé</option>
+                <option value="tried smoked" {% if user.smoking == "tried smoking" %}selected{% endif %}>A déjà essayé</option>
                 <option value="other" {% if user.smoking == "other" %}selected{% endif %}>Autre</option>
             </select><br>
             
