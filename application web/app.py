@@ -12,8 +12,8 @@ from datetime import datetime
 import time
 
 # Variables globales
-CLIENT_ID = '27e6e375a4e1446ab580670055e248fe'  # Remplace par ton client_id Spotify
-CLIENT_SECRET = 'e79258ab68124cac9d66bcd43bfd19c2'  # Remplace par ton client_secret Spotify
+CLIENT_ID = ''  # Remplace par ton client_id Spotify
+CLIENT_SECRET = ''  # Remplace par ton client_secret Spotify
 REDIRECT_URI = 'http://127.0.0.1:5000/spotify_callback'
 SCOPE = 'user-read-private user-read-email user-read-playback-state user-modify-playback-state'
 STATE_KEY = "spotify_auth_state"
